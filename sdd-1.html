@@ -1,0 +1,159 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:xlink="http://www.w3.org/1999/xlink" 
+	  xmlns:rddl="http://www.rddl.org/" 
+	  xml:base="http://rs.tdwg.org/UBIF/2006" 
+	  xml:lang="en-US">
+	   
+<head>
+<!-- <!DOCTYPE html PUBLIC "-//XML-DEV//DTD XHTML RDDL 1.0//EN" "http://www.rddl.org/rddl-xhtml.dtd">--><!-- Note: DOCTYPE is commented out in the RDDL example RDDL itself; perhaps otherwise some html clients cause problems. -->
+  <title>Structured Descriptive Data (SDD) Standard 1.0</title>
+  
+  <style type="text/css">
+.ednote {color: red; font-size: 80%; font-style: italic; }
+div.toc ul {list-style: none }
+.new {color: blue}
+pre.example { color: green; font-family: monospace; font-weight: bold; margin-left: 0px; margin-right: 0px; white-space: pre}
+pre.dtd {font-family: monospace; font-weight: normal; margin-left: 0px; margin-right: 0px; white-space: pre}
+div.toc, div.subtoc {background-color: #ccccff;border: none;margin-right: 5%;}
+code {color: #660099; font-family: monospace; font-weight: bold}
+.ref {font-weight: bold}
+.normref {font-weight: bold}
+div.navbar {text-align: center}
+.center {text-align: center}
+.alphalist {list-style: upper-alpha}
+.codelist {}
+dl.codelist dt {color: #660099; font-family: mono; font-style: normal;font-weight: normal}
+.termlist {}
+dl.termlist dt {color: #330000; font-weight: bold}
+a.entity {color: red}
+a.element {color: green}
+a.attribute {	color: red}
+.elements {	color: green; font-family: mono; font-weight: bold}
+.attributes {	color: red; font-family: mono; font-weight: bold}
+.content {	color: blue; font-family: mono; font-weight: bold}
+.dfn {	color: #400040; font-style: italic; font-weight: bold}
+tt {	color: #4000af}
+dl.desc {	margin-left: 5%; margin-right: 5%}
+.sect2 {	margin-left: 5%; margin-right: 5%}
+.element {	color: #f00000; font-weight: bold}
+.attlist {	color: #f06000; font-weight: bold}
+.pentity {	color: #000080}
+span.attlistid {	color: gray; font-size: smaller; vertical-align: super}
+span.elementid {	color: gray; font-size: 80%; vertical-align: super}
+span.fixme {	color: red}
+table.moduledef {	border-bottom: red solid; border-left: red solid;	border-right: red solid; border-top: red solid; width: 100%}
+.tm, .reg {	vertical-align: super; font-size: smaller}
+div.head {	display: block;	border-width: 0;	border-bottom-width: thin;	border-style: groove;	padding-bottom: 2em;}
+div.note {	margin-left: +5%;	font-size: 80%;}
+body {margin: 2em 1em 2em 70px;font-family: sans-serif;color: black;background: white;background-position: top left; background-attachment: fixed; background-repeat: no-repeat;}
+th, td { /* ns 4 */ font-family: sans-serif; }
+h1, h2, h3, h4, h5, h6 { text-align: left }
+h1, h2, h3 { color: #005A9C }
+h1 { font: 170% sans-serif }
+h2 { font: 140% sans-serif }
+h3 { font: 120% sans-serif }
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+.hide { display: none }
+div.head { margin-bottom: 1em }
+div.head h1 { margin-top: 2em; clear: both }
+div.head table { margin-left: 2em; margin-top: 2em }
+div.head img { color: white; border: none } /* remove border from top image */
+p.copyright { font-size: small }
+p.copyright small { font-size: small }
+@media screen {  /* hide from IE3 */ a:hover { background: #ffa } }
+pre { margin-left: 2em }
+dt, dd { margin-top: 0; margin-bottom: 0 } /* opera 3.50 */
+dt { font-weight: bold }
+pre, code { font-family: monospace } /* navigator 4 requires this */
+ul.toc {
+  list-style: disc;		/* Mac NS has problem with 'none' */
+  list-style: none;
+}
+@media aural {  
+  h1, h2, h3 { stress: 20; richness: 90 }
+  .hide { speak: none }
+  p.copyright { volume: x-soft; speech-rate: x-fast }
+  dt { pause-before: 20% }
+  pre { speak-punctuation: code } 
+}
+/* Things (icons) that should only show up in projection mode */
+.projection { display: none }
+@media projection { .projection { display: inline } }
+body {}
+code           { font-family: monospace; }
+div.constraint, div.issue, div.note, div.notice     { margin-left: 2em; }
+dt.label { display: run-in; } 
+li p           { margin-top: 0.3em; margin-bottom: 0.3em; }
+.pentity {color: #0000FF}
+div.issue { color: red; }
+div.resource {	display: block;	border-width: 2;	border-style: groove;	padding-bottom: 2em;	background-color: #FFFFDD;}
+div.resource code { color: #005A9C }
+a.back { color: #FFFFFF;}
+table.eg { background-color:#99ffff; width: 100%; border-width: 2; border-style : ridge; }
+  </style>
+</head>
+
+<body>
+<h1>Structured Descriptive Data (SDD) Standard 1.0</h1>
+<div class="head">
+<p><a href="http://rs.tdwg.org/UBIF/2005/rddl-2005-09-15.html">This version</a> (2005-09-15)<br>
+<a href="http://rs.tdwg.org/UBIF/2006">Latest Version</a></p>
+</div>
+
+<div id="overview">
+<h2>Overview</h2>
+
+<p><strong>Note: This RDDL file has been created retrospectively in May
+2006 together with UBIF 1.1 to make the files and issues concerning
+this prior version transparent.</strong></p>
+
+<p>This is UBIF and SDD version 1.0. This version was officially voted
+by TDWG in 2005 to become a standard. However, in the light of of the
+revisions made for version 1.1, the authors of the UBIF and SDD
+standards recommend using a <a href="http://rs.tdwg.org/UBIF/2006">later version of UBIF/SDD</a> and refer to the documents cited here only for historical or archival purposes.</p>
+
+<p>For more information on SDD see the <a href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">SDD Wiki</a>, especially the <a href="http://wiki.tdwg.org/twiki/bin/view/SDD/Charter">Charter</a>.</p>
+
+<p>Note: While this document is human-readable, RDDL-aware processors
+may use it to automatically retrieve resources such as different schema
+versions for validating documents. See <a href="http://www.rddl.org/">http://www.rddl.org</a> for further information.</p>
+
+<rddl:resource xlink:type="simple" id="target" xlink:title="SDD root (target) namespace" xlink:role="http://www.rddl.org/#role" xlink:arcrole="http://www.rddl.org/purposes#target" xlink:href="http://rs.tdwg.org/UBIF/2005">
+	</rddl:resource><p>The root (target) namespace of UBIF and SDD in version 1.0 is <code>http://rs.tdwg.org/UBIF/2005</code>.</p>
+
+
+</div>
+
+<h2>Resources</h2>
+<div id="resources" class="resource">
+<ul class="compact">
+
+<rddl:resource xlink:type="simple" id="xsd" xlink:title="XML Schema for validation (normative)" xlink:role="http://www.w3.org/2000/10/XMLSchema" xlink:arcrole="http://www.rddl.org/purposes#schema-validation" xlink:href="http://rs.tdwg.org/UBIF/2005/Schema/1.0/SDD.xsd">
+	<li><a href="http://rs.tdwg.org/UBIF/2005/Schema/1.0/SDD.xsd">W3C XML Schema for validation (SDD 1.0, normative)</a></li>
+</rddl:resource>
+
+<li>Zipped archives with W3C XML Schema for downloading
+  <ul class="compact">
+  <rddl:resource xlink:type="simple" id="ZIP" xlink:title="XML Schema, zipped for download (SDD 1.0 final)" xlink:role="http://www.isi.edu/in-notes/iana/assignments/media-types/application/zip" xlink:arcrole="http://www.rddl.org/purposes#software-package" xlink:href="http://rs.tdwg.org/UBIF/2005/Schema/1.0/SDD100.zip">
+	<li><a href="http://rs.tdwg.org/UBIF/2005/Schema/1.0/SDD100.zip">SDD 1.0 = final voted standard</a></li>
+  </rddl:resource>
+  <rddl:resource xlink:type="simple" id="ZIP" xlink:title="XML Schema, zipped for download" xlink:role="http://www.isi.edu/in-notes/iana/assignments/media-types/application/zip" xlink:arcrole="http://www.rddl.org/purposes#software-package" xlink:href="http://rs.tdwg.org/UBIF/2005/Schema/1.0/SDD_UBIF_1.0b4.zip">
+	<li><a href="http://rs.tdwg.org/UBIF/2005/Schema/1.0/SDD_UBIF_1.0b4.zip">SDD 1.0 beta 4 = presented to TDWG for evaluation of standard</a></li>
+  </rddl:resource>
+  </ul>
+</li>
+
+<rddl:resource xlink:type="simple" xlink:title="SDD Home Page" xlink:role="http://www.w3.org/1999/xhtml" xlink:arcrole="http://www.rddl.org/purposes#non-normative-reference" xlink:href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">
+	<li><a href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">SDD Home Page</a></li>
+</rddl:resource>
+
+</ul>
+</div>
+
+<div id="footer">
+<p>Copyright (c) 2006 G. Hagedorn</p>
+</div>
+
+</body></html>
