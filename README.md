@@ -1,6 +1,6 @@
 # Structured Descriptive Data
 
-* **Download**: [Download](sdd-1.html)
+* **Download**: [Download](https://github.com/tdwg/sdd/archive/master.zip)
 * **Status**: TDWG current (2005) standard
 * **Category**: Technical specification
 * **Permanent URL**: http://www.tdwg.org/standards/116
