@@ -25,5 +25,4 @@ See also the [SDD Primer](http://wiki.tdwg.org/twiki/static/index.htm).
 
 ## Preferred citation
 
-> Hagedorn, G.; Thiele, K.; Morris, R. & Heidorn, P. B. 2005. The Structured Descriptive Data (SDD) w3c-xml-schema, version 1.0.
-http://www.tdwg.org/standards/116. [Last retrieved 05-May-2007]
+> Hagedorn G., Thiele K., Morris R. & Heidorn, P.B. 2005. Structured Descriptive Data (SDD) w3c-xml-schema, Version 1.0. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/116
