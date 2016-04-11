@@ -1,0 +1,8 @@
+The copy of xlink placed here is borrowed from GML 3.
+It is currently not yet used by UBIF/SDD, although we discussed
+using href etc. from the xlink namespace instead from UBIF itself.
+
+Major considerations for not using xlink were:
+- lack of widespread acceptance of xlink
+- some attributes (label, role) are unintuitively named.
+- requirement to always add xlink:type="simple" as fixed attribute to all data (this will probably be lifted in a future xlink version!)

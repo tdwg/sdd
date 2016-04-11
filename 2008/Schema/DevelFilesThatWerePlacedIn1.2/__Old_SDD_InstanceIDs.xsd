@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- 
+When used, the SDD_TypeLib.xsd contained:
+
+  <xs:include schemaLocation="SDD_InstanceIDs.xsd">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Contains relation IDs derived from the InstanceID base type. Used for locally unique identifiers (local to a specific object type). To better communicate the ID scope, for each object type a derived InstanceID has been used, although technically this is redundant.</xs:documentation>
+    </xs:annotation>
+  </xs:include>
+
+-->
+<xs:schema xmlns="http://rs.tdwg.org/UBIF/2006" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://rs.tdwg.org/UBIF/2006" elementFormDefault="qualified" attributeFormDefault="unqualified" blockDefault="#all" version="Unified Biosciences Information Framework (UBIF) 1.1 and SDD 1.1">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">!!! THIS IS CURRENTLY OBSOLETE, id type are are set to generic LocalInstanceID to avoid creating derivation by restriction</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Include file for the main SDD schema. This file isolates a number of derived simple types used to define ID-based relations between object definitions and object references. For each object in SDD a specific type is used. The use of the type is intended to clarify the relations, which otherwise are hidden in the xml schema identity constraints that are difficult to study. Bob Morris proposed using this to help when wording with tools like Castor. These types are technically redundant when using only schema but they should not cause any problems either. The type definitions are isolated in this include file to avoid clutter in the main SDD schema file.</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Copyright © 2006 TDWG (Taxonomic Databases Working Group, www. tdwg.org). See the file SDD_(c).xsd for authorship and licensing information.</xs:documentation>
+  </xs:annotation>
+  <xs:include schemaLocation="UBIF_BasePattern.xsd"/>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">---- Relation types used in terminology (defined to help in type-safe programming; this duplicates information also defined in schema identity constraints):</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="__CharacterInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="LocalInstanceID"/>
+  </xs:simpleType>
+  <xs:simpleType name="__CharacterStateInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="LocalInstanceID"/>
+  </xs:simpleType>
+  <xs:simpleType name="__ConceptTreeInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="LocalInstanceID"/>
+  </xs:simpleType>
+  <xs:simpleType name="__ConceptInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="LocalInstanceID"/>
+  </xs:simpleType>
+  <xs:simpleType name="__ConceptStateInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="LocalInstanceID"/>
+  </xs:simpleType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">---- Relation types used in descriptions (defined to help in type-safe programming; this duplicates information also defined in schema identity constraints):</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="__DescriptionInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="LocalInstanceID"/>
+  </xs:simpleType>
+  <xs:simpleType name="__SampleInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="LocalInstanceID"/>
+  </xs:simpleType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">---- Relation types used in identification keys (defined to help in type-safe programming; this duplicates information also defined in schema identity constraints):</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="__StoredKeyInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="LocalInstanceID"/>
+  </xs:simpleType>
+  <xs:simpleType name="__StoredKeyNodeInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="LocalInstanceID"/>
+  </xs:simpleType>
+</xs:schema>

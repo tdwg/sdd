@@ -1,0 +1,50 @@
+=======================================================================================
+ Subversion template for keyword substitution                                                     
+ 
+ DO NOT MESS WITH THE STUFF BELOW 
+  
+ SVN tree revision: 	$WCREV$	at $WCDATE$								     								     
+ Released from:		$WCURL$							                     
+
+ 
+This template last filled in by SubWCRev on $WCNOW$
+
+Bob Morris ram@cs.umb.edu Jacob Asiedu kasiedu@cs.umb.edu 
+============================================================================
+
+Make all additions below here unless you are maintaining the Subversion repository
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!! READ THIS - READ THIS - READ THIS - READ THIS 
+!!!!! EDIT ONLY THE FILE NAMED ReleaseNotesTemplate.txt 
+!!!!! NOT THE FILE NAMED ReleaseNotes.txt
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Release Notes for SDD Release RC2 (release candidate 2) name@bba.de (replace name with g.hagedorn)
+* In response to problems with single-character dependency rules (detected by Damian) the character tree structure was relatively strongly reworked.
+* Inconsistencies between resource media type specifications in Link and MediaObject where resolved.
+* Untyped element "MediaObject/Data" changed to typed element "MediaObject/Source".
+* An additional identity constraint (unique) for the uri-attribute (= object identifier) was added.
+* An additional identity constraint QuantSummaryData_UniqueMeasureType was added (see discussion of Lucid implementation on Wiki).
+* An additional attribute NaturalLanguage/Phrase/@type with a new StringFormattingTypeEnum was added. This informs about block-level formatting necessary for Character-Tree based natural language rendering.
+* Minor internal fixes in type names and type derivation - these should not affect previous instance documents.
+* Minor changes to UBIF_Enum, plus one larger change: IRPStatementRoleEnum and LinkingRelEnum, which were partly overlapping, now clearly separated.
+* Minor changes to SDD_Enum, plus one larger change: RatingOriginEnum is removed (no longer meaningful after changes concept/character tree introduced in 1.1; reintroduction of concept ratings requires discussion).
+* Base type of all enumerations changed from NCName to QName. This causes no differences in current instance documents, but does affect software using post-schema-validation-infoset (psvi), such as some xslt 2.0 processors. Also it does not change the values space at the moment, because values are fully constrained to the enumerated literal. However, it simplifies the change to the planned semi-constrained status of enumerations in the future.
+* RevisionStatus type changed and now modeled analogous to DataStatus (coded / missing data)
+* In the abstract linking model the relation between label (title of href resource) and literal value (literal free-form text alternative to uri-code) was clarified and the issues better separated.
+* Extension elements from other namespaces may now be placed directly in a sequence (without a container; this is now more similar to the previously existing direct use of extension attributes from other namespaces).
+* The Annotation element has been returned to discussion level (double-underscore) and thus removed from RC2. It may be better treated as an extension, or a general Representation/Detail "Comment/Annotation" may be introduced.
+* The namespace was changed according to TDWG-decisions to rs.tdwg.org/UBIF
+
+Release Notes for SDD Release RC1 (release candidate 1) name@bba.de (replace name with g.hagedorn)
+* Additional complex types are now named (i.e. elements are typed)
+* Previously anonymous "Specification" inner classes removed and properties placed directly in main class
+* One attribute renamed to increase internal consistency (Link/@uri to Link/@href)
+* For further changes see http://wiki.tdwg.org/twiki/bin/view/SDD/DiscussionFor1dot1beta11
+
+Release Notes for SDD Release 1.1b11  name@cs.umb.edu (replace name with ram)
+* First release made in SVN 
+* Added release mechanisms for windows (release.bat and ReleaseNotesTemplate.txt)
+* Adjusted for errors on http://wiki.tdwg.org/twiki/bin/view/SDD/DiscussionFor1dot1beta10
+* In this release, some complex types are anonymous (= untyped elements) and this may still provide problems for TAPIR
+

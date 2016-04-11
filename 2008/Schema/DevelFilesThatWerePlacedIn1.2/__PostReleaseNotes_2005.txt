@@ -1,0 +1,446 @@
+Tellico:
+
+Book collections have 26 default fields: 
+Title, Subtitle, Author, Binding, Purchase Date, Purchase Price, Publisher, 
+Edition, Copyright Year, Publication Year, ISBN#, LCCN#, Pages, Language, 
+Genre, Keywords, Series, Series Number, Condition, Signed, Read, Gift, Loaned, 
+Rating, Front Cover, and Comments. 
+
+
+Bibliographies have 22 default fields: 
+Title, Entry Type, Author, Bibtex Key, Book Title, Editor, Organization, 
+Publisher, Address, Edition, Pages, Year, Journal, Month, Number, How Published, 
+Chapter, Series, Series, Volume, Cross-Reference, and Notes. 
+
+Although bibliographic collections are not specifically linked to bibtex, the default 
+set of fields is taken from a typical set of bibtex fields. When exporting to bibtex, 
+an extended property called bibtex is used for each fields to define the corresponding bibtex 
+field. If you add an additional field to a bibliography and want to export it to bibtex, 
+be sure to set the bibtex extended property. 
+
+Tellico does have some specialized functions for bibliographies. Bibtex string macros can be added, 
+modified, or deleted from within Tellico and the bibtex export gives you the option of 
+expanding the macros. Bibtex citations can be pushed to an external application such as LyX or Kile using the so-called lyxpipe. 
+
+
+
+----------------------
+
+The Label structures so far used a second level of element names to distinguish between Label/Text, Label/Abbreviation, and Label/ExportToken.
+This has been changed by using an attribute "type" with enumerated values. Thus "Label/Text" becomes "Label[@type="full"]", "Label/Abbreviation" becomes "Label[@type="abbrev"]", and "Label/ExportToken" becomes "Label[@type="token"]".
+
+
+### Should add to state scores attributes: ####
+ - kind, type, with positivescore, negativescore, non-scored, 
+ - also something for considered implicit
+ - also something for scope out!
+
+** Charles Copp interested in UBIF, has modeling and modularization experience
+** ICBN uses "connecting term" for the "RankTerm"
+
+Interest in SDD: Rebecca, user interface development, based on flash.
+Eric Chenin, France
+
+Gu. Rousse: either override, or aggregate. Could fix some characters as absolute override. This knowledge aggregation problem is general, not limited to SDD!
+Glossary into UBIF???
+Should definitely be cross-referencable differently, to link characters from multiple projects to the same semantics. How would Jessie do it?
+
+idea: make separate standards: SDD-Terminology, SDD-Coded, SDD-Markup, SDD-StoredKey
+idea: all description of resource, by adding media resource to the header choice! 
+
+-------------
+==================================
+Comment on DWC: GenBankNumber should be GenBankNumbers plural according to annotation
+
+First ask Walter to comment on the enumerations in UBIF! Done on 19. August
+Then try to use taxacom to get feedback on the enumerations in UBIF!
+
+Write on WIKI:
+
+Try explaining common things relevant for DELTA-like import/export operations
+Contact Alex Gray re Derivations (= TransformationHistory) (his PI did look at it, they have a different, GRID-based perspective)
+  Done on 3.June2004 - no reply
+Contact perhaps William Ulate CR, fungus id database and CR flora markup -- THANKS SAID. He is on the SDD wiki list! wulate@inbio.ac.cr
+
+=================
+EB: Variations are classified either as continuous, or quantitative (smoothly grading between two extremes, 
+ with the majority of individuals at the centre, as height in human populations); or as discontinuous, or 
+ qualitative (composed of well-defined classes, as blood groups in man). A discontinuous variation with several 
+ classes, none of which is very small, is known as a polymorphic variation. The separation of most higher organisms 
+ into males and females and the occurrence of several forms of a butterfly of the same species, each coloured to blend 
+ with a different vegetation, are examples of polymorphic variation.
+
+Fundamentals: Method: perhaps separate Instrumentation (see EB article) as generic from specific methods?
+
+Measurement Unit: EB: Measuring a quantity means ascertaining its ratio to some other fixed quantity of the same kind, 
+ known as the unit of that kind of quantity. A unit is an abstract conception, defined either by reference to some arbitrary 
+ material standard or to natural phenomena. For example, the standard of length in the metric system was defined (1889-1960) 
+ by the separation of two lines on a particular metal bar, but it is now defined as equal to a certain number of wavelengths 
+ of light produced by a particular kind of atom under given conditions.
+
+EB: Types of measurement scales
+To measure any property or activity is to assign it a unique position along a numerical scale. When numbers are used merely to 
+identify individuals or classes (as on the backs of athletes on a football team), they constitute a nominal scale. When a set 
+of numbers reflects only the relative order of things (e. g., pleasantness-unpleasantness of odours), it constitutes an ordinal scale. 
+An interval scale has equal units and an arbitrarily assigned zero point; one such scale, for example, is the Fahrenheit temperature scale. 
+Ratio scales not only provide equal units but also have absolute zero points; examples include measures of weight and distance.
+=================
+semantics = relations between expressions and meanings
+syntax = relations among expressions
+conjunction = and
+disjunction = or
+--------------
+From OGC: Observations and Measurements:
+<gml:ValueArray observable="#Temperature"><gml:valueMembers xlink:href="externalFile.dat"/></gml:ValueArray>
+--------------
+From Microsoft MSDN, popup window explaining "Level": This is a difficulty level, not expertise level.
+100 The technical level of introductory and overview material. Assumes little or no expertise with topic and covers topic concepts, functions, features, and benefits.
+200 The technical level of intermediate material. Assumes 100 level knowledge and provides specific drill-down into topic.
+300 The technical level of advanced material. Assumes 200 level knowledge and in-depth understanding of features in a real world environment and strong coding skills. Provides a detailed technical overview of a subset of product/technology features, covering architecture, performance, migration, deployment, and development.
+400 The technical level of expert material. Assumes a deep level of techn. knowledge and experience and a detailed, thorough understanding of topic. Provides expert-to-expert interaction and coverage of specialized topics
+--------------
+Diss image
+1/3 2/3 line
+eyes within   = line on the outside of eyes
+eyes lateral  = line on the inside of eyes
+--------------
+Diskrete Merkmale haben höchstens abzählbar unendlich viele Ausprägungen. 
+Stetige Merkmale können überabzählbar viele Werte annehmen, z.B. jede reelle Zahl in einem Intervall. 
+--------------
+In UML 3 major relationship types exist: generalization, association (with composition being special), and dependency. All 3 types exist in SDD as well!
+Concepts: We need structural generalization as well as structural composition. Plus method generalization, property generalization hierarchy
+----------
+Prometheus says a term can be
+STRUCTURE TERM	leaf, hair, apex
+PROPERTY TERM	texture
+STATE TERM	glabrous	
+MODIFIER TERM	before, more than,..
+UNIT TERM
+-------------
+InheritedFrom above / below ## Currently as Origin=Aggregated/Inherited
+inheritance why not always
+ inherit/don't inherit
+ child determines whether it inherits, default is no
+ inheriting: parent polymorphic, child being monomorphic
+  for compiling: reason not to do
+  !!information is always interesting, but coding status should not change from not coded!!
+  risk is that not all children coded, so representation of upper taxon may be incomplete / in adequate. Unknown may then be a more appropriate coding!
+-------------
+
+
+======================== WIKI ==================================
+
+The release versions for TDWG 2004 were UBIF 1.0 beta 18 and SDD 1.0 beta 2. Based on the discussions in Christchurch and criticism received, the following changes were made:
+
+
+UBIF
+=========
+
+Object type concept
+-------------------
+
+The congruence between a dataset and a knowledge domain has been given up. Previously each dataset was focussed on one knowledge domain (e.g. descriptive data,
+taxon concept, specimen units). All objects from other domains were expected to be provided in the form of short proxy objects, with id, label, and usually some 
+core attributes. These proxy objects were kept together in <nop>ExternalDataInterface. The term "<nop>ExternalDataInterface" was much critized in Christchurch. 
+However, also the concept of having an interface that shields from the complexity and diversity of "outside" data formats and standards was 
+similarly found not very attractive. At the same time, from the discussion and from Rebecca Shapley's short presentation on how future data will
+probably be a mosaic of base, core, and detail types for the various areas, a hierarchy of object representations emerges (DataModelMatrix).
+
+The aim is to find a name for a section that serves as a container for replacement proxy objects where no external data exist, and for caching / interface proxies where linking information is available. 
+
+UBIF is now changed and tries to address the problem of object relations, object resolution, and persistence of object and relation semantics in a more general framework,
+which is detailed in the wiki topic ObjectTypePattern and topics branching off from there.
+
+
+UBIF now introduces an abstract base type for any kind of first-class object. This type includes a Representation (strings and media like images),
+a link list expressing generic relations to other objects using URIs, and Developer tools for development annotation, custom extensions and version extensions.
+
+For each dataset besides meta information at the start, multiple object collections can be defined. This list of objects collections is currently
+purposely kept flat. The advantage is that new object types, and even related object types (overlapping with existing type concepts) can 
+easily be added without breaking any logic. This comes at the expense of a relatively long list of possible object collections. If this
+needs to be changed, possible generalizations are biological versus general objects, Resources = including Publication + MediaResources, Thesauri = including TaxonNames, GeoLocations, etc.
+
+
+Changes to object type names
+----------------------------
+
+SDD in principal is applicable to many non-biological knowledge domains. For this reason the SDD group decided not to use the conventional biological terms Taxon name and hierarchy but !ClassName and !ClassHierarchy. 
+However, with the development of UBIF, the relations to other biological standards became so dominant, and other groups considered the !ClassName notation confusing (class being both highly general in that all types in UBIF are class definitions in an information science sense, and class being specific as a biological rank term). I hope that by changing the names to a more biology-friendly notation (!TaxonName) the integration of TDWG standards is improved without excluding the possibility of using SDD for non-biological purposes. In fact, the use of "taxonomy" in informatics is closely related to the use in biology. It may therefore be considered acceptable to talk about a "pottery taxonomy" instead of "pottery classification".
+
+Similarly, the use of Unit was criticized. "Unit" was purposely choosen by ABCD to express that both observed and collected specimens, and also fragements of specimens may be considered a unit. However, without the context of a collection schema such 
+as ABCD, the term Unit is liable to cause confusion. Already in SDD there are measurement units and sampling units. Current options are !TaxonOccurrence (to generalize collected and observed specimens), Object (used in previous SDD versions) and
+simply Specimen. The Collins English Dictionary defines:<br/>
+*specimen* n.<br/>
+   1. a. an individual, object, or part regarded as typical of the group or class to which it belongs. b. (as modifier): a specimen signature; a specimen page.
+   2. Med. a sample of tissue, blood, urine, etc., taken for diagnostic examination or evaluation.
+   3. the whole or a part of an organism, plant, rock, etc., collected and preserved as an example of its class, species, etc.
+   4. Informal, often derogatory.a person. [C17: from Latin: mark, evidence, proof, from specere to look at]
+
+which seems to fit both biological and non-biological usage fairly well.
+
+
+Multilingual design pattern.
+----------------------------
+
+All references of the attribute "language" were changed to "xml:lang", bringing the schema more in line with standard practices. The change is now possible, since the research into the xs:language simply type has shown that is does support the necessary special codes for unknown, neutral and mixed can be achieved with that type (see wiki topic ExtendLanguageWithNeutralAndUnknown).
+
+In the case of multiple language/audience representations an additional attribute "translatedfrom" pointing to a language from which the text was translated has been added whereever language references involve possibly translations. 
+
+In previous versions, UBIF used only language representation, and SDD used in addition audience representation for different audiences having the same 
+language. This caused various complications in the interactions between UBIF and SDD. It was therefore considered appropriate to offer an audience
+selection mechanism in all UBIF language specific representations. The audience attribute is entirely optional and is not expected to be used by most users. In most objects it is 
+unlikely to be useful, but it may, e. g., be of interest when defining vernacular organism names.
+
+   * <small>Audiences may optionally be defined in a dataset-level collection. However, no identity/constraint (or "referential integrity") has been added to the use of 
+audience. Technically any uncontrolled value may be used in the attribute, but as a recommendations users should only use audience values that are either 
+resolvable through a uri mechanism, or that correspond to the id attribute of an Audience element in one of the datasets.</small>
+
+Most importantly, the general hierarchy of collection, language/audience -specific representation, and particles of the representation was changed.
+This decision is difficult because a fundamental conflict exists between clean and consistent design from a perspective of not ever looking
+at xml documents, and the desire of many to understand or debug xml instance documents, and reduce "schema complexity" and the number of elements. In the case of multilingual design this is aggravated
+by the fact that the majority of developers is monolingual and plans only monolingual developments. They do accept the need for multilingual design,
+but strongly resent the verbosity of the current solution.
+
+The different approaches are best illustrated by example. For a given object that has a label with a full and abbreviated text, possibly in multiple languages 
+(e.g. Publications/Publication), the following patterns have been used or proposed:
+
+<pre>
+1. Very old SDD versions used:
+   Labels
+     Label language="en"
+       Text
+       Abbreviation
+     Label language="de"
+       Text
+       Abbreviation
+
+2. UBIF as presented in Christchurch 2004 used:
+   Label
+     Representation language="en"
+       Text
+       Abbreviation
+     Representation language="de"
+       Text
+       Abbreviation
+
+3. Current version of UBIF uses:
+   Label xml:lang="en"
+     Text
+     Abbreviation
+   Label xml:lang="de"
+     Text
+     Abbreviation
+
+4. An alternative proposed on the wiki:
+   Label 
+     Text xml:lang="en"
+     Abbreviation xml:lang="en"
+     Text xml:lang="de"
+     Abbreviation xml:lang="de"
+</pre>
+
+Solution 1 follows the standard pattern that repreated elements are to be enclosed by a collection element and that the collection is named in a plural form. However,
+this caused confusion because the plural form is not intuitive for collection were only a single element is to choosen at any time (collection type rdf:alt). For 
+considerable time the SDD workgroup was therefore happy with pattern 2, introducing the element name "Representation" for elements of alt-collections. However,
+the extra collection element (which in most datasets contains only a single representation) creates the above-mentioned social problems.
+
+In the face of these strong and conflicting desires, I have decided that pattern 3 may be the best balancing solution. The general rule would be that most collections
+are enclosed in collections elements, but some are repeated directly. After all, this is inherent in the design of xml and xml schema, and the extra collection
+elements are introduced more for programming convenience and clarity of design than for necessity.
+
+I consider the pattern 4 undesirable, insofar that is requires additional information whenever some particles of a representation (e.g. the abbreviation) are purposely left
+empty. In this case it is not desirable to mix a German Text with the French abbreviation. In other cases, this is acceptable. So far, when ever mixed language
+report is acceptable, these data particle are in element that have independent xml:lang attributes. Pattern 4, but putting xml:lang on any particle, violates this
+design pattern and would require additional communication and often complicated algorithms to sometimes mix languages, and sometimes explicitly consider particles as empty or missing.
+
+
+Relatedly, UBIF IPRStatements was changed. Previously all different statements (Declaration, Copyright, License, etc.) where combined for each language. The implication
+of this design was that if a copyright exists in German and English, but License only in English, only the copyright but not License would have been displayed 
+to German consumers. While it is desirable in many labeling cases to be able to display abbreviations or icons only in some languages, and not mix languages here,
+in the case of IPR statements it was felt that these would normally be viewed as independent, so that a mixture of different languages would be preferable to not
+seeing a statement at all. As a result, several types and the structure has been changed so that each kind of statement has an independent language collection. All statements are still kept in a single IPRStatements container, however.
+
+
+UBIF DerivationMetadata:
+-------------------------
+
+- Type "DerivationMetadata" renamed to "TechnicalMetadata"
+- Element "Derivation" of this type renamed to "TechnicalMetadata" as well.
+  attributes: 
+  "datetime" renamed to "created"
+  "gooduntil" renamed to "expires" (also ABCD: "ExpiryDate" changed to "expires")
+
+UBIF ContentMetadata:
+---------------------
+ "WebAddress" changed to "URI", now similar to the structure of the Statement type (see IPRStatements).
+
+RevisionData type:
+------------------
+ - "InitiationDate" changed to DateCreated
+ - "LastRevisionDate" changed to DateModified
+ - Version/VersionReleaseDate changed to DateIssued
+ - Version data moved into RevisionData. In earlier version, only the entire dataset could have version metadata, now individual
+   objects such as characters or descriptions may optionally be versioned as well. This was found to be desirable in the context of 
+   shared descriptive terminologies; also some aspects of LSID identifiers may make versioning of objects more frequent than is currently done.
+
+All these changes change element names present in either SDD alone or both ABCD and SDD to a name from qualified Dublin Core 1.1. 
+Should DateCreated/Modified in RevisionData be changed to an attribute? Not done, Walter/ABCD against it.
+
+----
+
+AgentInterface, "Role" in contact information (e.g. "director", "database administrator") changed from Label/Representation/Text to type StringL (direct text with language attribute).
+
+
+
+--------------------------------------------------------------------
+
+SDD
+===
+
+The element "LanguageRules" has been put back to the development version only. 
+
+
+Characters:
+-----------
+
+Proposal by Ben Richardson: If public shared terminologies concepts have to be changed in a new version in ways that are no longer backward compatible, a new character will have to be created, but it is usually undesirable to remove the old character immediately. Instead it could be "deprecated", i.&nbsp;e. existing data may still refer to the character, but the authors of the terminology recommend against using it for new data and indicate that the character may be removed in the future.
+Date entry client software should take special action when encountering deprecated characters or states.
+
+Two possible solution: If a date on which deprecation occurs needs to be communicated, it may be desirable to add a special attribute 
+deprecatedOn="-datevalue-" to all terminology objects in SDD. However, if the date is of lesser importance, the "deprecated" status 
+would fit into UBIF "RevisionStatusEnum", by adding a "Deprecated" after "FullyRevised". As a recommendation, this change should be considered a
+version change of the object, and the date could be expressed a modified date.
+Note: currently there is no version control mechanism on characters, concepts, states or modifiers!
+
+-------
+
+Ratings have been removed from both characters and concepts. As Diederich & al. 1998 point out, character metadata for identification purposes (SDD uses "reliability", "availability", etc.; they used "conspicuity, ambiguity, variability") are *taxon dependent*. SDD so far has followed the DELTA example of tying this information to the character, but I believe that this solution does not scale very well once data sets span larger taxonomic groups (e.g. in collaborative projects like fish base). The newly proposed solution is to place ratings in descriptions, so that information may be inherited down the taxonomic hierarchy (see under heading "Descriptions" below).
+
+A new character type !SequenceCharacter (with corresponding description data type !SequenceData) was added for nucleotide and protein sequences. In principle, such sequences can be expressed as categorical characters. However, since the identity of columns is an assumption achieved in the alignment process, changing this assumption would require a huge effort in recoding data. Example for different alignment assumptions:
+1. ACGT--TACC
+2. ACGTTATACC could equally well be considered as 
+1. ACGTT--ACC
+2. ACGTTATACC.
+
+Many thanks to Shirley Cohen and Dan Miranker for input!
+
+
+
+CodingStatus:
+-------------
+
+As decided in Christchurch (see "Minutes of the SDD meeting in Christchurch, New Zealand, 11-17. October 2004"), in an attempt to simplify SDD, the CodingStatus definition facility was completely removed from the SDD schema. Instead, an enumeration was added to the UBIF schema and all references of CodingStatus now refer to this enumeration.
+
+This change is very similar to the change for statistical measures, and data-files corresponding to both enumerations will be provided. If applications rather than hard-coding the definitions will rely on these files a) extensions in future versions of SDD are easily accomodated b) designers of terminology are enabled to locally extend the definitions with labels in a new language. (Sending such extension back for integration into the next version would be appreciated!).
+
+The attribute "ref" was changed to "val" (value).
+
+Coding status usage in descriptions: this remains essentially identical to previous version, with two changes: 
+1. the values in the ref attribute are now fixed to single letter character/punctuation signs rather than id-numbers.
+2. A bug in the previous version was corrected: The element was named "Status" in coded descriptions, but still "CodingStatus" in natural language description. The latter has been changed to "Status" as well.
+
+
+----
+
+General: Character, state, etc. labels must now be unique within languages (including culture, i.e. en-us and en-uk can have the same label). See the minutes of the Christchurch meeting, chapter "Problem with Audience/Language optionality and schema validation" for the arguments.
+
+---
+
+Natural language wording definition in characters, states, modifiers, etc.
+-----------------------------------------------------------------------------
+
+The separation between three different wording types (VocabularyBaseW1 to W3, with intermost, single content with before/after, and repeated content with before/after/between)
+was given up. Since all elements are optional, this is considered an acceptable simplification. Furthermore, by removing the natural language wordings
+from the main Label/Representation structure and placing them in an independent collection, the number of types could be reduced.
+A single VocabularyBase type is now used as the basis for concept, character, state, modifier, measure, etc. definitions. In addition to the structures
+already present in the AbstractObjectType, a new NaturalLanguageWording/Fragment collection is present. Each fragment carries the multilingual language/audience attributes plus a 
+type attributes constrained to the enumerated values in NatLangFragmentTypeEnum. Current enumerated values are 'single', 'before', 'after', 'delim', 'lastdelim', 'delim2'; see annotations in enumeration for further information.
+
+
+
+Statistical measures:
+---------------------
+The attribute "ref" containing the enumerated values was changed to "type".
+
+
+Modifiers:
+---------
+
+The attempt to structure modifiers into those applicable to all kinds of characters and those applicable only to categorical states (like frequency or modifiers of degree/kind) has been dropped. In addition, in Christchurch it was considered undesirable to split for categorical character into two kinds. In previous versions, generally applicable modifiers (those also applicable to e.g. quantitative measures) were applied to all states together, whereas frequency and modifiers of degree/kind were directly on each state. The new version has modifiers on a character for quantitative, and on individual states for categorical data. If an application desires to do so, modifiers common to all states of a character in a description can be extracted. This, however, may result in ambiguous natural language expressions ("frequently red or frequently blue" to "frequently (red or blue)".
+
+As a result of dropping the differentiation between character-modifiers and state-modifiers, the types used in the definition of modifiers were reduced by one. Furthermore, although different modifier types are in prinical maintained in the modifier definition, the distinction is no longer explicit in the descriptions (coded or natural language). All modifier types are now referenced by a single element called "Modifier". Thus "<Categorical ref="2"><Modifiers><Certainty ref="41"/></Modifiers><State ref="6"><Frequency ref="22"/></State></Categorical>" is now simplified to: "<Categorical ref="2"><Modifiers><Modifier ref="41"/></Modifiers><Modifier ref="6"><Frequency ref="22"/></State></Categorical>".
+
+The change greatly simplifies the type system of SDD modifiers. It also does remove a number of validations that could be carried out by the schema in the previous proposal. For example, it now becomes possible to apply frequency modifiers to statistical measures like mean, or sample size. However, the modifier type system never was truly complete (it used types of other-state-modifier and other-character-modifiers). For example, morphological kind or degree modifiers like "narrowly" or "lightly" where in the previous version only validated to be state-specific modifiers. The schema offered no mechanism to prevent using "narrowly" on colors, or "lightly" on a shape term. Furthermore, additional character types (those in future extensions of SDD) may have additional validation requirements in regard to modifiers. These reasons make the reduction in modifier validation through the schem less problematic than it may occur. 
+
+Finally, independently of schema-type-driven validation, SDD already offers a method to let terminology-designers define the expected/desired combination of individual modifiers and individual characters. This method is the definition of recommended modifiers in the concept trees. Listing a modifier in a node of the concept tree makes it recommended for all characters below this node. The recommendations are not provided for external (non-schema) validation, but to improve the design of user interfaces (only recommended modifiers are expected to be offered during data entry). Knowledge about recommended modifiers, however, also offers a tool when searching for non-sensical character-modifier or state-modifier combinations.
+
+
+
+Descriptions:
+-------------
+In Categorical character, Summary data, the sequence of 'Model' and 'State' elements swapped, now starting with the optional Model element.
+
+The handling of images and other media associated with entire descriptions was slightly changed. It used to be part of the DescriptionBase type (= common parts for both coded and natural language descriptions). Now it has been moved after the SummaryData / SampleData elements and is only applicable to coded descriptions. The path CodedDescription/MediaResources remains unchanged (only the position of element has been changed). Linked images are rather specific to the context of coded descriptions and do not appear as such in natural language descriptions that is marked up (i.e. they may appear in the source that also contains natural language description text, but this text also usually contains taxon synonymy and other information not handled in SDD description markup). It is hoped that this change focusses the purpose of natural language description markup and improves the reusability of types from SDD in other contexts (e.g. online flora or fauna creation).
+
+Furthermore, in the discussion about other standards (e.g. online-monographs/flora or fauna creation) it became obvious that a reuse of SDD types would mostlikely occur not on the level of the SDD description types. These types are containers for descriptions, but also provide the description context (definintion of class or object that is being described, Source, Revision, and IPR information) when treated as independent objects. In the context of online monographs the embedding already defines such context. To improve the use of SDD in such situations, several previously anonymous types inside the SDD description containers (CodedDescription, NaturalLanguageDescription) have been changed to named types (SummaryDataCollection, SampleDataCollection, and NaturalLanguageData; this change of the schema does not affect instance files).
+
+In the case of the NaturalLanguageData type created in this context, a further change was made in that the type is now derived by restriction from the ConceptMarkup type. The restriction prohibits the concept ref/debugref. This change makes it explicit that immediately from the start the natural language markup is a recursive markup of concept, with unparsed text, character/states and further concepts.
+
+In descriptions, the number of modifiers applied to each character state (or to the character in quantitative character types) has been limited to four. This is done to simplify implementations by offering a denormalized modifier model (using attributes such as Modifier1, Modifier2, Modifier3, Modifier4). The structure used in the schema is not denormalized, however, and future versions of SDD may increase the number of supported modifiers or even support an unlimited number. Documents valid under SDD 1.0 would remain valid under such a future version.
+
+As discussed above, character ratings about their usefulness for identification depend on the taxonomic group and are thus now treated as a special form of descriptive data that may be inherited down the taxonomic hierarchy. Since the issue is unresolved, however, the Ratings element in description is available only as part of the development version (element "__IdentificationRatings").
+
+With the change in the multilingual design pattern, also the notes/comment character data extension mechanism was changed from Note/Text to Note.
+
+!NaturalLanguageDescriptions:
+-------------
+
+In any MarkupText element ("Text") an additional newpage attribute has been introduced to record the pagination as the most generally important publishing artifact. Also, xs:anyAttribute now allows users to extend the markup with attributes from other namespaces. This may be used to also record lesser publishing artifacts.
+
+With the change in the multilingual design pattern, also the character data notes/comments are changed from Note/Text to Note.
+
+===========
+
+
+
+======================
+OPEN PROBLEMS
+======================
+
+
+Open problems:
+===============
+Structures (parts of the organism) may be classified both by kind-of and part-of relations. Structures are represented by concept trees,
+which are strict trees (not Directed Acyclic Graphs). This is thought desirable because the concept trees are intended to a high degree for
+operational display purposes. However, this means that a structure might have to occur twice in a generalization and in a composition
+tree, and that the concept nodes identifying the same structure are not linked(connected.
+
+Should the concept tree broken down to a list of edges (like trees would be presented in databases)?
+Considering the protocol discussion and problems in handling recursive tree structures, this may be advantageous
+
+Relational characters: 3 legs per body, angle 30° between anntenna and top of head, petals 2x length of sepals. - these require characters in two structures - which is possible, but not very clear.
+
+Currently SDD is able to map categorical states to one or multiple states in one or multiple characters. It is, however, not yet able to handle a combination of states on the "from" side (Char. 1, state 2 "and" Char. 2, state 4 ? Char. 3, state 1). 
+
+Add the possibility to add states considered-and-rejected list, Kevin's idea!
+
+The mapping between character states of a single character does define a hierarchy which may be used to display states as a tree in the user interface.
+However, the problem here is that state mappings can only be defined on a per-character basis, not in general for concept states!
+
+
+
+Glossary: The entire Glossary and Definition system has not be placed in the 1.0 version and is only available in the development version 1.1.
+Too little feedback and testing occurred so far to consider the Glossary/Definition system stable. 
+
+A special problem is that Glossary terms are often taxon (higher class) specific. This is in fact related to a similar 
+problem in the wording of character/states (sexual spore is called ascospore in ascomycetes, basidiospore in basidiomycetes). 
+Would one use different characters for such terms? Should there be "Taxonomic scope" on character, state labels, and Glossary entries? How?
+
+
+
+
+
+-- [[Main.GregorHagedorn][Gregor Hagedorn]] - 1 March 2005
+======================== WIKI ==================================
+
+

@@ -1,0 +1,286 @@
+<root>
+  <ConceptTrees>
+    <ConceptTree id="1">
+      <Representation>
+        <Label>First Character Tree</Label>
+      </Representation>
+      <Type>PartCompositionHierarchy</Type>
+      <DesignedFor>
+        <Role>DescriptionEditing</Role>
+        <Role>InteractiveIdentification</Role>
+        <Role>TerminologyReporting</Role>
+        <Role>NaturalLanguageReporting</Role>
+      </DesignedFor>
+      <Concept id="0" debugkey="rootkey is currently not referrable!">
+        <Representation>
+          <Label>Node label</Label>
+          <Wording>
+            <TextBefore>Label</TextBefore>
+            <TextAfter>:</TextAfter>
+            <RepeatedDelimiterText>, </RepeatedDelimiterText>
+            <LastDelimiterText> and </LastDelimiterText>
+          </Wording>
+        </Representation>
+        <ReferableDefinitions>
+          <ConceptStates>
+            <StateDefinition id="10">
+              <Representation>
+                <Label>State&lt;sup&gt;10&lt;/sup&gt;
+                </Label>
+              </Representation>
+              <Definition ref="999"/>
+              <CustomExtensions>
+                <CustomExtension name="x" xmlns:x="www.x.edu"/>
+              </CustomExtensions>
+            </StateDefinition>
+            <StateDefinition id="11">
+              <Representation>
+                <Label>State x&lt;sup&gt;11&lt;/sup&gt;
+                </Label>
+              </Representation>
+              <Definition ref="999"/>
+              <Annotation>= Developer annotation</Annotation>
+            </StateDefinition>
+            <StateDefinition id="12">
+              <Representation>
+                <Label>State 12</Label>
+              </Representation>
+              <Definition ref="999"/>
+            </StateDefinition>
+          </ConceptStates>
+        </ReferableDefinitions>
+        <InheritableDefinitions>
+          <DependencyRules>
+            <OnlyApplicableIf>
+              <State ref="1"/>
+              <State ref="2"/>
+            </OnlyApplicableIf>
+            <InapplicableIf>
+              <State ref="3"/>
+            </InapplicableIf>
+          </DependencyRules>
+        </InheritableDefinitions>
+        <Nodes>
+          <Concept id="2">
+            <Representation>
+              <Label>Node label</Label>
+            </Representation>
+          </Concept>
+          <Concept id="3">
+            <Annotation>The node labels are optional!</Annotation>
+          </Concept>
+        </Nodes>
+      </Concept>
+    </ConceptTree>
+    <ConceptTree id="2">
+      <Representation>
+        <Label>Second Character Tree</Label>
+      </Representation>
+      <Type>PropertyHierarchy</Type>
+      <DesignedFor>
+        <Role>NaturalLanguageReporting</Role>
+      </DesignedFor>
+      <Concept id="21">
+        <Representation>
+          <Label>Label&lt;em&gt;Label&lt;/em&gt;
+          </Label>
+          <Abbreviation>normalizedString</Abbreviation>
+          <Wording>
+            <TextBefore>Label&lt;em&gt;Label&lt;/em&gt;
+            </TextBefore>
+            <TextAfter>Label&lt;em&gt;Label&lt;/em&gt;
+            </TextAfter>
+          </Wording>
+        </Representation>
+        <Definition ref="999"/>
+        <Annotation>= Developer annotation</Annotation>
+        <ReferableDefinitions>
+          <ConceptStates>
+            <StateDefinition id="13">
+              <Representation>
+                <Label>Label 13</Label>
+                <Abbreviation>normalizedString</Abbreviation>
+                <Wording>
+                  <Label>Label&lt;em&gt;Label&lt;/em&gt;
+                  </Label>
+                </Wording>
+              </Representation>
+              <Definition ref="999"/>
+            </StateDefinition>
+            <StateDefinition id="14">
+              <Representation>
+                <Label>Label 14</Label>
+              </Representation>
+            </StateDefinition>
+            <StateDefinition id="15">
+              <Representation>
+                <Label>Label 15</Label>
+              </Representation>
+            </StateDefinition>
+          </ConceptStates>
+        </ReferableDefinitions>
+        <InheritableDefinitions>
+          <DependencyRules>
+            <InapplicableIf>
+              <State ref="4"/>
+            </InapplicableIf>
+          </DependencyRules>
+        </InheritableDefinitions>
+      </Concept>
+    </ConceptTree>
+    <ConceptTree id="9">
+      <!-- Concept trees can also define presentation concepts, e.g. n-dimensional array arrangements: By default the innermost dimension is considered row, the next table (rows). Any further dimension can only be displayed as pages or when using a pivot viewer. Recommendation: applications may display 3 dimensions as multiple 2-dimensional tables one below the other. -->
+      <Representation>
+        <Label>Table of Growth diameter (by time and temperature)</Label>
+      </Representation>
+      <Type>PresentationTable</Type>
+      <DesignedFor>
+        <Role>NaturalLanguageReporting</Role>
+      </DesignedFor>
+      <!-- rows -->
+      <Concept id="900" debugkey="table">
+        <Nodes>
+          <Concept id="901" debugkey="row1">
+            <!-- row (the ref IDs are currently just dummies for formal validation, see debugref for the intended concepts!) -->
+            <Representation>
+              <Label>7 days</Label>
+            </Representation>
+            <Nodes>
+              <!-- row -->
+              <Concept id="904">
+                <Character ref="1" debugref="GrowthDiam15c7d_OA"/>
+              </Concept>
+              <Concept id="905">
+                <Character ref="2" debugref="GrowthDiam15c7d_MA"/>
+              </Concept>
+              <Concept id="906">
+                <Character ref="3" debugref="GrowthDiam15c7d_SNA"/>
+              </Concept>
+            </Nodes>
+          </Concept>
+          <Concept id="902" debugkey="row2">
+            <Representation>
+              <Label>14 days</Label>
+            </Representation>
+            <Nodes>
+              <!-- row -->
+              <Concept id="907">
+                <Character ref="1" debugref="GrowthDiam15c14d_OA"/>
+              </Concept>
+              <Concept id="908">
+                <Character ref="2" debugref="GrowthDiam15c14d_MA"/>
+              </Concept>
+              <Concept id="909">
+                <Character ref="3" debugref="GrowthDiam15c14d_SNA"/>
+              </Concept>
+            </Nodes>
+          </Concept>
+          <Concept id="903" debugkey="row3">
+            <Representation>
+              <Label>21 days</Label>
+            </Representation>
+            <Nodes>
+              <!-- row -->
+              <Concept id="910">
+                <Character ref="1" debugref="GrowthDiam15c21d_OA"/>
+              </Concept>
+              <Concept id="911">
+                <Character ref="2" debugref="GrowthDiam15c21d_MA"/>
+              </Concept>
+              <Concept id="912">
+                <Character ref="3" debugref="GrowthDiam15c21d_SNA"/>
+              </Concept>
+            </Nodes>
+          </Concept>
+          <!-- end rows -->
+        </Nodes>
+      </Concept>
+    </ConceptTree>
+    <!-- other types possible for character group are: -->
+    <ConceptTree id="10">
+      <Representation>
+        <Label>Observation methods</Label>
+      </Representation>
+      <Type>MethodHierarchy</Type>
+      <Concept id="1001" debugkey="CultureMethods">
+        <Representation>
+          <Label>Culture methods</Label>
+        </Representation>
+        <Nodes>
+          <!-- dummy content, in a real tree many more methods would be listed! -->
+          <Concept id="1002">
+            <Representation>
+              <Label>Table of Growth diameter (by time and temperature)</Label>
+              <Abbreviation>normalizedString</Abbreviation>
+              <ExportToken>A</ExportToken>
+              <Icon ref="123"/>
+              <MediaObjects>
+                <MediaObject ref="124"/>
+              </MediaObjects>
+            </Representation>
+            <Character ref="1" debugref="GrowthDiam15c21d_OA"/>
+          </Concept>
+          <Concept id="1003">
+            <Character ref="2" debugref="GrowthDiam15c21d_MA"/>
+          </Concept>
+          <Concept id="1004">
+            <Character ref="3" debugref="GrowthDiam15c21d_SNA"/>
+          </Concept>
+        </Nodes>
+      </Concept>
+    </ConceptTree>
+    <!-- other types possible for character group are: -->
+    <ConceptTree id="11">
+      <Representation>
+        <Label>Special tree for modifier sets (normally these are expected to be integrated into another main concept tree!)</Label>
+      </Representation>
+      <Type>OtherConceptHierarchy</Type>
+      <Concept id="2001" debugkey="CultureMethods">
+        <Nodes>
+          <Concept id="2002">
+            <Representation>
+              <Label>Standard uncertainty modifiers</Label>
+            </Representation>
+            <InheritableDefinitions>
+              <RecommendedModifiers>
+                <ModifierSet ref="40"/>
+              </RecommendedModifiers>
+            </InheritableDefinitions>
+          </Concept>
+          <Concept id="2003">
+            <Representation>
+              <Label>Modifier set for presence/absence characters</Label>
+            </Representation>
+            <InheritableDefinitions>
+              <RecommendedModifiers>
+                <ModifierSet ref="1"/>
+              </RecommendedModifiers>
+            </InheritableDefinitions>
+          </Concept>
+          <Concept id="2004">
+            <Representation>
+              <Label>Modifier set for standard categorical characters</Label>
+            </Representation>
+            <InheritableDefinitions>
+              <RecommendedModifiers>
+                <ModifierSet ref="20"/>
+                <ModifierSet ref="1"/>
+              </RecommendedModifiers>
+            </InheritableDefinitions>
+          </Concept>
+          <Concept id="2005">
+            <Representation>
+              <Label>Modifier set for colors</Label>
+            </Representation>
+            <InheritableDefinitions>
+              <RecommendedModifiers>
+                <ModifierSet ref="20"/>
+                <ModifierSet ref="1"/>
+              </RecommendedModifiers>
+            </InheritableDefinitions>
+          </Concept>
+        </Nodes>
+      </Concept>
+    </ConceptTree>
+  </ConceptTrees>
+</root>

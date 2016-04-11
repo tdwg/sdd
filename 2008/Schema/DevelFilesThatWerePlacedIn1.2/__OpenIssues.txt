@@ -1,0 +1,79 @@
+Sex, !TaxonomicRank and Codingstatus unchanged, but now inherited from common base type (AbstractStringOrCode)
+
+Measure uses type,
+Label, Detail, MediaObject use role
+
+OK, because multiple roles: <xs:element name="Role" type="CharacterTreeRoleEnum" maxOccurs="unbounded"/>
+<xs:element name="Class" type="ModifierClassEnum" default="OtherModifierClass" minOccurs="0">
+
+<xs:attribute name="valueclass" type="UnivarStatMeasureClassEnum" use="optional" default="CentralMeasure">
+ 
+<xs:attribute name="role" type="NatLangPhraseRoleEnum" use="required">
+
+<xs:attribute name="rel" type="LinkingRelEnum" use="required">
+
+<xs:attribute name="role" type="LabelRoleEnum" use="optional" default="Full">
+<xs:attribute name="role" type="DetailRoleEnum" default="Description">
+<xs:attribute name="role" type="MediaRepresentationRoleEnum" use="optional" default="UnknownMediaRole">
+
+<xs:attribute name="role" type="AgentRoleEnum" use="required">
+<xs:attribute name="role" type="AgentCreatorRoleEnum" use="required"/>
+etc. (3 more) 
+
+<xs:attribute name="role" type="IRPStatementRoleEnum" use="required">
+
+<xs:attribute name="type" type="UnivarStatMeasureEnum" use="required">
+      
+<xs:element name="Type" type="ResourceTypeEnum">
+
+I believe all would best use class or property!
+
+Furthermore, role is defined in xlink as:
+	xlink:role="http://www.w3.org/1999/xhtml"
+	xlink:arcrole="http://www.rddl.org/purposes.htm#normative-reference"
+and in xhtml 2.0 as "Navigation" etc. on all elements.
+
+
+   * The attribute "type" in Measures renamed from "type" to "class" to make more consistent with other types 
+(!CodingStatus, Sex, all use "class" now). Note that "type" was introduced only after the meeting in Berlin, 
+and I did not check enough for correspondence with usage elsewhere.
+
+
+
+
+TODO: at least the markup versions should also be able to use the href method!
+
+TODO: Contact authors about proposed citations, make sure second URI (rs.tdwg.org) actually works.
+
+TO DO. EACH REF thing should be ref, uri/href, label, where label may be the only value!
+Char/char, Character/character
+
+---------
+
+- Summierte Meßdaten, Specimen sind summarisch bekannt
+   (wird von SDD nicht abgebildet!)
+
+Stuart Aitken lesen, für Diss (potentially cited, authors, about part-of anatomy ontologies)
+
+SDD WIKI pages durcharbeiten, insbesondere Diskussion über documentation
+
+In next version add scoped Representations, where taxon is added, eg for concept, character
+
+
+Send Paul note to ask about permission to use
+Ellis & Ellis images in GLOPP, the public 
+Global plant pathogen index.
+license / permission, no copyright transfer!
+Richmond publishing, "lichen guy".
+
+
+Ideas with Donald: have someone from GML explain concepts to us.
+
+Perhaps rework SDD schema into files
+
+ - TerminologyDefinition
+ - TerminologyReferences (included by descriptions and TerminologyDefinition itself)
+ - Descriptions
+ - IdentificationKeys
+
+

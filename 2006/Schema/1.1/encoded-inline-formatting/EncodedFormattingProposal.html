@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Proposal: Encoded inline text formatting</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="/Workbench02.CSS" type="text/css" rel="stylesheet" />
+</head>
+<body lang="en-us" xml:lang="en-us">
+
+<h2>Proposal: Encoded inline text formatting</h2>
+
+<h3>Introduction</h3>
+
+<p>This proposal does not discuss general formatting requirements, which we believe in the context of exchange of biological data to be most adequately dealt with by software creating reports or user interfaces.</p>
+
+<p>However, it is believed that some text content in databases or xml elements requires minimal text formatting to preserve the correct semantics, or to allow the degree of expressiveness considered necessary by content authors. An example of required semantics is the use of superscript and subscript markup: "G2", "G<sub>2</sub>", and "G<sup>2</sup>" may be different symbols referring to different concepts. An example of a social requirement is the tradition in biology to write scientific taxon names in italics. Biologists usually find a system that does not support this inadequate to their needs.</p>
+
+<h3>Existing solutions</h3>
+
+<h4>Email and Wikis</h4>
+
+<p>In "email-style", simple superscript expressions may be found as "mm^2". No equivalent for subscript or italics is similarly widespread.</p>
+
+<p>Studying existing WIKI software (which faces similar problems) members of the TDWG-SDD found that either (x)html is being used, or a large and inconsistent variety of text-based markup is employed.</p>
+  
+<h4>Usage in the DELTA standard</h4>
+
+<p>The experience with DELTA shows that text formatting is a significant issue. DELTA underwent changes from "[Itext]" to "[I]text['I]" to RTF typesetting marks. The DELTA User guide (Edition 4.12, 2000) explicitly accepts codes for: italics, bold, superscript, subscript, font size, default font appearance, En dash, Left/Right quote, new paragraph, default paragraph attributes, space before paragraph, space after paragraph, line indentation, first line indentation. Of these, the en-dash and quotes are already covered by Unicode. Italics, bold, superscript, subscript are proposed to support in a special convention detailed below. The paragraph-level formatting is considered problematic, since it may conflict with report generation styles, and may in fact cause invalid html to be created. As a compromise, the support of the break tag (&lt;br/&gt;) is proposed. Font size or style in general is not considered desirable. However, support of the &lt;small&gt; and &lt;big&gt; tags may be introduced if requested.</p>
+
+<h4>UBIF proposals up to version 1.0 beta 18</h4>
+
+<p>UBIF/SDD tried to use xhtml (rather than inventing proprietary codes). In versions of UBIF prior to 1.0 beta 18 used a mixed content markup, closely modeled on a mimized set of xhtml inline-formatting elements. Use of mixed content may also be found in ATOM 1.0 (for text having the attribute type="xhtml").</p> 
+
+<p>However, this use of mixed content was received critically and was considered to pose a significant burden to implementations. For example, a product like Altova Mapforce (allowing graphical xslt creation to map to and from databases) can not handle elements with mixed content. Furthermore, the element validation that is implicit in using xhtml-style markup to format label or definitional text, creates an impedance problem between database and xml: The database most likely uses ANSI or Unicode to encode &amp;, &lt;, &gt;, rather than natively storing character entities (&amp;amp;, &amp;lt;, &amp;gt;). It would thus have to distinguish between passing these through unencoded if used in combination of the few recognized markup tags, and encoding them otherwise.</p>
+
+<p>Example: the Database content "A&lt;sub&gt;1&lt;/sub&gt; &gt; A&lt;sub&gt;2&lt;/sub&gt;" would have to be recoded into: "A&lt;sub&gt;1&lt;/sub&gt; &amp;gt; A&lt;sub&gt;2&lt;/sub&gt;" when creating SDD xml content. This is especially problematic, since some validation may have to occur in the conversion process to avoid ill-formed xml or non-valid SDD. For example, unbalanced markup like: "A&lt;sub&gt;1&lt;/sup&gt;" should be converted to "A&amp;lt;sub&amp;gt;1&amp;lt;/sup&amp;gt;"!</p>
+
+<p>Starting with UBIF 1.0 beta 18, it is proposed to change this to a new concept based on encoded markup, avoiding mixed content.</p>
+
+<hr />
+
+<h3>Proposal</h3>
+
+<p>Support for a limited list of formatting symbols based on xhtml is recommended (see table below). String content in UBIF xml element content should not be mixed content. To avoid this, all occurrences of "&lt;", "&gt;", or "&amp;" should be encoded (i.&nbsp;e. to "&amp;lt;", "&amp;gt;", or "&amp;amp;"). Processors may then choose to recognize and recover the limited encoded formatting symbols. Thus a text that is literally in the UBIF document "H&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt;O" may be treated by a report generating software as xhtml mixed content markup "H&lt;sub&gt;2&lt;/sub&gt;O". When using xhtml as reporting format, the UBIF-encoded formatting may simply be recovered and displayed as "H<sub>2</sub>O". The recovering process should be limited to expressions producing well-formed xml (e. g. "H&lt;sub&gt;2&lt;/sup&gt;O" should be left unchanged).</p>
+
+<p>The proposed encoded formatting is very similar to the a formatting use found in ATOM 1.0 (for text having the attribute type="html").</p>
+
+<p>The content of this recommendation is not validated by UBIF schemata. It is intended to be an agreement between content authors and processors (e.&nbsp;g. a routine creating SDD natural language documents). Processors may not implement this, if it is not relevant for their purposes. However, they may wish to realize that "&amp;lt;em&amp;gt;xyz&amp;lt;/em&amp;gt;" and "xyz" are more similar than a plain text comparison may indicate. An example xslt script to strip encoded formatting symbols is provided for such purposes.</p>
+
+<p class="compact">The following xhtml tags are proposed to be recognized:</p>
+<table border="0" cellspacing="0" cellpadding="2" summary="Formatting examples">
+<tr class="header" valign="bottom" style="font:normal">
+  <td>&nbsp;</td>
+  <td colspan="4">Examples:</td>
+</tr>
+<tr class="header" valign="bottom" style="font:bold">
+  <td>Tag<br />
+name&nbsp;</td>
+  <td>Content editor<br />
+or database view</td>
+  <td>XML encoded string <br />
+in UBIF document</td>
+  <td>Browser view after <br />
+RecoverEncodedFormatting&nbsp;&nbsp;</td>
+  <td>Plain text after <br />
+StripEncodedFormatting&nbsp;&nbsp;</td>
+</tr>
+<tr class="data1">
+  <td>strong</td>
+  <td>&lt;strong&gt;Strongly emphasized&lt;/strong&gt;</td>
+  <td>&amp;lt;strong&amp;gt;Strongly emphasized&amp;lt;/strong&amp;gt;</td>
+  <td><strong>Strongly emphasized</strong></td>
+  <td>Strongly emphasized</td>
+</tr>
+<tr class="data2">
+  <td>em</td>
+  <td>This is &lt;em&gt;emphasized&lt;/em&gt;.</td>
+  <td>This is &amp;lt;em&amp;gt;emphasized&amp;lt;/em&amp;gt;.</td>
+  <td>This is <em>emphasized</em>.</td>
+  <td>This is emphasized.</td>
+</tr>
+<tr class="data1">
+  <td>b</td>
+  <td>Using &lt;b&gt;bold&lt;/b&gt;text.</td>
+  <td>Using &amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt; text.</td>
+  <td>Using <b>bold</b> text.</td>
+  <td>Using bold text.</td>
+</tr>
+<tr class="data2">
+  <td>i</td>
+  <td>This is &lt;i&gt;italics&lt;/i&gt;.</td>
+  <td>This is &amp;lt;i&amp;gt;italics&amp;lt;/i&amp;gt;.</td>
+  <td>This is <i>italics</i>.</td>
+  <td>This is italics.</td>
+</tr>
+<tr class="data1">
+  <td>sub</td>
+  <td>H&lt;sub&gt;2&lt;/sub&gt;O needs subscript.</td>
+  <td>H&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt;O needs subscript.</td>
+  <td>H<sub>2</sub>O needs subscript.</td>
+  <td>H2O needs subscript.</td>
+</tr>
+<tr class="data2">
+  <td>sup</td>
+  <td>cm&lt;sup&gt;3&lt;/sup&gt; needs superscript</td>
+  <td>cm&amp;lt;sup&amp;gt;3&amp;lt;/sup&amp;gt; needs superscript</td>
+  <td>cm<sup>3</sup> needs superscript</td>
+  <td>cm3 needs superscript</td>
+</tr>
+<tr class="data1">
+  <td>br</td>
+  <td>line break (3 forms):&lt;br&gt; (1),&lt;br/&gt; (2),&lt;br /&gt; (3)</td>
+  <td>line break (3 forms):&amp;lt;br&amp;gt; (1),&amp;lt;br/&amp;gt; (2),&amp;lt;br /&amp;gt; (3)</td>
+  <td>line break (3 forms):<br/> (1),<br/> (2),<br/> (3)</td>
+  <td>line break (3 forms): (1), (2), (3)</td>
+</tr>
+</table>
+
+<p>Strong and emphasis are usually rendered bold and italics, respectively. They are logical markup which leaves the exact rendering to the processor. Thus, emphasized words should be marked with em, whereas explicitly required italics (e.&nbsp;g. for taxonomic names) should use i.</p>
+
+<p class="compact">The following xhtml tags are not yet proposed, but discussion is encouraged.</p>
+<ul class="compact">
+<li>small - &lt;small&gt;smaller font size&lt;/small&gt; = <small>smaller font size</small>.</li>
+<li>big - &lt;big&gt;larger font size&lt;/big&gt; = <big>larger font size</big>.</li>
+<li>ins - inserted text revision marker, example: &lt;ins datetime="yyyy-MM-ddThh:mm:ss+hh:mm"&gt;...&lt;/ins&gt;</li>
+<li>del - deleted text revision marker, example: &gt;del datetime="yyyy-MM-ddThh:mm:ss+hh:mm"&gt;...&lt;/del&gt;</li>
+</ul>
+
+<p>Support for the u/underline tag was already rejected in <a href="../Docs/SDD_P_TextFormatting01.html">a previous SDD discussion</a>.</p>
+
+<h3>Applicable elements</h3>
+
+<p>In UBIF/SDD any element named "Text", "Details", "Definition", "Abbreviation", and "InternationalAbbreviation" should be treated when creating formatted reports, as potentially containing encoded formatting.</p>
+
+<p>Specific to SDD natural language generation are the following additional element names: "TextBefore, TextAfter, SingleDelimiterText, RepeatedDelimiterText, LastDelimiterText"</p>
+
+
+<h3>Example code</h3>
+
+<p>Short sample xslt scripts and data have been created as proof of concept. These are listed in the <a href="rddl.html">resource directory</a> corresponding to this proposal.</p>
+
+<hr />
+
+<p>Gregor Hagedorn 18.8.2004, revised 2.6.2006</p>
+</body>
+</html>

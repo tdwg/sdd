@@ -1,0 +1,93 @@
+<!-- <!DOCTYPE html PUBLIC "-//XML-DEV//DTD XHTML RDDL 1.0//EN" "http://www.rddl.org/rddl-xhtml.dtd">-->
+<!-- Note: DOCTYPE is commented out in the RDDL example RDDL itself; perhaps otherwise some html clients cause problems. -->
+<html xmlns="http://www.w3.org/1999/xhtml" 
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		xmlns:rddl="http://www.rddl.org/"
+    xml:base="http://rs.tdwg.org/UBIF/2006"
+    xml:lang="en-US">
+<head>
+	<title>Resource Directory (RDDL) for UBIF and SDD 1.0</title>
+  <link href="http://www.rddl.org/xrd.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+<h1>Resource Directory (RDDL) for UBIF and SDD 1.0</h1>
+<div class="head">
+<p><a href="http://rs.tdwg.org/UBIF/2005/rddl-2005-09-15.html">This version</a> (2005-09-15)<br />
+<a href="http://rs.tdwg.org/UBIF/2006">Latest Version</a></p>
+</div>
+
+<div id="overview">
+<h2>Overview</h2>
+
+<p><strong>Note: This RDDL file has been created retrospectively in May 2006 together with UBIF 1.1 to make the files and issues concerning this prior version transparent.</strong></p>
+
+<p>This is UBIF and SDD version 1.0. This version was officially voted by TDWG in 2005 to become a standard. However, in the light of of the revisions made for version 1.1, the authors of the UBIF and SDD standards recommend using a <a href="http://rs.tdwg.org/UBIF/2006">later version of UBIF/SDD</a> and refer to the documents cited here only for historical or archival purposes.</p>
+
+<p>For more information on SDD see the <a href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">SDD Wiki</a>, especially the <a href="http://wiki.tdwg.org/twiki/bin/view/SDD/Charter">Charter</a>.</p>
+
+<p>Note: While this document is human-readable, RDDL-aware processors may use it to automatically retrieve resources such as different schema versions for validating documents. See <a href="http://www.rddl.org">http://www.rddl.org</a> for further information.</p>
+
+<rddl:resource xlink:type="simple" id="target" 
+	xlink:title="SDD root (target) namespace"
+	xlink:role="http://www.rddl.org/#role"
+	xlink:arcrole="http://www.rddl.org/purposes#target"
+	xlink:href="http://rs.tdwg.org/UBIF/2005"
+	>
+	<p>The root (target) namespace of UBIF and SDD in version 1.0 is <code>http://rs.tdwg.org/UBIF/2005</code>.</p>
+</rddl:resource>
+
+</div>
+
+<h2>Resources</h2>
+<div id="resources" class="resource">
+<ul class="compact">
+
+<rddl:resource xlink:type="simple" id="xsd"
+	   xlink:title="XML Schema for validation (normative)"
+	   xlink:role="http://www.w3.org/2000/10/XMLSchema"
+	   xlink:arcrole="http://www.rddl.org/purposes#schema-validation"
+	   xlink:href="http://rs.tdwg.org/UBIF/2005/Schema/1.0/SDD.xsd"
+	   >
+	<li><a href="http://rs.tdwg.org/UBIF/2005/Schema/1.0/SDD.xsd">W3C XML Schema for validation (SDD 1.0, normative)</a></li>
+</rddl:resource>
+
+<li>Zipped archives with W3C XML Schema for downloading
+  <ul class="compact">
+  <rddl:resource xlink:type="simple" id="ZIP"
+	   xlink:title="XML Schema, zipped for download (SDD 1.0 final)"
+     xlink:role="http://www.isi.edu/in-notes/iana/assignments/media-types/application/zip"
+     xlink:arcrole="http://www.rddl.org/purposes#software-package"
+	   xlink:href="http://rs.tdwg.org/UBIF/2005/Schema/1.0/SDD100.zip"
+	   >
+	<li><a href="http://rs.tdwg.org/UBIF/2005/Schema/1.0/SDD100.zip">SDD 1.0 = final voted standard</a></li>
+  </rddl:resource>
+  <rddl:resource xlink:type="simple" id="ZIP"
+	   xlink:title="XML Schema, zipped for download"
+     xlink:role="http://www.isi.edu/in-notes/iana/assignments/media-types/application/zip"
+     xlink:arcrole="http://www.rddl.org/purposes#software-package"
+	   xlink:href="http://rs.tdwg.org/UBIF/2005/Schema/1.0/SDD_UBIF_1.0b4.zip"
+	   >
+	<li><a href="http://rs.tdwg.org/UBIF/2005/Schema/1.0/SDD_UBIF_1.0b4.zip">SDD 1.0 beta 4 = presented to TDWG for evaluation of standard</a></li>
+  </rddl:resource>
+  </ul>
+</li>
+
+<rddl:resource xlink:type="simple" 
+	xlink:title="SDD Home Page"
+	xlink:role="http://www.w3.org/1999/xhtml"
+	xlink:arcrole="http://www.rddl.org/purposes#non-normative-reference"
+	xlink:href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome"
+	>
+	<li><a href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">SDD Home Page</a></li>
+</rddl:resource>
+
+</ul>
+</div>
+
+<div id="footer">
+<p>Copyright (c) 2006 G. Hagedorn</p>
+</div>
+
+</body>
+</html>

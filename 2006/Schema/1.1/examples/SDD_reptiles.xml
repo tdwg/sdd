@@ -1,0 +1,4183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Datasets xsi:schemaLocation="http://rs.tdwg.org/UBIF/2006/ ../SDD.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://rs.tdwg.org/UBIF/2006/" xmlns:u="http://rs.tdwg.org/UBIF/2006/">
+  <TechnicalMetadata created="2008-10-01T10:00:00">
+    <Generator name="by hand" version="1" notes="ETI reptielen en amfibieën" routine="vers.12"/>
+  </TechnicalMetadata>
+  <Dataset xml:lang="en">
+    <Representation>
+      <Label xml:lang="en">SDD reptiles and amfibians</Label>
+      <Label role="Token">reptiles and amfibians</Label>
+      <Label role="Abbrev" xml:lang="en">Test</Label>
+    </Representation>
+    <RevisionData>
+      <Creators>
+        <Agent ref="agent" role="aut"/>
+      </Creators>
+      <DateModified>2008-10-07T10:35:00</DateModified>
+    </RevisionData>
+    <IPRStatements>
+      <IPRStatement role="Copyright">
+        <Label xml:lang="en">©&amp;nbsp;2008&amp;nbsp;ETI</Label>
+      </IPRStatement>
+    </IPRStatements>
+    <TaxonNames>
+      <TaxonName id="t7">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Trachemys scripta elegans</Label>
+          <Label xml:lang="nl">Roodwangschildpad</Label>
+          <Label>Red-eared Terrapin</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Trachemys scripta</Simple>
+          <Genus literal="Trachemys"/>
+          <SpecificEpithet literal="scripta"/>
+          <InfraspecificEpithet>elegans</InfraspecificEpithet>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t11">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Podarcis muralis</Label>
+          <Label xml:lang="nl">Muurhagedis</Label>
+          <Label>Common Wall Lizard</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Podarcis muralis</Simple>
+          <Genus literal="Podarcis"/>
+          <SpecificEpithet literal="muralis"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t13">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Lacerta agilis</Label>
+          <Label xml:lang="nl">Zandhagedis</Label>
+          <Label>Sand Lizard</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Lacerta agilis</Simple>
+          <Genus literal="Lacerta"/>
+          <SpecificEpithet literal="agilis"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t15">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Zootoca vivipara</Label>
+          <Label xml:lang="nl">Levendbarende hagedis</Label>
+          <Label>Viviparous Lizard</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Zootoca vivipara</Simple>
+          <Genus literal="Zootoca"/>
+          <SpecificEpithet literal="vivipara"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t18">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Anguis fragilis</Label>
+          <Label xml:lang="nl">Hazelworm</Label>
+          <Label>Slow Worm</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Anguis fragilis</Simple>
+          <Genus literal="Anguis"/>
+          <SpecificEpithet literal="fragilis"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t22">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Vipera berus</Label>
+          <Label xml:lang="nl">Adder</Label>
+          <Label>Adder</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Vipera berus</Simple>
+          <Genus literal="Vipera"/>
+          <SpecificEpithet literal="berus"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t25">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Natrix natrix</Label>
+          <Label xml:lang="nl">Ringslang</Label>
+          <Label>Grass Snake</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Natrix natrix</Simple>
+          <Genus literal="Natrix"/>
+          <SpecificEpithet literal="natrix"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t27">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Coronella austriaca</Label>
+          <Label xml:lang="nl">Gladde slang</Label>
+          <Label>Smooth Snake</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Coronella austriaca</Simple>
+          <Genus literal="Coronella"/>
+          <SpecificEpithet literal="austriaca"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t41">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Bufo bufo</Label>
+          <Label xml:lang="nl">Gewone pad</Label>
+          <Label>Common Toad</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Bufo bufo</Simple>
+          <Genus literal="Bufo"/>
+          <SpecificEpithet literal="bufo"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t42">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Epidalea calamita</Label>
+          <Label xml:lang="nl">Rugstreeppad</Label>
+          <Label>Natterjack Toad</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Epidalea calamita</Simple>
+          <Genus literal="Epidalea"/>
+          <SpecificEpithet literal="calamita"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t43">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Bombina variegata</Label>
+          <Label xml:lang="nl">Geelbuikvuurpad</Label>
+          <Label>Yellow-bellied Toad</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Bombina variegata</Simple>
+          <Genus literal="Bombina"/>
+          <SpecificEpithet literal="variegata"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t44">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Alytes obstetricans</Label>
+          <Label xml:lang="nl">Vroedmeesterpad</Label>
+          <Label>Midwife Toad</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Alytes obstetricans</Simple>
+          <Genus literal="Alytes"/>
+          <SpecificEpithet literal="obstetricans"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t45">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Pelobates fuscus</Label>
+          <Label xml:lang="nl">Knoflookpad</Label>
+          <Label>Common Spadefoot</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Pelobates fuscus</Simple>
+          <Genus literal="Pelobates"/>
+          <SpecificEpithet literal="fuscus"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t46">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Hyla arborea</Label>
+          <Label xml:lang="nl">Boomkikker</Label>
+          <Label>European Tree Frog</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Hyla arborea</Simple>
+          <Genus literal="Hyla"/>
+          <SpecificEpithet literal="arborea"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t47">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Rana arvalis</Label>
+          <Label xml:lang="nl">Heikikker</Label>
+          <Label>Moor Frog</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Rana arvalis</Simple>
+          <Genus literal="Rana"/>
+          <SpecificEpithet literal="arvalis"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t48">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Rana temporaria</Label>
+          <Label xml:lang="nl">Bruine kikker</Label>
+          <Label>Common Frog</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Rana temporaria</Simple>
+          <Genus literal="Rana"/>
+          <SpecificEpithet literal="temporaria"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t49">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Pelophylax lessonae</Label>
+          <Label xml:lang="nl">Poelkikker</Label>
+          <Label>Pool Frog</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Pelophylax lessonae</Simple>
+          <Genus literal="Pelophylax"/>
+          <SpecificEpithet literal="lessonae"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t50">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Pelophylax ridibundus</Label>
+          <Label xml:lang="nl">Meerkikker</Label>
+          <Label>Marsh Frog</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Pelophylax ridibundus</Simple>
+          <Genus literal="Pelophylax"/>
+          <SpecificEpithet literal="ridibundus"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t51">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Pelophylax esculentus</Label>
+          <Label xml:lang="nl">Bastaardkikker</Label>
+          <Label>Edible frog</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Pelophylax esculentus</Simple>
+          <Genus literal="Pelophylax"/>
+          <SpecificEpithet literal="esculentus"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t52">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Salamandra salamandra</Label>
+          <Label xml:lang="nl">Vuursalamander</Label>
+          <Label>Fire Salamander</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Salamandra salamandra</Simple>
+          <Genus literal="Salamandra"/>
+          <SpecificEpithet literal="salamandra"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t53">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Lissotriton vulgaris</Label>
+          <Label xml:lang="nl">Kleine watersalamander</Label>
+          <Label>Common Newt</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Lissotriton vulgaris</Simple>
+          <Genus literal="Lissotriton"/>
+          <SpecificEpithet literal="vulgaris"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t54">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Lissotriton helveticus</Label>
+          <Label xml:lang="nl">Vinpootsalamander</Label>
+          <Label>Palmate Newt</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Lissotriton helveticus</Simple>
+          <Genus literal="Lissotriton"/>
+          <SpecificEpithet literal="helveticus"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t55">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Mesotriton alpestris</Label>
+          <Label xml:lang="nl">Alpenwatersalamander</Label>
+          <Label>Alpine Newt</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Mesotriton alpestris</Simple>
+          <Genus literal="Mesotriton"/>
+          <SpecificEpithet literal="alpestris"/>
+        </CanonicalName>
+      </TaxonName>
+      <TaxonName id="t56">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Triturus cristatus</Label>
+          <Label xml:lang="nl">Kamsalamander</Label>
+          <Label>Great Crested Newt</Label>
+        </Representation>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Triturus cristatus</Simple>
+          <Genus literal="Triturus"/>
+          <SpecificEpithet literal="cristatus"/>
+        </CanonicalName>
+      </TaxonName>
+    </TaxonNames>
+    <Geolocalisations>
+      <Geolocalisation>
+        <Representation>
+          <Label xml:lang="nl">Amsterdam</Label>
+          <Label>Amsterdam</Label>
+        </Representation>
+        <Coordinates>2443287</Coordinates>
+      </Geolocalisation>
+    </Geolocalisations>
+    <Characters>
+      <CategoricalCharacter id="w">
+        <Representation>
+          <Label xml:lang="nl">Waar lijkt het op?</Label>
+          <Label>What does it look like?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="w1">
+            <Representation>
+              <Label xml:lang="nl">Schildpad</Label>
+              <Label>Tortoise</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="w2">
+            <Representation>
+              <Label xml:lang="nl">Salamander of hagedis</Label>
+              <Label>Salamander or lizard</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="w3">
+            <Representation>
+              <Label xml:lang="nl">Kikker of pad</Label>
+              <Label>Frog or toad</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="w4">
+            <Representation>
+              <Label xml:lang="nl">Slang</Label>
+              <Label>Snake</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="a">
+        <Representation>
+          <Label xml:lang="nl">Heeft het dier schubben?</Label>
+          <Label>Does it have scales?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="a1">
+            <Representation>
+              <Label xml:lang="nl">Ja, dit dier heeft schubben</Label>
+              <Label>Yes, it has scales</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="a2">
+            <Representation>
+              <Label xml:lang="nl">Nee, dit dier heeft geen schubben</Label>
+              <Label>No, it does not have scales</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="b">
+        <Representation>
+          <Label xml:lang="nl">Heeft het dier poten?</Label>
+          <Label>Does it have legs?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="b1">
+            <Representation>
+              <Label xml:lang="nl">Ja, dit dier heeft poten</Label>
+              <Label>Yes, it has legs</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="b2">
+            <Representation>
+              <Label xml:lang="nl">Nee, dit dier heeft geen poten</Label>
+              <Label>No, it does not have legs</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="c">
+        <Representation>
+          <Label xml:lang="nl">Heeft het dier een staart?</Label>
+          <Label>Does it have a tail?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="c1">
+            <Representation>
+              <Label xml:lang="nl">Ja, dit dier heeft een staart</Label>
+              <Label>Yes, it has a tail</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="c2">
+            <Representation>
+              <Label xml:lang="nl">Nee, dit dier heeft geen staart</Label>
+              <Label>No, it does not have a tail</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="d">
+        <Representation>
+          <Label xml:lang="nl">Wat voor kleur kun je zien op de rug?</Label>
+          <Label>What is the colour on the back?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="d1">
+            <Representation>
+              <Label xml:lang="nl">Groen</Label>
+              <Label>Green</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="d2">
+            <Representation>
+              <Label xml:lang="nl">Bruin</Label>
+              <Label>Brown</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="d3">
+            <Representation>
+              <Label xml:lang="nl">Grijs</Label>
+              <Label>Grey</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="d4">
+            <Representation>
+              <Label xml:lang="nl">Zwart en geel</Label>
+              <Label>Black and yellow</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="e">
+        <Representation>
+          <Label xml:lang="nl">Wat voor patroon kun je zien op de rug?</Label>
+          <Label>What is the pattern on the back?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="e1">
+            <Representation>
+              <Label xml:lang="nl">Zwart/geel gevlekt</Label>
+              <Label>Black/yellow spotted</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="e2">
+            <Representation>
+              <Label xml:lang="nl">Een dunne gele/oranje lengtestreep op de rug</Label>
+              <Label>A thin yellow/orange stripe along the back</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="e4">
+            <Representation>
+              <Label xml:lang="nl">Een donkere lengtestreep op de rug</Label>
+              <Label>A dark stripe along the back</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="e5">
+            <Representation>
+              <Label xml:lang="nl">Een rode vlek op de slaap</Label>
+              <Label>A red spot on the temple</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="e3">
+            <Representation>
+              <Label xml:lang="nl">Geen van deze patronen</Label>
+              <Label>No such patterns</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="f">
+        <Representation>
+          <Label xml:lang="nl">Wat voor kleur kun je zien op de buik?</Label>
+          <Label>What is the colour on the belly?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="f1">
+            <Representation>
+              <Label xml:lang="nl">Groen</Label>
+              <Label>Green</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="f2">
+            <Representation>
+              <Label xml:lang="nl">Bruin</Label>
+              <Label>Brown</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="f3">
+            <Representation>
+              <Label xml:lang="nl">Geel</Label>
+              <Label>Yellow</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="f4">
+            <Representation>
+              <Label xml:lang="nl">Wit/crème</Label>
+              <Label>White or cream-coloured</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="f5">
+            <Representation>
+              <Label xml:lang="nl">Geel tot oranje</Label>
+              <Label>Yellow - orange</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="f6">
+            <Representation>
+              <Label xml:lang="nl">Grijs, wit, crème</Label>
+              <Label>Grey, white, cream-coloured</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="f7">
+            <Representation>
+              <Label xml:lang="nl">Grijs tot zwart</Label>
+              <Label>Grey - black</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="f8">
+            <Representation>
+              <Label xml:lang="nl">Oranje en Wit/crème</Label>
+              <Label>Orange and white/cream-coloured</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="g">
+        <Representation>
+          <Label xml:lang="nl">Wat voor patroon kun je zien op de buik?</Label>
+          <Label>What is the pattern on the belly?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="g1">
+            <Representation>
+              <Label xml:lang="nl">Donkere/zwarte vlekken of vlekjes</Label>
+              <Label>Dark patches or spots</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="g2">
+            <Representation>
+              <Label xml:lang="nl">Geen vlekken</Label>
+              <Label>No patches</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="g3">
+            <Representation>
+              <Label xml:lang="nl">Grijs gevlekt/gemarmerd</Label>
+              <Label>Grey patches</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="g4">
+            <Representation>
+              <Label xml:lang="nl">Vage gele vlekken</Label>
+              <Label>Faint yellow patches</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="h">
+        <Representation>
+          <Label xml:lang="nl">Wat voor pupil heeft het dier?</Label>
+          <Label>What does the pupil look like?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="h1">
+            <Representation>
+              <Label xml:lang="nl">Een ronde pupil</Label>
+              <Label>Round pupil</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="h2">
+            <Representation>
+              <Label xml:lang="nl">Een verticale pupil</Label>
+              <Label>Vertical pupil</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="h3">
+            <Representation>
+              <Label xml:lang="nl">Een horizontale pupil</Label>
+              <Label>Horizontal pupil</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="h4">
+            <Representation>
+              <Label xml:lang="nl">Een driehoekige tot hartvormige pupil</Label>
+              <Label>Triangular or heart-shaped pupil</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="j">
+        <Representation>
+          <Label xml:lang="nl">Heeft het dier klierlijsten?</Label>
+          <Label>Does it have dorsolateral folds?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="j1">
+            <Representation>
+              <Label xml:lang="nl">Ja, het dier heeft klierlijsten</Label>
+              <Label>Yes, it has dorsolateral folds</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="j2">
+            <Representation>
+              <Label xml:lang="nl">Nee, het dier heeft geen klierlijsten</Label>
+              <Label>No, it does not have dorsolateral folds</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="k">
+        <Representation>
+          <Label xml:lang="nl">Heeft het dier een schild op zijn rug?</Label>
+          <Label>Does it have a carapace?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="k1">
+            <Representation>
+              <Label xml:lang="nl">Ja, dit dier heeft een rugschild</Label>
+              <Label>Yes, it has a carapace</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="k2">
+            <Representation>
+              <Label xml:lang="nl">Nee, dit dier heeft geen rugschild</Label>
+              <Label>No, it does not have a carapace</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="m">
+        <Representation>
+          <Label xml:lang="nl">Heeft het dier een rugkam of staartzoom?</Label>
+          <Label>Does it have a crest on the back or tail?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="m1">
+            <Representation>
+              <Label xml:lang="nl">Ja, de rugkam loopt ononderbroken over in de
+                                staartzoom</Label>
+              <Label>Yes, the crest continues on the tail</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="m2">
+            <Representation>
+              <Label xml:lang="nl">Ja, maar de rugkam en staartzoom zijn onderbroken</Label>
+              <Label>Yes, but it is not continuous with the tail</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="m3">
+            <Representation>
+              <Label xml:lang="nl">Nee, dit dier heeft geen rugkam of staartzoom</Label>
+              <Label>No, it does not have a crest</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="n">
+        <Representation>
+          <Label xml:lang="nl">Wat voor geluid maakt het dier?</Label>
+          <Label>What sound does it make?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="n1">
+            <Representation>
+              <Label xml:lang="nl">Niet van toepassing</Label>
+              <Label>Not applicable</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="n2">
+            <Representation>
+              <Label xml:lang="nl">Vroedmeesterpad</Label>
+              <Label>Midwife Toad</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="n3">
+            <Representation>
+              <Label xml:lang="nl">Geelbuikvuurpad</Label>
+              <Label>Yellow-bellied Toad</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="n4">
+            <Representation>
+              <Label xml:lang="nl">Knoflookpad</Label>
+              <Label>Common Spadefoot</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="n5">
+            <Representation>
+              <Label xml:lang="nl">Gewone pad</Label>
+              <Label>Common Toad</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="n6">
+            <Representation>
+              <Label xml:lang="nl">Rugstreeppad</Label>
+              <Label>Natterjack Toad</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="n7">
+            <Representation>
+              <Label xml:lang="nl">Boomkikker</Label>
+              <Label>European Tree Frog</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="n8">
+            <Representation>
+              <Label xml:lang="nl">Heikikker</Label>
+              <Label>Moor Frog</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="n9">
+            <Representation>
+              <Label xml:lang="nl">Bruine kikker</Label>
+              <Label>Common Frog</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="n10">
+            <Representation>
+              <Label xml:lang="nl">Poelkikker</Label>
+              <Label>Pool Frog</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="n11">
+            <Representation>
+              <Label xml:lang="nl">Bastaardkikker</Label>
+              <Label>Edible Frog</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="n12">
+            <Representation>
+              <Label xml:lang="nl">Meerkikker</Label>
+              <Label>Marsh Frog</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="p">
+        <Representation>
+          <Label xml:lang="nl">Hoe ziet de metatarsusknobbel op achtervoet eruit?</Label>
+          <Label>What do the metatarsal tubercles look like?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="p1">
+            <Representation>
+              <Label xml:lang="nl">Niet van toepassing</Label>
+              <Label>Not applicable</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="p2">
+            <Representation>
+              <Label xml:lang="nl">Hard - halve teenlengte</Label>
+              <Label>Hard - half the length of toe</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="p3">
+            <Representation>
+              <Label xml:lang="nl">Zacht - korter halve teenlengte</Label>
+              <Label>Soft - less than half the length of toe</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="p4">
+            <Representation>
+              <Label xml:lang="nl">Hard scherp gerand halvemaanvorm</Label>
+              <Label>Hard, sharp edges, crescent-shaped</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="p5">
+            <Representation>
+              <Label xml:lang="nl">Klein laag asymmetrisch - 25-40%</Label>
+              <Label>Small, low, asymmetric - 25-40%</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="p6">
+            <Representation>
+              <Label xml:lang="nl">Hoog asymmetrisch - tot halve te</Label>
+              <Label>High, asymmetric - up to half toe-length</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="p7">
+            <Representation>
+              <Label xml:lang="nl">Groot lichtbruin hard scherpgerand</Label>
+              <Label>Large, brownish, hard, sharp edges</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="q">
+        <Representation>
+          <Label xml:lang="nl">Heeft het dier vlekken op zijn rug?</Label>
+          <Label>Does it have patches on its back?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="q1">
+            <Representation>
+              <Label xml:lang="nl">Ja</Label>
+              <Label>Yes</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="q2">
+            <Representation>
+              <Label xml:lang="nl">Nee</Label>
+              <Label>No</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="r">
+        <Representation>
+          <Label xml:lang="nl">Heeft het dier een wit/gele ring achter zijn kop?</Label>
+          <Label>Does it have a white/yellow ring behind the head?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="r1">
+            <Representation>
+              <Label xml:lang="nl">Ja</Label>
+              <Label>Yes</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="r2">
+            <Representation>
+              <Label xml:lang="nl">Nee</Label>
+              <Label>No</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="s">
+        <Representation>
+          <Label xml:lang="nl">Heeft het dier strepen op zijn rug?</Label>
+          <Label>Is the back striped?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="s1">
+            <Representation>
+              <Label xml:lang="nl">Ja, als zigzag streep</Label>
+              <Label>Yes, a zigzag line</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="s3">
+            <Representation>
+              <Label xml:lang="nl">Ja, als lengtestreep</Label>
+              <Label>Yes, a longitudal stripe</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="s2">
+            <Representation>
+              <Label xml:lang="nl">Nee</Label>
+              <Label>No</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="t">
+        <Representation>
+          <Label xml:lang="nl">Heeft dit dier een dunne geelgroene lengtestreep op de rug?</Label>
+          <Label>Does it have a narrow yellow/green stripe along the back?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="t1">
+            <Representation>
+              <Label xml:lang="nl">Ja</Label>
+              <Label>Yes</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="t2">
+            <Representation>
+              <Label xml:lang="nl">Nee</Label>
+              <Label>No</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="u">
+        <Representation>
+          <Label xml:lang="nl">Heeft het dier een donkere vlek achter het oog?</Label>
+          <Label>Does it have a dark patch behind the eye?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="u1">
+            <Representation>
+              <Label xml:lang="nl">Ja</Label>
+              <Label>Yes</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="u3">
+            <Representation>
+              <Label xml:lang="nl">Ja, doorlopend in donkere lengteband</Label>
+              <Label>Yes, continuous with dark longitudal stripe</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="u2">
+            <Representation>
+              <Label xml:lang="nl">Nee</Label>
+              <Label>No</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="v">
+        <Representation>
+          <Label xml:lang="nl">Heeft het dier vlekken op de buik?</Label>
+          <Label>Does it have patches on its belly?</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="v1">
+            <Representation>
+              <Label xml:lang="nl">Ja</Label>
+              <Label>Yes</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="v2">
+            <Representation>
+              <Label xml:lang="nl">Nee</Label>
+              <Label>No</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+    </Characters>
+    <NaturalLanguageDescriptions>
+      <NaturalLanguageDescription id="nld01">
+        <Representation>
+          <Label>Trachemys scripta elegans</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t7"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Deze schildpad zit bijna altijd in of bij water. Hij komt
+                        uit Amerika en is als huisdier ontsnapt of losgelaten. Krijgt in Nederland
+                        geen jongen omdat het hier te koud is. Lijkt op andere ontsnapte
+                        waterschildpadden, maar die worden in Nederland niet veel aangetroffen.</Text>
+          <Text>Turtle, originally imported from the USA. Always in or near water.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld02">
+        <Representation>
+          <Label>Podarcis muralis</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t11"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Slanke en supersnelle hagedis. Zeer zeldzaam. In het wild
+                        komen ze alleen voor op de stadsmuren en nabijgelegen spoorwegtaluds van
+                        Maastricht. Zijn succesvol uitgezet in de Hortus Botanicus van Utrecht.
+                        Lijkt op levendbarende hagedis, maar deze heeft kortere poten en tenen, is
+                        minder snel en kan minder goed klimmen.</Text>
+          <Text>Flattened, slender lizard. Body length up to 7 cm.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld03">
+        <Representation>
+          <Label>Lacerta agilis</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t13"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Stevige hagedis. Mannetje in het voorjaar felgroen. Zit
+                        meest op de grond of in lage struikjes. In Nederland in de kustduinen, de
+                        Waddeneilanden Vlieland en Terschelling en op zandgronden zoals
+                        heidegebieden. Ook op enkele geïsoleerde plekken in Noord-Brabant. Lijkt op
+                        levendbarende hagedis, maar deze is veel kleiner, slanker en heeft smallere
+                        kop.</Text>
+          <Text>Firm, stocky lizard with relatively short legs and tail. Not flattened.
+                        Body length up to about 9.5 cm.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld04">
+        <Representation>
+          <Label>Zootoca vivipara</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t15"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Kleine hagedis. Zit meest op de grond of in lage struikjes,
+                        maar kan ook klimmen op boomstammen en muren. Vlucht soms het water in, kan
+                        goed zwemmen. Onze kleinste en meest algemene reptielensoort. In Nederland
+                        vooral op zandgronden zoals heidegebieden in het oosten, midden en zuiden.
+                        Maar ook op de hoogvenen in die gebieden. Komt ook voor in de duinen van
+                        Terschelling en plaatselijk in Zeeland. Lijkt op andere hagedissen.
+                        Zandhagedis is veel groter en de jongen hebben lichte staart, jonge
+                        levendbarende een donkere. Muurhagedis heeft langere poten en tenen en komt
+                        van nature alleen voor in Maastricht.</Text>
+          <Text>Small, almost unflattened lizard. Small round head, short legs. Body
+                        length 4-7 cm.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld05">
+        <Representation>
+          <Label>Anguis fragilis</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t18"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Dit is geen slang maar een pootloze hagedis en totaal
+                        ongevaarlijk. Heeft beweegbare oogleden en een afbreekbare staart. Eet het
+                        liefst naaktslakken en regenwormen. In Nederland met name in het oosten en
+                        zuiden. Niet in Noord- en Zuid-Holland, Zeeland en Flevoland, verder in alle
+                        provincies. Wordt tegenwoordig ook wel eens in de duinen van het
+                        Noord-Holland gezien. Lijkt op gladde slang, maar die heeft zwarte vlekjes
+                        of streepjes op lichaam, een donkere vlek op kop en een donkere streep door
+                        het oog. Een hazelworm kan zijn ogen dicht doen, slangen niet.</Text>
+          <Text>A long-bodied legless lizard, it looks more like a snake</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld06">
+        <Representation>
+          <Label>Vipera berus</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t22"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Stevige slang met zigzagstreep over de rug en ogen met een
+                        verticale pupil. Niet agressief, maar beet is giftig (niet dodelijk). Ligt
+                        graag in de zon om op te warmen. Lijkt niet op andere slangen. Wordt soms
+                        verward met gladde slang, maar deze heeft geen zigzagstreep op rug, slechts
+                        wat donkere vlekjes of streepjes en ogen met een ronde pupil.</Text>
+          <Text>A thick-bodied snake. Length 50-80 cm. Mostly around 65 cm.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld07">
+        <Representation>
+          <Label>Natrix natrix</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t25"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Grootste en meest algemene slang van Nederland. Heeft
+                        geelwitte en zwarte banden in de nek. Vaak in de buurt van water, kan goed
+                        zwemmen. Ongevaarlijk.</Text>
+          <Text>Large snake, males usually 60-80 cm, females 80-120 cm.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld08">
+        <Representation>
+          <Label>Coronella austriaca</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t27"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Kleine, rolronde slang, met kleine ogen met een ronde pupil.
+                        Glad en glimmend. Kleine vlekjes of streepjes op rug. Ongevaarlijk. In
+                        Nederland op de hoge zandgronden ten oosten van de lijn Heerenveen - Bergen
+                        op Zoom. Belangrijkste leefgebieden zijn de Veluwe en het grensgebied van
+                        Drenthe-Friesland. Lijkt op hazelworm en een beetje op een adder. De
+                        hazelworm heeft geen donkere vlekjes op rug, geen donkere vlek op kop en
+                        geen donkere streep door het oog. De adder heeft een duidelijke zigzagstreep
+                        over de rug en ogen met een verticale pupil.</Text>
+          <Text>A moderately small, cylindrical snake. Total length 50-80 cm.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld09">
+        <Representation>
+          <Label>Bufo bufo</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t41"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Grote dikke pad met wrattige huid en oranje ogen. Zit alleen
+                        in het voorjaar enkele weken in het water. Vooral 's nachts actief. Komt in
+                        heel Nederland voor. Lijkt op andere padden, maar is groter. De rugstreeppad
+                        is bijna even groot maar heeft een gele streep over de rug.</Text>
+          <Text>Rather large, heavily built toad. Males up to 8 cm, females up to 10 cm.
+                        Horizontal, elliptical pupil.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld10">
+        <Representation>
+          <Label>Epidalea calamita</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t42"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Middelgrote pad met wrattige huid en gele ogen. Gele streep
+                        midden over rug. Zit alleen in voorjaar enkele weken in water. Vooral 's
+                        nachts actief. In Nederland in duinen, rivierengebied en delen van de
+                        polders in Noord- en Zuid-Holland, Zeeland en Flevoland. Ook op
+                        waddeneilanden en hogere zandgronden. Niet in veengebieden van Groningen,
+                        Friesland en Drenthe. Lijkt op andere padden, maar is de enige met een gele
+                        streep midden op de rug.</Text>
+          <Text>Robust, relatively short-limbed toad. Dry, warty skin. Length up to 7.5
+                        cm. Horizontal, elliptical pupil.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld11">
+        <Representation>
+          <Label>Bombina variegata</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t43"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Klein plat wrattig padje met knalgele buik met zwarte
+                        vlekken. Zit vaak in het water. Zeer zeldzaam, komt alleen voor in
+                        Zuid-Limburg. Is kleiner dan de meeste andere padden en de enige met een
+                        felgele buik met zwarte vlekken.</Text>
+          <Text>Small, very warty, aquatic toad with a flattened body. Length up to 5
+                    cm.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld12">
+        <Representation>
+          <Label>Alytes obstetricans</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t44"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Kleine wrattige pad, ogen met een verticale pupil. Mannetje
+                        draagt vaak eisnoeren met zich mee. Zit zelden in het water. Vooral 's
+                        nachts actief. Zeer zeldzaam. De vroedmeesterpad komt van nature alleen in
+                        Zuid-Limburg voor maar is elders in Nederland uitgezet, bijvoorbeeld in
+                        Haarlem en in Utrecht. Lijkt op andere padden, kleiner dan gewone- en
+                        rugstreeppad. Knoflookpad heeft veel gladdere huid.</Text>
+          <Text>Small, plump toad with large head and eyes with a vertical pupil. Length
+                        up to 5 cm.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld13">
+        <Representation>
+          <Label>Pelobates fuscus</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t45"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Middelgrote pad met vrij gladde huid, ogen met een verticale
+                        pupil. Zit alleen in voorjaar enkele weken in het water. Vooral 's nachts
+                        actief. Zeldzaam, komt nog maar op enkele plaatsen voor. Lokaal in
+                        Overijssel en Gelderland en enkele plaatsen in Noord-Brabant, Limburg en
+                        Drenthe. Lijkt een beetje op andere padden, maar de huid is veel gladder.
+                        Lijkt wel wat op een kikker, maar heeft geen opstaande richels op de rug en
+                        geen horizontale pupil.</Text>
+          <Text>Common Spadefoot, short English decription.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld14">
+        <Representation>
+          <Label>Hyla arborea</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t46"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Kleine groene kikker, tot 5 cm. Heeft zuignapjes aan zijn
+                        vingers en tenen waarmee hij goed kan klimmen, het is de enige kikker die
+                        soms in struiken zit. Vooral in het oosten en zuiden van het land. Verschilt
+                        van andere kikkers door de felgroene ongevlekte rug en bruine band op de
+                        zijkant van het lichaam.</Text>
+          <Text>Length up to 4.5 cm, usually 3-4 cm. Disc-like adhesive pads on tips of
+                        fingers and toes. Pupil horizontal, elliptical.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld15">
+        <Representation>
+          <Label>Rana arvalis</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t47"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Middelgrote bruine kikker. Mannetjes zijn in het vroege
+                        voorjaar blauw gekleurd (slechts een paar dagen!). In Nederland in de meeste
+                        provincies in heide en veengebieden, niet algemeen. Lijkt op bruine kikker,
+                        maar deze heeft een stompere snuit. Buik heikikker meestal ongevlekt, die
+                        van bruine kikker gevlekt. Groene kikkers hebben dunne groenige streep over
+                        het midden van de rug.</Text>
+          <Text>Moor Frog, short English decription.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld16">
+        <Representation>
+          <Label>Rana temporaria</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t48"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Vrij grote bruine kikker. Komt in bijna geheel Nederland
+                        voor. Lijkt op heikikker, maar deze heeft een spitsere snuit. Buik bruine
+                        kikker gevlekt, die van heikikker meestal ongevlekt. Groene kikkers hebben
+                        dunne groenige streep over het midden van de rug.</Text>
+          <Text>Length up to 11 cm, mostly smaller. High, round snout. Pupil horizontal
+                        elliptical.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld17">
+        <Representation>
+          <Label>Pelophylax lessonae</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t49"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Groene of bruinige kikker. Moeilijk van de andere soorten
+                        groene kikkers te onderscheiden. De poelkikker is de kleinste soort. Zit
+                        meestal in de buurt van water. De bruinige exemplaren lijken op bruine
+                        kikker, maar deze heeft geen groenige streep over het midden van de rug.
+                        Groene kikkers: Er komen twee echte soorten groene kikkers voor in
+                        Nederland: de poelkikker en de meerkikker. Op zich zijn die goed te
+                        herkennen. De poelkikker is kleiner, heeft relatief kortere poten, een
+                        gladdere huid, lichtere kwaakblazen en een lichte, ongevlekte iris.
+                        Determinatieproblemen ontstaan door het algemeen voorkomen van een
+                        kruisingsvorm: de bastaardkikker. Bastaardkikkers zijn erg variabel van
+                        uiterlijk. Sommige lijken meer op de ene oudersoort, andere meer op de
+                        andere of zitten er qua uiterlijk precies tussen in. Hierdoor is de
+                        determinatie van groene kikkers specialistenwerk.</Text>
+          <Text>Length up to 11 cm, mostly smaller. High, round snout. Pupil horizontal
+                        elliptical.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld18">
+        <Representation>
+          <Label>Pelophylax ridibundus</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t50"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Groene of bruinige kikker. Moeilijk van de andere soorten
+                        groene kikkers te onderscheiden. De meerkikker is de grootste soort. Zit
+                        meestal in de buurt van water. De bruinige exemplaren lijken op bruine
+                        kikker, maar deze heeft geen groenige streep over het midden van de rug.
+                        Groene kikkers: Er komen twee echte soorten groene kikkers voor in
+                        Nederland: de poelkikker en de meerkikker. Op zich zijn die goed te
+                        herkennen. De poelkikker is kleiner, heeft relatief kortere poten, een
+                        gladdere huid, lichtere kwaakblazen en een lichte, ongevlekte iris.
+                        Determinatieproblemen ontstaan door het algemeen voorkomen van een
+                        kruisingsvorm: de bastaardkikker. Bastaardkikkers zijn erg variabel van
+                        uiterlijk. Sommige lijken meer op de ene oudersoort, andere meer op de
+                        andere of zitten er qua uiterlijk precies tussen in. Hierdoor is de
+                        determinatie van groene kikkers specialistenwerk.</Text>
+          <Text>Length up to 15 cm. Snout broad and flat. Eyes close to each other.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld19">
+        <Representation>
+          <Label>Pelophylax esculentus</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t51"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Groene of bruinige kikker. Moeilijk van de andere soorten
+                        groene kikkers te onderscheiden. Het is een kruising tussen poel- en
+                        meerkikker. Zit meestal in de buurt van water. De bruinige exemplaren lijken
+                        op bruine kikker, maar deze heeft geen groenige streep over het midden van
+                        de rug. Groene kikkers: Er komen twee echte soorten groene kikkers voor in
+                        Nederland: de poelkikker en de meerkikker. Op zich zijn die goed te
+                        herkennen. De poelkikker is kleiner, heeft relatief kortere poten, een
+                        gladdere huid, lichtere kwaakblazen en een lichte, ongevlekte iris.
+                        Determinatieproblemen ontstaan door het algemeen voorkomen van een
+                        kruisingsvorm: de bastaardkikker. Bastaardkikkers zijn erg variabel van
+                        uiterlijk. Sommige lijken meer op de ene oudersoort, andere meer op de
+                        andere of zitten er qua uiterlijk precies tussen in. Hierdoor is de
+                        determinatie van groene kikkers specialistenwerk.</Text>
+          <Text>Length up to 12 cm, mostly smaller than 10 cm. Hybrid of Marsh Frog and
+                        Pool Frog.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld20">
+        <Representation>
+          <Label>Salamandra salamandra</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t52"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Dikke zwart-geel gevlekte glimmende salamander. Zit het
+                        liefst aan land, vrijwel nooit in water. Zeer zeldzaam, komt alleen voor in
+                        Limburg. Lengte tot 20 cm. Lijkt niet op andere salamanders. Die zijn
+                        kleiner en bruin (zonder gele vlekken).</Text>
+          <Text>Fire Salamander, short English decription.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld21">
+        <Representation>
+          <Label>Lissotriton vulgaris</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t53"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Kleine slanke salamander. Kleur bruin. Meestal met een
+                        gevlekte keel. Het mannetje krijgt in het voorjaar, in het water, meer kleur
+                        en een grote rugkam. Buik geel tot oranje met zwarte vlekken. Leeft een
+                        groot gedeelte van het jaar op het land. Dit is de meest algemene salamander
+                        in Nederland. Lijkt op: Vinpootsalamander die heeft meestal een ongevlekte
+                        keel, in het water met een kleine rugkam en een draadje aan zijn staart.
+                        Kamsalamander is groter en dikker. De alpenwatersalamander is donkerder en
+                        heeft een ongevlekte buik.</Text>
+          <Text>Slender salamander. Length up to 11 cm, generally smaller.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld22">
+        <Representation>
+          <Label>Lissotriton helveticus</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t54"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Kleine slanke salamander. Kleur bruin. In het voorjaar in
+                        het water hebben de mannetjes zwarte zwemvliezen aan de achterpoten en een
+                        kleine rugkam. Meestal een ongevlekte keel. Staart eindigt in een draadje
+                        van 3-8 mm lang. Buikzijde oranje en is niet duidelijk gevlekt. Zeldzaam,
+                        alleen in Noord-Brabant en Limburg. Lijkt op: Kleine watersalamander. Die
+                        heeft in het water een grote rugkam, meestal met een gevlekte keel en geen
+                        draadje aan zijn staart. Kamsalamander is groter en dikker, de
+                        alpenwatersalamander is donkerder en heeft een ongevlekte buik.</Text>
+          <Text>Slender salamander. Length up to 11 cm, generally smaller.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld23">
+        <Representation>
+          <Label>Mesotriton alpestris</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t55"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Kleine salamander. Kleur donker bruin met feloranje,
+                        ongevlekte buik. In het voorjaar in het water veel meer kleur, mannetjes met
+                        blauwtinten en een kleine rugkam. Vooral in Zuid- en Oost Nederland. Lijkt
+                        op andere salamanders. Kamsalamander is groter en dikker, de kleine
+                        watersalamander en de vinpootsalamander zijn lichter en hebben vlekjes op de
+                        buik en mannetjes hebben in waterfase niet zoveel blauwtinten.</Text>
+          <Text>Slender salamander. Length up to 11 cm.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+      <NaturalLanguageDescription id="nld24">
+        <Representation>
+          <Label>Triturus cristatus</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t56"/>
+        </Scope>
+        <NaturalLanguageData>
+          <Text xml:lang="nl">Grote stevige salamander. Kleur donkerbruin. In voorjaar in
+                        water met grote rugkam. In Nederland in alle provincies, behalve Flevoland.
+                        Verdwenen uit Groningen, in Friesland alleen aan grens met Drenthe. Vooral
+                        op hoge zandgronden en rivierdalen in het midden, zuiden en oosten van
+                        Nederland. Lijkt op andere salamanders, maar is groter en dikker. In water
+                        heeft het mannetje een grote rugkam en staartzoom. Die zijn gescheiden, ze
+                        lopen niet in elkaar over zoals bij andere salamanders.</Text>
+          <Text>A robust salamander with a broad head. Length up to 18 cm, but most are
+                        considerably smaller.</Text>
+        </NaturalLanguageData>
+      </NaturalLanguageDescription>
+    </NaturalLanguageDescriptions>
+    <CodedDescriptions>
+      <CodedDescription id="cd1">
+        <Representation>
+          <Label>Trachemys scripta elegans</Label>
+          <MediaObject ref="pic01" role="Primary"/>
+          <MediaObject ref="pic02" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t7"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a1"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d1"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e5"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f3"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g1"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h1"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h3"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k1"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n1"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w1"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd2">
+        <Representation>
+          <Label>Podarcis muralis</Label>
+          <MediaObject ref="pic03" role="Primary"/>
+          <MediaObject ref="pic04" role="Primary"/>
+          <MediaObject ref="pic05" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t11"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a1"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e4"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f8"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g1"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g2"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h1"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n1"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s3"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v2"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w2"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd3">
+        <Representation>
+          <Label>Lacerta agilis</Label>
+          <MediaObject ref="pic06" role="Primary"/>
+          <MediaObject ref="pic07" role="Primary"/>
+          <MediaObject ref="pic08" role="Primary"/>
+          <MediaObject ref="pic09" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t13"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a1"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e4"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f1"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f8"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g1"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g2"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h1"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n1"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s3"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v2"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w2"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd4">
+        <Representation>
+          <Label>Zootoca vivipara</Label>
+          <MediaObject ref="pic10" role="Primary"/>
+          <MediaObject ref="pic11" role="Primary"/>
+          <MediaObject ref="pic12" role="Primary"/>
+          <MediaObject ref="pic13" role="Primary"/>
+          <MediaObject ref="pic14" role="Primary"/>
+          <MediaObject ref="pic15" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t15"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a1"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e4"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f8"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g1"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h1"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n1"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s3"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w2"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd5">
+        <Representation>
+          <Label>Anguis fragilis</Label>
+          <MediaObject ref="pic16" role="Primary"/>
+          <MediaObject ref="pic17" role="Primary"/>
+          <MediaObject ref="pic18" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t18"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a1"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b2"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f2"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f7"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g2"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h1"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n1"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s3"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v2"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w4"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd6">
+        <Representation>
+          <Label>Vipera berus</Label>
+          <MediaObject ref="pic19" role="Primary"/>
+          <MediaObject ref="pic20" role="Primary"/>
+          <MediaObject ref="pic21" role="Primary"/>
+          <MediaObject ref="pic22" role="Primary"/>
+          <MediaObject ref="pic23" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t22"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a1"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b2"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f2"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f7"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g2"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h2"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n1"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s1"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v2"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w4"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd7">
+        <Representation>
+          <Label>Natrix natrix</Label>
+          <MediaObject ref="pic24" role="Primary"/>
+          <MediaObject ref="pic25" role="Primary"/>
+          <MediaObject ref="pic26" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t25"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a1"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b2"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f4"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g2"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h1"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n1"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r1"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w4"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd8">
+        <Representation>
+          <Label>Coronella austriaca</Label>
+          <MediaObject ref="pic27" role="Primary"/>
+          <MediaObject ref="pic28" role="Primary"/>
+          <MediaObject ref="pic29" role="Primary"/>
+          <MediaObject ref="pic30" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t27"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a1"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b2"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f2"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f7"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g2"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h1"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n1"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w4"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd9">
+        <Representation>
+          <Label>Bufo bufo</Label>
+          <MediaObject ref="pic31" role="Primary"/>
+          <MediaObject ref="pic32" role="Primary"/>
+          <MediaObject ref="pic33" role="Primary"/>
+          <MediaObject ref="pic34" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t41"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f6"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g3"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h3"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n5"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w3"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd10">
+        <Representation>
+          <Label>Epidalea calamita</Label>
+          <MediaObject ref="pic35" role="Primary"/>
+          <MediaObject ref="pic36" role="Primary"/>
+          <MediaObject ref="pic37" role="Primary"/>
+          <MediaObject ref="pic38" role="Primary"/>
+          <MediaObject ref="pic39" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t42"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f6"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g1"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h3"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n6"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t1"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w3"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd11">
+        <Representation>
+          <Label>Bombina variegata</Label>
+          <MediaObject ref="pic40" role="Primary"/>
+          <MediaObject ref="pic41" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t43"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f5"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f6"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g1"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h4"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n3"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w3"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd12">
+        <Representation>
+          <Label>Alytes obstetricans</Label>
+          <MediaObject ref="pic42" role="Primary"/>
+          <MediaObject ref="pic43" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t44"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f6"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g3"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h2"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n2"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w3"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd13">
+        <Representation>
+          <Label>Pelobates fuscus</Label>
+          <MediaObject ref="pic44" role="Primary"/>
+          <MediaObject ref="pic45" role="Primary"/>
+          <MediaObject ref="pic46" role="Primary"/>
+          <MediaObject ref="pic47" role="Primary"/>
+          <MediaObject ref="pic48" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t45"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f6"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g3"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h2"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n4"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p7"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w3"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd14">
+        <Representation>
+          <Label>Hyla arborea</Label>
+          <MediaObject ref="pic49" role="Primary"/>
+          <MediaObject ref="pic50" role="Primary"/>
+          <MediaObject ref="pic51" role="Primary"/>
+          <MediaObject ref="pic52" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t46"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f6"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g2"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h3"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n7"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u3"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v2"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w3"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd15">
+        <Representation>
+          <Label>Rana arvalis</Label>
+          <MediaObject ref="pic53" role="Primary"/>
+          <MediaObject ref="pic54" role="Primary"/>
+          <MediaObject ref="pic55" role="Primary"/>
+          <MediaObject ref="pic56" role="Primary"/>
+          <MediaObject ref="pic57" role="Primary"/>
+          <MediaObject ref="pic58" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t47"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f6"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g1"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g2"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h3"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j1"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n8"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p2"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u1"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v2"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w3"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd16">
+        <Representation>
+          <Label>Rana temporaria</Label>
+          <MediaObject ref="pic59" role="Primary"/>
+          <MediaObject ref="pic60" role="Primary"/>
+          <MediaObject ref="pic61" role="Primary"/>
+          <MediaObject ref="pic62" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t48"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f6"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g1"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h3"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j1"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n9"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p3"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u1"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w3"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd17">
+        <Representation>
+          <Label>Pelophylax lessonae</Label>
+          <MediaObject ref="pic63" role="Primary"/>
+          <MediaObject ref="pic64" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t49"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f6"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g3"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h3"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j1"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n10"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p4"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t1"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w3"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd18">
+        <Representation>
+          <Label>Pelophylax ridibundus</Label>
+          <MediaObject ref="pic65" role="Primary"/>
+          <MediaObject ref="pic66" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t50"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f6"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g3"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h3"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j1"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n12"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p5"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t1"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w3"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd19">
+        <Representation>
+          <Label>Pelophylax esculentus</Label>
+          <MediaObject ref="pic67" role="Primary"/>
+          <MediaObject ref="pic68" role="Primary"/>
+          <MediaObject ref="pic69" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t51"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f6"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g3"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h3"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j1"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n11"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p6"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t1"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w3"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd20">
+        <Representation>
+          <Label>Salamandra salamandra</Label>
+          <MediaObject ref="pic70" role="Primary"/>
+          <MediaObject ref="pic71" role="Primary"/>
+          <MediaObject ref="pic72" role="Primary"/>
+          <MediaObject ref="pic73" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t52"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d4"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e1"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f7"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g2"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g4"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h1"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n1"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q1"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v2"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w2"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd21">
+        <Representation>
+          <Label>Lissotriton vulgaris</Label>
+          <MediaObject ref="pic74" role="Primary"/>
+          <MediaObject ref="pic75" role="Primary"/>
+          <MediaObject ref="pic76" role="Primary"/>
+          <MediaObject ref="pic77" role="Primary"/>
+          <MediaObject ref="pic78" role="Primary"/>
+          <MediaObject ref="pic79" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t53"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f8"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g1"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h1"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m1"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n1"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w2"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd22">
+        <Representation>
+          <Label>Lissotriton helveticus</Label>
+          <MediaObject ref="pic80" role="Primary"/>
+          <MediaObject ref="pic81" role="Primary"/>
+          <MediaObject ref="pic82" role="Primary"/>
+          <MediaObject ref="pic83" role="Primary"/>
+          <MediaObject ref="pic84" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t54"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f8"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g2"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h1"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m1"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n1"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s2"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v2"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w2"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd23">
+        <Representation>
+          <Label>Mesotriton alpestris</Label>
+          <MediaObject ref="pic85" role="Primary"/>
+          <MediaObject ref="pic86" role="Primary"/>
+          <MediaObject ref="pic87" role="Primary"/>
+          <MediaObject ref="pic88" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t55"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e2"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f8"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g2"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h1"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m1"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n1"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s3"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v2"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w2"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+      <CodedDescription id="cd24">
+        <Representation>
+          <Label>Triturus cristatus</Label>
+          <MediaObject ref="pic89" role="Primary"/>
+          <MediaObject ref="pic90" role="Primary"/>
+          <MediaObject ref="pic91" role="Primary"/>
+          <MediaObject ref="pic92" role="Primary"/>
+          <MediaObject ref="pic93" role="Primary"/>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t56"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="a">
+            <State ref="a2"/>
+          </Categorical>
+          <Categorical ref="b">
+            <State ref="b1"/>
+          </Categorical>
+          <Categorical ref="c">
+            <State ref="c1"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d2"/>
+          </Categorical>
+          <Categorical ref="d">
+            <State ref="d3"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e2"/>
+          </Categorical>
+          <Categorical ref="e">
+            <State ref="e3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f3"/>
+          </Categorical>
+          <Categorical ref="f">
+            <State ref="f8"/>
+          </Categorical>
+          <Categorical ref="g">
+            <State ref="g1"/>
+          </Categorical>
+          <Categorical ref="h">
+            <State ref="h1"/>
+          </Categorical>
+          <Categorical ref="j">
+            <State ref="j2"/>
+          </Categorical>
+          <Categorical ref="k">
+            <State ref="k2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m2"/>
+          </Categorical>
+          <Categorical ref="m">
+            <State ref="m3"/>
+          </Categorical>
+          <Categorical ref="n">
+            <State ref="n1"/>
+          </Categorical>
+          <Categorical ref="p">
+            <State ref="p1"/>
+          </Categorical>
+          <Categorical ref="q">
+            <State ref="q2"/>
+          </Categorical>
+          <Categorical ref="r">
+            <State ref="r2"/>
+          </Categorical>
+          <Categorical ref="s">
+            <State ref="s3"/>
+          </Categorical>
+          <Categorical ref="t">
+            <State ref="t2"/>
+          </Categorical>
+          <Categorical ref="u">
+            <State ref="u2"/>
+          </Categorical>
+          <Categorical ref="v">
+            <State ref="v1"/>
+          </Categorical>
+          <Categorical ref="w">
+            <State ref="w2"/>
+          </Categorical>
+        </SummaryData>
+      </CodedDescription>
+    </CodedDescriptions>
+    <IdentificationKeys>
+      <!-- This is a placeholder for the dichotomous key we must still make -->
+      <IdentificationKey id="key1">
+        <Representation>
+          <Label>Dichotomous key to 8 species</Label>
+          <Label xml:lang="nl">Dichotome sleutel voor 8 soorten</Label>
+        </Representation>
+        <Leads>
+          <Lead id="kl1">
+            <Statement>Plant</Statement>
+            <Statement xml:lang="nl">Plant</Statement>
+          </Lead>
+          <Lead id="kl2">
+            <Statement>Animal</Statement>
+            <Statement xml:lang="nl">Dier</Statement>
+          </Lead>
+          <Lead>
+            <Parent ref="kl1"/>
+            <Statement>Height &gt; 1 meter</Statement>
+            <Statement xml:lang="nl">Hoogte &gt; 1 meter</Statement>
+            <MediaObject ref="pic01"/>
+            <TaxonName ref="t11"/>
+          </Lead>
+          <Lead>
+            <Parent ref="kl1"/>
+            <Statement>Height &lt; 1 meter</Statement>
+            <Statement xml:lang="nl">Hoogte &lt; 1 meter</Statement>
+            <MediaObject ref="pic02"/>
+            <TaxonName ref="t13"/>
+          </Lead>
+          <Lead id="kl5">
+            <Parent ref="kl2"/>
+            <Statement>No wings</Statement>
+            <Statement xml:lang="nl">Geen vleugels</Statement>
+          </Lead>
+          <Lead id="kl6">
+            <Parent ref="kl2"/>
+            <Statement>1 pair of wings</Statement>
+            <Statement xml:lang="nl">1 paar vleugels</Statement>
+          </Lead>
+          <Lead id="kl7">
+            <Parent ref="kl2"/>
+            <Statement>2 pair of wings</Statement>
+            <Statement xml:lang="nl">2 paar vleugels</Statement>
+          </Lead>
+          <Lead>
+            <Parent ref="kl5"/>
+            <Statement>With a tail</Statement>
+            <Statement xml:lang="nl">Met een staart</Statement>
+            <MediaObject ref="pic03"/>
+            <TaxonName ref="t15"/>
+          </Lead>
+          <Lead>
+            <Parent ref="kl5"/>
+            <Statement>Without a tail</Statement>
+            <Statement xml:lang="nl">Zonder staart</Statement>
+            <MediaObject ref="pic04"/>
+            <TaxonName ref="t18"/>
+          </Lead>
+          <Lead>
+            <Parent ref="kl6"/>
+            <Statement>Main colour: white</Statement>
+            <Statement xml:lang="nl">Overwegende kleur: wit</Statement>
+            <MediaObject ref="pic05"/>
+            <TaxonName ref="t22"/>
+          </Lead>
+          <Lead>
+            <Parent ref="kl6"/>
+            <Statement>Main colour: yellow</Statement>
+            <Statement xml:lang="nl">Overwegende kleur: geel</Statement>
+            <MediaObject ref="pic06"/>
+            <TaxonName ref="t25"/>
+          </Lead>
+          <Lead>
+            <Parent ref="kl7"/>
+            <Statement>Main colour: blue</Statement>
+            <Statement xml:lang="nl">Overwegende kleur: blauw</Statement>
+            <MediaObject ref="pic07"/>
+            <TaxonName ref="t27"/>
+          </Lead>
+          <Lead>
+            <Parent ref="kl7"/>
+            <Statement>Main colour: orange</Statement>
+            <Statement xml:lang="nl">Overwegende kleur: oranje</Statement>
+            <MediaObject ref="pic08"/>
+            <TaxonName ref="t41"/>
+          </Lead>
+        </Leads>
+      </IdentificationKey>
+    </IdentificationKeys>
+    <Agents>
+      <Agent id="agent">
+        <Representation>
+          <Label>Unknown (see copyright notice)</Label>
+        </Representation>
+      </Agent>
+    </Agents>
+    <GeographicAreas>
+      <GeographicArea id="area1">
+        <Representation>
+          <Label>Europe</Label>
+          <Label xml:lang="nl">Europa</Label>
+        </Representation>
+      </GeographicArea>
+    </GeographicAreas>
+    <MediaObjects>
+      <MediaObject id="pic01">
+        <Representation>
+          <Label>Trachemys scripta</Label>
+          <Label xml:lang="nl">Trachemys scripta</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Trachemys_scripta_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic02">
+        <Representation>
+          <Label>Trachemys scripta</Label>
+          <Label xml:lang="nl">Trachemys scripta</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Trachemys_scripta_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic03">
+        <Representation>
+          <Label>Podarcis muralis male</Label>
+          <Label xml:lang="nl">Podarcis muralis mannetje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Podarcis_muralis_mannetje_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic04">
+        <Representation>
+          <Label>Podarcis muralis male</Label>
+          <Label xml:lang="nl">Podarcis muralis mannetje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Podarcis_muralis_mannetje_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic05">
+        <Representation>
+          <Label>Podarcis muralis female</Label>
+          <Label xml:lang="nl">Podarcis muralis vrouwtje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Podarcis_muralis_vrouwtje_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic06">
+        <Representation>
+          <Label>Lacerta agilis male</Label>
+          <Label xml:lang="nl">Lacerta agilis mannetje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Lacerta_agilis_mannetje_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic07">
+        <Representation>
+          <Label>Lacerta agilis female</Label>
+          <Label xml:lang="nl">Lacerta agilis vrouwtje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Lacerta_agilis_vrouwtje_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic08">
+        <Representation>
+          <Label>Lacerta agilis female</Label>
+          <Label xml:lang="nl">Lacerta agilis vrouwtje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Lacerta_agilis_vrouwtje_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic09">
+        <Representation>
+          <Label>Lacerta agilis juvenile</Label>
+          <Label xml:lang="nl">Lacerta agilis juveniel</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Lacerta_agilis_juveniel.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic10">
+        <Representation>
+          <Label>Zootoca vivipara male</Label>
+          <Label xml:lang="nl">Zootoca vivipara mannetje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Zootoca_vivipara_mannetje_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic11">
+        <Representation>
+          <Label>Zootoca vivipara male</Label>
+          <Label xml:lang="nl">Zootoca vivipara mannetje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Zootoca_vivipara_mannetje_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic12">
+        <Representation>
+          <Label>Zootoca vivipara female</Label>
+          <Label xml:lang="nl">Zootoca vivipara vrouwtje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Zootoca_vivipara_vrouwtje_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic13">
+        <Representation>
+          <Label>Zootoca vivipara female</Label>
+          <Label xml:lang="nl">Zootoca vivipara vrouwtje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Zootoca_vivipara_vrouwtje_4.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic14">
+        <Representation>
+          <Label>Zootoca vivipara black</Label>
+          <Label xml:lang="nl">Zootoca vivipara zwart</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Zootoca_vivipara_zwart.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic15">
+        <Representation>
+          <Label>Zootoca vivipara juvenile</Label>
+          <Label xml:lang="nl">Zootoca vivipara jong</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Zootoca_vivipara_jong.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic16">
+        <Representation>
+          <Label>Anguis fragilis male</Label>
+          <Label xml:lang="nl">Anguis fragilis mannetje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Anguis_fragilis_mannetje_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic17">
+        <Representation>
+          <Label>Anguis fragilis female</Label>
+          <Label xml:lang="nl">Anguis fragilis vrouwtje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Anguis_fragilis_vrouwtje_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic18">
+        <Representation>
+          <Label>Anguis fragilis juvenile</Label>
+          <Label xml:lang="nl">Anguis fragilis juveniel</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Anguis_fragilis_juveniel.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic19">
+        <Representation>
+          <Label>Vipera berus</Label>
+          <Label xml:lang="nl">Vipera berus</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Vipera_berus_3.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic20">
+        <Representation>
+          <Label>Vipera berus</Label>
+          <Label xml:lang="nl">Vipera berus</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Vipera_berus_4.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic21">
+        <Representation>
+          <Label>Vipera berus vrouw</Label>
+          <Label xml:lang="nl">Vipera berus vrouw</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Vipera_berus_vrouw_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic22">
+        <Representation>
+          <Label>Vipera berus vrouw</Label>
+          <Label xml:lang="nl">Vipera berus vrouw</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Vipera_berus_vrouw_3.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic23">
+        <Representation>
+          <Label>Vipera berus dark</Label>
+          <Label xml:lang="nl">Vipera berus donker</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Vipera_berus_donker.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic24">
+        <Representation>
+          <Label>Natrix natrix</Label>
+          <Label xml:lang="nl">Natrix natrix</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Natrix_natrix_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic25">
+        <Representation>
+          <Label>Natrix natrix</Label>
+          <Label xml:lang="nl">Natrix natrix</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Natrix_natrix_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic26">
+        <Representation>
+          <Label>Natrix natrix</Label>
+          <Label xml:lang="nl">Natrix natrix</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Natrix_natrix_3.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic27">
+        <Representation>
+          <Label>Coronella austriaca</Label>
+          <Label xml:lang="nl">Coronella austriaca</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Coronella_austriaca_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic28">
+        <Representation>
+          <Label>Coronella austriaca</Label>
+          <Label xml:lang="nl">Coronella austriaca</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Coronella_austriaca_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic29">
+        <Representation>
+          <Label>Coronella austriaca flipped</Label>
+          <Label xml:lang="nl">Coronella austriaca omgekeerd</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Coronella_austriaca_4_flipped.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic30">
+        <Representation>
+          <Label>Coronella austriaca</Label>
+          <Label xml:lang="nl">Coronella austriaca</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Coronella_austriaca_4.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic31">
+        <Representation>
+          <Label>Bufo bufo</Label>
+          <Label xml:lang="nl">Bufo bufo</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Bufo_bufo_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic32">
+        <Representation>
+          <Label>Bufo bufo</Label>
+          <Label xml:lang="nl">Bufo bufo</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Bufo_bufo_3.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic33">
+        <Representation>
+          <Label>Bufo bufo juvenile</Label>
+          <Label xml:lang="nl">Bufo bufo juveniel</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Bufo_bufo_juveniel_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic34">
+        <Representation>
+          <Label>Bufo bufo juvenile</Label>
+          <Label xml:lang="nl">Bufo bufo juveniel</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Bufo_bufo_juveniel_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic35">
+        <Representation>
+          <Label>Epidalea calamita</Label>
+          <Label xml:lang="nl">Epidalea calamita</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Epidalea_calamita_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic36">
+        <Representation>
+          <Label>Epidalea calamita</Label>
+          <Label xml:lang="nl">Epidalea calamita</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Epidalea_calamita_3.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic37">
+        <Representation>
+          <Label>Epidalea calamita eggs</Label>
+          <Label xml:lang="nl">Epidalea calamita eieren</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Epidalea_calamita_eieren_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic38">
+        <Representation>
+          <Label>Epidalea calamita juvenile</Label>
+          <Label xml:lang="nl">Epidalea calamita juveniel</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Epidalea_calamita_juveniel.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic39">
+        <Representation>
+          <Label>Epidalea calamita croaking</Label>
+          <Label xml:lang="nl">Epidalea calamita kwakend</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Epidalea_calamita_kwakend.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic40">
+        <Representation>
+          <Label>Bombina variegata</Label>
+          <Label xml:lang="nl">Bombina variegata</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Bombina_variegata_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic41">
+        <Representation>
+          <Label>Bombina variegata</Label>
+          <Label xml:lang="nl">Bombina variegata</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Bombina_variegata_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic42">
+        <Representation>
+          <Label>Alytes obstetricans</Label>
+          <Label xml:lang="nl">Alytes obstetricans</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Alytes_obstetricans_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic43">
+        <Representation>
+          <Label>Alytes obstetricans with eggs</Label>
+          <Label xml:lang="nl">Alytes obstetricans met eieren</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/A_obst_met_eieren_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic44">
+        <Representation>
+          <Label>Pelobates fuscus male</Label>
+          <Label xml:lang="nl">Pelobates fuscus mannetje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Pelobates_fuscus_mannetje_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic45">
+        <Representation>
+          <Label>Pelobates fuscus male</Label>
+          <Label xml:lang="nl">Pelobates fuscus mannetje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Pelobates_fuscus_mannetje_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic46">
+        <Representation>
+          <Label>Pelobates fuscus female</Label>
+          <Label xml:lang="nl">Pelobates fuscus vrouwtje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Pelobates_fuscus_vrouwtje_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic47">
+        <Representation>
+          <Label>Pelobates fuscus</Label>
+          <Label xml:lang="nl">Pelobates fuscus</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Pelobates_fuscus_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic48">
+        <Representation>
+          <Label>Pelobates fuscus group</Label>
+          <Label xml:lang="nl">Pelobates fuscus groepje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Pelobates_fuscus_groepje.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic49">
+        <Representation>
+          <Label>Hyla arborea</Label>
+          <Label xml:lang="nl">Hyla arborea</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Hyla_arborea_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic50">
+        <Representation>
+          <Label>Hyla arborea</Label>
+          <Label xml:lang="nl">Hyla arborea</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Hyla_arborea_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic51">
+        <Representation>
+          <Label>Hyla arborea croaking</Label>
+          <Label xml:lang="nl">Hyla arborea kwakend</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Hyla_arborea_kwakend_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic52">
+        <Representation>
+          <Label>Hyla arborea croaking</Label>
+          <Label xml:lang="nl">Hyla arborea kwakend</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Hyla_arborea_kwakend_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic53">
+        <Representation>
+          <Label>Rana arvalis</Label>
+          <Label xml:lang="nl">Rana arvalis</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Rana_arvalis_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic54">
+        <Representation>
+          <Label>Rana arvalis amplexus</Label>
+          <Label xml:lang="nl">Rana arvalis amplexus</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Rana_arvalis_amplexus_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic55">
+        <Representation>
+          <Label>Rana arvalis amplexus</Label>
+          <Label xml:lang="nl">Rana arvalis amplexus</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Rana_arvalis_amplexus_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic56">
+        <Representation>
+          <Label>Rana arvalis belly</Label>
+          <Label xml:lang="nl">Rana arvalis buikzijde</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Rana_arvalis_buikzijde.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic57">
+        <Representation>
+          <Label>Rana arvalis eggs</Label>
+          <Label xml:lang="nl">Rana arvalis eieren</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Rana_arvalis_eieren.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic58">
+        <Representation>
+          <Label>Rana arvalis juvenile</Label>
+          <Label xml:lang="nl">Rana arvalis jong</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Rana_arvalis_jong.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic59">
+        <Representation>
+          <Label>Rana temporaria</Label>
+          <Label xml:lang="nl">Rana temporaria</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Rana_temporaria_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic60">
+        <Representation>
+          <Label>Rana temporaria</Label>
+          <Label xml:lang="nl">Rana temporaria</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Rana_temporaria_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic61">
+        <Representation>
+          <Label>Rana temporaria belly</Label>
+          <Label xml:lang="nl">Rana temporaria buikzijde</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Rana_temporaria_buikzijde.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic62">
+        <Representation>
+          <Label>Rana temporaria eggs</Label>
+          <Label xml:lang="nl">Rana temporaria eieren</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Rana_temporaria_eieren.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic63">
+        <Representation>
+          <Label>Pelophylax lessonae</Label>
+          <Label xml:lang="nl">Pelophylax lessonae</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Pelophylax_lessonae_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic64">
+        <Representation>
+          <Label>Pelophylax lessonae</Label>
+          <Label xml:lang="nl">Pelophylax lessonae</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Pelophylax_lessonae_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic65">
+        <Representation>
+          <Label>Pelophylax ridibundus</Label>
+          <Label xml:lang="nl">Pelophylax ridibundus</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Pelophylax_ridibundus_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic66">
+        <Representation>
+          <Label>Pelophylax ridibundus</Label>
+          <Label xml:lang="nl">Pelophylax ridibundus</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Pelophylax_ridibundus_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic67">
+        <Representation>
+          <Label>Pelophylax kl esculentus</Label>
+          <Label xml:lang="nl">Pelophylax kl esculentus</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Pelophylax_kl_esculentus_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic68">
+        <Representation>
+          <Label>Pelophylax kl esculentus</Label>
+          <Label xml:lang="nl">Pelophylax kl esculentus</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Pelophylax_kl_esculentus_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic69">
+        <Representation>
+          <Label>Pelophylax kl esculentus</Label>
+          <Label xml:lang="nl">Pelophylax kl esculentus</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Pelophylax_kl_esculentus_3.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic70">
+        <Representation>
+          <Label>Salamandra salamandra</Label>
+          <Label xml:lang="nl">Salamandra salamandra</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Salamandra_salamandra_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic71">
+        <Representation>
+          <Label>Salamandra salamandra</Label>
+          <Label xml:lang="nl">Salamandra salamandra</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/Salamandra_salamandra_3.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic72">
+        <Representation>
+          <Label>Salamandra salamandra belly</Label>
+          <Label xml:lang="nl">Salamandra salamandra buikzijde</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/S_salamandra_buikzijde.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic73">
+        <Representation>
+          <Label>Salamandra salamandra larva</Label>
+          <Label xml:lang="nl">Salamandra salamandra larve</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/S.salamandra_larve.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic74">
+        <Representation>
+          <Label>Lissotriton vulgaris male</Label>
+          <Label xml:lang="nl">Lissotriton vulgaris mannetje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/L_vulgaris_mannetje_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic75">
+        <Representation>
+          <Label>Lissotriton vulgaris female</Label>
+          <Label xml:lang="nl">Lissotriton vulgaris vrouwtje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/L_vulgaris_vrouwtje_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic76">
+        <Representation>
+          <Label>Lissotriton vulgaris landphase</Label>
+          <Label xml:lang="nl">Lissotriton vulgaris landfase</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/L_vulgaris_landfase_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic77">
+        <Representation>
+          <Label>Lissotriton vulgaris belly male</Label>
+          <Label xml:lang="nl">Lissotriton vulgaris buikzijde man</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/L_vulgaris_buikzijde_man.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic78">
+        <Representation>
+          <Label>Lissotriton vulgaris belly female</Label>
+          <Label xml:lang="nl">Lissotriton vulgaris buikzijde vrouw</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/L_vulgaris_buikzijde_vrouw.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic79">
+        <Representation>
+          <Label>Lissotriton vulgaris belly juvenile</Label>
+          <Label xml:lang="nl">Lissotriton vulgaris buikzijde jong</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/L_vulgaris_buikzijde_jong.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic80">
+        <Representation>
+          <Label>Lissotriton helveticus male</Label>
+          <Label xml:lang="nl">Lissotriton helveticus mannetje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/L_helveticus_mannetje.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic81">
+        <Representation>
+          <Label>Lissotriton helveticus female</Label>
+          <Label xml:lang="nl">Lissotriton helveticus vrouwtje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/L_helveticus_vrouwtje_1.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic82">
+        <Representation>
+          <Label>Lissotriton helveticus female</Label>
+          <Label xml:lang="nl">Lissotriton helveticus vrouwtje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/L_helveticus_vrouwtje_2.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic83">
+        <Representation>
+          <Label>Lissotriton helveticus male landphase</Label>
+          <Label xml:lang="nl">Lissotriton helveticus mannetje landfase</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/L_helv_mannetje_landfase.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic84">
+        <Representation>
+          <Label>Lissotriton helveticus belly</Label>
+          <Label xml:lang="nl">Lissotriton helveticus buikzijde</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/L_helveticus_buikzijde.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic85">
+        <Representation>
+          <Label>Mesotriton alpestris male</Label>
+          <Label xml:lang="nl">Mesotriton alpestris mannetje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/M_alpestris_mannetje.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic86">
+        <Representation>
+          <Label>Mesotriton alpestris female</Label>
+          <Label xml:lang="nl">Mesotriton alpestris vrouwtje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/M_alpestris_vrouwtje.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic87">
+        <Representation>
+          <Label>Mesotriton alpestris male landphase</Label>
+          <Label xml:lang="nl">Mesotriton alpestris mannetje landfase</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/M_alp_mannetje_landfase.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic88">
+        <Representation>
+          <Label>Mesotriton alpestris female landphase</Label>
+          <Label xml:lang="nl">Mesotriton alpestris vrouwtje landfase</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/M_alp_vrouwtje_landfase.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic89">
+        <Representation>
+          <Label>Triturus cristatus male</Label>
+          <Label xml:lang="nl">Triturus cristatus mannetje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/T_cristatus_mannetje.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic90">
+        <Representation>
+          <Label>Triturus cristatus female</Label>
+          <Label xml:lang="nl">Triturus cristatus vrouwtje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/T_cristatus_vrouwtje.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic91">
+        <Representation>
+          <Label>Triturus cristatus female landphase</Label>
+          <Label xml:lang="nl">Triturus cristatus vrouwtje landfase</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/T_cr_vrouwtje_landfase.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic92">
+        <Representation>
+          <Label>Triturus cristatus belly male</Label>
+          <Label xml:lang="nl">Triturus cristatus buikzijde mannetje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/T_cr_buikzijde_mannetje.jpg"/>
+      </MediaObject>
+      <MediaObject id="pic93">
+        <Representation>
+          <Label>Triturus cristatus belly female</Label>
+          <Label xml:lang="nl">Triturus cristatus buikzijde vrouwtje</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://www.soortenbank.nl/BIS/reptielen_en_amfibieen/pictures/T_cr_buikzijde_vrouwtje.jpg"/>
+      </MediaObject>
+    </MediaObjects>
+  </Dataset>
+</Datasets>

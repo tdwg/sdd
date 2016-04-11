@@ -1,0 +1,148 @@
+<IdentificationKeys>
+  <IdentificationKey id="k1">
+    <Representation>
+      <Label xml:lang="en-us">First level key</Label>
+      <Detail role="Description" xml:lang="en-us">Note: currently this key has 3 leads in the root, 1 of which directly points to another subkey, one directly ends with a taxon, and one leads to further leads. Note that this contains an ERROR by DESIGN: the lead id=3 results in nothing, an error we currently have no validation against!</Detail>
+    </Representation>
+    <Leads>
+      <Lead id="k1L1">
+        <Statement>
+          <Label xml:lang="en-us">Flowers blue</Label>
+        </Statement>
+      </Lead>
+      <Result>
+        <Statement>
+          <Label xml:lang="en-us">Flowers pink</Label>
+        </Statement>
+        <TaxonName ref="t2"/>
+      </Result>
+      <Result>
+        <Statement>
+          <Label xml:lang="en-us">Flowers red</Label>
+        </Statement>
+        <Subkey ref="k2"/>
+      </Result>
+      <Lead id="k1L2">
+        <Parent ref="k1L1"/>
+        <Statement>
+          <Label xml:lang="en-us">Flowers small</Label>
+        </Statement>
+      </Lead>
+      <Lead id="k1L3">
+        <Parent ref="k1L1"/>
+        <Statement>
+          <Label xml:lang="en-us">Flowers large</Label>
+        </Statement>
+      </Lead>
+      <Result>
+        <Parent ref="k1L2"/>
+        <Statement>
+          <Label xml:lang="en-us">Stamen 5</Label>
+        </Statement>
+        <TaxonName ref="t2"/>
+      </Result>
+      <Result>
+        <Parent ref="k1L2"/>
+        <Statement>
+          <Label xml:lang="en-us">Stamen 10</Label>
+        </Statement>
+        <TaxonName ref="t3"/>
+      </Result>
+    </Leads>
+  </IdentificationKey>
+  <IdentificationKey id="k2">
+    <Representation>
+      <Label xml:lang="en-us">Subkey 1: Red-flowers</Label>
+    </Representation>
+    <Leads>
+      <Result>
+        <Statement>
+          <Label xml:lang="en-us">Just copied, not meaningful</Label>
+        </Statement>
+        <TaxonName ref="t2"/>
+      </Result>
+      <Result>
+        <Statement>
+          <Label xml:lang="en-us">Just copied, not meaningful</Label>
+        </Statement>
+        <TaxonName ref="t3"/>
+      </Result>
+    </Leads>
+  </IdentificationKey>
+  <IdentificationKey id="k3">
+    <Representation>
+      <Label xml:lang="en">Key to the &lt;em&gt;Families&lt;/em&gt; of Higher Plants</Label>
+      <Label xml:lang="de">Schlüssel zu den Familien der Höheren Pflanzen</Label>
+    </Representation>
+    <x:Annotation xmlns:x="www.x.edu">In contrast to the previous keys, this one uses questions. Statements here are anwers to questions rather than independent statements.</x:Annotation>
+    <RevisionData>
+      <Creators>
+        <Agent role="aut" ref="a1"/>
+        <Agent role="edt" ref="a1"/>
+        <Agent role="edt" ref="a2"/>
+      </Creators>
+      <Contributors>
+        <Agent role="pfr" ref="a3"/>
+        <Agent role="res" ref="a3"/>
+      </Contributors>
+      <DateCreated>1999-08-13T00:00:00</DateCreated>
+      <DateModified>2006-04-05T00:00:00</DateModified>
+      <RevisionStatus code="Unrevised"/>
+    </RevisionData>
+    <Question>
+      <Label xml:lang="en">Is the plant mostly green?</Label>
+    </Question>
+    <Leads>
+      <Lead id="k3L1">
+        <Statement>
+          <Label>yes</Label>
+        </Statement>
+        <Question>
+          <Label>Are parts of the plant woody?</Label>
+        </Question>
+      </Lead>
+      <Lead id="k3L2">
+        <Statement>
+          <Label>no</Label>
+        </Statement>
+        <Question>
+          <Label>Does the plant have leaves, needles, leaf-like scales?</Label>
+        </Question>
+      </Lead>
+      <Result>
+        <Parent ref="k3L1"/>
+        <Statement>
+          <Label>No, the entire plant is thallous or herbaceous</Label>
+        </Statement>
+        <!-- finishing here with this taxon is done for the purpose of an example only, in reality this is nonsense!-->
+        <TaxonName ref="t1"/>
+      </Result>
+      <Result>
+        <Parent ref="k3L1"/>
+        <Statement>
+          <Label>At least some above-ground parts are woody.</Label>
+        </Statement>
+        <!-- finishing here with subkey is done for the purpose of an example only, in reality this is nonsense!-->
+        <Subkey ref="k1"/>
+      </Result>
+      <Lead id="k3L3">
+        <Parent ref="k3L2"/>
+        <Statement>
+          <Label>no</Label>
+        </Statement>
+        <Question>
+          <Label>Etc., key is incomplete here</Label>
+        </Question>
+      </Lead>
+      <Lead id="k3L4">
+        <Parent ref="k3L2"/>
+        <Statement>
+          <Label>yes</Label>
+        </Statement>
+        <Question>
+          <Label>Etc., key is incomplete here</Label>
+        </Question>
+      </Lead>
+    </Leads>
+  </IdentificationKey>
+</IdentificationKeys>

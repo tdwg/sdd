@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Gregor Hagedorn (Biologische Bundesanstalt) -->
+<xs:schema xmlns="http://www.tdwg.org/2005/UBIF" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sea="http://www.bgbm.org/biodivinf/Schema/sea" targetNamespace="http://www.tdwg.org/2005/UBIF" elementFormDefault="qualified" attributeFormDefault="unqualified" blockDefault="#all" version="Unified Biosciences Information Framework (UBIF) 1.0">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Unified Biosciences Information Framework (UBIF) XML schema. This part provides technical and content metadata for an entire dataset.</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Copyright © 2005 TDWG (Taxonomic Databases Working Group, www. tdwg.org). See the file UBIF_(c).xsd for authorship and licensing information.</xs:documentation>
+  </xs:annotation>
+  <xs:include schemaLocation="UBIF_ObjectCoreOntology.xsd"/>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== TechnicalMetadata: Data provider, derivation, transformation history:</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="TechnicalMetadata">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Describes the providers and application/ script(s) that produced the current data set, plus a history of all automatic or semi-automatic transformation involving none or automated content changes.
+
+Derivation examples: a) Generation of file from a database, b) Adding/removing data to/from an existing UBIF xml file, c) Passing data through a portal without intentionally changing any data. The information provided here is intended to
+a) facilitate debugging
+b) react to known deficits of generators, esp. if generators produce syntactically correct but semantically faulty data (misapplication of data elements, etc.)
+c) evaluate the quality and scope of archived data, especially whether the data contained in the document are complete or an excerpt from a larger data set.
+d) inform about options to update/refresh data</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Generator">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Which tool did it? Metadata about the software (application, script, etc.) that provided or transformed the data.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="name" type="String255" use="required">
+            <xs:annotation>
+              <xs:documentation xml:lang="en-us">Name of the software application or package that generated this document. This may also be the name of a script that is not part of a larger application. In the case of large applications, the attribute 'routine' may provide additional detail.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="version" type="String255" use="required">
+            <xs:annotation>
+              <xs:documentation xml:lang="en-us">Version of the application that has generated this document. The attribute should not be named 'Version' to avoid confusion with the version of the content (see content Metadata).</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="notes" type="String" use="optional">
+            <xs:annotation>
+              <xs:documentation xml:lang="en-us">Additional information about the generating application that is not part of the name or version. If the copyright of the generating application is specified, it should be understood that this does not affect the content copyright of the data.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="routine" type="String255" use="optional">
+            <xs:annotation>
+              <xs:documentation xml:lang="en-us">Optionally allows a generating application to identify which of possibly multiple transforming routines (database code, xslt, etc.) was used. This attribute may also be used, to identify different conditions under which the export routine may behave differently.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TechnicalContact" type="SimpleAgentRef" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Who did it?
+A technical contact is one to whom questions about accessibility of a provider or resource should be directed.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AdministrativeContact" type="SimpleAgentRef" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Who did it?
+Administrative contacts are those to whom questions about data, IPR or restrictions on should be directed. The contact listed here are not necessarily those responsible for the content, especially if the dataset is provided by a different person/organization than those who have created it. Compare also Metadata/RevisionData/Creators. </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="__UndecidedProposals" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="__Statement" type="Statement" minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">Optional statement describing the transformation actions, acknowledgement, copyright, etc. The statement should be complete and identify the speaker (i.e. Technical/AdministrativeContact should not be expected to be displayed). - This is the only item in TechnicalMetadata expected to be displayed on web reports addressing the general public. All other items in TechnicalMetadata are normally displayed only on technical pages. -- Note: Claiming copyright/database rights on data provision or transformations may interfere with the usability of data and is not recommended. Care must be taken to avoid violating the rights of holders of the original content copyright! [@Currently not yet validated: multiple statements should be limited to having different languages!</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="__Transformations" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">What was done? Metadata describing actions on the entire data set, recording especially the intent to transform data or pass them on unchanged. This element may be missing if the actions are variable/cannot be traced. However, consumers may wish to avoid datasets containing untraceable transformation actions. -- Note: The combination of Actions in this and previous transformations (see history) implicitly informs about the completeness of data (relevant when comparing archival data sets).</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Action" type="__DerivationActionDetails" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en-us">The kind of action is described using three required boolean attributes:
+ATTR: addition, removal, normalization = all 3 are false if the data are passed on without changes (except for information in the Derivation element itself). - The scope of action may optionally be described in: ATTR: affectedobjecttype = if empty the Action record is a summary for the entire dataset, else actions on specific object types may be described separately.
+ATTR: within = if true, the action changes values and structures inside objects rather than presence/absence of entire objects in their collections. 
+ATTR: description = optional free-form text description of the action.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="__Query" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">If the dataset is based on a query, use:
+[ATTR: uri = If online query can be expressed as a single URI, it is recommended to provide this (even if another mechanism has actually been used). Executing a request to this URI is expected to return the same data set if no content updates occurred and updated information otherwise. If the only web query mechanism has a wizard-like interface involve multiple steps a Query/URI may not exist.
+ATTR: description = Optional description of the query in any format considered intelligible to human readers. For example, it may be a set of rules in a programming language, an xpath, sql, or oql expression, or plain language (English is recommended, but not required). The format itself should be explained unless plain language is used. The information is intended for human consumption to improve the interpretation of documents that archive extracts and snapshots at a certain point in time.]</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:attribute name="uri" type="xs:anyURI" use="optional"/>
+                <xs:attribute name="description" type="String" use="optional"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="__DerivationHistory" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">The derivation history includes all automatic or semi-automatic transformation with negligable or automated content changes. It does NOT include the history of content revisions and expansions, possibly combined with changes of copyright or ownership; this history must be acknowledged in the Description, Owner and IPR statements in Metadata.
+
+Whenever a data provider receives a dataset already containing derviation data, it will put these unchanged into previous derivations and add its own data as a new outer layer. Thus the outermost Derivation is the most recent (immediate) one, the innermost the first.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Derivation" type="TechnicalMetadata" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en-us">Usually this contains only a single node! The history is a recursive structure, not an array. However, multiple earlier derivations may be present if information has been merged. Example: SDD descriptions are enriched with images created by a geography server and based on ABCD collection data. Datasets should be kept separate whereever possible, e. g. in the case of specimen data from multiple collections.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:group ref="DeveloperTools" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="created" type="xs:dateTime" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">When was the current document or data stream created by the generator? Date and time as local time with timezone information or UTC (Universal time coordinates, recommended).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="expires" type="xs:dateTime" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Cached dataset data must be refreshed or discarded after this date. No guarantee is given that data do not change prior to this date; if the most current data are desired a test for updates may be necessary.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="__DerivationActionDetails">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Used for derivation/transformation Action elements inside TechnicalMetadata.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:any namespace="##targetNamespace" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">This extension mechanism is designed for future versions of the UBIF standard. It might, e. g., allow to list references to ids of objects affected by an action. Most transformations would probably not give such information, but it could be valuable where given.</xs:documentation>
+        </xs:annotation>
+      </xs:any>
+    </xs:sequence>
+    <xs:attribute name="addition" type="xs:boolean" use="required"/>
+    <xs:attribute name="removal" type="xs:boolean" use="required"/>
+    <xs:attribute name="normalization" type="xs:boolean" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Normalization are actions that change data in a way intended to improve data quality without changing the meaning. Examples: standardization of collectors names or abbreviations. Primarily intended for changes within the major objects. However, a collection of objects may be normalized as well, e. g. if duplicate objects are removed.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="affectedobjecttype" type="String255" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">If empty the Action record is a summary for the entire dataset, else actions on specific object types may be described separately.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="within" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">If within is true, the action changes values and structures inside objects rather than presence/absence of entire objects in their collections.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="description" type="String" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Optionally an unconstrained text with details of the transformation action and completeness of data relative to the source of the current transformation. It may include both an account of the actions as well as a narrative describing the purpose of the transformation. This should address human readers. It is intended for technical usage, not to be displayed in consumer-oriented web pages. English language is recommended but not required.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Meta data about the entire data collection from which the data set was derived:</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="ContentMetadata">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Metadata referring to the principal source of the entire data collection
+(thus the metadata scope may be
+wider than the objects actually
+contained in the data set).
+
+If a history of the data collection
+(revised or expanded in various
+projects or at different institutions)
+exist, this must be reflected in the
+IPR statements and possibly in
+the list of Owners.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Representation" type="TitleEtcRepresentation" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Language-specific
+header information</xs:documentation>
+        </xs:annotation>
+        <xs:unique name="MetadataDescription_UniqueRepresentation">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">The language values must uniquely identify the Representations within Description.</xs:documentation>
+          </xs:annotation>
+          <xs:selector xpath="."/>
+          <xs:field xpath="@xml:Lang"/>
+        </xs:unique>
+      </xs:element>
+      <xs:element name="__Scope" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Language-independent expressions of limited geographical, taxonomic, etc. scopes. In the case of projects in progress, 'scope' may define the planned or intended, rather than the achieved scope (or coverage). Compare also Coverage in Description (which is free-form text and language-specific).</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="GeographicalScope" type="GeoLocalityRefs" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">A data collection may have a limited geographical scope. Example: 'Germany', 'Austria'.</xs:documentation>
+              </xs:annotation>
+              <xs:unique name="DatasetScope_UniqueLocalities">
+                <xs:selector xpath="GeoLocality"/>
+                <xs:field xpath="@ref"/>
+              </xs:unique>
+            </xs:element>
+            <xs:element name="TaxonScope" type="TaxonNameRefs" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">A data set may have a limited taxonomic scope. Example: 'Hymenoptera'</xs:documentation>
+              </xs:annotation>
+              <xs:unique name="DatasetScope_UniqueTaxonNameRefs">
+                <xs:selector xpath="TaxonName"/>
+                <xs:field xpath="@ref"/>
+              </xs:unique>
+            </xs:element>
+            <xs:element name="SourcePublications" type="PublicationRefs" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">Information in the entire dataset may come from these (printed or digital) publications. Note that if data are not just copied from publications into independent descriptions, but revised and combined with expert knowledge, SourcePublications should not be used. Such a process creates an independent new work and the publications are only cited in the descriptions).</xs:documentation>
+              </xs:annotation>
+              <xs:unique name="DatasetScope_UniquePublicationRefs">
+                <xs:selector xpath="Publication"/>
+                <xs:field xpath="@ref"/>
+              </xs:unique>
+            </xs:element>
+            <xs:element name="__OtherScope" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">@@ E.g. ecological like "Temperate rainforest", 'insectivores' (bats, birds, mammals' ...), temporal (jurassic fossils)... Problem: these should be external subject vocubularies that should be linked to... Library of congress subject headings may be usefull.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="__Term" type="String" maxOccurs="unbounded"/>
+                </xs:sequence>
+              </xs:complexType>
+              <xs:unique name="DatasetScope_UniqueOtherScope">
+                <xs:selector xpath="__Term"/>
+                <xs:field xpath="."/>
+              </xs:unique>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RevisionData" type="RevisionData" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Creators, Revision
+status, and dates of
+the entire data
+collection from which
+the current dataset
+is derived.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:group ref="OwnerAndIPR"/>
+      <xs:element name="GloballyUniqueName" type="xs:anyURI" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">A globally unique ID-string, distinguishing a data collection (which may be identical or larger than the current dataset) from all others. The value should never be changed once it has been introduced. To refer to objects within the dataset from elsewhere, this value is combined with the object. If you don't have this, it will be difficult to compare versions of data collections.
+
+Recommendation: Avoid choosing simple names that are likely to be used multiple times ('plants', 'French bees', etc.). Authors working at research institutions that allow to use their name as permanent identifiers (even if the author stops working there), may use institutional-URI/personal-or-team-name/ data-collection-label (example: xyz.de/hagedorn/coelomycetes). Note that this is only an identifier and does NOT help to locate real web resources.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:group ref="DeveloperTools" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TitleEtcRepresentation">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Language-specific content metadata (title, description, etc.) with *required* xml:lang attribute added.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Title" type="String255">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">A short, concise title. Does not support any formatting! (~= DC.Title)</xs:documentation>
+          <xs:documentation xml:lang="en-us">General Note on DublinCore translation: In addition to those that can bee transformed from UBIF metadata, an additional DC.Type with value 'dataset' should be added.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Details" type="String" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Free-form text containing a longer description of the data set.
+(~= DC.Description)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Coverage" type="String" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Free-form text describing geographic, taxonomic, or other coverage aspects of terminology or descriptions available in the current data set. (~= DC.Coverage)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="URI" type="xs:anyURI" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">URL pointing to an online source related to the current data set, which may or may not serve an updated version of the terminology or descriptions.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Icon" type="MediaResourceRef" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Optionally an image media resource containing an icon/logo symbolizing the data set.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attributeGroup ref="multilingual"/>
+  </xs:complexType>
+</xs:schema>

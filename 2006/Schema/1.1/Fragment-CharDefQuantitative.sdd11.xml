@@ -1,0 +1,28 @@
+<QuantitativeCharacter id="c2">
+  <Representation>
+    <Label>Leaf length</Label>
+  </Representation>
+  <Assumptions>
+    <MeasurementScale>Ratio</MeasurementScale>
+  </Assumptions>
+  <Mappings>
+    <Mapping>
+      <From lower="0" upper="3"/>
+      <ToState ref="s1"/>
+    </Mapping>
+    <Mapping>
+      <From lower="3" upper="10"/>
+      <ToState ref="s2"/>
+    </Mapping>
+    <Mapping>
+      <From lower="4" upper="10000000"/>
+      <ToState ref="s3"/>
+    </Mapping>
+  </Mappings>
+  <MeasurementUnit>
+    <Label role="Abbrev">m</Label>
+  </MeasurementUnit>
+  <Default>
+    <MeasurementUnitPrefix>milli</MeasurementUnitPrefix>
+  </Default>
+</QuantitativeCharacter>

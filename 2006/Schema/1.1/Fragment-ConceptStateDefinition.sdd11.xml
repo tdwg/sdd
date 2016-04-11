@@ -1,0 +1,14 @@
+<DescriptiveConcept id="dc30">
+  <Representation>
+    <Label>Two-dimensional shapes</Label>
+  </Representation>
+  <ConceptStates>
+    <StateDefinition id="cs1"><Representation><Label>round</Label></Representation></StateDefinition>
+    <StateDefinition id="cs2"><Representation><Label>elliptical</Label></Representation></StateDefinition>
+    <StateDefinition id="cs3"><Representation><Label>ovate</Label></Representation></StateDefinition>
+    <StateDefinition id="cs4"><Representation><Label>obovate</Label></Representation></StateDefinition>
+    <StateDefinition id="cs5"><Representation><Label>linear</Label></Representation></StateDefinition>
+    <StateDefinition id="cs6"><Representation><Label>rectangular</Label></Representation></StateDefinition>
+    <StateDefinition id="cs7"><Representation><Label>lanceolate</Label></Representation></StateDefinition>
+  </ConceptStates>  
+</DescriptiveConcept>

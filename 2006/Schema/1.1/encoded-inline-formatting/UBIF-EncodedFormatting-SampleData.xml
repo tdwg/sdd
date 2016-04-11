@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+<Text>This document shows some examples of a recommended form of character formatting that may be supported in UBIF documents. Only a very limited subset of xhtml inline formatting codes is considered relevant: strong, emphasis, italics, super- and subscript, and the new-line (br) tag. The formatting convention is based on overloading encoded text like &amp;lt;sup&amp;gt;2&amp;lt;/sup&amp;gt; with formatting semantics. This is not controlled by the schema in any way. Processors of UBIF documents are recommended to apply the convention and recover the formatting when producing html or other formatted output. The example xslt script delivered with this documents shows an example of how this can be achieved for xhtml documents.</Text>
+
+<Text>Plain text without formatting or character entities.</Text>
+<Text>Plain text without formatting, but containing character entities "&lt;" &amp; "&gt;".</Text>
+<Text>Testing sub- and superscript: ml H&lt;sub&gt;2&lt;/sub&gt;O / mm&lt;sup&gt;2&lt;/sup&gt;</Text>
+<Text>Multiple &lt;em&gt;emphasis&lt;/em&gt; and &lt;em&gt;emphasis&lt;/em&gt;</Text>
+<Text>&lt;em&gt;Testing emphasized field (entire text in parent tag is formatted). This is undesirable and not what the formatting convention is intended to support. However, since it is difficult to prohibit such abuse, it should not lead to an error condition.&lt;/em&gt;</Text>
+<Text>Testing nesting (different tags): &lt;em&gt;emphasized &lt;strong&gt;strong mm&lt;sup&gt;2&lt;/sup&gt; &lt;/strong&gt;&lt;/em&gt;.</Text>
+<Text>Testing nesting (same tag): &lt;em&gt;emphasized &lt;em&gt; emphasized mm&lt;sup&gt;2&lt;/sup&gt; &lt;/em&gt;&lt;/em&gt;. This may fail, but should still produce well-formed xml and valid xhtml (although not equivalent to the intended formatting!).</Text>
+<Text>Other tags: &lt;i&gt;italics&lt;/i&gt;,&lt;br&gt;
+testing new line (html) &lt;br&gt;
+testing new line (xhtml) &lt;br/&gt;
+testing new line (xhtml plus blank) &lt;br /&gt;
+End.</Text>
+<Text>Testing an unbalanced starting "strong": &lt;strong&gt;, should be left unchanged.</Text>
+<Text>Testing an unbalanced start/close mismatch error: H&lt;sub&gt;2&lt;/sup&gt;O, should be left unchanged.</Text>
+<Text>Contains empty emphasis: &lt;em&gt;&lt;/em&gt; this may be automatically removed. If not, then the xml should at least remain well formed!</Text>
+
+</root>

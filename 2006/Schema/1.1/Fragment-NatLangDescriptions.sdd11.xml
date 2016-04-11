@@ -1,0 +1,45 @@
+<NaturalLanguageDescriptions>
+  <NaturalLanguageDescription id="nd1">
+    <Representation>
+      <Label>Discaria pubescens, Botanische Staatssammlung München (M), 2nd floor, barcoded as "M-234823098"</Label>
+      <Detail role="Description">This version shows simple natural language description, without markup.</Detail>
+    </Representation>
+    <RevisionData>
+      <Creators>
+        <Agent role="edt" ref="a1"/>
+      </Creators>
+      <DateModified>2006-04-21T00:00:00</DateModified>
+    </RevisionData>
+    <NaturalLanguageData parsed="false">
+      <Text>Spreading shrub; stems glabrous. Leaves soon deciduous (particularly on older plants, especially when infected with &lt;i&gt;Diseasomyces&lt;/i&gt;), oblong, apex obtuse, glabrous or weakly hirsute; stipules dark reddish-brown, extremely rarely yellow, often shallowly joined around the node; spines stout.</Text>
+    </NaturalLanguageData>
+  </NaturalLanguageDescription>
+  <!-- OPEN PROBLEM?? TEXT FROM OLD EXAMPLE FILE: "authored" descriptions may never be overwritten by a natural language reporting process, whereas "generated" descriptions may be updated. Both "authored" and "generated" descriptions may have markup, but do not need to. -->
+  <NaturalLanguageDescription id="nd2">
+    <Representation>
+      <Label>Discaria pubescens, Botanische Staatssammlung München (M), 2nd floor, barcoded as "M-234823098"</Label>
+      <Detail role="Description">This version shows the same description with partial markup. Note that segmentation and parsing may be incomplete, which may be documented using the "parsed"-attribute. Note that the concept-, character- and state-ref values do not truly refer to appropriate definitions, they are given as examples only. The text should retain the full, unchanged original wording of the natural language description, the sequence of words should not be changed. The following example shows incomplete segmentation and parsing. The sdd standard is capable to store data with partial markup, resulting from any mixture of automatic markup by a processor or manual markup.  -->
+</Detail>
+    </Representation>
+    <RevisionData>
+      <Creators>
+        <Agent role="edt" ref="a1"/>
+      </Creators>
+      <Contributors>
+        <Agent role="mrk" ref="a2"/>
+      </Contributors>
+      <DateModified>2006-04-21T00:00:00</DateModified>
+    </RevisionData>
+    <NaturalLanguageData>
+      <Text>Spreading shrub; stems glabrous. Leaves soon deciduous (particularly on older plants, especially when infected with &lt;i&gt;Diseasomyces&lt;/i&gt;), oblong, apex obtuse, glabrous or weakly hirsute; </Text>
+      <Concept ref="dc1" debuglabel="stipules (from the part-hierarchy)">
+        <Text parsed="true">stipules</Text>
+        <Text parsed="false">sharply pointed, 3 mm wide,</Text>
+        <Categorical ref="c1" debuglabel="stipule-color (NOTE: after knowing about stipule, and only one char. with color property applied stipules in the character def., all color terms inside stipule can be automatically mapped to states of this character. The character mapping around the state may have been added by inference)"><State ref="s1" debuglabel="brown"><Modifier ref="mc50" debuglabel="dark"><Text parsed="true">darkish </Text></Modifier><Text parsed="true">brown, </Text></State></Categorical>            
+        <!-- Correctly, the stipule-color character would not stop here. However, the machine process assumed in this example, may have to identify the boundaries of characters by identifying states. Currently only one of the two states has been recognized and the character markup is *incorrect* here. However, as soon as "yellow"  below is recognized at a later time, a process can recognize that two states of the same character occur directly after another, so that both states can be joined with one character. -->
+        <Text parsed="false">extremely rarely yellow, often shallowly joined around the node; </Text>
+      </Concept>
+      <Text>spines stout.</Text>
+    </NaturalLanguageData>
+  </NaturalLanguageDescription>
+</NaturalLanguageDescriptions>

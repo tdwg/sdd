@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Datasets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://rs.tdwg.org/UBIF/2006/" xsi:schemaLocation="http://rs.tdwg.org/UBIF/2006/ ../SDD.xsd">
+  <TechnicalMetadata created="2004-09-10T10:00:00">
+    <Generator name="n/a, handcrafted instance document" version="n/a"/>
+  </TechnicalMetadata>
+  <Dataset xml:lang="en-us">
+    <Representation>
+      <Label>Branching key test dataset</Label>
+      <Detail role="Description">This validating SDD file gives 2 example of simple single-access keys (here the first is polytomous in lead-style, the second dichotomous in question-answer style). The data are not meant to be used for more than technical testing... More realistic data can be found on the SDD TDWG wiki.</Detail>
+    </Representation>
+  </Dataset>
+  <Dataset xml:lang="en-us">
+<Representation>
+  <Label xml:lang="en">Flying Fishes of the world</Label>
+  <Label xml:lang="de">Fliegende Fische der Welt</Label>
+  <Detail xml:lang="en" role="Description">A digital field guide</Detail>
+  <Detail xml:lang="en" role="Coverage">Flying Fishes (Exocoetidae)</Detail>
+  <Detail xml:lang="de" role="Coverage">Fliegende Fische (Exocoetidae)</Detail>
+  <MediaObject ref="m1"/>
+</Representation>
+<Links>
+  <Link rel="Alternate" href="http://www.DiversityCampus.net/Projects/xxx"/>
+</Links>
+<RevisionData>
+  <Creators>
+    <Agent role="aut" ref="a2" firstcontribution="2008-01-01T00:00:00Z" lastcontribution="2008-03-25T15:35:00Z"/>
+    <Agent role="edt" ref="a3"/>
+  </Creators>
+  <Contributors>
+    <Agent role="ctb" ref="a3"/>
+    <Agent role="trl" ref="a2"/>
+  </Contributors>
+  <DateCreated>1999-08-13T00:00:00</DateCreated>
+  <DateModified>2006-04-20T00:00:00</DateModified>
+  <RevisionStatus code="Unrevised"/>
+  <Version major="1" minor="01" modifier="beta" issued="2006-04-28T00:00:00Z" />
+</RevisionData>
+<IPRStatements>
+  <IPRStatement role="Copyright">
+    <Label>(c) 2002 Allmende Biological Research Station</Label>
+    <Detail>(c) 2002 Allmende Biological Research Station. All rights reserved. No part of this data may be....</Detail>
+  </IPRStatement>
+  <IPRStatement role="TermsOfUse">
+    <Detail>Data may be freely used as long as ...</Detail>
+    <Detail xml:lang="de">Die Daten dürfen frei verwendet werden, solange ...</Detail>
+  </IPRStatement>
+  <IPRStatement role="Disclaimer" href="http://www.xyz.org/disclaimer.html">
+    <Label>See also the disclaimer.</Label>
+  </IPRStatement>
+  <IPRStatement role="Acknowledgement">
+    <Detail>The work was made possible by a grant from ...</Detail>
+    <Detail xml:lang="de">Wir danken der X-Stiftung für ...</Detail>
+  </IPRStatement>
+</IPRStatements>
+<Scope>
+  <Citation ref="p111"/>
+  <GeographicArea ref="g1"/>
+</Scope>
+
+    <TaxonNames>
+<TaxonName id="t1" uri="http://Dryades.eu/FloraItalica/1029">
+  <!-- we chose FishBase for the example because it is one of the few resources where IDs are published (and Nicolas Bailly has helped a lot with SDD! -->
+  <Representation>
+    <Label>xxxx</Label>
+  </Representation>
+  <Links>
+  <Link rel="Alternate" href="urn:lsid:lsid.gbif.net:www.fishbase.org:1029"/>
+  <Link rel="Alternate" href="http://www.fishbase.org/Summary/SpeciesSummary.cfm?ID=1029"/>
+  </Links>
+  <Rank code="sp" />
+</TaxonName>
+<TaxonName id="t2">
+  <!-- Note that TaxonNames are not necessarily accepted/valid class names, they may contain synonyms like this:-->
+  <Representation>
+    <Label>Cheilopogon heterurus</Label>
+  </Representation>
+  <Links>
+  <Link rel="Alternate" href="http://www.fishbase.org/Nomenclature/SynonymSummary.cfm?ID=118703"/>
+  </Links>
+  <Rank code="sp" />
+</TaxonName>
+<TaxonName id="t3">
+  <Representation>
+    <Label>Cypselurus naresii (Günther, 1889)</Label>
+  </Representation>
+  <Links>
+  <Link rel="Alternate" href="http://www.fishbase.org/Summary/SpeciesSummary.cfm?ID=7726"/>
+  </Links>
+  <Rank code="sp" />
+</TaxonName>
+    </TaxonNames>
+
+<IdentificationKeys>
+  <IdentificationKey id="k1">
+    <Representation>
+      <Label xml:lang="en-us">First level key</Label>
+      <Detail role="Description" xml:lang="en-us">Note: currently this key has 3 leads in the root, 1 of which directly points to another subkey, one directly ends with a taxon, and one leads to further leads. Note that this contains an ERROR by DESIGN: the lead id=3 results in nothing, an error we currently have no validation against!</Detail>
+    </Representation>
+    <Leads>
+      <Lead id="k1L1">
+        <Statement xml:lang="en-us">Flowers blue</Statement>
+      </Lead>
+      <Lead>
+        <Statement xml:lang="en-us">Flowers pink</Statement>
+        <TaxonName ref="t2"/>
+      </Lead>
+      <Lead>
+        <Statement xml:lang="en-us">Flowers red</Statement>
+        <Subkey ref="k2"/>
+      </Lead>
+      <Lead id="k1L2">
+        <Parent ref="k1L1"/>
+        <Statement xml:lang="en-us">Flowers small</Statement>
+      </Lead>
+      <Lead id="k1L3">
+        <Parent ref="k1L1"/>
+        <Statement xml:lang="en-us">Flowers large</Statement>
+      </Lead>
+      <Lead>
+        <Parent ref="k1L2"/>
+        <Statement xml:lang="en-us">Stamen 5</Statement>
+        <TaxonName ref="t2"/>
+      </Lead>
+      <Lead>
+        <Parent ref="k1L2"/>
+        <Statement xml:lang="en-us">Stamen 10</Statement>
+        <TaxonName ref="t3"/>
+      </Lead>
+    </Leads>
+  </IdentificationKey>
+  <IdentificationKey id="k2">
+    <Representation>
+      <Label xml:lang="en-us">Subkey 1: Red-flowers</Label>
+    </Representation>
+    <Leads>
+      <Lead>
+        <Statement xml:lang="en-us">Just copied, not meaningful</Statement>
+        <TaxonName ref="t2"/>
+      </Lead>
+      <Lead>
+        <Statement> xml:lang="en-us">Just copied, not meaningful</Statement>
+        <TaxonName ref="t3"/>
+      </Lead>
+    </Leads>
+  </IdentificationKey>
+  <IdentificationKey id="k3">
+    <Representation>
+      <Label xml:lang="en">Key to the &lt;em&gt;Families&lt;/em&gt; of Higher Plants</Label>
+      <Label xml:lang="de">Schlüssel zu den Familien der Höheren Pflanzen</Label>
+    </Representation>
+    <x:Annotation xmlns:x="www.x.edu">In contrast to the previous keys, this one uses questions. Statements here are anwers to questions rather than independent statements.</x:Annotation>
+    <RevisionData>
+      <Creators>
+        <Agent role="aut" ref="a2"/>
+        <Agent role="edt" ref="a3"/>
+      </Creators>
+      <Contributors>
+        <Agent role="pfr" ref="a3"/>
+        <Agent role="res" ref="a3"/>
+      </Contributors>
+      <DateCreated>1999-08-13T00:00:00</DateCreated>
+      <DateModified>2006-04-05T00:00:00</DateModified>
+      <RevisionStatus code="Unrevised"/>
+    </RevisionData>
+    <Question><Text xml:lang="en">Is the plant mostly green?</Text></Question>
+    <Leads>
+      <Lead id="k3L1">
+        <Statement>yes</Statement>
+        <Question>
+          <Text>Are parts of the plant woody?</Text>
+        </Question>
+      </Lead>
+      <Lead id="k3L2">
+        <Statement>no</Statement>
+        <Question>
+          <Text>Does the plant have leaves, needles, leaf-like scales?</Text>
+        </Question>
+      </Lead>
+      <Lead>
+        <Parent ref="k3L1"/>
+        <Statement>No, the entire plant is thallous or herbaceous</Statement>
+        <!-- finishing here with this taxon is done for the purpose of an example only, in reality this is nonsense!-->
+        <TaxonName ref="t1"/>
+      </Lead>
+      <Lead>
+        <Parent ref="k3L1"/>
+        <Statement>At least some above-ground parts are woody.</Statement>
+        <!-- finishing here with subkey is done for the purpose of an example only, in reality this is nonsense!-->
+        <Subkey ref="k1"/>
+      </Lead>
+      <Lead id="k3L3">
+        <Parent ref="k3L2"/>
+        <Statement>no</Statement>
+        <Question>
+          <Text>Etc., key is incomplete here</Text>
+        </Question>
+      </Lead>
+      <Lead id="k3L4">
+        <Parent ref="k3L2"/>
+        <Statement>yes</Statement>
+        <Question>
+          <Text>Etc., key is incomplete here</Text>
+        </Question>
+      </Lead>
+    </Leads>
+  </IdentificationKey>
+</IdentificationKeys>
+
+<Agents>
+  <Agent id="a2">
+    <Representation>
+      <Label>Gregor Hagedorn, Berlin</Label>
+      <Label role="Sort">Hagedorn, Gregor (Berlin)</Label>
+    </Representation>
+  </Agent>
+  <Agent id="a3">
+    <Representation>
+      <Label>Ali Baba</Label>
+      <Detail role="Description" xml:lang="en">Ali Baba is also known as r.a.m.</Detail>
+    </Representation>
+  </Agent>
+</Agents>
+
+
+<Publications>
+  <Publication id="p111">
+    <Representation>
+      <Label>Author, X (2000). Short Citation, including journal or publisher.</Label>
+    </Representation>
+  </Publication>
+  <Publication id="p112">
+    <Representation>
+      <Label>Gee, X. &amp; Haa, Y. (2008). How to create identification tools in five minutes. Instant Gratifications, Palm Beach.</Label>
+    </Representation>
+    <Links>
+    <Link rel="BasedOn" href="doi:10.1992/32311"/>
+    <Link rel="Alternate" href="http://some.service.net/providing/bibliographic.data"/>
+    </Links>
+    <x:Data xmlns:x="www.x.edu">Applications may store additional data at the resource connectors.</x:Data>
+  </Publication>
+</Publications>
+
+<GeographicAreas>
+  <GeographicArea id="g1">
+    <Representation>
+      <Label>Italy</Label>
+    </Representation>
+  </GeographicArea>
+</GeographicAreas>
+
+<MediaObjects>
+  <MediaObject id="m1" uri="urn:lsid:local:local:129739128">
+    <Representation>
+      <Label>Image description, e. g., to be used for alt-attribute in html.</Label>
+    </Representation>
+    <Type>Image</Type>
+    <Source href="http://test.edu/test.jpg"/>
+  </MediaObject>
+  <MediaObject id="m2">
+    <Representation>
+      <Label>Morning call of Homo sapiens</Label>
+    </Representation>
+    <Type>Sound</Type>
+    <Source href="http://test.edu/123.mp3"/>
+  </MediaObject>
+  <MediaObject id="m3">
+    <!-- Representation Label is required, but if the source provides no separate title or description of a media object, the last part of the url may be used as a replacement -->
+    <Representation>
+      <Label>Melampsora evonymi-caprearum</Label>
+      <!-- Details like Caption are optional -->
+      <Detail role="Caption" xml:lang="fr">&lt;i&gt;Melampsora evonymi-caprearum&lt;/i&gt; Kleb., stade II sur &lt;i&gt;Salix caprea&lt;/i&gt;L.</Detail>
+      <Detail role="Caption" xml:lang="de">&lt;i&gt;Melampsora evonymi-caprearum&lt;/i&gt; Kleb., Sporenstadium II auf &lt;i&gt;Salix caprea&lt;/i&gt; L.</Detail>
+      <Detail role="Caption" xml:lang="en">&lt;i&gt;Melampsora evonymi-caprearum&lt;/i&gt; Kleb., spore stage II on &lt;i&gt;Salix caprea&lt;/i&gt; L.</Detail>
+    </Representation>
+    <Type>Image</Type>
+    <!-- Optionally Resources may be included rather than referencens through URIs. 
+           An additional href specifying the source of the encoded is optional (in addition to the encoded content) -->
+    <EncodedData type="image/png"  href="http://test.edu/Melampsora_evonymi-caprearum.png">R0lGODlhcgGSALMAAAQCAEMmCZtuMFQxDS8b</EncodedData>
+  </MediaObject>
+</MediaObjects>
+  </Dataset>
+</Datasets>

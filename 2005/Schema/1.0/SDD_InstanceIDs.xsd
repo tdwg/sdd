@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Gregor Hagedorn (Biologische Bundesanstalt) -->
+<xs:schema xmlns="http://www.tdwg.org/2005/UBIF" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tdwg.org/2005/UBIF" elementFormDefault="qualified" attributeFormDefault="unqualified" blockDefault="#all" version="SDD 1.0">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">!!! THIS IS CURRENTLY PARTLY OBSOLETE, USED ONLY IN ISOLATED PLACES, MOST id are set to generic InstanceID to avoid creating derivation by restriction</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Include file for the main SDD schema. This file isolates a number of derived simple types used to define ID-based relations between object definitions and object references. For each object in SDD a specific type is used. The use of the type is intended to clarify the relations, which otherwise are hidden in the xml schema identity constraints that are difficult to study. Bob Morris proposed using this to help when wording with tools like Castor. These types are technically redundant when using only schema but they should not cause any problems either. The type definitions are isolated in this include file to avoid clutter in the main SDD schema file.</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Copyright © 2005 TDWG (Taxonomic Databases Working Group, www. tdwg.org). See the file SDD_(c).xsd for authorship and licensing information.</xs:documentation>
+  </xs:annotation>
+  <xs:include schemaLocation="UBIF_ObjectPattern.xsd"/>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">---- Relation types used in general declarations(defined to help in type-safe programming; this duplicates information also defined in schema identity constraints):</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="ModifierInstanceID">
+    <xs:restriction base="InstanceID"/>
+  </xs:simpleType>
+  <xs:simpleType name="ModifierSetInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="InstanceID"/>
+  </xs:simpleType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">---- Relation type used in glossary (defined to help in type-safe programming; this duplicates information also defined in schema identity constraints):</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="GlossaryInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="InstanceID"/>
+  </xs:simpleType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">---- Relation types used in terminology (defined to help in type-safe programming; this duplicates information also defined in schema identity constraints):</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="CharacterInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="InstanceID"/>
+  </xs:simpleType>
+  <xs:simpleType name="CharacterStateInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="InstanceID"/>
+  </xs:simpleType>
+  <xs:simpleType name="ConceptTreeInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="InstanceID"/>
+  </xs:simpleType>
+  <xs:simpleType name="ConceptInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="InstanceID"/>
+  </xs:simpleType>
+  <xs:simpleType name="ConceptStateInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="InstanceID"/>
+  </xs:simpleType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">---- Relation types used in descriptions (defined to help in type-safe programming; this duplicates information also defined in schema identity constraints):</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="DescriptionInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="InstanceID"/>
+  </xs:simpleType>
+  <xs:simpleType name="SampleInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="InstanceID"/>
+  </xs:simpleType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">---- Relation types used in identification keys (defined to help in type-safe programming; this duplicates information also defined in schema identity constraints):</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="StoredKeyInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="InstanceID"/>
+  </xs:simpleType>
+  <xs:simpleType name="StoredKeyNodeInstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Derived from InstanceID simple type without changes. Declares a unique type to clarify relations between key definition and key references and supports type-safe programming.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="InstanceID"/>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,10 @@
+<CodedDescription id="D3">
+  <Representation>
+    <Label>(Testing states defined indirectly through concept states)</Label>
+  </Representation>
+  <SummaryData>
+    <Categorical ref="c5">
+      <State ref="cs1"/>
+    </Categorical>
+  </SummaryData>
+</CodedDescription>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xs:schema xmlns="http://rs.tdwg.org/UBIF/2006" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://rs.tdwg.org/UBIF/2006" elementFormDefault="qualified" attributeFormDefault="unqualified" blockDefault="#all" version="Unified Biosciences Information Framework (UBIF) 1.1 - !Single file version!">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">### Copyright © TDWG (Taxonomic Databases Working Group, www. tdwg.org), 2006. This file is a special version of the Unified Biosciences Information Frameword (UBIF) XML schema. It may be used only for viewing convenience and may not be distributed independently from the primary schema files (UBIF.xsd, UBIF_TypeLib.xsd, etc.). The inclusion of all parts starts below: !###</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">### End</xs:documentation>
+  </xs:annotation>
+</xs:schema>

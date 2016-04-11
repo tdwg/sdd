@@ -1,0 +1,9 @@
+<CategoricalCharacter id="c5">
+  <Representation>
+    <Label>Leaf shape</Label>
+  </Representation>
+  <States>
+    <StateReference ref="cs1" />
+    <StateReference ref="cs2" />
+  </States>
+</CategoricalCharacter>

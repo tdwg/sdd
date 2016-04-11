@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Datasets [
+  <!ENTITY DatasetMetadata SYSTEM "Fragment-DatasetMetadata.xml">
+  <!ENTITY TaxonNames1 SYSTEM "Fragment-TaxaViolaMechanites.xml">
+  <!ENTITY TaxonNames2 SYSTEM "Fragment-TaxaFishbase.xml">
+  <!ENTITY TaxonHierarchies SYSTEM "Fragment-TaxonHierarchies.xml">
+
+  <!ENTITY Concepts SYSTEM "Fragment-DescrConcepts.xml">
+  <!ENTITY ModifierConcepts SYSTEM "Fragment-Modifiers.xml">
+  <!ENTITY ConceptStateDef SYSTEM "Fragment-ConceptStateDefinition.xml">
+  <!ENTITY CharBlock1 SYSTEM "Fragment-CharDefCategorical.xml">
+  <!ENTITY CharBlock2 SYSTEM "Fragment-CharDefQuantitative.xml">
+  <!ENTITY ConceptStateInChar SYSTEM "Fragment-ConceptStateInChar.xml">
+  <!ENTITY CharTree1 SYSTEM "Fragment-CharTree.xml">
+
+  <!ENTITY CodedDescription_Simple SYSTEM "Fragment-CodedDescription_Simple.xml">
+  <!ENTITY CodedDescription_UsingConceptState SYSTEM "Fragment-ConceptStateInDescr.xml">
+  <!ENTITY CodedDescription_SampleData SYSTEM "Fragment-CodedDescription_SampleData.xml">  
+  <!ENTITY NatLangDescriptions SYSTEM "Fragment-NatLangDescriptions.xml">
+  
+  <!ENTITY IdentificationKeys SYSTEM "Fragment-IdentificationKeys.xml">
+
+  <!ENTITY Agents SYSTEM "Fragment-Agents.xml">
+  <!ENTITY Publications SYSTEM "Fragment-Publications.xml">
+  <!ENTITY GeographicAreas SYSTEM "Fragment-GeographicAreas.xml">
+  <!ENTITY MediaObjects SYSTEM "Fragment-MediaObjects.xml">
+]>
+<Datasets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://rs.tdwg.org/UBIF/2006/" xsi:schemaLocation="http://rs.tdwg.org/UBIF/2006/ ../SDD.xsd">
+  <TechnicalMetadata created="2004-09-10T10:00:00">
+    <Generator name="n/a, handcrafted instance document" version="n/a"/>
+  </TechnicalMetadata>
+  <Dataset xml:lang="en-us">
+    <Representation>
+      <Label>Test dataset</Label>
+      <Detail role="Description">This validating SDD file contains more complex examples than the minimal SDD-Test-Simple.xml example and illustrates how SDD can be used with fragments are distributed over several files, using XML external system entities. The key/keyref identity constraints are still validated. Alternatively, xInclude may be used, which has in principle many advantages, but also a major disadvantage of not being automatically supported by validating parsers or applications like Altova xmlspy. The main point of this demonstration is, however, that the aggregation of distributed fragments into a valid SDD entity, where all relations are resolvable, is considered a question of external mechanisms, and not part of SDD.
+      NOTE: This first dataset contains only the description above, the following second dataset includes the fragment files as xml system entities.
+(Intended for version="SDD 1.1").</Detail>
+    </Representation>
+  </Dataset>
+  <Dataset xml:lang="en-us">
+    &DatasetMetadata;
+    <TaxonNames>
+     &TaxonNames1;
+     &TaxonNames2;
+    </TaxonNames>
+    &TaxonHierarchies;
+    <DescriptiveConcepts>
+     &Concepts;
+     &ModifierConcepts;
+     &ConceptStateDef;
+    </DescriptiveConcepts>    
+    <Characters>
+     &CharBlock1; 
+     &CharBlock2; 
+     &ConceptStateInChar;
+    </Characters>
+    <CharacterTrees>
+     &CharTree1;
+    </CharacterTrees>
+    &NatLangDescriptions;
+    <CodedDescriptions>
+    &CodedDescription_Simple; 
+    &CodedDescription_SampleData;    
+     &CodedDescription_UsingConceptState;
+    </CodedDescriptions>
+    &IdentificationKeys;
+    &Agents;
+    &Publications;
+    &GeographicAreas;
+    &MediaObjects;
+  </Dataset>
+</Datasets>

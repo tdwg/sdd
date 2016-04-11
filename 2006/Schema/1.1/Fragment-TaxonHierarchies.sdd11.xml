@@ -1,0 +1,34 @@
+<TaxonHierarchies>
+  <TaxonHierarchy id="th1">
+    <!-- one of potentially several alternative hierarchies supported. -->
+    <Representation>
+      <Label>Default taxon hierarchy</Label>
+    </Representation>    
+    <TaxonHierarchyType>PhylogeneticTaxonomy</TaxonHierarchyType>
+    <Nodes>
+      <Node id="tn1">
+        <TaxonName ref="t1"/>
+      </Node>
+      <Node id="tn2">
+        <Parent ref="tn1"/>
+        <TaxonName ref="t2"/>
+      </Node>
+      <Node id="tn3">
+        <Parent ref="tn1"/>
+        <!-- Extension: -->
+        <html:p xmlns:html="http://www.w3.org/1999/xhtml">This node is anonymous!</html:p>
+      </Node>
+      <Node id="tn4">
+        <Parent ref="tn3"/>
+        <TaxonName ref="t3"/>
+      </Node>
+      <Node id="tn5">
+        <Parent ref="tn3"/>
+        <TaxonName ref="t4"/>
+        <Synonyms>
+          <TaxonName ref="t1"/>
+        </Synonyms>
+      </Node>
+    </Nodes>
+  </TaxonHierarchy>
+</TaxonHierarchies>

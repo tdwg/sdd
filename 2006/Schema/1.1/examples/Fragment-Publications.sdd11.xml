@@ -1,0 +1,17 @@
+<Publications>
+  <Publication id="p111">
+    <Representation>
+      <Label>Author, X (2000). Short Citation, including journal or publisher.</Label>
+    </Representation>
+  </Publication>
+  <Publication id="p112">
+    <Representation>
+      <Label>Gee, X. &amp; Haa, Y. (2003). How to be happy in five minutes. Instant Gratifications, Palm Beach.</Label>
+    </Representation>
+    <Links>
+    <Link rel="BasedOn" href="doi:10.1992/32311"/>
+    <Link rel="Alternate" href="http://some.service.net/providing/bibliographic.data"/>
+    </Links>
+    <x:Data xmlns:x="www.x.edu">Applications may store additional data at the resource connectors.</x:Data>
+  </Publication>
+</Publications>

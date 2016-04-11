@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Objects xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://rs.tdwg.org/UBIF/2006/" xsi:schemaLocation="http://rs.tdwg.org/UBIF/2006/ ../SDD_ForObjects.xsd">
+  <!-- Using a variant for independent object interchange, all first class objects may be exchanged in any sequence. -->
+  <Specimen>
+    <Representation>
+      <Label>Some specimen</Label>
+    </Representation>
+  </Specimen>
+  <TaxonName>
+    <Representation>
+      <Label>Cypselurus heterurus (Rafinesque, 1810)</Label>
+    </Representation>
+    <Rank code="sp" />
+  </TaxonName>
+  <Agent>
+    <Representation>
+      <Label>Kevin Thiele</Label>
+    </Representation>
+  </Agent>
+  <!-- BUT: ALL LOCAL REFS ARE UNPROTECTED AND NOT GUARANTEED TO RESOLVE // WE REALLY NEED ALTERNATIVE URI-refs everywhere! -->
+  <CodedDescription>
+    <Representation>
+      <Label>&lt;i&gt;Viola hederacea&lt;/i&gt; Labill. as revised by R. Morris April 8, 2006</Label>
+    </Representation>
+    <Scope>
+      <TaxonName ref="t1"/>
+      <Citation ref="p1" location="p. 30"/>
+    </Scope>
+    <SummaryData>
+      <Categorical ref="c1">
+        <State ref="s1"/>
+      </Categorical>
+      <Quantitative ref="c2">
+        <Measure type="Min" value="2.3"/>
+        <Measure type="Max" value="7.9"/>
+      </Quantitative>
+      <TextChar ref="c3">
+        <Content>Free form text</Content>
+      </TextChar>
+    </SummaryData>
+  </CodedDescription>
+</Objects>

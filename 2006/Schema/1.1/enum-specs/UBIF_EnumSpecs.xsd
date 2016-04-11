@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xs:schema xmlns="http://rs.tdwg.org/UBIF/2006/EnumSpecs/" xmlns:u="http://rs.tdwg.org/UBIF/2006/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:html="http://www.w3.org/1999/xhtml" targetNamespace="http://rs.tdwg.org/UBIF/2006/EnumSpecs/" elementFormDefault="qualified" attributeFormDefault="unqualified" blockDefault="#all" version="Unified Biosciences Information Framework (UBIF)  1.1">
+  <xs:annotation>
+    <xs:documentation xml:lang="en">Supplementary XML schema in a different name space for extensions used on schema enumeration values (UBIF_EnumLib, SDD_EnumLib). These extensions are provided inside xs:annotation/xs:appinfo elements.</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en">This schema is also used when UBIF data are generated from schema files by an xslt program, resulting in UBIF_EnumData.xml, SDD_EnumData.xml, etc.</xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="http://rs.tdwg.org/UBIF/2006/" schemaLocation="../UBIF_TypeLib.xsd"/>
+  <xs:element name="Specification" type="Specification"/>
+  <xs:complexType name="Specification">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Machine-readable 
+partial semantics 
+provided to support 
+generic application 
+code that continues 
+to function if 
+additional 
+enumerated values 
+are defined in 
+the future.</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:annotation>
+        <xs:documentation>Choice of 
+specifications 
+for various 
+enumerations</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">MeasurementUnitPrefixEnum</xs:documentation>
+        </xs:annotation>
+        <xs:element name="Factor" type="xs:double">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Broad classification of stat. methods</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">DataStatusEnum</xs:documentation>
+        </xs:annotation>
+        <xs:element name="BasicStatus" type="BasicDataStatusEnum">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">To be coded / Not to be coded / Cannot be coded / Coded successfully</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="InformationInSource" type="PresenceOfInformationEnum">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">NotEvaluated / CannotExist / DoesNotExist / Exists</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">UnivarAnyStatMeasureEnum</xs:documentation>
+        </xs:annotation>
+        <xs:element name="StatMethodClass" type="u:ShortString">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Broad classification of stat. methods</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="ReportingClass" type="UnivarStatMeasureReportingClassEnum">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Broad classification of statistical measures into predefined categories like CentralValue, VarianceMeasure, Min, Max, Lower/ UpperRangeLimit, etc. Together with IsDimensionless (below) this is expected to provide sufficient semantics for most applications handling statistical measures. The more detailed Method/MethodValue properties can thus often be ignored.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="IsDimensionless" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">Whether a method has a dimension (i. e. the measurement unit can be applied to values of the method) can in principle be inferred from the semantics of the Method values: Extremes, ranges and central measures have a dimension, sample size and variance and distribution shape measures are dimensionless. However, to simplify generic applications, this is also expressed here. </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="ValueIsPercentage" type="xs:boolean" minOccurs="0"/>
+        <xs:element name="ParameterIsPercentage" type="xs:boolean" minOccurs="0"/>
+      </xs:sequence>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">TaxonomicRankEnum</xs:documentation>
+        </xs:annotation>
+        <xs:element name="PreferredAbbreviation" type="u:ShortString"/>
+        <xs:element name="AdditionalAbbreviations" type="u:ShortString" minOccurs="0"/>
+        <xs:element name="SuffixBacteriae" type="u:ShortString" minOccurs="0"/>
+        <xs:element name="SuffixPlantae" type="u:ShortString" minOccurs="0"/>
+        <xs:element name="SuffixAlgae" type="u:ShortString" minOccurs="0"/>
+        <xs:element name="SuffixFungi" type="u:ShortString" minOccurs="0"/>
+        <xs:element name="SuffixAnimalia" type="u:ShortString" minOccurs="0"/>
+        <xs:element name="BioCodeStatus" type="u:ShortString" minOccurs="0"/>
+        <xs:element name="BacteriaStatus" type="u:ShortString" minOccurs="0"/>
+        <xs:element name="BotanyStatus" type="u:ShortString" minOccurs="0"/>
+        <xs:element name="ZoologyStatus" type="u:ShortString" minOccurs="0"/>
+      </xs:sequence>
+    </xs:choice>
+    <xs:attribute name="debuglabel" type="xs:string"/>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Secondary "helper enumerations" that are used in appinfo data by the primary UBIF enumerations (and which may be converted to UBIF data xml using this schema). </xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== The purpose of these secondary enums is to generalize specific concepts contained in the primary enums</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="UnivarStatMeasureReportingClassEnum">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Broad classification of the univariate statistical methods, used in "UnivarStatMeasureEnum": //xs:enumeration/xs:annotation/xs:appinfo/ReportingClass. A separate xslt script (UBIF_Enumerations.xsl) is provided that converts this from schema data to xml instance data. ReportingClasses are provided to simplify the creation of applications using UnivarStatMeasure values. They simplify the detailed information provided by the method values into a minimally extended version of the five basic measurement classes supported by DELTA. Most applications that report information for human consumption can rely on these reporting classes in their decision how to present the data. Whereas UnivarStatMeasureEnum must be implemented, these additional specifications are an offer to simplify implementations and increase compatibility with future UBIF version. Implementors may choose different methods of handling the statistical measures, however. Compare also UnivarStatMeasureMethodClassEnum.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:QName">
+      <xs:enumeration value="CentralMeasure">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Any kind of central measure, like mean, mode, median, etc.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LowerRange">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">The lower value of any kind of range measure, like 'mean minus standard dev.', confidence interval, percentiles, etc.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UpperRange">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">The upper value of any kind of range measure, like 'mean + standard dev.', confidence interval, percentiles, etc.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LowerExtreme">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">The absolute minimum value.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UpperExtreme">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">The absolute maximum value.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VarianceMeasure">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Any kind of variance measure, like standard deviation, variance, etc.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SampleSize">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">The sample size.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Other">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Any other kind of statistical measure.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UnivarStatMeasureMethodClassEnum">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Broad classification of the univariate statistical methods, used in "UnivarStatMeasureEnum": //xs:enumeration/xs:annotation/xs:appinfo/MethodClass. A separate xslt script (UBIF_Enumerations.xsl) is provided that converts this from schema data to xml instance data. MethodClasses inform about very general quality properties of measures. This is an optional feature. Whereas UnivarStatMeasureEnum must be implemented, these additional specifications are an offer to simplify implementations and increase compatibility with future UBIF version. Implementors may choose different methods of handling the statistical measures, however. Compare also UnivarStatMeasureReportingClassEnum.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:QName">
+      <xs:enumeration value="StatisticalEstimate">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Statistical estimate -- Measures estimated by statistical methods. Examples: Sample mean, minimum, confidence interval, standard deviation (n-1 degrees of freedom).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="StatisticalParameter">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Statistical parameter -- Values calculated by statistical methods that are exact in relation to the population under study (statistical estimates are exact in relation to the sample, but estimates in relation to the population under study). Examples: Sample size, standard deviation (n degrees of freedom).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ObserverEstimate">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Observer estimate -- Values estimated by humans without using mathematical/statistical methods.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UnknownMethod">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Unknown method -- Values obtained by an unknown method. This may be a statistical method or a human observer estimate. Many legacy data sets and data published in print fall into this category.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BasicDataStatusEnum">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Enumeration used to generalize (= classify) DataStatus values. This secondary enumeration is intended to simplify the design of applications that continue to function even when additional data status values are defined in future schema versions. It is, however, not required for the functionalitiy of the DataStatusEnum.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:QName">
+      <xs:enumeration value="ToBeCoded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">To Be Coded -- Information has not yet been entered, but is is planned to do so.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NotToBeCoded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Not To Be Coded -- Information has not yet been entered, and is is not planned to do so (esp. because resources are lacking and other characters should have priority).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CannotBeCoded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Cannot Be Coded -- Information cannot be entered due to objective (inapplicable character) or subjective (cannot interpret available data) reasons.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CodedSuccessfully">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Coded Successfully -- Information has been entered successfully.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PresenceOfInformationEnum">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Enumeration used to generalize (= classify) DataStatus values. This secondary enumeration is intended to simplify the design of applications that continue to function even when additional data status values are defined in future schema versions. It is, however, not required for the functionalitiy of the DataStatusEnum.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:QName">
+      <xs:enumeration value="ProbablyExists">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Probably Exists (= not evaluated) -- The presence of information has not yet been evaluated, but so far no reason is known for assuming that the source information does not exist or cannot be used.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CannotExist">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Cannot Exist -- Information cannot exist for logical reasons (= resulting in the data status inapplicable).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DoesNotExist">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Does Not Exist -- Information could exist, but extensive research has failed to find it.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Exists">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Exists -- Information has already been found. It may or may not have been used.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

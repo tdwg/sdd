@@ -1,0 +1,362 @@
+Sent by email, 19. April 2006
+
+1. REWORKED TREE STRUCTURES
+===============================
+
+Sorry, as mentioned in the phone conservation with Bob/Jacob, I have changed both tree structures that Bob/Jacob were proposing ...
+
+Identification keys: I did not understand how the relation between question nodes and key nodes in Bob's solution was expected to work. I tried to replace it with a solution similar to the character tree. It is less general than bobs solution, but has the advantage to have descriptive types  (Parent reference is a StoredKeyNodeRef rather than pointing generally to any instance id).
+
+TaxonHierarchy: After character trees and identification keys now having the same structure, and the proposed edge-structure for taxa not supporting unnamed inner nodes (which as we discussed, do occur in phylogenetic works), I reworked the hierarchy along the same lines. The previous version did support unnamed nodes, the current did not seem to do so.
+
+I was unable to validate a desirable constraint, as expressed in the following note: "NOTE: part of the constraints on the tree are not yet validated: Inner nodes may be anonymous, but terminal nodes must point to a taxon name." Also in annot. on Taxon Name itself, which currently reads: "Reference to a taxon name. Inner nodes may be anonymous or identified as a higher taxon; terminal nodes should always point to a taxon name (requires external validation)."
+
+
+
+
+2. YOUR QUESTIONS
+====================
+
+First many thanks for these, such question are very helpful - and they did point out quite a number of errors!
+
+Or open issues in the schema: CategoricalCharacterUnconstrainedText_UniqueLabelText is now removed, the structure was intended as a (somewhat desirable, but ultimately in St. Petersburg decided-against) alternative to TextCharacter.
+
+1. A ref attribute is used to reference CodingStatusData in CodedDescriptions//Status which does not exists.
+   -- Correct, CodingStatus is an enumeration. Changed "ref" to "type". Any better ideas?
+
+2. Modifiers limited to 1-4 in CodedDescriptions - Allow applications to decide how many they want?
+   -- Intention: May allow applications to design smoother User Interfaces. Kevin is to support only 1, 4 is already pretty heavy. Good? I don't know...
+
+(3. is still open issue, send in separate mail)
+
+4.GeoLocality - Seems they are not used at all. Remove them? 
+ -- Rather not, would be used in scope, which is currently as "__". I think better to keep in base ontology, is very fundamental type.
+
+Should the keyref on CategoricalCharacters be changed to also reference the 3 Character elements above?
+ -- No, references should be type-specific, DONE.
+
+5. StatisticalMeasure's appear not to be used anywhere. Remove them?
+  -- Please recheck, I can only find xs:element name="StatisticalMeasure" type="UnivarStatMeasureElaboration" maxOccurs="unbounded"
+  -- which does exist. You mean a different type or element name?
+  There should be no xs:key on statistical measures though.
+
+6. TextCharacter, SequenceCharacter, CategoricalWithTextCharacter seems not to be used at all. 
+ -- FIXED FIRST, DELETED LAST 
+
+6. Statemodel of CharacteRef should be optional with a default of orSet?
+  -- Please recheck, I can not find this in CharacterRef
+  -- Found in CatSummaryData after <xs:element name="State" type="StateData" minOccurs="0" maxOccurs="unbounded">
+     having <xs:attribute name="statemodel" type="StateCollectionModelEnum" use="required">
+  -- I agree, good suggestions! DONE
+
+7. The Concept complex type was abstract in the orginal schema.
+ Had to change it to get Schema to validate with some instance documents
+(see text.xml attached).
+  Correct, this was an error
+
+8. Should CodedDescription's have a unique label text?
+ -- I think yes. Typically descriptions had a label in DELTA and Lucid. It could be simply the name of the taxon.
+
+9. XPath expressions used in xs:key, xs:keyref and xs:unique require a namespace since they do not "see" the 
+default namespace.
+I added a ubif namespace( xmlns:u="http://www.tdwg.org/2006/UBIF")  
+explicitly to SDD.xsd, SDD_Type_Lib.xsd  and UBIF_Object..Extension_used.xsd.
+ -- DONE
+
+... These 3 files also contain some Identity constraint. 
+I had to move some of the unique constraints to SDD_TypeLib and UBIF_objectCore to ensure uniquenes in pairs of Edges for instance.
+I made it such that, a given pair( a->b ) could not be used more than once within the scope of an Edge.
+ -- PLEASE RECHECK THE UPDATED SOLUTION - YOU PROBABLY CAN IMPROVE IT BASED on the work you mention above.
+
+10. We should add in our documentation that applications should check for circular references.
+For example in StoredKeys subkeys and their child nodes should not refer to any nodes in the parent tree.
+ -- I agree, please do so!
+
+----
+
+
+
+
+
+3. IDENTITY CONSTRAINTS
+========================
+
+NOTE: After the meeting, Bob and I made the decision to also base the Dataset itself on abstract object type; this removed the special ContentMetadata and nicely simplified a number of xpath expressions!
+
+I checked and updated the identity constraints and tried to bring them into line with my recent changes. 
+
+<xs:unique name="StoredKeyNodeStatement_UniqueLabelText"> etc. are not true, statement and question text on nodes have no uniqueness. I hope I have not forgotten too many u: ns prefixes, spy is ignorant about them...
+However, as I just realize, these and other similar ones may be added INSIDE the Key nodes there the alternative (2 or more) statements must be unique (but not globally all statements). NOT YET DONE. CAN IT BE DONE - PLEASE TRY. Probably needs to combine statements and parent key (which leaves the roots ones not-guaranteed, but that would be ok.
+
+I found some cases, where the contraints do not work. I beleive that the only test is still that all possible error conditions must be tested through instance documents!
+I am very grateful if you can put work into this!
+---
+
+The UniqueLabelText constraints do not seem to work. Example:
+    <xs:unique name="TaxonHierarchy_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of objects must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="u:Dataset/u:TaxonHierarchies/u:TaxonHierarchy/u:Representation"/>
+      <xs:field xpath="u:Label"/>
+      <xs:field xpath="u:Label/@xml:lang"/>
+    </xs:unique>
+This should prevent:
+      <TaxonName id="1">
+        <Representation>
+          <Label xml:lang="la">Viola hederacea Labill.</Label>
+        </Representation>
+      </TaxonName>
+      <TaxonName id="2">
+        <Representation>
+          <Label xml:lang="la">Viola hederacea Labill.</Label>
+          <Label xml:lang="en-us">Mechanitis polymnia</Label>
+        </Representation>
+      </TaxonName>
+But it does not.
+
+-------
+
+I believe
+
+    <xs:unique name="ConceptState_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of concept state definitions are required and must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="u:Dataset/u:Concepts/u:Concept/u:ReferableDefinitions/u:ConceptStates/u:StateDefinition/u:Representation"/>
+      <xs:field xpath="u:Label"/>
+      <xs:field xpath="u:Label/@xml:lang"/>
+    </xs:unique>
+
+is wrong -  a propbably the related one for local States as well.
+
+The uniqueness is only required within a concept or character, but not globally.
+There should not be two "Rough" in one char., but one rough for smoothness by hand and one as observed in Electron Microscope would be ok.
+I consider the local uniqueness quite relevant - can you change it so that is works? Roughly, either in a global selector you would have to include
+the concept and char. id, respectively, or the constraints must be shifted to a local definition.
+
+-----
+
+I fail to get the following going:
+
+    <xs:key name="CharacterStatePlusCharacterKey">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">This key combines character and state. It is used in a keyref that guarantees that states can be recorded in descriptions only within a character defining them. Without this constraint, a state '1' defined in character '1', could also be used in another character  (like &lt;Categorical ref="4"&gt; &lt;State ref="1"/&gt; &lt;/Categorical&gt;.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="u:Dataset/u:Characters/u:CategoricalCharacter/u:States/u:*"/>
+      <xs:field xpath="../@id"/>
+      <xs:field xpath="@id"/>      
+    </xs:key>
+
+Is it possible to have a joint key with character and state id, so that in the Min1
+example document:
+
+          <Categorical ref="1">
+            <State ref="1"/>
+          </Categorical>
+
+remains ok (as currently) but 
+
+          <Categorical ref="4">
+            <State ref="1"/>
+          </Categorical>
+
+creates a validation error?
+
+---------
+I believe keyrefs for State references in Mappings are missing:
+(Characters/CategoricalCharacter/Mappings/Mapping/From | Characters/CategoricalCharacter/Mappings/Mapping/To | Characters/QuantitativeCharacter/Mappings/Mapping/To)
+
+---------
+Desirable validation: 
+within character data (= in description), each character may occur multiple times only if preceded by different modifiers
+difficult to validate, since one possible state that differs is no modifiers at all.
+
+---------
+
+Desirable validation: 
+Modifiers within each character or state should be unique. 'Description ... Quantitative Modifier ref="1" Modifier ref="1" ...' or 'Description ... Categorical State ref="1" Modifier ref="1" Modifier ref="1" ...' should be prevented.
+
+---------
+
+Desirable validation: 
+If possible, some constraint should prevent for the representations the following:
+<TaxonName id="1">
+<Representation>
+<Label xml:lang="la">Viola hederacea Labill.</Label>
+<Label xml:lang="la">Viola hederacea Labill.</Label>
+</Representation>
+</TaxonName>
+
+but allowing:
+<Representation>
+<Label xml:lang="la">Viola hederacea Labill.</Label>
+<Label xml:lang="en">Viola hederacea Labill.</Label>
+</Representation>
+
+I tried re-introducing it, but failed, see "@NOTE FOR JACOB": in UBIF_ObjectPattern.
+
+---------
+
+
+
+
+4. KEY/KEYREFS FROM PRE-ST.PETERSBURG THAT SHOULD BE RECONSIDERED:
+=====================================================================
+
+Note that most of these were NOT defined at root level, but immediately at the collection level!
+
+<xs:unique name="CatMapping_UniqueMappingCombination">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within a *Character/Mapping, a state may be mapped to multiple other states in the same character, or multiple states may be mapped to a single state, but the combination of From and To may only occur a single time.</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="Mapping"/>
+  <xs:field xpath="From/@ref"/>
+  <xs:field xpath="To/@ref"/>
+</xs:unique>
+<xs:unique name="CategoricalCharacter_UniqueConceptStateRefs">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within a CategoricalCharacter, references to project-wide defined ConceptStates (defined at the nodes of concept trees) must be unique within each character. This is achieved by a uniqueness constraint (local to each character) on the ref attribute of StateReference. The id attribute is already unique through the general CharacterStateKey.</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="StateReference"/>
+  <xs:field xpath="@ref"/>
+</xs:unique>
+<xs:unique name="CategoricalCharacter_UniqueStateLabelText">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within a CategoricalCharacter, the labels of character state definitions are required to be unique within each character and language. Note that this includes both the locally defined states and the referenced concept states.</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="StateDefinition/Label"/>
+  <xs:field xpath="Text"/>
+  <xs:field xpath="@xml:lang"/>
+</xs:unique>
+<xs:unique name="CharSumData_UniqueMediaResources">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within a given description, each media resource may occur only once in the collection.</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="MediaResource"/>
+  <xs:field xpath="@ref"/>
+</xs:unique>
+<xs:unique name="CharSummaryData_UniqueNoteRepresentation">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within Description, SummaryData, Character: the language/audience values must uniquely identify the representations within each Note element (no duplicate language/audience-combination allowed).</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="."/>
+  <xs:field xpath="@xml:lang"/>
+  <xs:field xpath="@audience"/>
+</xs:unique>
+<xs:unique name="StateData_UniqueNoteRepresentation">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within State data (inside a description), the language/audience values must uniquely identify the representations within each Note element (no duplicate language/audience-combination allowed).</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="."/>
+  <xs:field xpath="@xml:lang"/>
+  <xs:field xpath="@audience"/>
+</xs:unique>
+<xs:unique name="CodingStatusData_UniqueNoteRepresentation">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within Description, SummaryData, Character: the language/audience values must uniquely identify the representations within each Note element (no duplicate language/audience-combination allowed).</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="."/>
+  <xs:field xpath="@xml:lang"/>
+  <xs:field xpath="@audience"/>
+</xs:unique>
+<xs:unique name="SummaryDataCategorical_UniqueCharState">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within a single coded description each character state reference may occur only once, i. e. it is not possible to state "flowers blue, or blue". (The uniqueness constraint must involve the id of the description, otherwise no two descriptions could use the same character! However, the character reference is not necessary, since state ids are unique across characters.) Note that this still allows repeated occurrence of character states in the Sample containers.</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="State"/>
+  <xs:field xpath="@ref"/>
+  <xs:field xpath="Modifier/@ref"/>
+</xs:unique>
+<xs:unique name="SummaryDataCategorical_UniqueCodingStatus">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within a single coded description and within each character, a coding status reference may occur only once, i. e. it is not possible to state "not applicable, or not applicable" (it is possible to state "unknown, or not applicable"). (The uniqueness constraint must involve the id of the description, and the character id, since coding status values are not defined globally for all characters.</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="CodingStatus"/>
+  <xs:field xpath="@ref"/>
+</xs:unique>
+<xs:unique name="SummaryDataQuantitative_UniqueCodingStatus">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within a single coded description and within each character, a coding status reference may occur only once, i. e. it is not possible to state "not applicable, or not applicable" (it is possible to state "unknown, or not applicable"). (The uniqueness constraint must involve the id of the description, and the character id, since coding status values are not defined globally for all characters.</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="CodingStatus"/>
+  <xs:field xpath="@ref"/>
+</xs:unique>
+<xs:unique name="SummaryDataColorRange_UniqueCodingStatus">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within a single coded description and within each character, a coding status reference may occur only once, i. e. it is not possible to state "not applicable, or not applicable" (it is possible to state "unknown, or not applicable"). (The uniqueness constraint must involve the id of the description, and the character id, since coding status values are not defined globally for all characters.</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="CodingStatus"/>
+  <xs:field xpath="@ref"/>
+</xs:unique>
+<xs:unique name="QuantSampleData_UniqueNoteRepresentation">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">The audience values must uniquely identify the representations within each Note element (no duplicate language/audience-combination allowed).</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="."/>
+  <xs:field xpath="@xml:lang"/>
+  <xs:field xpath="@audience"/>
+</xs:unique>
+<xs:unique name="ColorRangeSampleData_UniqueNoteRepresentation">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">The audience values must uniquely identify the representations within each Note element (no duplicate language/audience-combination allowed).</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="."/>
+  <xs:field xpath="@xml:lang"/>
+  <xs:field xpath="@audience"/>
+</xs:unique>
+<xs:unique name="SampleDataCategorical_UniqueCharState">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within a single character inside a sampling unit each character state reference may occur only once.</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="State"/>
+  <xs:field xpath="@ref"/>
+</xs:unique>
+<xs:unique name="SampleDataQuantitative_UniqueCharState">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within a single character inside a sampling unit each character state reference may occur only once.</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="State"/>
+  <xs:field xpath="@ref"/>
+</xs:unique>
+<xs:unique name="Description_UniqueMediaResources">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Each media resource may occur only once in the collection of resources for a description.</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="MediaResource"/>
+  <xs:field xpath="@ref"/>
+</xs:unique>
+<xs:unique name="Sample_UniqueNoteRepresentation">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">The audience values must uniquely identify the representations within each Note element (no duplicate language/audience-combination allowed).</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="."/>
+  <xs:field xpath="@xml:lang"/>
+  <xs:field xpath="@audience"/>
+</xs:unique>
+
+<xs:unique name="SamplingUnit_UniqueCharacter">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Within a single SamplingUnit each character reference may occur only once. Multiple SamplingUnits in an Sample may and should use the same characters. (The latter, i. e. consistent presence of characters, is not validated by the schema.)</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="Character"/>
+  <xs:field xpath="@ref"/>
+</xs:unique>
+<xs:unique name="StoredKey_UniqueQuestionTextRepresentation">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">The language/audience-combination must uniquely identify the representations within each QuestionText.
+@@Check, this may no longer work</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="."/>
+  <xs:field xpath="@xml:lang"/>
+</xs:unique>
+<xs:unique name="Label_UniqueMediaResource">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Each media resource may occur only once in the collection or resources for a single label.</xs:documentation>
+  </xs:annotation>
+  <xs:selector xpath="MediaResource"/>
+  <xs:field xpath="@ref"/>
+</xs:unique>
+
+===========================================
+

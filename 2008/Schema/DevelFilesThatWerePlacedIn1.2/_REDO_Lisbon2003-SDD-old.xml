@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Not everything has yet been moved from the old example document to the newer one!
+At least the natural language descriptions should yet be preserved! 
+see Spreading shrub; stems ...
+-->
+<Project xmlns="http://www.tdwg.org/2002/SDD-Strawman" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tdwg.org/2002/SDD-Strawman
+Lisbon2003-SDD.xsd">
+  <Terminology>
+    <GlobalStateDefinitions>
+      <GlobalStateDefinitionSet key="color">
+        <SetLabelLabel keyref="en5">
+          <Label>standard color states</Label>
+        </SetLabelLabel>
+        <StateDefinition key="red">
+          <Label>
+            <Representation audience="en5">
+              <Label>red</Label>
+              <Wording>+++</Wording>
+            </Representation>
+            <Representation audience="de5">
+              <Label>rot</Label>
+              <Wording>+++</Wording>
+            </Representation>
+          </Label>
+          <InternalNotes>Internal notes of the designer of the terminology. Such notes are not strictly confidential, but applications should not make them generally available and should make them available only under specific circumstances </InternalNotes>
+        </StateDefinition>
+        <StateDefinition key="green">
+          <Label>
+            <Representation audience="en5">
+              <Label>green</Label>
+              <Wording>+++</Wording>
+            </Representation>
+            <Representation audience="de5">
+              <Label>grün</Label>
+              <Wording>+++</Wording>
+            </Representation>
+          </Label>
+        </StateDefinition>
+        <StateDefinition key="blue">
+          <Label>
+            <Representation audience="en5">
+              <Label>blue</Label>
+              <Wording>+++</Wording>
+            </Representation>
+          </Label>
+        </StateDefinition>
+        <StateDefinition key="white">
+          <Label>
+            <Representation audience="en5">
+              <Label>white</Label>
+              <Wording>+++</Wording>
+            </Representation>
+          </Label>
+        </StateDefinition>
+      </GlobalStateDefinitionSet>
+      <GlobalStateDefinitionSet key="color_metallic">
+        <SetLabelLabel keyref="en5">
+          <Label>metallic color states</Label>
+        </SetLabelLabel>
+        <StateDefinition key="red-metallic">
+          <Label>
+            <Representation audience="en5">
+              <Label>red-metallic</Label>
+              <Wording>+++</Wording>
+            </Representation>
+          </Label>
+        </StateDefinition>
+        <StateDefinition key="green-metallic">
+          <Label>
+            <Representation audience="en5">
+              <Label>green-metallic</Label>
+              <Wording>+++</Wording>
+            </Representation>
+          </Label>
+        </StateDefinition>
+        <StateDefinition key="blue-metallic">
+          <Label>
+            <Representation audience="en5">
+              <Label>blue-metallic</Label>
+              <Wording>+++</Wording>
+            </Representation>
+          </Label>
+        </StateDefinition>
+      </GlobalStateDefinitionSet>
+    </GlobalStateDefinitions>
+    <CharacterDefinitions>
+      <!--- "Character list" = "Character definition" -->
+      <!--- Characters include morphology, sounds, behavior, physiological or molecular tests, disease symptoms  -->
+      <CharacterDefinition key="habit">
+        <Label>
+          <!-- "Flat list names": for each audience definition, the label of a character should be unique within the entire CharacterDefinitions collection -->
+          <Representation audience="en5">
+            <Label>Habit of entire plant</Label>
+            <Abbreviation>Habit</Abbreviation>
+            <ExternalName>PlantHabit</ExternalName>
+            <GlossaryEntry>The appearance of the entire plant above-ground (stem, leave, inflorescence) as well as below-ground</GlossaryEntry>
+            <GlossaryReference>http://www.organisation.org/PlantTerminology/Glossary/query?term="habit"</GlossaryReference>
+          </Representation>
+          <Representation audience="de5">
+            <Label>Habitus der gesamten Pflanze</Label>
+            <Abbreviation>Habitus</Abbreviation>
+          </Representation>
+        </Label>
+        <DescriptorDefinitions>
+          <LocalStateDefinitions>
+            <StateDefinition key="spreading shrub">
+              <Label>
+                <Representation audience="en5">
+                  <Label>spreading shrub</Label>
+                  <Wording>spreading shrub</Wording>
+                </Representation>
+                <Representation audience="de5">
+                  <Label>kriechender Strauch</Label>
+                  <Wording>kriechender Strauch</Wording>
+                </Representation>
+              </Label>
+              <Resources>
+                <!-- Resources of type Semantics may occur 0-1, Resources of any other type may occur 0..n times. Problem: Semantics is self-defined, all other types should be MIME types.-->
+                <Resource keyref="243872847"/>
+                <Resource keyref="129838729427"/>
+                <Resource keyref="129838729428"/>
+              </Resources>
+            </StateDefinition>
+          </LocalStateDefinitions>
+        </DescriptorDefinitions>
+      </CharacterDefinition>
+      <!--StateDefinition keys are unique only within the CharacterDefinition, and keyref reference to a State key must also be qualified by the Character keyref in which it is contained. In strict schema the selector path must guarantee the uniqueness and existence of reference Character and State keys in the terminology element. In the lenient schema this is not required. Adding terminology to Character elements is recommended as best practice. If the strict requirement is implemented by xml-keyrefs, then it is equivalent to validity.-->
+      <CharacterDefinition key="stem, hairiness">
+        <Label>
+          <Representation audience="en5">
+            <Label>stem hairiness</Label>
+          </Representation>
+        </Label>
+        <DescriptorDefinitions>
+          <LocalStateDefinitions>
+            <StateDefinition key="glabrous">
+              <Label>
+                <Representation audience="en5">
+                  <Label>glabrous</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+            <StateDefinition key="hairy">
+              <Label>
+                <Representation audience="en5">
+                  <Label>hairy</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+          </LocalStateDefinitions>
+        </DescriptorDefinitions>
+      </CharacterDefinition>
+      <CharacterDefinition key="leaves, persistence">
+        <Label>
+          <Representation audience="en5">
+            <Label>leaves, persistence</Label>
+          </Representation>
+        </Label>
+        <DescriptorDefinitions>
+          <LocalStateDefinitions>
+            <StateDefinition key="persistent">
+              <Label>
+                <Representation audience="en5">
+                  <Label>persistence</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+            <StateDefinition key="deciduous">
+              <Label>
+                <Representation audience="en5">
+                  <Label>deciduous</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+          </LocalStateDefinitions>
+        </DescriptorDefinitions>
+      </CharacterDefinition>
+      <CharacterDefinition key="leaves, shape">
+        <Label>
+          <Representation audience="en5">
+            <Label>leaf shape</Label>
+          </Representation>
+        </Label>
+        <DescriptorDefinitions>
+          <LocalStateDefinitions>
+            <StateDefinition key="oblong">
+              <Label>
+                <Representation audience="en5">
+                  <Label>oblong</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+            <StateDefinition key="linear">
+              <Label>
+                <Representation audience="en5">
+                  <Label>linear</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+            <StateDefinition key="lanceolate">
+              <Label>
+                <Representation audience="en5">
+                  <Label>lanceolate</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+          </LocalStateDefinitions>
+        </DescriptorDefinitions>
+      </CharacterDefinition>
+      <CharacterDefinition key="leaves apex, shape">
+        <Label>
+          <Representation audience="en5">
+            <Label>leaf apex shape</Label>
+          </Representation>
+        </Label>
+        <DescriptorDefinitions>
+          <LocalStateDefinitions>
+            <StateDefinition key="obtuse">
+              <Label>
+                <Representation audience="en5">
+                  <Label>obtuse</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+            <StateDefinition key="acute">
+              <Label>
+                <Representation audience="en5">
+                  <Label>acute</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+          </LocalStateDefinitions>
+        </DescriptorDefinitions>
+      </CharacterDefinition>
+      <CharacterDefinition key="leaves apex, hairiness">
+        <Label>
+          <Representation audience="en5">
+            <Label>leaves apex, hairiness</Label>
+          </Representation>
+        </Label>
+        <DescriptorDefinitions>
+          <LocalStateDefinitions>
+            <StateDefinition key="glabrous">
+              <Label>
+                <Representation audience="en5">
+                  <Label>glabrous</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+            <StateDefinition key="hirsute">
+              <Label>
+                <Representation audience="en5">
+                  <Label>hirsute</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+          </LocalStateDefinitions>
+        </DescriptorDefinitions>
+      </CharacterDefinition>
+      <CharacterDefinition key="stipules, length">
+        <Label>
+          <Representation audience="en5">
+            <Label>stipule length</Label>
+          </Representation>
+        </Label>
+        <DescriptorDefinitions>
+          <LocalStateDefinitions>
+            <StateDefinition key="very long  stipule length">
+              <Label>
+                <Representation audience="en5">
+                  <Label>very long</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+            <StateDefinition key="short stipule length">
+              <Label>
+                <Representation audience="en5">
+                  <Label>short</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+          </LocalStateDefinitions>
+          <MeasureDefinitions>
+            <MeasureDefinition key="stipules-length-mean" keyref="mean"/>
+          </MeasureDefinitions>
+        </DescriptorDefinitions>
+      </CharacterDefinition>
+      <CharacterDefinition key="stipules, shape" type="nominal">
+        <Label>
+          <Representation audience="en5">
+            <Label>stipule shape</Label>
+          </Representation>
+        </Label>
+        <DescriptorDefinitions>
+          <LocalStateDefinitions>
+            <StateDefinition key="oblong">
+              <Label>
+                <Representation audience="en5">
+                  <Label>oblong</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+            <StateDefinition key="linear">
+              <Label>
+                <Representation audience="en5">
+                  <Label>linear</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+          </LocalStateDefinitions>
+        </DescriptorDefinitions>
+      </CharacterDefinition>
+      <CharacterDefinition key="stipule-color" type="ordinal-interval">
+        <Label>
+          <Representation audience="en5">
+            <Label>stipule color</Label>
+          </Representation>
+        </Label>
+        <DescriptorDefinitions>
+          <GlobalStateSetReference keyref="color">
+            <Selections>
+              <DescriptorSelection keyref="green"/>
+              <DescriptorSelection keyref="white"/>
+            </Selections>
+          </GlobalStateSetReference>
+          <GlobalStateSetReference keyref="color_metallic">
+            <Selections>
+              <DescriptorSelection keyref="green-metallic"/>
+            </Selections>
+          </GlobalStateSetReference>
+          <LocalStateDefinitions>
+            <StateDefinition key="black">
+              <Label>
+                <Representation audience="en5">
+                  <Label>black</Label>
+                  <Wording>+++</Wording>
+                </Representation>
+                <Representation audience="de5">
+                  <Label>Schwarz</Label>
+                  <Wording>+++</Wording>
+                </Representation>
+              </Label>
+            </StateDefinition>
+            <StateDefinition key="gray">
+              <Label>
+                <Representation audience="en5">
+                  <Label>gray</Label>
+                  <Wording>+++</Wording>
+                </Representation>
+              </Label>
+            </StateDefinition>
+          </LocalStateDefinitions>
+        </DescriptorDefinitions>
+      </CharacterDefinition>
+      <CharacterDefinition key="stipules, joining">
+        <Label>
+          <Representation audience="en5">
+            <Label>stipules, joining</Label>
+          </Representation>
+        </Label>
+        <DescriptorDefinitions>
+          <LocalStateDefinitions>
+            <StateDefinition key="joined around the node">
+              <Label>
+                <Representation audience="en5">
+                  <Label>joined around the node</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+            <StateDefinition key="not joined around the node">
+              <Label>
+                <Representation audience="en5">
+                  <Label>not joined around the node</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+          </LocalStateDefinitions>
+        </DescriptorDefinitions>
+      </CharacterDefinition>
+      <CharacterDefinition key="spines, stoutness">
+        <Label>
+          <Representation audience="en5">
+            <Label>spines, stoutness</Label>
+          </Representation>
+        </Label>
+        <DescriptorDefinitions>
+          <LocalStateDefinitions>
+            <StateDefinition key="stout">
+              <Label>
+                <Representation audience="en5">
+                  <Label>stout</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+            <StateDefinition key="not stout">
+              <Label>
+                <Representation audience="en5">
+                  <Label>not stout</Label>
+                </Representation>
+              </Label>
+            </StateDefinition>
+          </LocalStateDefinitions>
+        </DescriptorDefinitions>
+      </CharacterDefinition>
+      <CharacterDefinition key="leaf-color">
+        <Label>
+          <Representation audience="en5">
+            <Label>leaf color</Label>
+          </Representation>
+        </Label>
+        <DescriptorDefinitions>
+          <GlobalStateSetReference keyref="color"/>
+        </DescriptorDefinitions>
+      </CharacterDefinition>
+      <CharacterDefinition key="GrowthDiam15c7d_OA">
+        <!--    character definition example for measures: -->
+        <Label>
+          <Representation audience="en5">
+            <Label>diameter after 7 d on OA (15 °C)</Label>
+          </Representation>
+        </Label>
+        <DescriptorDefinitions>
+          <MeasureDefinitions>
+            <!-- These definitions constrain which global measure definitions can appear in items of this character -->
+            <MeasurementUnit Postfix="true">mm<sup>2</sup>
+              <!-- MeasurementUnit is element here, can not be used except for numerical data. Cannot be an attribute of MeasureDefinitions, since markup for super/subscript is frequently needed. Postfix = false allows to define that the MeasurementUnit is output as a prefix to the number, e.g. for "pH" -->
+            </MeasurementUnit>
+            <MeasureDefinition key="GDMax" keyref="max">
+              <!-- Note: if the globally defined measure definitions should in the future be derived from an xml include statement, the wording there can not be extended! -->
+            </MeasureDefinition>
+            <MeasureDefinition key="GDMean" keyref="mean"/>
+            <MeasureDefinition key="GDPercentile89" keyref="Percentile"/>
+          </MeasureDefinitions>
+        </DescriptorDefinitions>
+      </CharacterDefinition>
+    </CharacterDefinitions>
+    <CharacterGroupDefinitions>
+      <!-- Character groups define hierarchies as well as subsets of the Character list -->
+      <CharacterGroupDefinition key="my preferred plant part hierarchy" MinimumExpertiseLevel="3" complete="true" type="PartHierarchy">
+        <!--  MinimumExpertiseLevel: the designer of the subset expects the user to have a  certain minimum expertise level -->
+        <!-- If a Character grouping is defined as complete, a processor should warn the designer if a Character missing.
+             An application may add newly defined Characters automatically to such Character groups. -->
+        <Label>
+          <Representation audience="en5">
+            <Label>Plant organ hierarchy</Label>
+          </Representation>
+        </Label>
+        <Purposes>
+          <!-- uses to which the hierarchy can be put, as intended by the designer -->
+          <Purpose name="NaturalLanguageReporting"/>
+          <Purpose name="InteractiveIdentification"/>
+          <Purpose name="GuidedKeyBuilder"/>
+          <Purpose name="DefaultDescriptionEditorView"/>
+          <Purpose name="DefaultGeneral"/>
+          <!--- Purposes: DefaultGeneral = use for any purpose, unless something is found for the specific purpose. Should only occur once in the collection CharacterGroupDefinitions.  Try later to add a validation for this in the schema. -->
+        </Purposes>
+        <CharacterGroupItem key="entire plant">
+          <Label>
+            <Representation audience="en5">
+              <Label>Entire plant</Label>
+              <GlossaryEntry>The entire plant compromises all above-ground (stem, leaves, inflorescence) and below-ground (roots, rhizomes, etc.) parts</GlossaryEntry>
+              <NaturalLanguage>
+                <!--NaturalLanguage is an example of a data type required to be free of references to anything else, and which only has a containment relationship to its parent object. These data types can either be processed, or stored and passed through when the next output is generated. -->
+                <Wording>habit</Wording>
+                <WordingAfter/>
+                <NonTerminalDelimiter>;</NonTerminalDelimiter>
+                <TerminalDelimiter>;</TerminalDelimiter>
+              </NaturalLanguage>
+            </Representation>
+            <Representation audience="de5">
+              <Label>Gesamte Pflanze</Label>
+            </Representation>
+          </Label>
+          <InternalNotes>Check these characters!</InternalNotes>
+          <!-- LucID 3 has properties for the nodes of the tree: "check these Characters" -> ok as long as only management properties, otherwise refactoring of tree/Characters etc. would be a problem-->
+          <Character keyref="habit">
+            <Label>
+              <Representation audience="en5">
+                <Label>habit</Label>
+              </Representation>
+              <Representation audience="de5">
+                <Label>Habitus</Label>
+              </Representation>
+            </Label>
+          </Character>
+          <CharacterGroupItem key="stem">
+            <Label>
+              <Representation audience="en5">
+                <Label>Stem</Label>
+              </Representation>
+              <Representation audience="de5">
+                <Label>Stamm</Label>
+              </Representation>
+            </Label>
+            <CharacterGroupItem key="trunk">
+              <Label>
+                <Representation audience="en5">
+                  <Label>trunk</Label>
+                </Representation>
+              </Label>
+              <Character keyref="trunk color"/>
+            </CharacterGroupItem>
+            <CharacterGroupItem key="branch">
+              <Character keyref="branch color">
+                <Label>
+                  <Representation audience="en5">
+                    <Label>color</Label>
+                  </Representation>
+                  <Representation audience="de5">
+                    <Label>Farbe</Label>
+                  </Representation>
+                </Label>
+                <!-- Wording for Character node needs to be here. The relevant or possible wording is constrained by the path in the tree, so it needs to be defined in the tree, not in the flat character list. In a methodological tree the wording may have to add part hierarchy information, in a part hierarchy methodological information. -->
+              </Character>
+            </CharacterGroupItem>
+          </CharacterGroupItem>
+          <CharacterGroupItem key="leaf">
+            <Label>
+              <Representation audience="en5">
+                <Label>leaf</Label>
+              </Representation>
+            </Label>
+            <CharacterGroupItem key="lamina (blade)">
+              <Label>
+                <Representation audience="en5">
+                  <Label>lamina (blade)</Label>
+                </Representation>
+              </Label>
+            </CharacterGroupItem>
+            <CharacterGroupItem key="petiole">
+              <Label>
+                <Representation audience="en5">
+                  <Label>petiole</Label>
+                </Representation>
+              </Label>
+            </CharacterGroupItem>
+            <CharacterGroupItem key="stipules">
+              <Label>
+                <Representation audience="en5">
+                  <Label>stipules</Label>
+                </Representation>
+              </Label>
+            </CharacterGroupItem>
+          </CharacterGroupItem>
+        </CharacterGroupItem>
+        <!-- organism parts hierarchy for the following example
+entire plant
+   char: "habit"
+stem
+  trunk
+   char: "trunk color"
+  branch
+   char: "branch color"
+leaf
+  lamina (= blade)
+    char: "leaves, shape"
+    margin
+      char: "revolution" (states: revolute/involute)
+      toothing
+        char: "toothing, presence"
+    apex
+      char: "leaf apex, shape"
+    base
+      char: "leaf base, shape"
+   petiole
+root
+   ...
+Note: not all characters are necessarily in the parts (or structures) hierarchy. Phenology, distribution, sounds, behavior, etc. are neither structures or parts!
+-->
+      </CharacterGroupDefinition>
+    </CharacterGroupDefinitions>
+  </Terminology>
+</Project>

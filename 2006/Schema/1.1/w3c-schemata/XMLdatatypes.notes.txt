@@ -1,0 +1,1 @@
+This is currently not used by UBIF/SDD and has been placed here for schema validation purposes alone.

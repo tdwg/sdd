@@ -1,0 +1,391 @@
+Bob: test schema and documents with newest version of Xerces. Develop a suite data documents, that should remain valid, even if a problem in the schema that has not yet been detected,should remain valid
+SDD should specify parser for which standard has been validated -> Apache Xerces, newest version. Testing with SAX and DOM.
+
+Chuck Miller use cases: Mostly presentation of unstructured descriptions -> SDD is not necessary for this, xhtml with DublinCore or RDF header would be sufficient.
+
+Steve Wilkinson: Use case network of computer unskilled  workers, exchange often using Excel, low end of Access.
+
+Martin Pullan: Develop specific terminology sets for specific taxonomic groups, establish those as standards.
+
+Jessie reports on plantontology, SDD has no current relations. Problem of ontologies currently defined for individual genetically important plants, not cross-cutting.
+
+Martin Pullan: Improving terminology definition, problem with categorical data: adding categories changes semantics of previous data.
+
+Alexander Ryss: Describing nematodes, description may be noisy because they describe multiple species.
+Noise in data for other reasons as well.
+
+SDD enables social contracts about sharing terminology to be expressed.
+
+Discussion Polymorphism methods in schema:
+
+xsi-type method:
+Characters
+  Character xsi:type=CategoricalCharacter
+  Character xsi:type=QuantitativeCharacter
+-> invalid
+
+Characters
+  Character 
+    Representation ...
+-> invalid because abstract type
+
+
+Elementname/choice method:
+Characters
+  CategoricalCharacter
+  QuantitativeCharacter
+
+
+Choice/Elementname method for reference or direct nesting:
+----------------------------------------------------------
+DirektLabel :     PublicationSimple label="Hagedorn, Personia 78 (1998)"
+Crossreference    PublicationRef   ref="123"
+GUID/URI          PublicationHRef  ref="http://sldkfjslkd" label="Hagedorn, Personia 78 (1998)"
+Nested:           Publication 
+                      Representation
+                          Label lang=en  text=Hagedorn, Personia 78 (1998)
+                      PublicationYear=1998
+
+xsi:Polymorphism method
+----------------------------------------------------------
+DirektLabel :     Publication xsi:type="PublicationSimple" label="Hagedorn, Personia 78 (1998)"
+Crossreference    Publication xsi:type="PublicationRef"   ref="123"
+GUID/URI          Publication xsi:type="PublicationHRef"  ref="http://sldkfjslkd" label="Hagedorn, Personia 78 (1998)"
+Nested:           Publication xsi:type="PublicationDef" (with complex content defining the object)
+
+Roger Hyam proposed an all-optional model, where the different types are merged:
+
+Publication ref="123" reftype="internal" label="Hagedorn, Personia 78 (1998)"
+   Content (nested as well)
+
+Alternating requiredness is not enforceable in xml-schema, so 
+<Publication /> would be a valid
+
+Would be inconsistent, but would not be picked by schema validation (no keyref identity constraints possible on optional attributes).
+
+<Publication label="null"\> is not preventable, but obvious when any quality control exists.
+
+
+<== citation
+Bob Morris: citation is defined as publication reference in 
+Text Text Text  Morris (2000) Text Text 
+
+References
+Morris (2000). sdfjsfdljfs l
+
+--------------
+
+Crossreference    Character Ref   ref="123"
+Crossreference    Char   ref="123"
+
+alternative pattern of abbreviating for internal references: Kevin, Bryan, Bob: not intuitive
+
+Character id="123"
+ Representation 
+   <Label xml:lang="en" role="concise">My label text</Label>
+   <Label xml:lang="en" role="abbrev">MLT</Label>
+   <Label xml:lang="de" role="sorting">label text, my</Label>
+ Links
+  Link about 
+
+
+Use PublicationSimple instead of PublicationLabel
+
+Use Publication instead of Ref?
+Use PublicationFull PublicationDirect instead of Publication 
+
+Use PublicationLink instead of HRef?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+General cross-cutting questions:
+---------------------------------
+
+Use xsi:polymorphism or choice method (with social contract being derived from base type)?
+
+Which referencing pattern?
+
+How to distinguish between simple stub and multiple complex object class definition
+  SpecimenDarwinCore1
+  SpecimenABCD
+or, in contrast to the choice polymorphism method here by namespace/xs:any? Name of container element?
+
+Pattern for verbatim/original, unconstrained text, constrained value
+ Example: Rank, date
+  
+Perhaps change Publication to PublicationReference, to free name for online-publications proper?
+
+
+=====================
+
+Comment to Stan/John: JulianDay better DayOfYear
+
+
+Kevin staying until Sunday, Saturday available
+
+DONE:
+Clean up measurement unit stuff. Ability to define both at character definition and at data level, both either as reference to defined objects
+and simple text makes it difficult to verify that data within a character remain comparable.
+
+Problem of concersion and compatibility. Most unit non-convertible. 
+Possible solution: MeasurementUnitSet/MeasurementUnit/ConversionRules
+External quality check, whether measurements units are defined and those used in a single character all have conversion data associated with them.
+
+Instead: now measurement unit only in Character definition, summary and sample data may only override unit prefix, and this
+only if a default prefix has been defined (if not unit may already contain a prefix, or scientific prefixes may not be appropriate
+(µinch...).
+
+------------
+
+Taxon hierarchy:
+Rather type enumeration:
+  Phylogenetic
+  Taxonomic
+  ArbitrarySubsets
+
+
+
+DO MeasurementUnitPrefixEnum
+
+Ask SDD, also Arthur Chapman
+ MediaResource
+   or 
+ AudioVisual
+?
+
+
+
+
+Small multimedia resource to be displayed in addition to the label. It should be quicly recognized and will usually not be informative enough to base decisions on it alone. Example: in a concept tree a leaf icon image is provided for the node containing leaf characters.
+A set of representative multimedia resources that convey the meaning even when used without a Text representation (but applications may choose to combine text and media). Example: display shape images to select a state during identification. If more than one resource is defined here, the assumption is that they will normally all be consumed before making a selection.
+
+The size of the resource should be sufficiently concise to view ca. 6 images from different labels concurrently on the intended output device, or listened to ca. 6 audio extracts before making a selection. - Both Icon and these selectors resources are language/audience-specific (e. g., image with abbreviation, bird-call with spoken text).
+
+
+
+
+
+
+ICON: Small multimedia resource to be displayed in addition to the label. It should be quicly recognized and will usually not be informative enough to base decisions on it alone. Example: in a concept tree a leaf icon image is provided for the node containing leaf characters.
+
+SELECTOR: A set of representative multimedia resources that convey the meaning even when used without a Text representation (but applications may choose to combine text and media). Example: display shape images to select a state during identification. If more than one resource is defined here, the assumption is that they will normally all be consumed before making a selection. The size of the resource should be sufficiently concise to view ca. 6 images from different labels concurrently on the intended output device, or listened to ca. 6 audio extracts before making a selection. - Both Icon and these selectors resources are language/audience-specific (e. g., image with abbreviation, bird-call with spoken text).
+
+
+
+
+(Hint: Choice is  
+equivalent to 
+polymorphism,
+derived from same
+base type.)
+
+SequenceCharacter has not yet properly been introduced into points of polymorphism.
+
+
+Element StateReference derived from this has manual id and debugkey - clear, because 
+ extended from Type ConceptStateRef, multiple inheritance.
+
+Ask Task group mailing list:
+ is element id for local cross references confusing, if (as in TCS and SDD) required to be unique only within an object type (but not
+necessarily among all xml-elements in a document)?
+
+
+Change content metadata to be based on Abstract object again
+
+Is Technical metadata always the same for all datasets in a datasets element?
+
+Proposal: change TechnicalMetadata to ProviderMetadata, ProvisionMetadata, ProcessMetadata
+Metadata changed to ContentMetadata, 
+
+
+
+
+PROPOSAL DC: change JulianDay to DayOfYear. Check ISO-Date issue, this is not an xml-type but must be constructed manually based on string.
+
+I tried to use http://darwincore.calacademy.org/PendingIssues/ and managed to create user account and log in, but cannot see how to add the point there (no edit/contribute button or link?)
+
+
+
+
+=================
+SDD continued:
+==============
+
+Bob, Jacob, Pierre Grard(?), Bryan, Gregor
+
+FRIDAY SESSION
+
+AGENDA
+
+Kevin/Jacob Check taxon subsets, type class hierarchy
+
+------------
+
+BRYAN check image support - role enumeration when Bryan.
+
+Kevin: (global) Concept states
+
+Bob: unnatural requ. in concept trees character only at terminal nodes.
+  All agreed change to DA graph
+  GH: need to do some cleanup in concepts
+
+Semantic overload of concept trees
+if so, perhaps rather as node list?
+i.e. Concept, ConceptRelation?
+
+Are specializations always values for generalization?
+Do we need to separate concept states, or may they be simply concept nodes?
+
+Dependency: check issue of default dependency against thesis
+
+Bob/Jacob: Related taxa issues
+
+
+Kevin: Text characters
+Perhaps (Bob) rather separate element name, rather than overloading state?
+One difference: sequence can not be defined. I believe in combination with states, text as last always ok.
+Other: probably not meaningful to occur in multiple. Use cases? I had only Bob's states in mind.
+How to better see the text states?
+Perhaps Character type text, constrained to have only this element?
+
+
+123 something real like shape: "circular" 
+    UnconstrainedText=false
+121 unconstrained text
+    UnconstrainedText=true
+
+Instance:
+
+Coded Description
+
+
+OLD Categorical with extension
+<Char ref="99">
+ <State ref="state123"><Notes>in species xxx this may be difficult to observe.</Notes></State>
+ <State ref="state121"><Notes>banana-shaped</Notes></State>
+</Char>
+
+NEW Categorical with extension
+<CategoricalWithTextChar ref="99">
+ <State ref="state123"><Notes>in species xxx this may be difficult to observe.</Notes></State>
+ <Text>banana-shaped</Text>
+</Char>
+
+NEW Separate text-only character
+<TextChar ref="99">
+ <Text>blue, banana-shaped, found in Mexico</Text>
+</Char>
+
+
+PROBLEM Cannot be validated schema 
+ 
+
+
+NL Description
+ <State ref="123"><Text>Original text for thing</Text></State>
+
+
+__GlossaryRefGroup contains comment: @This may be more appropriately subsumed under Links above!@ OLD: GlossaryEntry reference (modeled as a group to include the identity constraint for the id/ref relation).
+
+
+
+
+
+
+
+
+
+
+
+
+Global states
+  Concept 
+
+Tree xml
+Node1
+  Node2 
+    Node3
+
+-----------------
+ConceptList
+Node1
+  States
+  States
+Node2
+Node3 (inflorescence)
+
+Tree 1
+Edges
+Node1 - Node2 - ""
+Node2 - Node3 - part of
+
+Tree 2
+Edges
+Node1 - Node2 
+Node2 - Node3
+
+
+entire plant
+root
+Above-ground part
+Inflorescence
+Monochasium
+Raceme
+Leaf-like structures
+
+Inflorescense is Monochasium
+Monochasium is Raceme
+Inflorescense is Raceme
+
+
+Think about ConceptTree/Specification/Type. Rather Composition, Generalization, or the other purposes and move that to the edges???
+
+TaxonHierarchyTypeEnum introduced, the previous IsPhylogenetic true/false was insufficient, not capturing non-phylogenetic taxonomy versus pure filtering.
+
+------------
+
+Remove part/kind from ConceptHierarchyType
+add annotation to relation
+
+
+Rename MediaResource Role to MediaResourceRichRef
+Where is MediaResources still used?
+
+Make Dataset itself derived from Abstract Object? DONE
+
+Add 
+iconic (not icon), primary, secondary to ResourceRoleEnum
+
+Add decimal places, in sample/summary data, significant to significantfigures?
+
+Major changes in SDD at the St. Petersburg meeting:
+
+All object types are derived from abstract base type. ExternalDataInterface grouping given up, all object types, including SDD ones treated symmetrically.
+Multilingual representation was simplified (one level of nesting less than previous version). The text character facility was redesigned to be expressed
+differently in xml, the previous solution was considered unintuitive. This involves element name and structural changes, but no essential changes
+in functionality. The expression of measurement units was simplified, rather than allowing multiple units within a character (which required 
+structures to define units and their conversion methods), only onee unit may be defined, which may be accompanied with different scientific prefix
+letters (k, c, m, µ) in different descriptions.
+
+MediaResource needs xml:lang and audience, optional, but not translation!
+
+TODO: check constraints in UBIF_RootIdentityConstraints.xsd for correctness. Perhaps rename to DatasetsRoot.xsd
+Perhaps this may now be given up, and can be included in SDD itself.
+
+TODO: on language group in UBIF types: ###COMMENT needs updating, see wiki!### Defines a required 'xml:lang' attribute (recommended special values are: 'x-unknown', 'x-neutral', 'x-mixed')
+
+FIX and finalize decision about lang/audience in dataset root.
+
+CHANGE annotation to attribute??? on object itsel rather than part of developer tool group?
+

@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html PUBLIC "-//XML-DEV//DTD XHTML RDDL 1.0//EN" "http://www.rddl.org/rddl-xhtml.dtd">-->
+<!-- Note: DOCTYPE is commented out in the RDDL example RDDL itself; perhaps it causes problems with some html browsers. -->
+<html xmlns="http://www.w3.org/1999/xhtml" 
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		xmlns:rddl="http://www.rddl.org/"
+    xml:base="http://rs.tdwg.org/UBIF/2006"
+    xml:lang="en-US">
+<head>
+	<title>Resource directory for "encoded-inline-formatting" folder</title>
+  <link href="http://www.rddl.org/xrd.css" type="text/css" rel="stylesheet"/>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <meta name="MSSmartTagsPreventParsing" content="TRUE" /> 
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+
+<h1>Resource directory for "encoded-inline-formatting" folder</h1>
+
+<div id="overview">
+<p>This folder contains a proposal for inline text formatting that may be embedded/encoded in database or xml field content.</p>
+</div>
+
+<h2>Resources</h2>
+<div id="resources" class="resource">
+<ul class="compact" compact="compact">
+<!-- Note: This special rddl file currently contains very little rddl markup! -->
+<rddl:resource xlink:type="simple" id="encoded-formatting-proposal"
+	xlink:title="UBIF Encoded Formatting Proposal"
+	xlink:role="http://www.w3.org/1999/xhtml"
+	xlink:arcrole="http://www.rddl.org/purposes#non-normative-reference"
+	xlink:href="EncodedFormattingProposal">
+  <li>The proposal itself: <a href="EncodedFormattingProposal.html">EncodedFormattingProposal.html</a>.</li>
+</rddl:resource>
+
+<li>Short sample xslt script, data, and transformed output have been created as proof of concept, see:<ul class="compact" compact="compact"> 
+<li><a href="UBIF-EncodedFormatting-Recover.xsl">UBIF-EncodedFormatting-Recover.xsl</a> (recover and present and xhtml) and</li>
+<li><a href="UBIF-EncodedFormatting-Strip.xsl">UBIF-EncodedFormatting-Strip.xsl</a> (remove encoded formatting in support of text comparison or indexing).</li>
+<li><a href="UBIF-EncodedFormatting-SampleData.xml">UBIF-EncodedFormatting-SampleData.xml</a> (example data, using a generic format, not bound to any UBIF schema)</li>
+<li><a href="UBIF-EncodedFormatting-Recover-SampleOutput.html">UBIF-EncodedFormatting-Recover-SampleOutput.html</a> (expected result of "recover"-transformation)</li>
+<li><a href="UBIF-EncodedFormatting-Strip-SampleOutput.html">UBIF-EncodedFormatting-Strip-SampleOutput.html</a>) (expected result of "strip"-transformation)</li>
+</ul></li>
+
+<rddl:resource xlink:type="simple" id="home"
+	xlink:title="SDD Home Page"
+	xlink:role="http://www.w3.org/1999/xhtml"
+	xlink:arcrole="http://www.rddl.org/purposes#non-normative-reference"
+	xlink:href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">
+	<li>For further information see also the <a href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">SDD Home Page (Wiki)</a>!</li>
+</rddl:resource>
+
+</ul>
+</div>
+
+<div id="footer">
+<p>Copyright (c) 2006 G. Hagedorn</p>
+</div>
+
+</body>
+</html>

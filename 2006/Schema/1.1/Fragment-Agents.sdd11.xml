@@ -1,0 +1,19 @@
+<Agents>
+  <Agent id="a1">
+    <Representation>
+      <Label>Kevin Thiele</Label>
+    </Representation>
+  </Agent>
+  <Agent id="a2">
+    <Representation>
+      <Label>Gregor Hagedorn, Berlin</Label>
+      <Label role="Sort">Hagedorn, Gregor (Berlin)</Label>
+    </Representation>
+  </Agent>
+  <Agent id="a3">
+    <Representation>
+      <Label>Ali Baba</Label>
+      <Detail role="Description" xml:lang="en">Ali Baba is also known as r.a.m.</Detail>
+    </Representation>
+  </Agent>
+</Agents>

@@ -1,0 +1,12 @@
+SDD version 1.1 had several minor revision versions. These fix minor problems, like problems with xml schema validation that only occurred with newer software.
+
+One potentially occurring problem, which has not been generally fixed, is that some validators have problems with relative include paths. If this seems to be your problem, please search for all
+
+<xs:include schemaLocation="xyz.xsd"/>
+e.g. in SDD.xsd:
+<xs:include schemaLocation="SDD_TypeLib.xsd"/>
+and replace them with a full path, either your local copy or:
+<xs:include schemaLocation="http://rs.tdwg.org/UBIF/2006/Schema/1.1/SDD_TypeLib.xsd"/>
+
+XML API of JDOM seems ok with relative paths, but Xerces may not.
+We did not changes this, because in general the relative paths have advantages when using a local schema copy and are considered good practice.

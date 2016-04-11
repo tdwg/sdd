@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Datasets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://rs.tdwg.org/UBIF/2006/" xsi:schemaLocation="http://rs.tdwg.org/UBIF/2006/ ../UBIF.xsd">
+  <TechnicalMetadata created="2006-04-20T10:00:00">
+    <Generator name="n/a, handcrafted instance document" version="n/a"/>
+  </TechnicalMetadata>
+  <Dataset xml:lang="en-us">
+    <Representation>
+      <Label>The Genus Viola</Label>
+      <Detail>This is an example for a minimal SDD file, representing a single description with one categorical, quantitative, and text character each. Compare also the "Fragment*" examples, which contain more complex examples in the form of document fragments. Intended for version="SDD 1.1".</Detail>
+    </Representation>
+    <RevisionData>
+      <Creators>
+        <Agent role="aut" ref="a1"/>
+        <Agent role="aut" ref="a2"/>
+        <Agent role="edt" ref="a3"/>
+      </Creators>
+      <DateModified>2006-04-08T00:00:00</DateModified>
+    </RevisionData>
+    <IPRStatements>
+      <IPRStatement role="Copyright">
+        <Label xml:lang="en-au">(c) 2003-2006 Centre for Occasional Botany.</Label>
+      </IPRStatement>
+    </IPRStatements>
+    <TaxonNames>
+      <TaxonName id="t1" uri="urn:lsid:authority:namespace:my-own-id">
+        <Representation>
+          <Label xml:lang="zxx-x-taxon">Viola hederacea Labill.</Label>
+        </Representation>
+      </TaxonName>
+    </TaxonNames>
+    <Characters>
+      <CategoricalCharacter id="c1">
+        <Representation>
+          <Label> Leaf complexity</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="s1">
+            <Representation>
+              <Label>Simple</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="s2">
+            <Representation>
+              <Label>Compound</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <CategoricalCharacter id="c4">
+        <Representation>
+          <Label> Leaf shape</Label>
+        </Representation>
+        <States>
+          <StateDefinition id="s3">
+            <Representation>
+              <Label>Round</Label>
+            </Representation>
+          </StateDefinition>
+          <StateDefinition id="s4">
+            <Representation>
+              <Label>Ovate</Label>
+            </Representation>
+          </StateDefinition>
+        </States>
+      </CategoricalCharacter>
+      <QuantitativeCharacter id="c2">
+        <Representation>
+          <Label>Leaf length</Label>
+        </Representation>
+        <MeasurementUnit>
+          <Label role="Abbrev">m</Label>
+        </MeasurementUnit>
+        <Default>
+          <MeasurementUnitPrefix>milli</MeasurementUnitPrefix>
+        </Default>
+      </QuantitativeCharacter>
+      <TextCharacter id="c3">
+        <Representation>
+          <Label xml:lang="en">Leaf features not covered by other characters</Label>
+        </Representation>
+      </TextCharacter>
+    </Characters>
+    <CodedDescriptions>
+      <CodedDescription id="D101">
+        <Representation>
+          <Label>&lt;i&gt;Viola hederacea&lt;/i&gt; Labill. as revised by R. Morris April 8, 2006</Label>
+        </Representation>
+        <Scope>
+          <TaxonName ref="t1"/>
+          <Citation ref="p1" location="p. 30"/>
+        </Scope>
+        <SummaryData>
+          <Categorical ref="c1">
+            <State ref="s1"/>
+          </Categorical>
+          <Quantitative ref="c2">
+            <Measure type="Min" value="2.3"/>
+            <Measure type="Mean" value="5.1"/>
+            <Measure type="Max" value="7.9"/>
+            <Measure type="SD" value="1.3"/>
+            <Measure type="N" value="20"/>
+          </Quantitative>
+          <TextChar ref="c3">
+            <Content>Free form text</Content>
+          </TextChar>
+        </SummaryData>
+      </CodedDescription>
+    </CodedDescriptions>
+    <Agents>
+      <Agent id="a1">
+        <Representation>
+          <Label>Kevin Thiele</Label>
+        </Representation>
+      </Agent>
+      <Agent id="a2">
+        <Representation>
+          <Label>Gregor Hagedorn</Label>
+        </Representation>
+        <Links>
+          <Link rel="Alternate" href="http://www.diversitycampus.net/people/hagedorn"/>
+        </Links>
+      </Agent>
+      <Agent id="a3">
+        <Representation>
+          <Label>Ali Baba</Label>
+          <Detail role="Description">Ali Baba is also known as r.a.m.</Detail>
+        </Representation>
+      </Agent>
+    </Agents>
+    <Publications>
+      <Publication id="p1">
+        <Representation>
+          <Label>Sample Citation</Label>
+        </Representation>
+      </Publication>
+    </Publications>
+    <MediaObjects>
+      <MediaObject id="m1">
+        <Representation>
+          <Label>Image description, e.g. to be used for alt-attribute in html.</Label>
+        </Representation>
+        <Type>Image</Type>
+        <Source href="http://test.edu/test.jpg"/>
+      </MediaObject>
+    </MediaObjects>
+  </Dataset>
+</Datasets>

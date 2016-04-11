@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Gregor Hagedorn (Biologische Bundesanstalt) -->
+<xs:schema xmlns="http://rs.tdwg.org/UBIF/2006" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sea="http://www.bgbm.org/biodivinf/Schema/sea" targetNamespace="http://rs.tdwg.org/UBIF/2006" elementFormDefault="qualified" attributeFormDefault="unqualified" blockDefault="#all" version="Unified Biosciences Information Framework (UBIF) 1.1">
+  <xs:simpleType name="__IdentifierValueTypeEnum">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">CURRENTLY NO LONGER USED! Enumeration of types of identifiers, such as temporary, local, global, DOI, LSID.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:NCName">
+      <xs:enumeration value="TemporaryIdentifier">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Temporary identifiers are not guaranteed to be comparable when the same document is requested multiple times. They may only be interpreted as cross-references within a single instance of a document. (All following identifier types are persistent; multiple requests to a provider return identical identifiers for identical objects; objects with the same identifier may or may not be identical because of versioning policies.)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LocalIdentifier">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Local identifiers are unique only for a specific object-domain within the providing institution. They can not be resolved without external knowledge about provider and resolution service. (All following identifier types are globally unique.)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="IdentifierTypeSimpleGuid">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Globally unique identifiers (GUIDs) are unique for any object type in the entire world. A "simple guid" is here defined to encompass any guid without a recognizable resolution mechanism. Examples are numeric GUIDs like '{a7d00c20-22d4-11d0-1091-0000754c2752}' or non-resolvable urn schemes.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="IdentifierTypeURL">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Universal resource locator (the typical "internet addresses")</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="IdentifierTypeLSID">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">life science id, a resolvable form of guid</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="IdentifierTypeDOI">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Document object identifier, a resolvable form of guid</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

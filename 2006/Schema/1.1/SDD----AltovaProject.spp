@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Folder FolderName="XML Files" ExtStr="xml;cml;math;mtx;rdf;smil;svg;wml">
+		<File FilePath="examples/SDD-Test-AutoIncludeFragments.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/SDD-Test-DuplicateMembers.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/SDD-Test-ForObjectInterchange.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/SDD-Test-Lucid.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/SDD-Test-Simple.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/SDD-Test-Simple_under_UBIF (SDD parts non-validated).xml" HomeFolder="Yes"/>
+		<File FilePath="examples\SDD-Test-EFG_Terminology.xml" HomeFolder="Yes"/>
+		<File FilePath="Untitled1.xml" HomeFolder="Yes"/>
+		<File FilePath="examples\EFG\BostonNatureCenterSDD.xml" HomeFolder="Yes"/>
+		<File FilePath="examples\EFG\MassBogsSDD.xml" HomeFolder="Yes"/>
+		<File FilePath="examples\EFG\NantucketinvasivesSDD.xml" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="XSL Files" ExtStr="xsl;xslt">
+		<ExtMountFolder FolderName="xslt"/>
+	</Folder>
+	<Folder FolderName="XQuery Files" ExtStr="xq;xql;xquery"/>
+	<Folder FolderName="HTML Files" ExtStr="html;htm;xhtml;asp"/>
+	<Folder FolderName="DTD/Schemas" ExtStr="dtd;dcd;xdr;biz;xsd">
+		<File FilePath="SDD.xsd" HomeFolder="Yes"/>
+		<File FilePath="SDD_ForObjects.xsd" HomeFolder="Yes"/>
+		<File FilePath="SDD_(c).xsd" HomeFolder="Yes"/>
+		<File FilePath="SDD_EnumLib.xsd" HomeFolder="Yes"/>
+		<File FilePath="SDD_TypeLib.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_(c).xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_EnumLib.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_CoreExtensions.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_BasePattern.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_CoreOntology.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_CoreExtensions_Unused.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_LinneanCore.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_TypeLib.xsd" HomeFolder="Yes"/>
+		<File FilePath="altova://ystream/xmlschema.xsd" DocFrom="URL" DocType="XML" HomeFolder="Yes"/>
+		<ExtMountFolder FolderName="C:\Data\Desktop\DESCR\TDWG-SDD-Internal\OtherSchemata\NapierDraftFinal2005"/>
+	</Folder>
+	<Folder FolderName="Entities" ExtStr="ent">
+		<File FilePath="examples/Fragment-Agents.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-CharDefCategorical.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-CharDefQuantitative.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-CharTree.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-CodedDescription_SampleData.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-CodedDescription_Simple.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-ConceptStateDefinition.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-ConceptStateInChar.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-ConceptStateInDescr.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-DatasetMetadata.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-DescrConcepts.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-GeographicAreas.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-IdentificationKeys.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-MediaObjects.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-Modifiers.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-NatLangDescriptions.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-Publications.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-TaxaFishbase.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-TaxaViolaMechanites.xml" HomeFolder="Yes"/>
+		<File FilePath="examples/Fragment-TaxonHierarchies.xml" HomeFolder="Yes"/>
+	</Folder>
+	<ExtMountFolder FolderName="examples"/>
+</Project>

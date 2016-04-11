@@ -1,0 +1,48 @@
+<Representation>
+  <Label xml:lang="en">Flying Fishes of the world</Label>
+  <Label xml:lang="de">Fliegende Fische der Welt</Label>
+  <Detail xml:lang="en" role="Description">A digital field guide</Detail>
+  <Detail xml:lang="en" role="Coverage">Flying Fishes (Exocoetidae)</Detail>
+  <Detail xml:lang="de" role="Coverage">Fliegende Fische (Exocoetidae)</Detail>
+  <MediaObject ref="m1"/>
+</Representation>
+<Links>
+  <Link rel="Alternate" href="http://www.DiversityCampus.net/Projects/xxx"/>
+</Links>
+<RevisionData>
+  <Creators>
+    <Agent role="aut" ref="a1" firstcontribution="2001-01-01T00:00:00Z" lastcontribution="2003-12-01T15:35:00Z"/>
+    <Agent role="edt" ref="a1"/>
+    <Agent role="edt" ref="a2"/>
+  </Creators>
+  <Contributors>
+    <Agent role="ctb" ref="a3"/>
+    <Agent role="trl" ref="a2"/>
+  </Contributors>
+  <DateCreated>1999-08-13T00:00:00</DateCreated>
+  <DateModified>2006-04-20T00:00:00</DateModified>
+  <RevisionStatus code="Unrevised"/>
+  <Version major="1" minor="01" modifier="beta" issued="2006-04-28T00:00:00Z" />
+</RevisionData>
+<IPRStatements>
+  <IPRStatement role="Copyright">
+    <Label>(c) 2002 Allmende Biological Research Station</Label>
+    <Detail>(c) 2002 Allmende Biological Research Station. All rights reserved. No part of this data may be....</Detail>
+  </IPRStatement>
+  <IPRStatement role="TermsOfUse">
+    <Detail>Data may be freely used as long as ...</Detail>
+    <Detail xml:lang="de">Die Daten dürfen frei verwendet werden, solange ...</Detail>
+  </IPRStatement>
+  <IPRStatement role="Disclaimer" href="http://www.xyz.org/disclaimer.html">
+    <Label>See also the disclaimer.</Label>
+  </IPRStatement>
+  <IPRStatement role="Acknowledgement">
+    <Detail>The work was made possible by a grant from ...</Detail>
+    <Detail xml:lang="de">Wir danken der X-Stiftung für ...</Detail>
+  </IPRStatement>
+</IPRStatements>
+<Scope>
+  <Citation ref="p111"/>
+  <GeographicArea ref="g1"/>
+  <GeographicArea ref="g2"/>
+</Scope>

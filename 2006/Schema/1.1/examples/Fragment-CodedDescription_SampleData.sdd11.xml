@@ -1,0 +1,65 @@
+<CodedDescription id="d2">
+  <Representation>
+    <Label>Example for a coded description including frequency values, notes, and sample data.</Label>
+    <MediaObject ref="m1" debuglabel="some media objects, rather than being bound to characters, may illustrate the entire object or class description"/>
+    <MediaObject ref="m2"/>
+    <MediaObject ref="m3"/>
+  </Representation>
+  <Scope><TaxonName ref="t1"/></Scope>
+  <SummaryData>
+    <Categorical ref="c1">
+      <Status code="NotApplicable"/>
+      <State ref="s1">
+          <Modifier debuglabel="frequency example!" ref="mc40" lower="0.8" upper="0.8"/>
+      </State>
+      <State ref="s2">
+        <Note xml:lang="en">especially in later summer</Note>
+      </State>
+    </Categorical>
+    <Quantitative ref="c2">
+      <BasedOnSample ref="sev1000"/>
+      <Note xml:lang="en">The maximum may be based on erroneous operation of the instrument</Note>
+      <Status code="NotInterpretable"/>
+        <Modifier debuglabel="Certainty example!" ref="mc40"/>
+      <Measure type="Min" value="100.4"/>
+      <Measure type="Max" value="120"></Measure>
+    </Quantitative>
+    <Categorical ref="c4">
+        <!-- media objects like images may be specific to a single character. They do not require a measurement yet; it is possible to add them together without data or with status: unavailable/unknown! -->
+        <MediaObject ref="m1"/>
+    </Categorical>
+    <Quantitative ref="c2">
+        <!-- as above, for a quantitative character -->
+        <MediaObject ref="m1"/>
+    </Quantitative>
+  </SummaryData>
+  <SampleData>
+    <SamplingEvent id="sev1000">
+    <DateTime></DateTime>
+      <SamplingUnit>
+        <Categorical ref="c1">
+          <State ref="s2"/>
+        </Categorical>
+        <Quantitative ref="c2" value="110"/>
+      </SamplingUnit>
+      <SamplingUnit>
+        <Categorical ref="c1">
+          <State ref="s1"/>
+        </Categorical>
+        <Quantitative ref="c2" value="112"/>
+      </SamplingUnit>
+      <SamplingUnit>
+        <Categorical ref="c1">
+          <State ref="s1"/>
+        </Categorical>
+        <Quantitative ref="c2" value="110"/>
+      </SamplingUnit>
+      <SamplingUnit>
+        <Categorical ref="c1">
+          <State ref="s1"/>
+        </Categorical>
+        <Quantitative ref="c2" value="118"/>
+      </SamplingUnit>
+    </SamplingEvent>
+  </SampleData>
+</CodedDescription>

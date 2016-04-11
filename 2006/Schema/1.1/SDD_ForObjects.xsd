@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xs:schema xmlns="http://rs.tdwg.org/UBIF/2006/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://rs.tdwg.org/UBIF/2006/" elementFormDefault="qualified" attributeFormDefault="unqualified" blockDefault="#all" version="Unified Biosciences Information Framework (UBIF) 1.1 and SDD 1.1">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Variant of the primary schema file to be used for exchanging and validating objects outside of the document context defined in the main schema. Any first class object defined in UBIF/SDD may occur here either as an immediate root element, or in any position inside the "Objects" collection. This schema may also be used when validating objects used as extensions of other schemata.</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Copyright © 2006 TDWG (Taxonomic Databases Working Group, www.tdwg.org). See the file SDD_(c).xsd for authorship and licensing information.</xs:documentation>
+  </xs:annotation>
+  <xs:include schemaLocation="SDD.xsd"/>
+  <xs:element name="Objects">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:any namespace="##any" processContents="strict"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Specimen" type="SpecimenCore"/>
+  <xs:element name="TaxonName" type="TaxonNameCore"/>
+  <xs:element name="TaxonHierarchy" type="TaxonHierarchyCore"/>
+  <xs:element name="DescriptiveConcept" type="DescriptiveConcept"/>
+  <xs:element name="Modifier" type="ModifierDef"/>
+  <xs:element name="CategoricalCharacter" type="CategoricalCharacter"/>
+  <xs:element name="QuantitativeCharacter" type="QuantitativeCharacter"/>
+  <xs:element name="TextCharacter" type="TextCharacter"/>
+  <xs:element name="SequenceCharacter" type="MolecularSequenceCharacter"/>
+  <xs:element name="CharacterTree" type="CharacterTree"/>
+  <xs:element name="NaturalLanguageDescription" type="NaturalLanguageDescription"/>
+  <xs:element name="CodedDescription" type="CodedDescription"/>
+  <xs:element name="IdentificationKey" type="StoredKey"/>
+  <xs:element name="Agent" type="Agent"/>
+  <xs:element name="Publication" type="Publication"/>
+  <xs:element name="GeographicArea" type="GeographicArea"/>
+  <xs:element name="MediaObject" type="MediaObjectCore"/>
+  <xs:element name="Audience" type="AudienceCore"/>
+  <xs:element name="TechnicalMetadata" type="TechnicalMetadata"/>
+</xs:schema>

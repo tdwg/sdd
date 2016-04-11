@@ -1,0 +1,12 @@
+<GeographicAreas>
+  <GeographicArea id="g1">
+    <Representation>
+      <Label>Worldwide</Label>
+    </Representation>
+  </GeographicArea>
+  <GeographicArea id="g2">
+    <Representation>
+      <Label>Europe</Label>
+    </Representation>
+  </GeographicArea>
+</GeographicAreas>

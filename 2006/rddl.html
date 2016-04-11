@@ -1,0 +1,157 @@
+<!-- <!DOCTYPE html PUBLIC "-//XML-DEV//DTD XHTML RDDL 1.0//EN" "http://www.rddl.org/rddl-xhtml.dtd">-->
+<!-- Note: DOCTYPE is commented out in the RDDL example RDDL itself; perhaps otherwise some html clients cause problems. -->
+<html xmlns="http://www.w3.org/1999/xhtml" 
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		xmlns:rddl="http://www.rddl.org/"
+    xml:base="http://rs.tdwg.org/UBIF/2006"
+    xml:lang="en-US">
+<head>
+	<title>Resource Directory (RDDL) for UBIF and SDD 1.1</title>
+  <link href="http://www.rddl.org/xrd.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+<h1>Resource Directory (RDDL) for UBIF and SDD 1.1</h1>
+<div class="head">
+<p>
+<a href="http://rs.tdwg.org/UBIF/2006/rddl-2006-05-11.html">This version</a> (2006-05-11)<br />
+<a href="http://rs.tdwg.org/UBIF/2006">Latest Version</a><br />
+<a href="http://rs.tdwg.org/UBIF/2005/rddl-2005-09-15.html">Prior version</a> (2005-09-15)
+<rddl:resource xlink:type="simple" id="prior" 
+	xlink:title="UBIF/SDD prior version (RDDL file)"
+	xlink:role="http://www.rddl.org/"
+	xlink:arcrole="http://www.rddl.org/purposes#prior-version"
+	xlink:href="http://rs.tdwg.org/UBIF/2006"	></rddl:resource>
+</p>
+</div>
+
+<div id="overview">
+<h2>Overview</h2>
+<p>This is UBIF and SDD version 1.1. For more information on SDD see the <a href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">SDD Wiki</a>, especially the <a href="http://wiki.tdwg.org/twiki/bin/view/SDD/Charter">Charter</a>.</p>
+
+<p>Note: While this document is human-readable, RDDL-aware processors may use it to automatically retrieve resources such as different schema versions for validating documents. See <a href="http://www.rddl.org">http://www.rddl.org</a> for further information.</p>
+
+<rddl:resource xlink:type="simple" id="target" 
+	xlink:title="SDD root (target) namespace"
+	xlink:role="http://www.rddl.org/#role"
+	xlink:arcrole="http://www.rddl.org/purposes#target"
+	xlink:href="http://rs.tdwg.org/UBIF/2006"
+	>
+	<p>The root (target) namespace of UBIF and SDD is: <code>http://rs.tdwg.org/UBIF/2006</code>.</p>
+</rddl:resource>
+
+</div>
+
+<h2>Resources</h2>
+<div id="resources" class="resource">
+<ul class="compact"><!-- Note: instead of role="http://www.w3.org/1999/xhtml" a more general URI is: http://www.isi.edu/in-notes/iana/assignments/media-types/text/html -->
+
+<rddl:resource xlink:type="simple" id="spec"
+	xlink:title="SDD 1.1 Specification"
+	xlink:role="http://www.w3.org/1999/xhtml" 
+	xlink:arcrole="http://www.rddl.org/purposes#normative-reference"
+	xlink:href="http://wiki.tdwg.org/twiki/bin/view/SDD/NormativeSpecification"
+	>
+	<li><a href="http://wiki.tdwg.org/twiki/bin/view/SDD/NormativeSpecification">SDD 1.1 Normative Specification (@@CURRENTLY EMPTY@@)</a></li>
+</rddl:resource>
+
+<rddl:resource xlink:type="simple" id="home"
+	xlink:title="SDD Home Page"
+	xlink:role="http://www.w3.org/1999/xhtml"
+	xlink:arcrole="http://www.rddl.org/purposes#non-normative-reference"
+	xlink:href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome"
+	>
+	<li><a href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">SDD Home Page</a></li>
+</rddl:resource>
+<rddl:resource xlink:type="simple" id="primer" 
+	xlink:title="SDD Primer"
+	xlink:role="http://www.w3.org/1999/xhtml"
+	xlink:arcrole="http://www.rddl.org/purposes#non-normative-reference"
+	xlink:href="http://wiki.tdwg.org/twiki/bin/view/SDD/PrimerHome"
+	>
+	<li><a href="http://wiki.tdwg.org/twiki/bin/view/SDD/PrimerHome">SDD Primer</a></li>
+</rddl:resource>
+
+<!-- Templates for RDFS, schematron, DTD, remove xxx before href!
+<rddl:resource xlink:type="simple" id="RDFS"
+    xlink:title="RDF Schema"
+    xlink:role="http://www.w3.org/2000/01/rdf-schema#"
+    xxx_xlink:href="rddl.rdfs"
+	<li><a href="#">CURRENTLY NO RDF Schema...</a> (not normative)</li>
+</rddl:resource>
+<rddl:resource xlink:type="simple" 
+	   xlink:title="Schematron schema for validation"
+	   xlink:role="http://www.ascc.net/xml/schematron"
+	   xlink:arcrole="http://www.rddl.org/purposes#schema-validation"
+	   xxx_xlink:href="SDD_schematron1-5.sch" >
+	<li><a href="#">CURRENTLY NO SCHEMATRON schema...</a></li>
+</rddl:resource>
+<rddl:resource xlink:type="simple" 
+	   xlink:title="DTD for validation"
+	   xlink:role="http://www.rddl.org/roles#DTD"
+	   xlink:arcrole="http://www.rddl.org/purposes#validation"
+	   xxx_xlink:href="SDD.dtd" >
+	<li><a href="#">NO DTD available...</a></li>
+</rddl:resource>
+ -->
+ 
+<rddl:resource xlink:type="simple" id="xsd"
+	   xlink:title="W3C XML Schema for document validation (normative)"
+	   xlink:role="http://www.w3.org/2000/10/XMLSchema"
+	   xlink:arcrole="http://www.rddl.org/purposes#schema-validation"
+	   xlink:href="http://rs.tdwg.org/UBIF/2006/Schema/1.1/SDD.xsd"
+	   >
+	<li><a href="http://rs.tdwg.org/UBIF/2006/Schema/1.1/SDD.xsd">W3C XML Schema for validation (normative)</a>
+  <ul class="compact">
+   <li>Note 1: Although RDDL-aware processors may automatically detect a schema location, most processors require an explicit location. SDD instance documents intended for validation should therefore contain the following attributes in the "Datasets" root element: <br />
+<code>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" <br />
+xsi:schemaLocation="http://rs.tdwg.org/UBIF/2006 http://rs.tdwg.org/UBIF/2006/Schema/1.1/SDD.xsd"</code>.</li>
+   <li>Note 2: Please use a local, cached copy for repeated validations, specifying, e.&nbsp;g.: <br />
+<code>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" <br />
+xsi:schemaLocation="http://rs.tdwg.org/UBIF/2006 http://your-domain.net/path/SDD.xsd"</code>.</li>
+  </ul></li>
+</rddl:resource>
+
+<rddl:resource xlink:type="simple" id="object-xsd"
+	   xlink:title="W3C XML Schema for validation of single or mixed objects (non-normative)"
+	   xlink:role="http://www.w3.org/2000/10/XMLSchema"
+	   xlink:arcrole="http://www.rddl.org/purposes#schema-validation"
+	   xlink:href="http://rs.tdwg.org/UBIF/2006/Schema/1.1/SDD_ForObjects.xsd"
+	   >
+	<li><a href="http://rs.tdwg.org/UBIF/2006/Schema/1.1/SDD_ForObjects.xsd">W3C XML Schema for validation of single or mixed objects (non-normative)</a>
+  <ul class="compact">
+   <li>Note 1: This is an alternative primary schema intended for exchange of single UBIF or SDD objects, or a collection of mixed, unrelated objects. When using this schema, objects may contain unresolved references (validation is lower than when using the full document structure). However, this schema is preferable when a client and server exchange objects on specific requests.</li>
+   <li>Note 2: The recommended attributes in the "Datasets" root element for this variant are: <br />
+<code>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" <br />
+xsi:schemaLocation="http://rs.tdwg.org/UBIF/2006 http://rs.tdwg.org/UBIF/2006/Schema/1.1/SDD_ForObjects.xsd"</code>. <br />
+Again, it is recommended to use a local, cached copy for repeated validations.</li>
+  </ul></li>
+</rddl:resource>
+
+<rddl:resource xlink:type="simple" id="zip"
+	   xlink:title="W3C XML Schema, zipped for download"
+     xlink:role="http://www.isi.edu/in-notes/iana/assignments/media-types/application/zip"
+     xlink:arcrole="http://www.rddl.org/purposes#software-package"
+	   xlink:href="http://rs.tdwg.org/UBIF/2006/Schema/SDD1.1rev5.zip"
+	   >
+	<li><a href="http://rs.tdwg.org/UBIF/2006/Schema/SDD1.1rev5.zip">Zipped archive with W3C XML Schema plus accessory files for downloading</a></li>
+</rddl:resource>
+
+<rddl:resource xlink:type="simple" 
+	xlink:title="SDD Implementations"
+	xlink:role="http://www.w3.org/1999/xhtml"
+	xlink:arcrole="http://www.rddl.org/purposes#software-project"
+	xlink:href="http://wiki.tdwg.org/twiki/bin/view/SDD/ImplementationsOfSDD"
+	>
+	<li><a href="http://wiki.tdwg.org/twiki/bin/view/SDD/ImplementationsOfSDD">SDD Implementations</a></li>
+</rddl:resource>
+
+</ul>
+</div>
+
+<div id="footer">
+<p>Copyright (c) 2006 G. Hagedorn</p>
+</div>
+
+</body>
+</html>

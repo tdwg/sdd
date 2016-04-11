@@ -1,0 +1,37 @@
+<CategoricalCharacter id="c1">
+  <Representation>
+    <Label> Leaf complexity</Label>
+  </Representation>
+  <States>
+    <StateDefinition id="s1">
+      <Representation>
+        <Label>Simple</Label>
+      </Representation>
+    </StateDefinition>
+    <StateDefinition id="s2">
+      <Representation>
+        <Label>Compound</Label>
+      </Representation>
+    </StateDefinition>
+  </States>
+  <Assumptions>
+    <MeasurementScale>Nominal</MeasurementScale>
+  </Assumptions>
+</CategoricalCharacter>
+<CategoricalCharacter id="c4">
+  <Representation>
+    <Label xml:lang="en"> Leaf shape</Label>
+  </Representation>
+  <States>
+    <StateDefinition id="s3">
+      <Representation>
+        <Label xml:lang="en">Round</Label>
+      </Representation>
+    </StateDefinition>
+    <StateDefinition id="s4">
+      <Representation>
+        <Label xml:lang="en">Ovate</Label>
+      </Representation>
+    </StateDefinition>
+  </States>
+</CategoricalCharacter>

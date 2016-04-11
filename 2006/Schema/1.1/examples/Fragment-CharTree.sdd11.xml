@@ -1,0 +1,42 @@
+<CharacterTree id="ct1">
+  <Representation>
+    <Label>(Lucid default character list)</Label>
+  </Representation>
+    <Nodes>
+      <Node id="cn1">
+        <!-- no Parent element = root of tree is the parent! -->
+        <DescriptiveConcept ref="dc1"/>
+      </Node>
+      <Node id="cn2">
+        <Parent ref="cn1"/>
+      </Node>
+      <Node id="cn3">
+        <Parent ref="cn1"/>
+        <DescriptiveConcept ref="dc3"/>
+      </Node>
+      <!-- Note that character nodes may never have an id and can thus not become inner nodes. -->
+      <CharNode>
+        <Parent ref="cn2"/>
+        <Character ref="c1"/>
+      </CharNode>
+      <CharNode>
+        <Parent ref="cn2"/>
+        <Character ref="c2"/>
+      </CharNode>
+      <!-- Both Node and CharNode may carry Dependency rules for character below it: -->
+      <Node id="cn4">
+        <Parent ref="cn2"/>
+        <DependencyRules>
+          <InapplicableIf><State ref="s1"/></InapplicableIf>
+        </DependencyRules>    
+        <DescriptiveConcept ref="dc3"/>
+      </Node>
+      <CharNode>
+        <Parent ref="cn4"/>
+        <DependencyRules>
+          <InapplicableIf><State ref="s4"/><State ref="s1"/></InapplicableIf>
+        </DependencyRules>
+        <Character ref="c4"/>
+      </CharNode>
+    </Nodes>
+</CharacterTree>

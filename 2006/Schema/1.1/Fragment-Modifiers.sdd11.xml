@@ -1,0 +1,207 @@
+<DescriptiveConcept id="dc40">
+  <Representation>
+    <Label>Preferred certainty modifiers</Label>
+  </Representation>
+  <Modifiers>
+    <Modifier id="mc40">
+      <Representation>
+        <Label xml:lang="en">probably</Label>
+        <Label xml:lang="de">vermutlich</Label>
+      </Representation>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="Before">probably </Phrase>
+        <Phrase xml:lang="de" role="Before">vermutlich </Phrase>
+      </NaturalLanguage>
+      <ModifierClass>Certainty</ModifierClass>
+      <ProportionRange lowerestimate="0.6" upperestimate="1"/>
+    </Modifier>
+    <Modifier id="mc41">
+      <Representation>
+        <Label xml:lang="en">perhaps</Label>
+        <Label xml:lang="de">eventuell</Label>
+      </Representation>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="Before">perhaps </Phrase>
+        <Phrase xml:lang="de" role="Before">eventuell </Phrase>
+      </NaturalLanguage>
+      <ModifierClass>Certainty</ModifierClass>
+      <ProportionRange lowerestimate="0" upperestimate="0.5"/>
+    </Modifier>
+    <Modifier id="mc42">
+      <Representation>
+        <Label xml:lang="en">(by misinterpretation)</Label>
+        <Label xml:lang="de">(durch Fehlinterpretation)</Label>
+      </Representation>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="After">(by misinterpretation)</Phrase>
+        <Phrase xml:lang="de" role="After">(Fehlinterpretation)</Phrase>
+      </NaturalLanguage>
+      <ModifierClass>TreatAsMisinterpretation</ModifierClass>
+      <ProportionRange lowerestimate="0" upperestimate="0"/>
+    </Modifier>
+  </Modifiers>
+</DescriptiveConcept>
+<DescriptiveConcept id="dc45">
+  <Representation>
+    <Label>Preferred frequency modifiers</Label>
+  </Representation>
+  <x:Block xmlns:x="www.x.edu">
+     <x:Label>DescriptiveConcepts may carry custom extensions, e.g. application-specific data.</x:Label>
+     <x:Annotation>Color modifier potentially bear a relationship to color state values. Can this be expressed in a machine-interpretable way?</x:Annotation>
+  </x:Block>
+  <Modifiers>
+    <Modifier id="mc45">
+      <Representation>
+        <Label xml:lang="en">extremely rarely</Label>
+        <Label xml:lang="de">extrem selten</Label>
+      </Representation>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="Before">extremely rarely </Phrase>
+        <Phrase xml:lang="de" role="Before">extrem selten </Phrase>
+      </NaturalLanguage>
+      <ModifierClass>Frequency</ModifierClass>
+      <ProportionRange lowerestimate="0" upperestimate="0.01"/>
+      <!-- 0.01 = 1%! -->
+    </Modifier>
+    <Modifier id="mc46">
+      <Representation>
+        <Label xml:lang="en">very rarely</Label>
+        <Label xml:lang="de">sehr selten</Label>
+      </Representation>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="Before">very rarely </Phrase>
+        <Phrase xml:lang="de" role="Before">sehr selten </Phrase>
+      </NaturalLanguage>
+      <ModifierClass>Frequency</ModifierClass>
+      <ProportionRange lowerestimate="0.0001" upperestimate="0.05"/>
+      <!-- 0.05 = 5% -->
+    </Modifier>
+    <Modifier id="mc47">
+      <Representation>
+        <Label xml:lang="en">rarely</Label>
+        <Label xml:lang="de">selten</Label>
+      </Representation>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="Before">rarely </Phrase>
+        <Phrase xml:lang="de" role="Before">selten </Phrase>
+      </NaturalLanguage>
+      <!--- frequency limits may overlap (compare with very rarely): -->
+      <ModifierClass>Frequency</ModifierClass>
+      <ProportionRange lowerestimate="0.0001" upperestimate="0.15"/>
+      <!-- 0.15 = 15% -->
+    </Modifier>
+    <Modifier id="mc48">
+      <Representation>
+        <Label xml:lang="en">often</Label>
+        <Label xml:lang="de">häufig</Label>
+      </Representation>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="Before">often </Phrase>
+        <Phrase xml:lang="de" role="Before">häufig </Phrase>
+      </NaturalLanguage>
+      <ModifierClass>Frequency</ModifierClass>
+      <ProportionRange lowerestimate="0.2" upperestimate="0.8"/>
+    </Modifier>
+    <Modifier id="mc49">
+      <Representation>
+        <Label xml:lang="en">usually</Label>
+        <Label xml:lang="de">gewöhnlich</Label>
+      </Representation>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="Before">usually </Phrase>
+        <Phrase xml:lang="de" role="Before">gewöhnlich </Phrase>
+      </NaturalLanguage>
+      <ModifierClass>Frequency</ModifierClass>
+      <ProportionRange lowerestimate="0.5" upperestimate="0.999"/>
+    </Modifier>
+    <Modifier id="mc50">
+      <Representation>
+        <Label xml:lang="en">almost always</Label>
+        <Label xml:lang="de">fast immer</Label>
+      </Representation>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="Before">almost always </Phrase>
+        <Phrase xml:lang="de" role="Before">fast immer </Phrase>
+      </NaturalLanguage>
+      <ModifierClass>Frequency</ModifierClass>
+      <ProportionRange lowerestimate="0.9" upperestimate="0.999"/>
+    </Modifier>
+  </Modifiers>
+</DescriptiveConcept>
+<DescriptiveConcept id="dc51">
+  <Representation>
+    <Label>Color modifiers</Label>
+  </Representation>
+  <Modifiers>
+    <Modifier id="mc51">
+      <Representation>
+        <Label xml:lang="en">reddish</Label>
+        <Label xml:lang="de">rötlich</Label>
+      </Representation>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="Before">reddish-</Phrase>
+        <Phrase xml:lang="de" role="Before">rötlich-</Phrase>
+      </NaturalLanguage>
+    </Modifier>
+    <Modifier id="mc52">
+      <Representation>
+        <Label xml:lang="en">greenish</Label>
+        <Label xml:lang="de">grünlich</Label>
+      </Representation>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="Before">greenish-</Phrase>
+        <Phrase xml:lang="de" role="Before">grünlich-</Phrase>
+      </NaturalLanguage>
+    </Modifier>
+    <Modifier id="mc53">
+      <Representation>
+        <Label xml:lang="en">dark</Label>
+        <Label xml:lang="de">dunkel</Label>
+      </Representation>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="Before">dark-</Phrase>
+        <Phrase xml:lang="de" role="Before">dunkel</Phrase>
+      </NaturalLanguage>
+    </Modifier>
+    <Modifier id="mc54">
+      <Representation>
+        <Label xml:lang="en">dark reddish</Label>
+      </Representation>
+    </Modifier>
+  </Modifiers>
+</DescriptiveConcept>
+<DescriptiveConcept id="dc55">
+  <Representation>
+    <Label>Other modifiers</Label>
+  </Representation>
+  <Modifiers>
+    <Modifier id="mc55">
+      <Representation>
+        <Label xml:lang="en">shallowly</Label>
+        <Label xml:lang="de">flach</Label>
+        <Label xml:lang="en" role="Abbrev">shall.</Label>
+      </Representation>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="Before">shallowly </Phrase>
+        <Phrase xml:lang="de" role="Before">flach </Phrase>
+      </NaturalLanguage>
+    </Modifier>
+    <Modifier id="mc56">
+      <Representation>
+        <Label xml:lang="en">weakly</Label>
+      </Representation>
+    </Modifier>
+    <Modifier id="mc57">
+      <Representation>
+        <Label xml:lang="en">(when mature)</Label>
+      </Representation>
+      <x:Block xmlns:x="www.x.edu">
+         <x:Annotation>Note that this has a wording AFTER the state (and none before). It is also possible to define both one before and after the state.</x:Annotation>
+      </x:Block>
+      <NaturalLanguage>
+        <Phrase xml:lang="en" role="After"> (when mature)</Phrase>
+        <Phrase xml:lang="de" role="After"> (wenn reif)</Phrase>
+      </NaturalLanguage>
+    </Modifier>
+  </Modifiers>
+</DescriptiveConcept>

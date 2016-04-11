@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Folder FolderName="XML Files" ExtStr="xml;cml;math;mtx;rdf;smil;svg;wml">
+		<File FilePath="SDD-Docu-Enumerations.xml" HomeFolder="Yes"/>
+		<File FilePath="SDD-Test-ObjectInterchange.xml" HomeFolder="Yes"/>
+		<File FilePath="SDD-Test-Lucid.xml" HomeFolder="Yes"/>
+		<File FilePath="SDD-Test-Simple.xml" HomeFolder="Yes"/>
+		<File FilePath="SDD-Test-AutoIncludeFragments.xml" HomeFolder="Yes"/>
+		<File FilePath="SDD-Test-DuplicateMembers.xml" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="XSL Files" ExtStr="xsl;xslt"/>
+	<Folder FolderName="XQuery Files" ExtStr="xq;xql;xquery"/>
+	<Folder FolderName="HTML Files" ExtStr="html;htm;xhtml;asp"/>
+	<Folder FolderName="DTD/Schemas" ExtStr="dtd;dcd;xdr;biz;xsd">
+		<File FilePath="SDD.xsd" HomeFolder="Yes"/>
+		<File FilePath="SDD_ForObjects.xsd" HomeFolder="Yes"/>
+		<File FilePath="SDD_(c).xsd" HomeFolder="Yes"/>
+		<File FilePath="SDD_EnumLib.xsd" HomeFolder="Yes"/>
+		<File FilePath="SDD_TypeLib.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_(c).xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_EnumLib.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_CoreExtensions.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_BasePattern.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_CoreOntology.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_CoreExtensions_Unused.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_LinneanCore.xsd" HomeFolder="Yes"/>
+		<File FilePath="UBIF_TypeLib.xsd" HomeFolder="Yes"/>
+		<File FilePath="xml.xsd" HomeFolder="Yes"/>
+		<File FilePath="XMLdatatypes.dtd" HomeFolder="Yes"/>
+		<File FilePath="XMLSchema.dtd" HomeFolder="Yes"/>
+		<File FilePath="altova://ystream/xmlschema.xsd" DocFrom="URL" DocType="XML" HomeFolder="Yes"/>
+		<ExtMountFolder FolderName="C:\Data\Desktop\DESCR\TDWG-SDD\Schema\OtherSchemata\NapierDraftFinal2005"/>
+	</Folder>
+	<Folder FolderName="Entities" ExtStr="ent"/>
+</Project>

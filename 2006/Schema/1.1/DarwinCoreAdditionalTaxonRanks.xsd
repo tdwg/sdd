@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dwc="http://rs.tdwg.org/dwc/xsd/simpledarwincore/" targetNamespace="http://rs.tdwg.org/UBIF/2006/Schema/1.1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>
+		DarwinCore Additional Taxon Ranks is a DarwinCore extension intended for atomization of taxon names in literature.
+		
+		DarwinCore Additional Taxon Ranks provides elements for marking epithets of ranks that are not included in DarwinCore core,
+		including some that may not even be valid under the current nomenclature code, but used to be valid in the past and are thus common in legacy documents.
+		
+		In particular, it is intended to handle taxonomic names that have multiple infraspecific epithets or epithets of ranks beyond those DarwinCore has elements for,
+		providing dedicated elements for all these ranks listed at http://code.google.com/p/darwincore/wiki/Taxon as valid values for the dwc:taxonRank element,
+		and ones listed in http://rs.tdwg.org/UBIF/2006/Schema/1.1/UBIF_EnumLib.xsd.
+		
+		Where DarwinCore provides elements, these are to be used, the corresponding ranks from the UBIF ranks enumeration are shown only in comments below. The elements from this extension should only fill in the gaps in DarwinCore.
+    
+		This extension is based on the work UBIF type "TaxonomicRankEnum", published in:
+		Hagedorn, G.; Thiele, K.; Morris, R. and Heidorn, P. B. 2006. The Structured Descriptive Data (SDD) w3c-xml-schema, version 1.1. http://rs.tdwg.org/UBIF/2006/rddl.html.
+		The type has been converted to a list of corresponding elements by Guido Sautter in 2013.    
+		</xs:documentation>
+		<xs:documentation>
+		CHANGE LOG:
+		
+		2013-05-13, Guido Sautter:
+		- added this change log
+		- reactivated subgenus element, which is present in Simple DarwinCore (http://rs.tdwg.org/dwc/xsd/tdwg_dwc_simple.xsd), but lacking in older DarwinCore versions (http://digir.net/schema/conceptual/darwin/manis/1.21/darwin2.xsd)
+		</xs:documentation>
+	</xs:annotation>
+	<!-- this import is intended to point to the current version of DarwinCore - it will be changed once we manage to find a valid schema location on the web -->
+	<!--	<xs:import namespace="http://rs.tdwg.org/dwc/xsd/simpledarwincore/" schemaLocation="http://rs.tdwg.org/dwc/xsd/tdwg_dwc_simple.xsd"/> -->
+	<!-- the elements listed here correspond to the table of ranks found at http://code.google.com/p/darwincore/wiki/Taxon and the ones listed in http://rs.tdwg.org/UBIF/2006/Schema/1.1/UBIF_EnumLib.xsd -->
+	<xs:element name="domain" type="xs:string"/>
+	<xs:element name="superkingdom" type="xs:string"/>
+	<!--xs:element name="kingdom" type="xs:string" /-->
+	<xs:element name="subkingdom" type="xs:string"/>
+	<xs:element name="infrakingdom" type="xs:string"/>
+	<xs:element name="superphylum" type="xs:string"/>
+	<!--xs:element name="phylum" type="xs:string" /-->
+	<xs:element name="subphylum" type="xs:string"/>
+	<xs:element name="superclass" type="xs:string"/>
+	<!--xs:element name="class" type="xs:string" /-->
+	<xs:element name="subclass" type="xs:string"/>
+	<xs:element name="infraclass" type="xs:string"/>
+	<xs:element name="superorder" type="xs:string"/>
+	<!--xs:element name="order" type="xs:string" /-->
+	<xs:element name="suborder" type="xs:string"/>
+	<xs:element name="infraorder" type="xs:string"/>
+	<xs:element name="superfamily" type="xs:string"/>
+	<!--xs:element name="family" type="xs:string" /-->
+	<xs:element name="subfamily" type="xs:string"/>
+	<xs:element name="infrafamily" type="xs:string"/>
+	<xs:element name="supertribe" type="xs:string"/>
+	<xs:element name="tribe" type="xs:string"/>
+	<xs:element name="subtribe" type="xs:string"/>
+	<xs:element name="infratribe" type="xs:string"/>
+	<!--xs:element name="genus" type="xs:string" /-->
+	<xs:element name="subgenus" type="xs:string"/>
+	<xs:element name="infragenus" type="xs:string"/>
+	<xs:element name="section" type="xs:string"/>
+	<xs:element name="subsection" type="xs:string"/>
+	<xs:element name="series" type="xs:string"/>
+	<xs:element name="subseries" type="xs:string"/>
+	<xs:element name="speciesAggregate" type="xs:string"/>
+	<!--xs:element name="speciesEpithet" type="xs:string" /-->
+	<xs:element name="subspeciesEpithet" type="xs:string"/>
+	<xs:element name="infraspeciesEpithet" type="xs:string"/>
+	<xs:element name="graftChimaeraEpithet" type="xs:string"/>
+	<xs:element name="cultivarGroupEpithet" type="xs:string"/>
+	<xs:element name="convarEpithet" type="xs:string"/>
+	<xs:element name="cultivarEpithet" type="xs:string"/>
+	<xs:element name="bioVarietyEpithet" type="xs:string"/>
+	<xs:element name="pathoVarietyEpithet" type="xs:string"/>
+	<xs:element name="varietyEpithet" type="xs:string"/>
+	<xs:element name="subvarietyEpithet" type="xs:string"/>
+	<xs:element name="subsubvarietyEpithet" type="xs:string"/>
+	<xs:element name="formEpithet" type="xs:string"/>
+	<xs:element name="subformEpithet" type="xs:string"/>
+	<xs:element name="subsubformEpithet" type="xs:string"/>
+	<xs:element name="specialformEpithet" type="xs:string"/>
+	<xs:element name="candidateEpithet" type="xs:string"/>
+</xs:schema>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xs:schema xmlns="http://www.tdwg.org/2005/UBIF" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sea="http://www.bgbm.org/biodivinf/Schema/sea" targetNamespace="http://www.tdwg.org/2005/UBIF" elementFormDefault="qualified" attributeFormDefault="unqualified" blockDefault="#all" version="Unified Biosciences Information Framework (UBIF) 1.0">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Unified Biosciences Information Framework (UBIF) XML schema. This part provides the only root element (Datasets) for instance documents, together with xs:key and other schema identity constraints. The purpose of separating this file from the main file containing the Dataset element is to allow its inclusion into schema components using xs:keyref definitions. By doing so, each schema component can be validated separately during schema development.</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Copyright © 2005 TDWG (Taxonomic Databases Working Group, www. tdwg.org). See the file UBIF_(c).xsd for authorship and licensing information.</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">The Datasets collection is the only root element allowed in UBIF:</xs:documentation>
+  </xs:annotation>
+  <xs:element name="Datasets">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Root element for files or data streams. Multiple Dataset objects are completely independent. Potential relationship may be detected by the consumer, but are not expressed in the UBIF format. The sequence of Dataset objects has no semantics and does not have to be preserved.
+
+The version of the UBIF standard used is defined in the namespace declaration and needs no separate data element.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:any namespace="##targetNamespace">
+          <xs:annotation>
+            <xs:documentation>The element to be used here is Dataset. Declaring it here as xs:any is a modeling trick to decouple the root element with its xs:key definitions from the lower parts of the schema. Without this the need to include the root with key definitions in all the component containing keyrefs would lead to a circular schema inclusion.</xs:documentation>
+          </xs:annotation>
+        </xs:any>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:key name="TaxonNameKey">
+      <xs:selector xpath="Dataset/TaxonNames/*"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="TaxonNames_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of objects must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/TaxonNames/*/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="TaxonHierarchyKey">
+      <xs:selector xpath="Dataset/TaxonHierarchies/*"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="TaxonHierarchy_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of objects must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/TaxonHierarchies/*/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="SpecimenKey">
+      <xs:selector xpath="Dataset/Specimens/*"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="Specimens_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of objects must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Specimens/*/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="AgentKey">
+      <xs:selector xpath="Dataset/Agents/*"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="Agents_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of objects must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Agents/*/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="PublicationKey">
+      <xs:selector xpath="Dataset/Publications/*"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="Publications_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of objects must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Publications/*/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="GeoLocalityKey">
+      <xs:selector xpath="Dataset/Geography/*"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="Geography_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of objects must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Geography/*/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="MediaResourceKey">
+      <xs:selector xpath="Dataset/MediaResources/*"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="MediaResources_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of objects must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/MediaResources/*/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="MeasurementUnitKey">
+      <xs:selector xpath="Dataset/MeasurementUnits/*"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="MeasurementUnits_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of objects must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/MeasurementUnits/*/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="AudienceKey">
+      <xs:selector xpath="Dataset/Audiences/*"/>
+      <xs:field xpath="@audiencekey"/>
+    </xs:key>
+    <xs:unique name="Audience_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of audience definitions are required and must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Audiences/*/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="GlossaryEntryKey">
+      <xs:selector xpath="Dataset/Terminology/Glossary/GlossaryEntry"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="GlossaryEntry_UniqueTermPlusSensuLabel">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of glossary definitions are required and must - in combination with the SensuLabel - be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Terminology/Glossary/GlossaryEntry"/>
+      <xs:field xpath="Term"/>
+      <xs:field xpath="SensuLabel"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="ModifierSetKey">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Modifier set keys are required and must be unique.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Terminology/Modifiers/ModifierSet"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="ModifierSet_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of modifier sets are required and must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Terminology/Modifiers/ModifierSet/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="ModifierKey">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Modifier keys are required and must be unique regardless of modifier type (certainty, frequency, etc.).</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Terminology/Modifiers/ModifierSet/*/Modifier"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="Modifier_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of modifier definitions are required and must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Terminology/Modifiers/ModifierSet/*/Modifier/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="CharacterDefKey">
+      <xs:selector xpath="Dataset/Terminology/Characters/*"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="CharacterDefKey_Categorical">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Additional character-type-specific key.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Terminology/Characters/CategoricalCharacter"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="CharacterDefKey_Quantitative">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Additional character-type-specific key.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Terminology/Characters/QuantitativeCharacter"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="CharacterDefKey_ColorRange">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Additional character-type-specific key.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Terminology/Characters/ColorRangeCharacter"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="Character_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of character definitions are required and must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Terminology/Characters/Character/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="CharacterStateKey">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">This provides a joint key for states either defined locally within a character (= StateDefinition), or referenced from ConceptStates (StateReference; provides a new local key). This is the only key for them; no separate keys for locally defined/concept reference within the character are defined. Note that state keys are unique across all characters, not only within each character.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Terminology/Characters/CategoricalCharacter/States/StateDefinition | Terminology/Characters/CategoricalCharacter/States/StateReference"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="ConceptTreeKey">
+      <xs:selector xpath="Dataset/Terminology/ConceptTrees/ConceptTree"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="ConceptTree_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of concept tree definitions (= entire trees, not the nodes within the trees) are required and must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/Terminology/ConceptTrees/ConceptTree/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="ConceptKey">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">This collects all keys of Concept elements. Note that no UniqueLabelText constraint is defined for concept tree nodes; the labels on tree nodes are optional and not required to be unique. They are expected to be displayed together with their parents and thus obtain their uniqueness from the context (the path from the root should be unique, but this is not expressed in the schema). Also, the xpath selector selects all Concept elements anywhere in the document, which is more general (and therefore computation intensive) than necessary. A better xpath expression would be Terminology/ConceptTrees/ConceptTree//Concept, which includes all nodes regardless of their place in the tree structure. However, combining a defined path with an "all child" path is impossible under the restrictions imposed on xpath expressions in xml-schema identity constraints. Further, since keyed elements in a tree are collected from the document root rather than from the tree root, the node element names must be unique names in the entire schema. A related problem is that we desire to use the same element name (Concept) for node definitions and references to these nodes (from within NaturalLanguageDescriptions). Although the latter has a ref instead of an id, Schema would normally complain that the id is missing, rather than understanding that only elements possessing a id are to be selected for the xs:key constraint. Using a combined xpath ".//Nodes/Concept" is a solution. It does, however, work only if the id of the root node is not included. Since no reason exists to do so (this id is redundant) we accept this.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath=".//Nodes/Concept"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="ConceptStateKey">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">All concept state id values must be unique in an entire project. Compare ConceptKey.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath=".//Concept/ReferableDefinitions/ConceptStates/StateDefinition"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="DescriptionKey">
+      <xs:selector xpath="Dataset/CodedDescriptions/CodedDescription | NaturalLanguageDescriptions/NaturalLanguageDescription">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">A joint key for all CodedDescription or NaturalLanguageDescription elements.</xs:documentation>
+        </xs:annotation>
+      </xs:selector>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="SampleKey">
+      <xs:selector xpath="Dataset/CodedDescriptions/CodedDescription/SampleData/Sample">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">A key to identify a specific sample. This is used when summary statistics are calculated from sample data that are also present in the dataset (compare the "BasedOnSample" element).</xs:documentation>
+        </xs:annotation>
+      </xs:selector>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="StoredKeyKey">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">This identifies an entire stored key (i. e. not the nodes/steps in the key)</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/IdentificationKeys/IdentificationKey"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:unique name="StoredKey_UniqueLabelText">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">The labels of stored key definitions (i. e. for the entire key) are required and must be unique for a given language.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="Dataset/IdentificationKeys/IdentificationKey/Label"/>
+      <xs:field xpath="Text"/>
+      <xs:field xpath="@xml:lang"/>
+    </xs:unique>
+    <xs:key name="StoredKeyNodeKey">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">This collects all ids of nodes in stored keys (Lead elements). Compare the note on Concept about a potentially better xpath.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath=".//Lead"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+  </xs:element>
+</xs:schema>

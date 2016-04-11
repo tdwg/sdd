@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Gregor Hagedorn (Biologische Bundesanstalt) -->
+<xs:schema xmlns="http://www.tdwg.org/2005/UBIF" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sea="http://www.bgbm.org/biodivinf/Schema/sea" targetNamespace="http://www.tdwg.org/2005/UBIF" elementFormDefault="qualified" attributeFormDefault="unqualified" blockDefault="#all" version="Unified Biosciences Information Framework (UBIF) 1.0">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Unified Biosciences Information Framework (UBIF) XML schema. This schema provides a core ontology of first class object types and references derived from the common abstract base type.</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Copyright © 2005 TDWG (Taxonomic Databases Working Group, www. tdwg.org). See the file UBIF_(c).xsd for authorship and licensing information.</xs:documentation>
+  </xs:annotation>
+  <xs:include schemaLocation="UBIF_RootIdentityConstraints.xsd"/>
+  <xs:include schemaLocation="UBIF_ObjectPattern.xsd"/>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Fundamental UBIF object types not imported from the schemata of other working groups:</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Taxon names (includes taxon in the biological as well as a more general sense):</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="TaxonName">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Object type limited to taxon names (in the biological as well as a more general sense).</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractObjectType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TaxonNameRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Defines an element with a ref attribute pointing to a TaxonName (in biology: Class = Taxon)</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractLocalRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TaxonNameRefs">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">A collection of TaxonNameRef type elements</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TaxonName" type="TaxonNameRef" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Reference to a class name (in biology =  taxon name) defined in TaxonNames</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Taxon class hierarchy (biology: taxon concepts):</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="TaxonHierarchy">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Object type limited to class hierarchies (taxonomies)</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractObjectType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TaxonHierarchyRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Defines an element with a ref attribute pointing to a TaxonHierarchy.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractLocalRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Specimens ('Unit' in ABCD, 'Object' in earlier versions of UBIF/SDD):</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="Specimen">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Object type limited physical objects that are collected, described, or observed (collected objects may be preserved permanently in a specimen collection).
+
+Provides either a simple free-form descriptive label ('so-and-so in freezer 14, with tag 1233'), or links to an external collection specimen.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractObjectType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SpecimenRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Defines an element with a ref attribute pointing to a Specimen object.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractLocalRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SpecimenRefs">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">A collection of elements of SpecimenRef type.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Specimen" type="SpecimenRef" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us"/>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Publications, references, and citations:</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="Publication">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Used for *references* to resources like publications, laboratory notes, speeches, etc. Provides either a simple free-form text, or a connection to an external resource.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractObjectType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PublicationRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Defines an element with a ref attribute pointing to a Publication (Publications/Publication)</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractLocalRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PublicationRefs">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">A collection of elements of PublicationRef type.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Publication" type="PublicationRef" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us"/>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">--- The following types build on the Publication infrastructure:</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="Citation">
+    <xs:annotation>
+      <xs:documentation>Extending PublicationRef with location detail like page number within that publication. Citation is used without 'Ref'-suffix, which is considered implicit.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="PublicationRef">
+        <xs:attribute name="location" type="String255" use="optional">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">Location within publication where the cited data can be found: Page, table, figure number, database record, html document bookmark, etc. This is not the page range of the entire article! (Note: equivalent to ABCD.ReferenceDetail; this term was rejected in the SDD discussions.)</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="__verbatim_taxon_name" type="String255" use="optional">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">Verbatim name as it appears in citation. 'sub name xy'
+@@ Do we need this? I think the use case may be considered an extension to the Location element. Example: "p. 3, sub Ustilago"@@</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Citations">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">A collection of Citation-type elements</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">(The element 
+sequence in 
+instance 
+documents 
+is informative!)</xs:documentation>
+      </xs:annotation>
+      <xs:element name="Citation" type="Citation" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Media (especially images, audio/video, but potentially also complex objects like html with images, pdf, etc.):</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="MediaResource">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Extends resource type with optional encoded data content (esp. images embedded in xml document) and with a Type (Image/Audio/Video, etc.).</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractObjectType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">--- Note: In contrast to most reference types MediaResource references have already been defined in the abstract ObjectPattern schema, they are used in the base types Representation component.</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Geography:</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="GeoLocality">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Used for resources like geographical names or places. Provides either
+a simple free-form text, or a
+connection to an external resource.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractObjectType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GeoLocalityRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Defines an element with a ref attribute pointing to a GeoLocality (Geography/GeoLocality)</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractLocalRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GeoLocalityRefs">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">A collection of GeoLocalityRef-type elements. The sequence of elements in instance documents is semantically irrelevant and may be changed.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="GeoLocality" type="GeoLocalityRef" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Reference to a locality defined
+in Geography/GeoLocality</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Agents (persons, organization, software agent):</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="Agent">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Used for Agent documentation (an Agent is a person, project, organization, or software agent). Currently used for authors, editors, contributors, and translators. Ideally it connects to an outside definition or documentation of the Agent.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractObjectType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AgentRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Defines an element with a required ref attribute pointing to an Agent (Agents/Agent)</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractLocalRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AgentRefs">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">A collection of AgentRef-type elements, i. e. Agents forming a team like an author team.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Agent" type="AgentRef" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">(The sequence of elements
+in instance documents
+is informative!)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SimpleAgentRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Provides minimalized local Agent information as label text plus optional attributes.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractSimpleRef">
+        <xs:attribute name="name" type="String255" use="optional"/>
+        <xs:attribute name="email" type="String255" use="optional"/>
+        <xs:attribute name="phone" type="String255" use="optional"/>
+        <xs:attribute name="address" type="String255" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">--- The following types build on the Agent infrastructure:</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="RichAgentRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Extension of AgentRef with a role attribute and three attributes recording object-specific contributions.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AgentRef">
+        <xs:attribute name="role" type="AgentRoleEnum" use="required">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">(constrained to enumerated values)</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="firstcontribution" type="xs:dateTime" use="optional">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">The first time an agent (creator or contributor) has edited/made a contribution to an object. If a creator has contributed both as an author and later as an editor of data, two references in these two roles will exist and the contribution dates will be recorded separately.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="lastcontribution" type="xs:dateTime" use="optional"/>
+        <xs:attribute name="contributioncount" type="xs:integer" use="optional">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">The number of contributions by a specific agent (editing, revising, adding to an object).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="RichAgentRefs">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">A collection of RichAgentRef elements.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Agent" type="RichAgentRef" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">(The sequence of elements in instance documents should be preserved. Within each role it is mandatory. Different roles may, however, be reported in separate sequences.)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreatorRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Restriction of RichAgentRef to Creator roles only.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="RichAgentRef">
+        <xs:attribute name="role" type="AgentCreatorRoleEnum" use="required"/>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CreatorRefs">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Collection (sequence) 
+of Agent elements of 
+type CreatorRef (Technical note: this and the similar type ContributorRefs, etc. could be viewed as a restriction of the base type "RichAgentRefs". This was valid under Xerces and xmlspy 2004. Spy 2005, however, rejects this so that this has been disabled.)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Agent" type="CreatorRef" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">(The sequence of elements in instance documents should be preserved. Within each role it is mandatory. Different roles may, however, be reported in separate sequences.)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreatorContributorRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Restriction of RichAgentRef to either Creator or Contributor (but not Owner) roles.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="RichAgentRef">
+        <xs:attribute name="role" type="AgentCreatorContribRoleEnum" use="required"/>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CreatorContributorRefs">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Collection (sequence) 
+of Agent elements of 
+type CreatorContributorRef</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Agent" type="CreatorContributorRef" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">(The sequence of elements in instance documents should be preserved. Within each role it is mandatory. Different roles may, however, be reported in separate sequences.)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContributorRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Restriction of RichAgentRef to Contributor roles only.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="RichAgentRef">
+        <xs:attribute name="role" type="AgentContributorRoleEnum" use="required"/>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ContributorRefs">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Collection (sequence) 
+of Agent elements of 
+type ContributorRef</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Agent" type="ContributorRef" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">(The sequence of elements in instance documents should be preserved. Within each role it is mandatory. Different roles may, however, be reported in separate sequences.)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OwnerRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Restriction of RichAgentRef to Owner roles only (contribution attributes prohibited).</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="RichAgentRef">
+        <xs:attribute name="role" type="AgentOwnerRoleEnum" use="required"/>
+        <xs:attribute name="firstcontribution" type="xs:dateTime" use="prohibited"/>
+        <xs:attribute name="lastcontribution" type="xs:dateTime" use="prohibited"/>
+        <xs:attribute name="contributioncount" type="xs:integer" use="prohibited"/>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="OwnerRefs">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Collection (sequence) 
+of Agent elements of 
+type OwnerRef</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Agent" type="OwnerRef" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">(The sequence of elements in instance documents should be preserved. Within each role it is mandatory. Different roles may, however, be reported in separate sequences.)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:group name="OwnerAndIPR">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Owners and 
+IPRStatements 
+(incl. identity 
+constraints).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Owners" type="OwnerRefs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Entities having legal possession of the data collection content. Owners are defined only for the entire data collection, not for individual descriptions etc. (= http://www.loc.gov/ marc.relators/own)</xs:documentation>
+        </xs:annotation>
+        <xs:unique name="Owners_UniqueAgentRole">
+          <xs:selector xpath="Agents"/>
+          <xs:field xpath="@ref"/>
+          <xs:field xpath="@role"/>
+        </xs:unique>
+      </xs:element>
+      <xs:element name="IPRStatements" type="IPRStatements" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Copyright, terms of use, license and other IPR-related statements like disclaimer or acknowledgement. Giving a copyright statement and a (if possible public) licence is highly recommended! (~= DC.Rights)</xs:documentation>
+        </xs:annotation>
+        <xs:unique name="IPRStatements_UniqueDeclarationRepresentation">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">The Language values must uniquely identify the Representations within each kind of Statement.</xs:documentation>
+          </xs:annotation>
+          <xs:selector xpath="Declaration/Representation"/>
+          <xs:field xpath="@xml:lang"/>
+        </xs:unique>
+        <xs:unique name="IPRStatements_UniqueCopyrightRepresentation">
+          <xs:selector xpath="Copyright/Representation"/>
+          <xs:field xpath="@xml:lang"/>
+        </xs:unique>
+        <xs:unique name="IPRStatements_UniqueLicenseRepresentation">
+          <xs:selector xpath="License/Representation"/>
+          <xs:field xpath="@xml:lang"/>
+        </xs:unique>
+        <xs:unique name="IPRStatements_UniqueTermsOfUseRepresentation">
+          <xs:selector xpath="TermsOfUse/Representation"/>
+          <xs:field xpath="@xml:lang"/>
+        </xs:unique>
+        <xs:unique name="IPRStatements_UniqueDisclaimerRepresentation">
+          <xs:selector xpath="Disclaimer/Representation"/>
+          <xs:field xpath="@xml:lang"/>
+        </xs:unique>
+        <xs:unique name="IPRStatements_UniqueAcknowledgementRepresentation">
+          <xs:selector xpath="Acknowledgement/Representation"/>
+          <xs:field xpath="@xml:lang"/>
+        </xs:unique>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">--- Note: A modeling problem is that in instance documents Agents within a role are usually ordered (sequence), but different roles not (authors+editors = editors+authors). UBIF 1.0 until beta 14 (available on WIKI!), attempted to solve the problem by introducing a 2-layer collection with Creators/AgentRole[@role='aut']/Agent[@ref]. This has now been abandoned to reduce complexity.</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">--- types related to Agent references:</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="AgentNames">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">A collection (seq) of name strings, used for publication authors or editors and for collectors, i. e. whenever the identity of an Agent is doubtful and can not associated with an Agent without doubt</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Name" type="AbstractStringRef" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Authors or Editors usually as string (in xml-element content), e. g. in publications where the identity of creators can often not be discovered. Optionally, the ref or uri attributes may exactly specify identity with an Agent is assessment possible. (The sequence of elements in instance documents is informative!)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RevisionData">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">RevisionData (creators, dates, revision) for the entire data set or individual objects.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Creators" type="CreatorRefs">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">If RevisionData exist 
+at all, at least one
+creator(author or 
+editor) is required.
+(~= DC.Creators)</xs:documentation>
+        </xs:annotation>
+        <xs:unique name="Creators_UniqueAgentRole">
+          <xs:selector xpath="Agents"/>
+          <xs:field xpath="@ref"/>
+          <xs:field xpath="@role"/>
+        </xs:unique>
+      </xs:element>
+      <xs:element name="Contributors" type="ContributorRefs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">General contributors,
+or translators.
+(~= DC.Contributors)</xs:documentation>
+        </xs:annotation>
+        <xs:unique name="Contributors_UniqueAgentRole">
+          <xs:selector xpath="Agents"/>
+          <xs:field xpath="@ref"/>
+          <xs:field xpath="@role"/>
+        </xs:unique>
+      </xs:element>
+      <xs:element name="DateCreated" type="xs:dateTime" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Date/time when the intellectual content (project, term, description, etc.) was created. Applications may initially set this to the system date for new data objects, but authors must be able to change it to an earlier date if necessary. If for legacy data this is imprecisely known, it may be missing here. Earlier versions in other data formats should then be mentioned in the copyright or acknowl. statements.
+(~= DC.Date.Created)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DateModified" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Date/time when the last modification of the object was made. If in online data sources the provider can not assess this, the current date/time may be substituted. For legacy data this may be set to the file date of imported data, or estimated.
+(~= DC.Date.Modified)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Version" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Number and date of current version, where citable version management exists.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Major" type="xs:nonNegativeInteger">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">The major version number ('1' in 1.2)
+of the object content.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="Minor" type="xs:nonNegativeInteger" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">An optional minor version number
+('2' in 1.2)</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="Modifier" type="String255" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">Unconstrained text specifying status + optional number, e. g., 'beta', 'alpha', 'rc/release candidate 2', 'internal'. release status is assumed if empty/missing.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="DateIssued" type="xs:date" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">Citable 'publication date' of the current version (comp. RevisionData/DateCreated and DateModified for version- independent dates). The value must be missing if the current version is not yet published! (~= DC.Date.issued; http://purl.org/dc/terms/issued).</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RevisionStatus" type="RevisionStatusEnum" default="Unrevised" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Intended to be a rough estimate by authors/editors rather than exact statements. RevisionStatus expresses correctness of data already entered and an estimate of completeness relative to the stated scope (e. g. taxonomic or geographic scopes in the data set metadata). If the goal is to describe the frequent species of a taxonomic group, revision status may be 'FullyRevised' even if many species are missing.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:group name="RevisionData">
+    <xs:sequence>
+      <xs:element name="RevisionData" type="RevisionData" minOccurs="0"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">--- (About group above (do not place this in group-annotation, to avoid showing where group is used): An optional RevisionData element provided as a group to simplify reuse (esp. where restrictions are being used).)</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Audience definitions</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">--- Audiences are an extension of language/culture codes, to capture expertise and other factors (= registers within a language). Examples: "Students", "General public", "Custom officers", "Farmers".</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="Audience" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Derived by restriction, changing type of 'id'-attribute to AudienceIdentifier and making it required</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="AbstractObjectType">
+        <xs:sequence>
+          <xs:element name="Representation" type="RepresentationReqrd">
+            <xs:annotation>
+              <xs:documentation xml:lang="en-us">See comments in base type</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="Links" type="Links" minOccurs="0"/>
+          <xs:group ref="DeveloperTools" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="AudienceIdentifier" use="required"/>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AudienceCore">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">An Audience is a combination of an enumerated expertise category (pupil, beginner, expert) and a free-form scope definition. As a result, multiple audiences can be defined for the same expertise, distinguished only by their label.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Audience">
+        <xs:sequence>
+          <xs:element name="Specification">
+            <xs:annotation>
+              <xs:documentation xml:lang="en-us">Properties describing
+machine-readable
+partial semantics for
+an audience definition.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ExpertiseLevel" type="ExpertiseLevelEnum">
+                  <xs:annotation>
+                    <xs:documentation xml:lang="en-us">ExpertiseLevel is restricted to values from 0-5. These categories allow to communicate expected expertise between different applications using UBIF. Recommended interpretations:
+0 = expertise level undefined
+1 = elementary school (year 1 to 6);
+2 = middle school (year 7 to 10);
+3 = high school (year 11 above) and general public (trying to avoid any specialized terminology or jargon);
+4 = university students or (partly) trained personnel (using terminology, but avoiding or explaining problematic terminology);
+5 = experts (using the full range of terminology).</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">(AudienceIdentifier is defined in UBIF_ObjectTypePattern because audience is already used in the labels of the fundamental object type.)</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">(Note: It would be possible to remodel all object types using the same restriction plus extension in two steps. Using type-specific instance identifiers may be desirable when mapping the schema to programming languages. However, for the first release of UBIF this has ONLY been done here!)</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="AudienceRef">
+    <xs:annotation>
+      <xs:documentation>Reference to audience instance (used e.g. to define default audience)</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="AbstractLocalRef">
+        <xs:attribute name="ref" type="AudienceIdentifier" use="required"/>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">(AudienceRef itself (i.e. without language) is only rarely used; more frequent is a combination with language. Currently NO schema identity constraints (= referential integrity) are used. See comments in the multilingual attribute group for futher notes on this.</xs:documentation>
+  </xs:annotation>
+</xs:schema>

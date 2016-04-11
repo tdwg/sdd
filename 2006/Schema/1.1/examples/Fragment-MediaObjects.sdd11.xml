@@ -1,0 +1,29 @@
+<MediaObjects>
+  <MediaObject id="m1" uri="urn:lsid:local:local:129739128">
+    <Representation>
+      <Label>Image description, e. g., to be used for alt-attribute in html.</Label>
+    </Representation>
+    <Type>Image</Type>
+    <Source href="http://test.edu/test.jpg"/>
+  </MediaObject>
+  <MediaObject id="m2">
+    <Representation>
+      <Label>Morning call of Homo sapiens</Label>
+    </Representation>
+    <Type>Sound</Type>
+    <Source href="http://test.edu/123.mp3"/>
+  </MediaObject>
+  <MediaObject id="m3">
+    <!-- Representation: Label is required, but if the source provides no separate title or description of a media object, the last part of the url may be used as a replacement -->
+    <Representation>
+      <Label>Melampsora evonymi-caprearum</Label>
+      <!-- Details like Caption are optional -->
+      <Detail role="Caption" xml:lang="fr">&lt;i&gt;Melampsora evonymi-caprearum&lt;/i&gt; Kleb., stade II sur &lt;i&gt;Salix caprea&lt;/i&gt;L.</Detail>
+      <Detail role="Caption" xml:lang="de">&lt;i&gt;Melampsora evonymi-caprearum&lt;/i&gt; Kleb., Sporenstadium II auf &lt;i&gt;Salix caprea&lt;/i&gt; L.</Detail>
+      <Detail role="Caption" xml:lang="en">&lt;i&gt;Melampsora evonymi-caprearum&lt;/i&gt; Kleb., spore stage II on &lt;i&gt;Salix caprea&lt;/i&gt; L.</Detail>
+    </Representation>
+    <Type>Image</Type>
+    <!-- Optionally Resources may be *included* rather than referenced through URIs. An additional href specifying the source of the encoded is optional (in addition to the encoded content) -->
+    <EncodedData type="image/png"  href="http://test.edu/Melampsora_evonymi-caprearum.png">R0lGODlhcgGSALMAAAQCAEMmCZtuMFQxDS8b</EncodedData>
+  </MediaObject>
+</MediaObjects>

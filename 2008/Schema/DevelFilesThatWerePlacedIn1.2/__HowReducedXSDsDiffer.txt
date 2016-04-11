@@ -1,0 +1,19 @@
+For the SDD and UBIF schemata, special reduced/simplified versions have been created. 
+The following changes were made:
+
+1. All annotations from UBIF enumeration types are removed (reducing UBIF_EnumLib.xsd from 165 kB to 15 kB).
+
+2. All model items starting with "__" (elements, types, groups, etc. introduced for discussion) are removed.
+
+3. Processing-specific elements only remotely related to the information model (especially extension mechanisms: EnablingGroup, xs:anyAttribute, the debugkey/ref attributes) are removed.
+
+Specifically in UBIF:
+   * some unused pattern types for color and nomenclatural name patterns.
+
+Specifically in SDD
+   * Normally, the SDD content root (DescriptiveData, i.e. the last element within a UBIF Dataset), has 5 elements: ConfigurationData, Terminology, NaturalLanguageDescriptions, CodedDescriptions, IdentificationKeys. Of these, only Terminology and CodedDescriptions remain in the reduced schema.
+   * Removing NLD and Keys these does not mean that they are not meant to be discussed. However, since they are partly modeled after the coded descriptions, it is more important to concentrate the review on the code part (which is the only part used by any projects so far. I will support any attempt to discuss natural language descriptions markup and identification keys by producing special reduced version if there is interest.
+   * Further changes are the removal of the optional Audience system (i.e. representations depend only on language) and the Glossary definition system. Glossary references would normally be present at any character, modifiers, state, concept etc. definition and would provide the option to define the term more extensively than is possible with a single label. Since this is a very general feature, I felt removing it from the discussion is allowable. Comments on Glossary are welcome, however, please look inot the non-reduced schema.
+   * The UBIF-parts have been further simplified: all non-optional parts removed from DerivationMetadata, some elements removed from Metadata. In the proxy system (ExternalDataInterface), most type-specific extension groups (like title, year in publication) have been removed (look at the UBIF-Reduced schema if you want to review them). Thus, ClassName, Unit (= specimen object, here the SDD-proposed parts have been left, but the rough or the DarwinCore-based proposal for Specimen Units removed), Publication, Locality, and Agent are now identical with the ProxyBase type. The interfaces of MediaResourceProxy, MeasurementUnitProxy, ClassHierarchyInterface have been left unreduced, however.
+   * Finally, all types no longer used after these changes (i.e. only used in removed parts) are themself removed.
+   * All groups have been directly inserted and the group definitions deleted.

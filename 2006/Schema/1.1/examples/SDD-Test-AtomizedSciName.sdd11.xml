@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Datasets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://rs.tdwg.org/UBIF/2006/" xsi:schemaLocation="http://rs.tdwg.org/UBIF/2006/ ../SDD.xsd">
+  <TechnicalMetadata created="2006-04-20T10:00:00">
+    <Generator name="n/a, handcrafted instance document" version="n/a"/>
+  </TechnicalMetadata>
+  <Dataset xml:lang="en-us">
+    <Representation>
+      <Label>Example for file with atomized scientific names in addition to the label</Label>
+    </Representation>
+    <RevisionData>
+      <Creators>
+        <Agent role="aut" ref="a2"/>
+      </Creators>
+      <DateModified>2008-09-29T00:00:00</DateModified>
+    </RevisionData>
+    <IPRStatements>
+      <IPRStatement role="Copyright">
+        <Label xml:lang="en-au">(c) 2003-2006 Centre for Occasional Botany.</Label>
+      </IPRStatement>
+    </IPRStatements>
+    <TaxonNames>
+      <TaxonName id="t1" uri="urn:lsid:authority:namespace:my-own-id">
+        <Representation>
+          <!-- in addition to the optional atomized scientific name, a non-atomized label should always be given, marked with the special language code  xml:lang="zxx-x-taxon", to help clients displaying the taxon name in a simple way. -->
+          <Label xml:lang="zxx-x-taxon">Viola hederacea Labill.</Label>
+        </Representation>
+        <NomenclaturalCode>Botanical</NomenclaturalCode>
+        <Rank code="sp"/>
+        <CanonicalName>
+          <Simple>Viola hederacea Labill.</Simple>
+          <Genus href="lsid:xyz..." literal="Viola"/>
+          <SpecificEpithet literal="hederacea"/>
+        </CanonicalName>
+        <CanonicalAuthorship>
+          <Simple>Labill.</Simple>
+          <!-- optionally, authors may also be atomized, see example of var in the next taxon -->
+        </CanonicalAuthorship>
+      </TaxonName>
+      <TaxonName id="t2" uri="urn:lsid:authority:namespace:my-own-id2">
+        <Representation>
+          <!-- in addition to the optional atomized scientific name, a non-atomized label should always be given, marked with the special language code  xml:lang="zxx-x-taxon", to help clients displaying the taxon name in a simple way. -->
+          <Label xml:lang="zxx-x-taxon">Viola tricolor var. arvensis (Murr.) Boiss.</Label>
+        </Representation>
+        <NomenclaturalCode>Botanical</NomenclaturalCode>
+        <Rank code="var"/>
+        <CanonicalName>
+          <Simple>Viola tricolor var. arvensis (Murr.) Boiss.</Simple>
+          <Genus literal="Viola"/>
+          <SpecificEpithet literal="tricolor"/>
+          <InfraspecificEpithet>arvensis</InfraspecificEpithet>
+        </CanonicalName>
+        <CanonicalAuthorship>
+          <Simple>(Murr.) Boiss.</Simple>
+          <BaseCitation>
+            <Authors><Agent literal="Boiss."/></Authors><!-- optionally, authors may also be identified by a URI/LSID (through href attribute) or as a dataset-internal author (through ref attribute)-->
+          </BaseCitation>
+          <CombinationCitation>
+            <Authors><Agent literal="Murr."/></Authors>
+          </CombinationCitation>
+        </CanonicalAuthorship>
+      </TaxonName>
+    </TaxonNames>
+    <Agents>
+      <Agent id="a2">
+        <Representation>
+          <Label>Gregor Hagedorn</Label>
+        </Representation>
+        <Links>
+          <Link rel="Alternate" href="http://www.diversitycampus.net/people/hagedorn"/>
+        </Links>
+      </Agent>
+    </Agents>
+  </Dataset>
+</Datasets>

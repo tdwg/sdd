@@ -1,0 +1,13 @@
+Text
+This file contains the examples as they would probably be seen in a database editor or in any database that does not require the "<", ">", "&" characters to be encoded into xml entities. Looking at this file is helpful to see that the proposed encoding schema is less difficult to use for content authors, than the xml example file, when viewed in text or xml editors, may suggest. (This is an extra line describing this file, that does not correspond to contents of the example file.)
+Plain text without formatting or character entities.
+Plain text without formatting, but containing character entities "<" & ">".
+Testing sub- and superscript: ml H<sub>2</sub>O / mm<sup>2</sup>
+Multiple <em>emphasis</em> and <em>emphasis</em>
+<em>Testing emphasized field (entire text in parent tag is formatted). This is undesirable and not what the formatting convention is intended to support. However, since it is difficult to prohibit such abuse, it should not lead to an error condition.</em>
+Testing nesting (different tags): <em>emphasized <strong>strong mm<sup>2</sup> </strong></em>.
+Testing nesting (same tag): <em>emphasized <em> emphasized mm<sup>2</sup> </em></em>. This may fail, but should still produce well-formed xml and valid xhtml (although not equivalent to the intended formatting!).
+Other tags: <i>italics</i>,<br> testing new line (html) <br> testing new line (xhtml) <br/> testing new line (xhtml plus blank) <br /> End.
+Testing an unbalanced starting "strong": <strong>, should be left unchanged.
+Testing an unbalanced start/close mismatch error: H<sub>2</sup>O, should be left unchanged.
+Contains empty emphasis: <em></em> this may be automatically removed. If not, then the xml should at least remain well formed!

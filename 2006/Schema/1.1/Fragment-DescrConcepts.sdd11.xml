@@ -1,0 +1,45 @@
+<DescriptiveConcept id="dc1">
+  <Representation>
+    <Label>Morphology</Label>
+  </Representation>
+</DescriptiveConcept>
+<DescriptiveConcept id="dc2">
+  <Representation>
+    <Label>Colour</Label>
+  </Representation>
+</DescriptiveConcept>
+<DescriptiveConcept id="dc3">
+  <Representation>
+    <Label>Habitat</Label>
+  </Representation>
+</DescriptiveConcept>
+<DescriptiveConcept id="dc4">
+  <Representation>
+    <Label>Field characteristics</Label>
+  </Representation>
+</DescriptiveConcept>
+<DescriptiveConcept id="dc5">
+  <Representation>
+    <Label>Microscopic characteristics</Label>
+  </Representation>
+</DescriptiveConcept>
+<DescriptiveConcept id="dc6">
+  <Representation>
+    <Label>Roots</Label>
+  </Representation>
+</DescriptiveConcept>
+<DescriptiveConcept id="dc7">
+  <Representation>
+    <Label>Stem</Label>
+  </Representation>
+</DescriptiveConcept>
+<DescriptiveConcept id="dc8">
+  <Representation>
+    <Label>Leaves</Label>
+  </Representation>
+</DescriptiveConcept>
+<DescriptiveConcept id="dc9">
+  <Representation>
+    <Label>Inflorescences</Label>
+  </Representation>
+</DescriptiveConcept>

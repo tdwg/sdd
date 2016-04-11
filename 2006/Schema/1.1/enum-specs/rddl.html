@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html PUBLIC "-//XML-DEV//DTD XHTML RDDL 1.0//EN" "http://www.rddl.org/rddl-xhtml.dtd">-->
+<!-- Note: DOCTYPE is commented out in the RDDL example RDDL itself; perhaps it causes problems with some html browsers. -->
+<html xmlns="http://www.w3.org/1999/xhtml" 
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		xmlns:rddl="http://www.rddl.org/"
+    xml:base="http://rs.tdwg.org/UBIF/2006"
+    xml:lang="en-US">
+<head>
+	<title>Resource directory for "enum-specs" folder</title>
+  <link href="http://www.rddl.org/xrd.css" type="text/css" rel="stylesheet"/>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <meta name="MSSmartTagsPreventParsing" content="TRUE" /> 
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+
+<h1>Resource directory for "enum-specs" folder</h1>
+<div id="overview">
+<p>The folder "enum-specs" contains additional material relating to value enumerations (controlled vocabularies) found in the UBIF and SDD schemata. For more information on UBIF and SDD see the <a href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">SDD Wiki</a>, especially the <a href="http://wiki.tdwg.org/twiki/bin/view/SDD/Charter">Charter</a>.</p>
+
+<p>Note: While this document is human-readable, RDDL-aware processors may use it to automatically retrieve resources such as different schema versions for validating documents. See <a href="http://www.rddl.org">http://www.rddl.org</a> for further information.</p>
+</div>
+
+<h2>Resources</h2>
+<div id="resources" class="resource">
+<ul class="compact" compact="compact">
+<!-- Note: This special rddl file currently contains very little rddl markup! -->
+<!-- Note: instead of role="http://www.w3.org/1999/xhtml" a more general URI is: http://www.isi.edu/in-notes/iana/assignments/media-types/text/html -->
+
+<li>To simplify application building, enumerated values present in the UBIF schema are also provided as SDD data files (using an xslt script that converts schema information into ubif:DescriptiveConcept/ConceptStates):<ul class="compact" compact="compact">
+  <li><a href="UBIF_EnumData.xml">UBIF_EnumData.xml</a> and</li>
+  <li><a href="SDD_EnumData.xml">SDD_EnumData.xml</a>.</li>
+  </ul></li>
+
+<li>These files contain human readable labels, abbreviations and descriptions in standard UBIF format. In addition, some enumerations provide extended specifications using a separate namespace and specified in a separate schema <a href="UBIF_EnumSpecs.xsd">"UBIF_EnumSpecs.xsd"</a>.</li> 
+  <rddl:resource xlink:type="simple" id="xsd"
+	   xlink:title="W3C XML Schema for document validation (normative)"
+	   xlink:role="http://www.w3.org/2000/10/XMLSchema"
+	   xlink:arcrole="http://www.rddl.org/purposes#schema-validation"
+	   xlink:href="http://rs.tdwg.org/UBIF/2006/Schema/1.1/enum-specs/UBIF_EnumSpecs.xsd"></rddl:resource>
+<rddl:resource xlink:type="simple" id="UBIF2005"
+  xlink:role="http://www.rddl.org/"
+  xlink:arcrole="http://www.rddl.org/purposes#directory"
+  xlink:href=""
+  xlink:title="RDDL Subdirectory: ../enum-specs/">
+  <li>See also the <a href="../documentation/rddl.html">general documentation RDDL subdirectory</a>, especially:
+<ul class="compact" compact="compact">
+  <li><a href="../documentation/UBIF_EnumData.html">UBIF_EnumData.html</a></li> 
+  <li><a href="../documentation/SDD_EnumData.html">SDD_EnumData.html</a>.</li>
+  </ul></li>
+</rddl:resource>
+<rddl:resource xlink:type="simple" id="home"
+  xlink:title="SDD Home Page"
+  xlink:role="http://www.w3.org/1999/xhtml"
+  xlink:arcrole="http://www.rddl.org/purposes#non-normative-reference"
+  xlink:href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">
+  <li>For further information see also the <a href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">SDD Home Page</a>!</li>
+</rddl:resource>
+
+</ul>
+</div>
+
+<div id="footer">
+<p>Copyright (c) 2006 G. Hagedorn</p>
+</div>
+
+</body>
+</html>

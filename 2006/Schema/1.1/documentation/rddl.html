@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html PUBLIC "-//XML-DEV//DTD XHTML RDDL 1.0//EN" "http://www.rddl.org/rddl-xhtml.dtd">-->
+<!-- Note: DOCTYPE is commented out in the RDDL example RDDL itself; perhaps it causes problems with some html browsers. -->
+<html xmlns="http://www.w3.org/1999/xhtml" 
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		xmlns:rddl="http://www.rddl.org/"
+    xml:base="http://rs.tdwg.org/UBIF/2006"
+    xml:lang="en-US">
+<head>
+	<title>Resource directory for "documentation" folder</title>
+  <link href="http://www.rddl.org/xrd.css" type="text/css" rel="stylesheet"/>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <meta name="MSSmartTagsPreventParsing" content="TRUE" /> 
+  <meta name="robots" content="index, follow" />
+</head>
+<body>
+
+<h1>Resource directory for "documentation" folder</h1>
+<div id="overview">
+<p>The "documentation" folder contains files documenting the schema. They have been created either manually or (mostly) automatically based on the schema files. For more information on UBIF and SDD see the <a href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">SDD Wiki</a>, especially the <a href="http://wiki.tdwg.org/twiki/bin/view/SDD/Charter">Charter</a>.</p>
+
+<p>Note: While this document is human-readable, RDDL-aware processors may use it to automatically retrieve resources such as different schema versions for validating documents. See <a href="http://www.rddl.org">http://www.rddl.org</a> for further information.</p>
+</div>
+
+<h2>Resources</h2>
+<div id="resources" class="resource">
+<ul class="compact" compact="compact">
+<!-- Note: This special rddl file currently contains very little rddl markup! -->
+<!-- Note: instead of role="http://www.w3.org/1999/xhtml" a more general URI is: http://www.isi.edu/in-notes/iana/assignments/media-types/text/html -->
+
+<li>Two files document special schema-like files containing only base information and intellectually property rights and licences:<ul class="compact" compact="compact">
+  <li><a href="UBIF_(c)_Overview.html">UBIF_(c)_Overview.html</a></li> 
+  <li><a href="SDD_(c)_Overview.html">SDD_(c)_Overview.html</a></li>
+  </ul></li>
+
+<li>The following files document the alternative entry level schema files (i.e. one of which will usually be referenced in instance documents):<ul class="compact" compact="compact">
+  <li><a href="UBIF_Overview.html">UBIF_Overview.html</a></li> 
+  <li><a href="SDD_Overview.html">SDD_Overview.html</a></li>
+  <li><a href="SDD_ForObjects_Overview.html">SDD_ForObjects_Overview.html</a></li>
+  </ul></li>
+
+<li>The entry level schema files are based on the following library files:<ul class="compact" compact="compact">
+  <li><a href="UBIF_BasePattern_Overview.html">UBIF_BasePattern_Overview.html</a></li> 
+  <li><a href="UBIF_CoreOntology_Overview.html">UBIF_CoreOntology_Overview.html</a></li>
+  <li><a href="UBIF_CoreExtensions_Overview.html">UBIF_CoreExtensions_Overview.html</a></li>
+  <li><a href="UBIF_LinneanCore_Overview.html">UBIF_LinneanCore_Overview.html</a></li>
+  <li><a href="UBIF_TypeLib_Overview.html">UBIF_TypeLib_Overview.html</a></li>
+  <li><a href="SDD_TypeLib_Overview.html">SDD_TypeLib_Overview.html</a></li>
+  </ul></li>
+
+<li>A special kind of library file contain schema enumerated values (= controlled vocabularies). These are documented both in the overview format used for other schema files, and in a special format, giving details of the documentation value embedded in the schema:<ul class="compact" compact="compact">
+  <li><a href="UBIF_EnumLib_Overview.html">UBIF_EnumLib_Overview.html</a></li> 
+  <li><a href="UBIF_EnumData.html">UBIF_EnumData.html</a></li> 
+  <li><a href="SDD_EnumLib_Overview.html">SDD_EnumLib_Overview.html</a></li>
+  <li><a href="SDD_EnumData.html">SDD_EnumData.html</a></li>
+  </ul></li>
+
+<li>Note for application builders/software designers: To simplify application building, enumerated values are also provided as UBIF/SDD data files (using DescriptiveConcept/ConceptStates):<ul class="compact" compact="compact">
+  <li><a href="../enum-specs/UBIF_EnumData.xml">UBIF_EnumData.xml</a> and</li> 
+  <li><a href="../enum-specs/SDD_EnumData.xml">SDD_EnumData.xml</a>, which use a supplementary specification schema:</li>
+  <li><a href="../enum-specs/UBIF_EnumSpecs.xsd">UBIF_EnumSpecs.xsd</a> in a separate namespace.</li>
+  <rddl:resource xlink:type="simple" id="UBIF2005"
+  	xlink:role="http://www.rddl.org/"
+  	xlink:arcrole="http://www.rddl.org/purposes#directory"
+  	xlink:href=""
+  	xlink:title="RDDL Subdirectory: ../enum-specs/" >
+  	<li>(These files all come from a <a href="../enum-specs/">separate RDDL subdirectory</a>)</li>
+  </rddl:resource>
+  </ul></li>
+
+<rddl:resource xlink:type="simple" id="home"
+	xlink:title="SDD Home Page"
+	xlink:role="http://www.w3.org/1999/xhtml"
+	xlink:arcrole="http://www.rddl.org/purposes#non-normative-reference"
+	xlink:href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome"
+	>
+	<li>For further information see also the <a href="http://wiki.tdwg.org/twiki/bin/view/SDD/WebHome">SDD Home Page</a>!</li>
+</rddl:resource>
+
+</ul>
+</div>
+
+<div id="footer">
+<p>Copyright (c) 2006 G. Hagedorn</p>
+</div>
+
+</body>
+</html>

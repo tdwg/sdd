@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Gregor Hagedorn (Biologische Bundesanstalt) -->
+<xs:schema xmlns="http://www.tdwg.org/2005/UBIF" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sea="http://www.bgbm.org/biodivinf/Schema/sea" targetNamespace="http://www.tdwg.org/2005/UBIF" elementFormDefault="qualified" attributeFormDefault="unqualified" blockDefault="#all" version="Unified Biosciences Information Framework (UBIF) 1.0">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Unified Biosciences Information Framework (UBIF) XML schema. This part provides a fundamental abstract bioscience object with a pattern for object-id, object representation, and object linking and referencing (simple direct text, document-internal cross-references, global guid references, or nested use of full object type).</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">Copyright © 2005 TDWG (Taxonomic Databases Working Group, www. tdwg.org). See the file UBIF_(c).xsd for authorship and licensing information.</xs:documentation>
+  </xs:annotation>
+  <xs:include schemaLocation="UBIF_TypeLib.xsd"/>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== All fundamental UBIF object types are derived from the following base type:</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="AbstractObjectType" abstract="true">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Abstract base type for all knowledge- domain specific classes (= object types) in UBIF, containing generic representation, linking, text annotation, and element/attribute extension mechanisms</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Representation" type="RepresentationReqrd">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Language/audience-specific object representation for human consumers, free-form text labels or descriptions, capturing the essence of the object semantics in human-readable form (see also further note on updating/language independence). Example (concise label for a publication): "Smith 1998. Flora of Erehwon, Z- Publishers".</xs:documentation>
+          <xs:documentation xml:lang="en-us">*Updating:* Object representations may be updated using link information. This should occur automatically (without human control) only after a human decided that the semantic management of an external object provider can be fully trusted.</xs:documentation>
+          <xs:documentation xml:lang="en-us">*Language independence:* Publication references are sometimes erroneously considered language independent, ignoring the transcription regularly occuring when citing publications from non-latin character sets (Cyrillic, Greek, Chinese, etc.). Scientific taxon names are fixed in both language and character set and usable in all languages and cultures. (xml:lang=x-neutral ##CHECK wiki##).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Links" type="Links" minOccurs="0"/>
+      <xs:group ref="DeveloperTools" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="InstanceID"/>
+    <xs:attribute name="debugkey" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation source="http://160.45.63.11/Projects/TDWG-SDD/docs/SDD_I_KeyKeyref.html" xml:lang="en-us">An optional attribute to add a human-readable equivalent to the primary identity key, intended to simplify debugging. Values may be discarded or updated at any time and should not normally be included in exports by applications; they may be generated using xslt (based on labels, abbreviations, xpath+label, etc.).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:anyAttribute namespace="##other">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Any UBIF object may be extended with attributes from other namespaces.</xs:documentation>
+      </xs:annotation>
+    </xs:anyAttribute>
+  </xs:complexType>
+  <xs:complexType name="__AbstractObjectMixedContentType" abstract="true" mixed="true">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">NOT YET USED: Allowing mixed content; Label here optional.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Representation" type="Representation" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Optional object representation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Links" type="Links" minOccurs="0"/>
+      <xs:group ref="DeveloperTools" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="InstanceID"/>
+    <xs:attribute name="debugkey" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation source="http://160.45.63.11/Projects/TDWG-SDD/docs/SDD_I_KeyKeyref.html" xml:lang="en-us">An optional attribute to add a human-readable equivalent to the primary identity key, intended to simplify debugging. Values may be discarded or updated at any time and should not normally be included in exports by applications; they may be generated using xslt (based on labels, abbreviations, xpath+label, etc.).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:anyAttribute namespace="##other">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Any UBIF object may be extended with attributes from other namespaces.</xs:documentation>
+      </xs:annotation>
+    </xs:anyAttribute>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== References to objects should use either the ref (for object-internal references) or uri (=href) attribute. The name of element name should differ from the object name, to allow designs that offer a choice of providing a full object or an object reference (xml schema can not use different attributes content to detect the type!)</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="AbstractSimpleRef" abstract="true">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Human readable text intended to reference another object.</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="label" type="String255" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Human readable short text capturing the semantics of the object reference/link. More formal reference forms (document-internal cross-reference or global URI reference) are recommended!</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:complexType name="AbstractLocalRef" abstract="true">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Local, within-document reference.</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="ref" type="InstanceID" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Refers to an id attribute in an instance of the corresponding object type. This reference should be internally retrievable with the xml document. It is usually protected by identity constraints (= referential integrity).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="debuglabel" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation source="http://160.45.63.11/Projects/TDWG-SDD/docs/SDD_I_KeyKeyref.html" xml:lang="en-us">An optional attribute to add a human-readable equivalent to the primary ref value to simplify debugging. Values would normally correspond to always points to the coresponding debugkey. They may be discarded or updated at any time and should not normally be included in exports by applications; they may be generated using xslt (based on labels, abbreviations, xpath+label, etc.).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:complexType name="AbstractURIRef" abstract="true">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Global uri/href reference.</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="uri" type="xs:anyURI" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">External reference using a retrievable uri (url, doi, lsid, etc.)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="label" type="String255" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Human readable short text capturing the semantics of the link. This may occur either in combination with ref (not recommended) or uri (recommended), or alone.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:complexType name="AbstractStringRef">
+    <xs:annotation>
+      <xs:documentation>A free-format string, with optional local ref/global uri attributes. Used where strings/names are often ambiguous, but may occasionally be identified as an object.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="String255">
+        <xs:attribute name="uri" type="xs:anyURI" use="optional">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">External reference using a retrievable uri (url, doi, lsid, etc.)</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="ref" type="InstanceID" use="optional">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">Refers to an id attribute in an instance of the corresponding object type. This reference should be internally retrievable with the xml document. It is usually protected by identity constraints (= referential integrity).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="debuglabel" type="xs:string" use="optional">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">(Please see comments on other occurrences of debuglabel.)</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:group name="__ReferencePattern">
+    <xs:annotation>
+      <xs:documentation>Choice of types above, illustrating naming pattern. Provided only as an example!</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="ClassNameSimple" type="AbstractSimpleRef"/>
+      <xs:choice>
+        <xs:annotation>
+          <xs:documentation>Two alternative 
+naming patterns
+proposed:</xs:documentation>
+        </xs:annotation>
+        <xs:element name="ClassName" type="AbstractLocalRef"/>
+        <xs:element name="ClassNameRef" type="AbstractLocalRef"/>
+      </xs:choice>
+      <xs:choice>
+        <xs:annotation>
+          <xs:documentation>Two alternative 
+naming patterns
+proposed:</xs:documentation>
+        </xs:annotation>
+        <xs:element name="ClassNameLink" type="AbstractURIRef"/>
+        <xs:element name="ClassNameURI" type="AbstractURIRef"/>
+      </xs:choice>
+      <xs:element name="ClassNameString" type="AbstractStringRef"/>
+      <xs:element name="ClassNameNested" type="AbstractObjectType"/>
+    </xs:choice>
+  </xs:group>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">--- Each object may have an instance ID by exactly this digital representation may be referred to in instance references. It is recommended to use semantically neutral ids. All of temporary (repeated queries may result in documents having different ids), local, and global identifier schemes are acceptable. Where resolvable URIs are used, the retrieval of data should result in exactly the same representation.</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Instance Identifiers are used for linking within a document (within a data set or between data sets):</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">--- Each object may have an instance ID by exactly this digital representation may be referred to in instance references. It is recommended to use semantically neutral ids. All of temporary (repeated queries may result in documents having different ids), local, and global identifier schemes are acceptable. Where resolvable URIs are used, the retrieval of data should result in exactly the same representation.</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">--- The id attribute is optional. When it is missing no document-local reference to an object instance is possible. The object may still be referenced through a uri-reference (Link) if it contains a Link rel="self" uri="myuri" element. References should not attempt to point to URIs defined through a Link rel="about" uri="Physical or concept" element.</xs:documentation>
+  </xs:annotation>
+  <xs:attributeGroup name="InstanceID">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">An instance identifier identifies a specific representation. This value is used when referencing an object (using 'ref'-attributes). It may be a value unique only within a dataset and derived object type, or within elements of the dataset, or a global id such as a uri.</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="id" type="InstanceID" use="optional"/>
+  </xs:attributeGroup>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">General Note: The use of attribute groups instead of globally defined and referred attributes is a work-around for problems occurring with attribute definitions in included library schemata. Normally one would use global attributes by ref; this however causes problems when attempting to use a library with no target namespace in multiple namespaces (chameleon pattern). Spy 2004.4 says, e. g., "... attributes need to be qualified because your schema uses attributeForm = qualified or global attributes. You must specify a prefix for your schema namespace."</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Links to abstract or physical objects or to other object representations of these:</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="Link">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Object linking 
+mechanisms,
+may be 
+used by all 
+object types!</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="rel" type="LinkingRelEnum" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">General semantics of link, currently constrained by an enumeration 
+('about', 'alternate', 'meta', etc.).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="label" type="String255" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Text describing the link relation to human consumers. This differs from xhtml and XLink 'title' in that title normally describes the linked object itself, not its relation.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="uri" type="xs:anyURI" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="en-us">Recommended URI schemata for linking to other object representations or to abstract objects (like character concepts) are:
+LifeScience ID (constant prefix 'urn:lsid:', followed by 3-4 parts separated by ':'). The 1st part is the lsid authority service that provides metadata on how to obtain the object reference in part 2 (namespace = data collection), 3 (object ID) and 4 (optional) object version. Example: 'urn:lsid:lsid.gbif.net:CollID:X/1§31:v2'
+
+Digital object identifier (used especially by the publishing industry). Example: doi:10.47198/923347'
+
+URL directly providing an object representation. In contrast to the URN types LSID or DOI this should resolve directly. The URL may be a query string (with ID embedded), for example: "http://x.y.fr/pub/au=smith?yr=1998".</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="Links">
+    <xs:annotation>
+      <xs:documentation>Collection of Link elements</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Link" type="Link" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Defines a link to another object (e.g., other provider, format, level of detail, metadata or abstract base) by means of a URI. Similar to xhtml header/link, but with slightly different values for the 'rel' attribute. - ## The format of data obtained when resolving the link is undefined; we needs to be investigated whether xlink:role or xhtml:type/media mechanisms should be added in future UBIF versions.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="LinkingRelEnum">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Enumerated values expressing the semantics of a Link uri. These are currently highly constrained, but future version may add either more values or free extensibility (union of this type with xs:anyURI).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:Name">
+      <xs:enumeration value="self">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[self] -- self -- Link informing about an identifier of the digital object itself. An object may have multiple identifiers, for example http or urn:lsid uris. If retrievable, this should result in the exact same representation (same language, format, version). [No equivalent in xhtml.]</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="alternate">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[alt.] -- alternate -- Link designates an alternate (substitute) representation for the resource in which the link occurs. These representations may differ in languages, format, level of detail, etc. All alternate representations are implicitly about the same abstract resource, and it is recommended to express the abstract resource using rel="about". [Closely related to xhtml 1.0 "alternate" recommend link type value.]</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="latest_ver">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[latest] -- latest version -- Link that resolves to a representation of the latest (newest) version of the object at the time of resolution.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="prev_ver">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[prev.] -- prev. version -- Link that resolves to the previous version of the current object. [Not related to xhtml prev]</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="about">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[about] -- about -- Link refers to another resource (e. g. non-digital specimen, abstract concept, etc.) and for which the current object instance is one of possibly multiple representations (in different languages, formats, at different level of detail). For example, DOI identifiers are usually assigned to the abstract publication, not individual objects representing it. [No equivalent available among xhtml recommended link type values; corresponds to rdf:about.]</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="detail">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[detail] -- detail -- Link designates a more detailed alternate representations for the resource in which the link occurs.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="meta">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[meta] -- meta -- Link refers to a resource offering meta data or help (more information about the instance document, including meta data like copyright or licensing, links to other sources information, etc.) [Closely related to xhtml 2.0 "meta", but also to xhtml 1.0-2.0 "help" recommended link type values.]</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="__copyright">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[(c)] -- copyright -- Link refers to a resource offering copyright information about the current object. [Closely related to xhtml 1.0 "copyright". This information may also be found together with other information under rel='meta'.]</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="__IdentifierValueTypeEnum">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us"> CURRENTLY NO LONGER USED! Enumeration of types of identifiers, such as temporary, local, global, DOI, LSID.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:Name">
+      <xs:enumeration value="temporary">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Temporary identifiers are not guaranteed to be comparable when the same document is requested multiple times. They may only be interpreted as cross-references within a single instance of a document. (All following identifier types are persistent; multiple requests to a provider return identical identifiers for identical objects; objects with the same identifier may or may not be identical because of versioning policies.)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="local">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Local identifiers are unique only for a specific object-domain within the providing institution. They can not be resolved without external knowledge about provider and resolution service. (All following identifier types are globally unique.)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="simpleguid">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Globally unique identifiers (GUIDs) are unique for any object type in the entire world. A "simple guid" is here defined to encompass any guid without a recognizable resolution mechanism. Examples are numeric GUIDs like '{a7d00c20-22d4-11d0-1091-0000754c2752}' or non-resolvable urn schemes.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="url">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Universal resource locator, the typical internet addresses</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lsid">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">life science id, a resolvable form of guid</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="doi">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Document object identifier, a resolvable form of guid</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Components used in the Representation part of the general AbstractObject type:</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="Representation">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Language/audience specific object representation for human consumers, using free-form text labels, descriptions, images, etc.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Label" type="LabelText" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Language/audience specific labels providing a text directly presentable to human consumers, usually unique (see attributes) to preserving object semantics if machine-readable links/IDs break.
+Text optionally UBIF-text formatted (e.g. for subscripts), max 255 char. (see second annotation).</xs:documentation>
+          <xs:documentation xml:lang="en-us">Text length limiting is irrelevant to some applications, using xml documents or in memory storage. However, in many databases unlimited length text slows operation and such text may not be sortable. The shorter label text roles (in contrast to those found in Detail) are therefore limited to 255 characters to simplify database implementations.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Detail" type="DetailText" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Additional free-form text without length limitation, optionally UBIF-text formatted.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MediaResource" type="MediaResourceRef" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Object representation through image/audio/video resource</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RepresentationReqrd">
+    <xs:annotation>
+      <xs:documentation>Representation type, with at least one Label required (restriction)</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="Representation">
+        <xs:sequence>
+          <xs:element name="Label" type="LabelText" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en-us">Language/audience specific labels providing a text directly presentable to human consumers, usually unique (see attributes) to preserving object semantics if machine-readable links/IDs break.
+Text optionally UBIF-text formatted (e.g. for subscripts), max 255 char. (see second annotation).</xs:documentation>
+              <xs:documentation xml:lang="en-us">Text length limiting is irrelevant to some applications, using xml documents or in memory storage. However, in many databases unlimited length text slows operation and such text may not be sortable. The shorter label text roles (in contrast to those found in Detail) are therefore limited to 255 characters to simplify database implementations.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="Detail" type="DetailText" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en-us">Additional free-form text without length limitation, optionally UBIF-text formatted.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="MediaResource" type="MediaResourceRef" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en-us">Object representation through image/audio/video resource</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LabelText">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">StringL255 extended with boolean 'unique' and LabelRoleEnum 'role' attribute.
+
+Content is free form text that (usually uniquely) represent the object to human consumers. Such labels are often essential to preserve semantics if machine-readable links/IDs break. 
+
+Content text may optionally be UBIF-formatted. It is limited to 255 characters to simplify implementation in databases (in many databases unlimited length text slows operation and may not be sortable).
+
+In an LSID-based interaction, the 'title' metadata item may be considered a label with role='concise' and unique='true'.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="StringL255">
+        <xs:attribute name="role" type="LabelRoleEnum" default="concise">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">The kind of label text. Example values: 'concise' (default, includes 'title'), 'short', 'abbrev', 'token', 'sorting'. See annotation of enumerated values for further information.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="unique" type="xs:boolean" default="true">
+          <xs:annotation>
+            <xs:documentation>Assertion that label text is unique within all labels in a given dataset, object type, language and audience. Instances of different object types may have the same label, and a label used in one language/audience may be used in another language for another object without violating uniqueness. NOTE: This is subject to external validation; not validated by xml schema.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DetailText">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">StringL extended with a DetailRoleEnum 'role' attribute.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="StringL">
+        <xs:attribute name="role" type="DetailRoleEnum" use="required">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us">The kind of long free-form text. Important values are 'description' (incl. abstract) and 'caption'. See annotation of enumerated values for further information.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="LabelRoleEnum">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Enumerated values expressing the kind of label text. These are currently highly constrained, but either additional values or free extensibility (by union of this enum type with xs:anyURI) are expected for future releases of UBIF.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:Name">
+      <xs:enumeration value="concise">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[concise] -- concise label -- Free-form label text designed to be as short and expressive as possible while remaining intuitive and locally unique. Depending on the object type, a concise label is commonly called a 'name' or a 'title'. The recommended length is less than 80 characters; longer text (up to 255 char.) is supported but human user interface software may be optimized for shorter labels. Uniqueness within dataset, object type, and language/audience combination is required. A concise label may contain abbreviations but is not usually considered an abbreviated label itself. It should uniquely identify an object, but multiple concise labels may exist. -- Examples: Agent 'Gregor Hagedorn, BBA, Berlin', 'G. Hagedorn, Biol. Bundesanstalt'; Taxon 'Ascochyta aceris Fuckel', 'Ascochyta aceris Lib.', 'Ascochyta aceris Sacc.' or 'Ascochyta aceris Saccardo'.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="short">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[short] -- short label -- Short label text designed to represent an object in user interfaces or reports (esp. in tabular format) where space considerations are more important than intuitive understanding or readability. The text short label may be context dependent and may contain unusual abbreviations that require knowledge of the full concise label to be intelligable. The recommended length is less than 20 characters (including blanks); longer text (up to 255 char.) is supported but may not be readable in all human user interface designs. When missing, applications may attempt to abbreviate the concise label, which may result in duplicate labels, however. Uniqueness within dataset, object type, and language/audience combination is required. -- Examples: Agent 'G. Haged.'; Taxon 'Asc. aceris Fck.'.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="abbrev">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[abbrev.] -- abbreviation -- A label text abbreviated as far as possible while remaining unique within a dataset. When missing, applications may attempt to abbreviate the short or concise label, which may result in duplicate labels, however. Uniqueness within dataset, object type, and language/audience combination is required. -- Examples: Agent 'GH'; Taxon 'A.aceris' (assuming the dataset contains no other Genus abbreviated as 'A.' with a species epithet 'aceris').</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="token">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[token] -- token/variable name -- Unique and highly constrained version of the label designed for exports to formats requiring very short and simple object names, such as fields in databases and variable names in phylogenetic or statistical analysis software like NEXUS or SAS. Recommendations: max. 12 characters, starting with letter and followed by letters or digits, without blanks or punctuation marks, a combination or upper and lower case letters may be used, but uniqueness should not depend on case. Non-normative: A regular expression in xs:pattern format could be: "[A-Za-z][A-Za-z0-9_]{0,11}". Uniqueness within dataset, object type, and language/audience combination is required. -- Examples: Agent 'GHAGED'; Taxon 'AscAceris'.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sorting">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[sort.] -- sorting string -- A string that results in a desired sorting order when sorted with a standard, case-insensitive unicode sorting routine. The most important problems addressed here are word or token order, leading articles, and quoting marks (see examples). Other problems (special locale-specific sorting rules for accented characters like 'ü'='ue' in German but 'u' in Spanish, 'rr/ll' sorted after 'r/l' in Spanish, or character ligatures may or may not be addressed, depending on the data available to the provider. Where the provider has a choice, it is recommended *not* to address these problems, since sorting may be desirable according to rules defines defined in the locale of the consumer, not the provider. Current unicode-based data handling software often provides sufficient locale-specific sorting rules for accented or ligature characters. Problem: The provider may have stored all-uppercase sort-strings. This is not recommened, but consumers should expect that the sorting string has this form. One consequence is that the sorting string, while the best available choice for sorting where provided, may not be suitable for labeling the data in a sorted list. Should a second label type ('sortreport'?) be defined for this purpose? -- Examples: Agent 'Duarte, Amália Mourinha' (pt), 'Pina de Morales, Ana Maria' (es).; Taxon 'Isoetes' for if preferred form uses 'Isoëtes' (as allowable under ICBN); MediaResource 'high plano, the' for image titled 'The "high" plano'. -- Other standards: vCard:Sort-String</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DetailRoleEnum">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Enumerated values expressing the kind of long 'detail' text. In contrast to label text, detail text to which these values are applied are not restricted in length and not required to be unique. Note that the text length of detail text elements is not limited by the schema. It is, however, recommended that the length does not exceed 30000 characters because longer text may lead to interoperability problems. Currently the enumerated values are highly constrained, but either extension or free extensibility (by union of this enum type with xs:anyURI) is expected for future releases of UBIF. Note that a 'description' is usually presented instead of the object, and a 'caption' always together with the object. An 'abstract' may be presented instead or together with the object.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:Name">
+      <xs:enumeration value="description">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[descript.] -- description -- Free-form text describing an object. It may summarize the information contained in the object (similar to an abstract) but may also inform about related information.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="__definition">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[def.] -- definition -- Free-form text defining the concept of the object. Similar to description, but considered normative.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="caption">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[caption] -- caption -- A special form of free-form description that is expected to be displayed together with the object (especially images, video, or audio formats). Caption as defined here is limited to a caption displayed together with the entire object (i. e. excluding timed captions/subtitles of audio/video objects). Frequently description and caption texts are identical, in which case providing the description is sufficient. Specific captions may contain, e. g., references to places or objects in the image such as 'in upper left corner ...', 'bar = 10µm'.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="abstract">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[abstr.] -- abstract -- A special form of free-form description that is contains a condensed version of the object content itself. Detail text with role 'abstract' is commonly used in the case of publications. The main difference to a 'description' is that an abstract does not contain external or metainformation about the object. Its applicability is therefore more limited, but also the correspondence of the representation with the full object may be assumed to be larger.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unknown">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[?] -- unknown -- The role ('description', 'caption', 'abstract') of long detail text is unknown.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResourceRoleEnum">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Enumerated values expressing the kind of media resource in an object representation. ##Question: Whereas icon and selector are clearly object representations, inclusion of further roles (definition, association) is doubtful and needs further discussion. Therefore, these currently start with "__".##</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:Name">
+      <xs:enumeration value="icon">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[icon] -- icon -- Small image or audio/video resource to supplement, but usually not replace label text. Icon resources are usually not considered sufficiently informative to allow humans to make an object selection without addition textual representation. Recommendation: For each language/audience only a single resource should be defined with this role (not validated).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="selector">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[sel.] -- selector -- Medium-sized resource considered sufficiently informative to allow humans to make an object selection without addition textual representation. Multiple resources per item/char./state may have this role.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="__definition">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[def.] -- definition -- Detailed supplementary information used to define an object.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="__association">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[ass.] -- association -- Associated information that is considered useful to relate.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unknown">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">[?] -- unknown -- The role ('icon', 'selector', 'association', etc.) of the media resource is unknown.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">--- Note: Earlier UBIF versions had specific label types of various complexity (SimpleLabel, Label, LabelWithDetail, RichMediaLabel, etc.) for different objects. This caused a significant additional complexity in the design. The new model accepts that some objects may offer a number of representation choices that may rarely or never be used.</xs:documentation>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Public objects carrying an id also generally provide for developer annotations/comments (undefined language), version extensions for future versions of UBIF, and custom extensions (= "application annotations").</xs:documentation>
+  </xs:annotation>
+  <xs:group name="DeveloperTools">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Version extension (future versions, own namespace),
+Custom extension (other namespaces),
+Annotation (free-form text comments).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Annotation" type="String" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Internal notes/management comments (not multilingual). Annotations should be displayed only in a 'designer' or 'revision' mode' and are expected to be invisible to users who only want to consume or apply the data. They are appropriate for rough, unedited comments, but should not contain confidential information.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="VersionExtension" type="VersionExtension" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Extension mechanism to implement forwards compatibility in a new version of the standard (i. e. old applications can process newer data versions; compare backwards compatibility using optional elements anywhere).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CustomExtensions" type="CustomExtensions" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Community extension mechanism,
+e. g., for application-specific data.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="VersionExtension">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">To allow forward compatible extensions of UBIF and derived schemata, an extension container for the target namespace is provided for the use by the designers of the schema.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:any namespace="##targetNamespace" processContents="lax" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Only the developers of the standard namespace may place elements here!</xs:documentation>
+        </xs:annotation>
+      </xs:any>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CustomExtensions">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">This provides an extension mechanism to the standard model that may be used, e. g., to store application-specific data.
+
+Recommendation: UBIF applications that both import and export data may implement the loss-less round-tripping of data. The information of all imported custom extensions, even if those that are not interpreted, should be preserved as string and later exported unchanged.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CustomExtension" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Each custom extension contains xml content defined in another namespace. This may either be application-specific,
+or several applications may agree on common custom extensions.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType mixed="false">
+          <xs:sequence>
+            <xs:any namespace="##other" processContents="lax" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation xml:lang="en-us">The content or CustomExtension is not further validated against a schema by validating xml processors. However, it must be well-formed xml and it is not possible to directly store a text string (content model mixed="false").</xs:documentation>
+              </xs:annotation>
+            </xs:any>
+          </xs:sequence>
+          <xs:attribute name="name" type="String255" use="required">
+            <xs:annotation>
+              <xs:documentation xml:lang="en-us">Identifier chosen by the target application(s) for which the content in the extension container is intended. The only purpose of this attribute is that application(s) generating a type of custom extension recognize the target identifier, while other applications just pass this through.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="version" type="String255" use="optional">
+            <xs:annotation>
+              <xs:documentation xml:lang="en-us">Optional information about which version of the custom extension definition has been used.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== Statements are a special form of complex text expressions</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="Statement" abstract="false">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Language/audience-specific Statement (= Text, Details, URI)</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Label" type="String">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">A concise representation of a statement (copyright, acknowledgement, etc.). Recommended to be as short as possible, but actual length is unconstrained.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Detail" type="String" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Optional text of unconstrained length, elaborating details of the short Text</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="URI" type="xs:anyURI" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">An optional resource on the net providing details on the statement (in addition or as an alternative to the details text).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:group ref="DeveloperTools" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="multilingual"/>
+  </xs:complexType>
+  <xs:complexType name="IPRStatements">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">A sequence of various intellectual property right (= IPR) statements, each possibly in multiple language representations</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Copyright" type="Statement" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Copyright may include the information that the data has been released to the public domain (language-specific).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="License" type="Statement" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">To be used if data are placed under a public license (Creative Commons, GPL, GFDL, OpenDocument). Placing data under a public license while maintaining copyright is recommended. (language-specific; = DC.Rights.Licence).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TermsOfUse" type="Statement" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Defines conditions under which the data may be analyzed, distributed or changed. "Terms of use" includes concepts like "Usage conditions" and "Specific Restrictions" (language-specific).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Declaration" type="Statement" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Other forms of IPR declaration not yet covered (e.g., database rights); also used in cases where an automatic converter can not decide whether a statements is copyright, licence, etc.
+(language-specific).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Disclaimer" type="Statement" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">Disclaimer statement, e. g. concerning responsibility for data quality or legal implications (language-specific).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Acknowledgement" type="Statement" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">A free form text acknowledging support (e. g. grant money, help, permission to reuse published material, etc.)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== In contrast to most reference types (defined in UBIF_ObjectCoreOntology or schemata defining derived object types), MediaResource references are already defined here in the abstract ObjectPattern schema. Media files such as still images are used as part of representation. This is especially important for structural, character or state concepts but even audio or video have customarily title image representing them in the form of a fully informative image or an icon.</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="MediaResourceRef">
+    <xs:annotation>
+      <xs:documentation>Defines an element with a ref attribute pointing to a MediaResource (MediaResources/MediaResource)</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractLocalRef"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MediaResourceRefs">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">A collection of MediaResourceRef elements. The sequence of elements in instance documents is semantically relevant and should be preserved.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MediaResource" type="MediaResourceRef" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">(the sequence in instances
+is informative!)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">=== </xs:documentation>
+  </xs:annotation>
+</xs:schema>
