@@ -21,7 +21,7 @@ Raw data descriptions usually comprise repeated measurements of parts of individ
 
 The goal of the SDD standard is to allow capture, transport, caching and archiving of descriptive data in all the forms shown above, using a platform- and application-independent, international standard. Such a standard is crucial to enabling lossless porting of data between existing and future software platforms including identification, data-mining and analysis tools, and federated databases.
 
-See also the [SDD Primer](http://wiki.tdwg.org/twiki/static/index.htm).
+See also the [SDD Primer](https://github.com/tdwg/wiki-archive/blob/master/twiki/data/SDD/Primer/SddIntroduction.txt).
 
 ## Preferred citation
 
