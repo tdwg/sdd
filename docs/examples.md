@@ -1,8 +1,8 @@
 ---
-author: Gregor Haggedorn
+author: Gregor Hagedorn
 ---
 
-GregorHaggedorn - Mon Jan 18 2010 - Version 1.17
+GregorHagedorn - Mon Jan 18 2010 - Version 1.17
 
 # Real world examples (SDD 1.1)
 
