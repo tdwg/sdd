@@ -5,4 +5,4 @@ The goal of the SDD standard is to allow capture, transport, caching and archivi
 ## Getting started
 
 - [Primer](./primer/)
-- [Examples](./examples.html)
+- [Examples](./examples/)

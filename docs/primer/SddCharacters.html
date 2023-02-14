@@ -5,9 +5,9 @@ author: "Donovan Sharp"
 
 <p>DonovanSharp - Thu Sep 07 2006 - Version 1.17<br> <a href="index.html">Parent topic: SddContents</a><br></p>
 
-<h2>SDD Part 0: Introduction and Primer to the SDD Standard </h2>
+<h2 id="sdd-part-0-introduction-and-primer-to-the-sdd-standard">SDD Part 0: Introduction and Primer to the SDD Standard </h2>
 
-<h3>3.6 Characters</h3>
+<h3 id="3-6-characters">3.6 Characters</h3>
 
 <p>Characters and their states are fundamental elements used in SDD to describe a taxon, specimen or other entity. Characters and states (and their arrangement into a hierarchy) provide the ontology for the SDD document. Sdd employs a single flat character list containing states. The order of characters in SDD is not informative and is instead defined exclusively in the <a href="CharacterHierarchies.html">&lt;CharacterHierarchies&gt;</a> element. This enables different character sequences for different reporting purposes and splitting characters into multiple files or reusing characters from different terminologies.</p>
 
@@ -17,7 +17,7 @@ author: "Donovan Sharp"
 
 <p><a href="SddCharacters/characters.gif"><img src="SddCharacters/characters.gif"/></a></p>
 
-<h3>3.6.1 Categorical characters</h3>
+<h3 id="3-6-1-categorical-characters">3.6.1 Categorical characters</h3>
 
 <p>Categorical characters express either naturally discontinuous states or categories defining parts of a continuous range. Examples include presence (present/absent), colour (red/blue) and shape (round/ovate). </p>
 
@@ -25,7 +25,7 @@ author: "Donovan Sharp"
 
 <p><a href="SddCharacters/categoricalcharacter.gif"><img src="SddCharacters/categoricalcharacter.gif"/></a></p>
 
-<h5>Example 3.6.1.1 - Traditional representation of categorical characters.</h5>
+<h5 id="example-3-6-1-1-traditional-representation-of-categorical-characters">Example 3.6.1.1 - Traditional representation of categorical characters.</h5>
 
 <table bgcolor="#ddddff" border="0" width="100%" cellpadding="5" cellspacing="5" style="border-collapse: collapse" bordercolor="#111111">
 
@@ -48,7 +48,7 @@ author: "Donovan Sharp"
 
 </table>
 
-<h5>Example 3.6.1.2 - SDD representation of the categorical characters in 3.6.1.1.</h5>
+<h5 id="example-3-6-1-2-sdd-representation-of-the-categorical-characters-in-3-6-1-1">Example 3.6.1.2 - SDD representation of the categorical characters in 3.6.1.1.</h5>
 
 <table bgcolor="#ddddff" border="0" width="100%" cellpadding="5" cellspacing="5" style="border-collapse: collapse" bordercolor="#111111">
 
@@ -113,7 +113,7 @@ author: "Donovan Sharp"
 
 <p><a href="SddMapping.html">&lt;Mapping&gt;</a> allows characters and states to be mapped to each other (e.g. the states narrowly ovate and broadly ovate may be mapped as substates of the state ovate)</p>
 
-<h3>3.6.2 Quantitative characters</h3>
+<h3 id="3-6-2-quantitative-characters">3.6.2 Quantitative characters</h3>
 
 <p>Quantitative states record an actual measurement (e.g. number of legs = 8; leaf length = 6.8 cm), range of measurements (e.g. leaf length<code>4.5-10.6), or statistical parameter for a set of measurements (e.g.). Extended ranges (e.g. wing length</code> (5-)10-40(-50) mm, interpreted as wings usually between 10 and 40mm but occasionally down to 5mm or up to 50mm) are supported.</p>
 
@@ -121,7 +121,7 @@ author: "Donovan Sharp"
 
 <p><a href="SddCharacters/quantitativecharacter.gif"><img src="SddCharacters/quantitativecharacter.gif"/></a></p>
 
-<h4>Example 3.6.2.1 - SDD definition of a simple quantitative character &#8220;Leaf length&#8221;.</h4>
+<h4 id="example-3-6-2-1-sdd-definition-of-a-simple-quantitative-character-8220-leaf-length-8221">Example 3.6.2.1 - SDD definition of a simple quantitative character &#8220;Leaf length&#8221;.</h4>
 
 <table bgcolor="#ddddff" border="0" width="100%" cellpadding="5" cellspacing="5" style="border-collapse: collapse" bordercolor="#111111">
 
@@ -148,13 +148,13 @@ author: "Donovan Sharp"
 
 <p>&lt;Default&gt; provides a default value to be used for the character if no value is specifically recorded in a description.</p>
 
-<h3>3.6.3 Text characters</h3>
+<h3 id="3-6-3-text-characters">3.6.3 Text characters</h3>
 
 <p>Text characters record information not easily ascribed to a measurement or atomised into characters and states. Examples include place of publication (e.g. &#8220;Smith 1998. Flora of Erehwon, Z-Publ.&#8221;), derivations (e.g. &#8220;acuta- from the Latin acuo (sharpen), alluding to the sharply pointed glumes (Aristida acuta)&#8221;) or general notes (e.g. &#8220;One record for tropical Queensland but mainly recorded from subtropical coastal Queensland to northern New South Wales. Eucalyptus woodlands and forests on poor soil&#8221;).</p>
 
 <p>The content of quantitative characters simply exists as plain text within a  &lt;Representation&gt; element  as in Example 3.6.2.1 below.</p>
 
-<h5>3.6.3.1 Sdd representation of text characters</h5>
+<h5 id="3-6-3-1-sdd-representation-of-text-characters">3.6.3.1 Sdd representation of text characters</h5>
 
 <table bgcolor="#ddddff" border="0" width="100%" cellpadding="5" cellspacing="5" style="border-collapse: collapse" bordercolor="#111111">
 
@@ -190,13 +190,13 @@ author: "Donovan Sharp"
 
 </table>
 
-<h3>3.6.4 Sequence characters</h3>
+<h3 id="3-6-4-sequence-characters">3.6.4 Sequence characters</h3>
 
 <p>Sequence characters record the coding of genes or proteins  for use in molecular analysis. The basic structure od SDD code for sequence characters has the basic structure shown below and in example 3.6.4.1.</p>
 
 <p><a href="SddCharacters/sequencecharacter.gif"><img src="SddCharacters/sequencecharacter.gif"/></a></p>
 
-<h5>3.6.3.1 Sdd representation of sequence characters</h5>
+<h5 id="3-6-3-1-sdd-representation-of-sequence-characters">3.6.3.1 Sdd representation of sequence characters</h5>
 
 <table bgcolor="#ddddff" border="0" width="100%" cellpadding="5" cellspacing="5" style="border-collapse: collapse" bordercolor="#111111">
 

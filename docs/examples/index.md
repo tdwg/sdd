@@ -9,11 +9,11 @@ GregorHagedorn - Mon Jan 18 2010 - Version 1.17
 
 <p>To help application developers in understanding SDD and testing their software, we provide a number of "real world" example data sets for SDD, version 1.1. We try to provide different data sets with different properties and originating from different applications.</p>
 
-<h2>1. Data sets for multi-access keys ("matrix keys")</h2>
+<h2 id="1-data-sets-for-multi-access-keys-matrix-keys">1. Data sets for multi-access keys ("matrix keys")</h2>
 
-<h3>Transformed DELTA example data set</h3>
+<h3 id="transformed-delta-example-data-set">Transformed DELTA example data set</h3>
 
-<p><a target="_blank" href="http://delta-intkey.com/" title="DELTA and Intkey home page"><img src="examples/deltlogo.gif" alt="DELTA and Intkey home page" align="right" style="float:right;margin-left:20px;margin-bottom:10px"/></a>  <strong>Introduction:</strong> The following two datasets are either distributed together with the <a target="_blank" href="http://delta-intkey.com/" title="DELTA and Intkey home page">CSIRO DELTA programs</a>, or used in feature comparisons. They are provided here to help people with a DELTA background to understand the relation between SDD and DELTA.</p>
+<p><a target="_blank" href="http://delta-intkey.com/" title="DELTA and Intkey home page"><img src="deltlogo.gif" alt="DELTA and Intkey home page" align="right" style="float:right;margin-left:20px;margin-bottom:10px"/></a>  <strong>Introduction:</strong> The following two datasets are either distributed together with the <a target="_blank" href="http://delta-intkey.com/" title="DELTA and Intkey home page">CSIRO DELTA programs</a>, or used in feature comparisons. They are provided here to help people with a DELTA background to understand the relation between SDD and DELTA.</p>
 
 <p><strong>Description of data sets:</strong> The first data set is a minimal set with 4 characters and 3 descriptions of beetles. It is used as the example on <a target="_blank" href="http://delta-intkey.com/www/descdata.htm">Data Requirements for Natural-language Descriptions and Identification</a> and provided there in various formats (DELTA, NEXUS, Lucid Interchange Format File v. 1.1 (old version of Lucid), and XDELTA). The second set contains a larger character set and 14 grass species. It is distributed together with the DELTA programs (version from 2000, see "All programs (including Intkey)" on <a target="_blank" href="http://delta-intkey.com/www/programs.htm">DELTA Programs and Documentation</a>). The original DELTA file is ANSI (not ASCII) encoded and uses RTF for character markup. This example is provided both as a single-document and as a multifile xml-document set. The multifile approach uses multiple xml fragments that can be individually edited or placed in different repositories and which finally can be combined using xml entities into a "master-document". To some extent this mirror the most common use of DELTA using a folder plus multiple directive files.</p>
 
@@ -26,16 +26,16 @@ GregorHagedorn - Mon Jan 18 2010 - Version 1.17
 <p>FOLLOWING ARE 3 BROKEN LINKS - NEED TO BE FIXED: </p>
 
 <ul>
-  <li><a href="examples/Beetles.sdd11.zip">Beetles.sdd11.zip</a>: Beetles dataset in SDD 1.1 format</li>
-  <li><a href="examples/DELTA2000-Sample.sdd11.zip">DELTA2000-Sample.sdd11.zip</a>: DELTA.exe (2000) sample dataset on 14 Grass genera in SDD 1.1 format</li>
-  <li><a href="examples/DELTA2000_Multifile.sdd11.zip">DELTA2000_Multifile.sdd11.zip</a>: As above, but using multiple xml fragments combined into a master document</li>
+  <li><a href="Beetles.sdd11.zip">Beetles.sdd11.zip</a>: Beetles dataset in SDD 1.1 format</li>
+  <li><a href="DELTA2000-Sample.sdd11.zip">DELTA2000-Sample.sdd11.zip</a>: DELTA.exe (2000) sample dataset on 14 Grass genera in SDD 1.1 format</li>
+  <li><a href="DELTA2000_Multifile.sdd11.zip">DELTA2000_Multifile.sdd11.zip</a>: As above, but using multiple xml fragments combined into a master document</li>
 </ul>
 
 <hr>
 
-<h3>LIAS data set</h3>
+<h3 id="lias-data-set">LIAS data set</h3>
 
-<p><a target="_blank" href="http://www.lias.net/" title="LIAS project"><img src="examples/LIAS_small.gif" alt="LIAS project" align="right" style="float:right;margin-left:20px;margin-bottom:10px"/></a> <strong>Introduction:</strong> <a href="http://www.lias.net/">LIAS</a> is a global information system for Lichenized and Non-Lichenized Ascomycetes. The vision of LIAS is to establish a non-commercial global information system for the collection and distribution of descriptive, phylogenetic, and other biodiversity data on these taxonomic groups that uses advanced technology and where published biodiversity data of all ascomycetes are joined in a multi-authored database and used for the most sophisticated queries. Specific goals are to</p>
+<p><a target="_blank" href="http://www.lias.net/" title="LIAS project"><img src="LIAS_small.gif" alt="LIAS project" align="right" style="float:right;margin-left:20px;margin-bottom:10px"/></a> <strong>Introduction:</strong> <a href="http://www.lias.net/">LIAS</a> is a global information system for Lichenized and Non-Lichenized Ascomycetes. The vision of LIAS is to establish a non-commercial global information system for the collection and distribution of descriptive, phylogenetic, and other biodiversity data on these taxonomic groups that uses advanced technology and where published biodiversity data of all ascomycetes are joined in a multi-authored database and used for the most sophisticated queries. Specific goals are to</p>
 
 <ul>
   <li>provide a working space for cooperation and collaboration of experts on ascomycetes in the Internet</li>
@@ -58,11 +58,11 @@ GregorHagedorn - Mon Jan 18 2010 - Version 1.17
 
 <p><strong>Copyright and license:</strong> The "LIAS main" dataset attached here is © 1996-2007 by Botanische Staatssammlung München. All rights reserved. It is here released under the Creative Commons non-commercial, by attribution, share-alike license in version 2.5. Further details are included in the file itself.</p>
 
-<p><strong>SDD document:</strong> <a href="examples/LIAS_Main.sdd11.zip">LIAS_Main.sdd11.zip</a>: LIAS Main dataset in SDD 1.1 format</p>
+<p><strong>SDD document:</strong> <a href="LIAS_Main.sdd11.zip">LIAS_Main.sdd11.zip</a>: LIAS Main dataset in SDD 1.1 format</p>
 
 <hr>
 
-<h3>Interactive Key to Species of Erythroneura</h3>
+<h3 id="interactive-key-to-species-of-erythroneura">Interactive Key to Species of Erythroneura</h3>
 
 <p><strong>Introduction:</strong> The <a href="http://ctap.inhs.uiuc.edu/dmitriev/key.asp?key=Erythroneura&lng=En&i=1&keyN=2">Interactive Key to Species of the Genus Erythroneura (Homoptera, Cicadellidae)</a> by D. Dmitriev & C. Dietrich is also available online under the <a href="http://ctap.inhs.uiuc.edu/dmitriev/">3I software</a> created by Dmitry A. Dmitriev. 3I (Internet-accessible Interactive Identification) is a set of software tools for creating on-line identification keys, taxonomic databases, and virtual taxonomic revisions. By organizing illustrations and nomenclatural, morphological, bibliographical, and distributional data into a single database 3I also facilitates production of traditional, printed taxonomic papers and monographs. As such it is more comprehensive that SDD alone, pointing into the direction into which SDD plans to evolve (online monographs including nomenclature as well as descriptions and identification tools).</p>
 
@@ -74,11 +74,11 @@ GregorHagedorn - Mon Jan 18 2010 - Version 1.17
 
 <p><strong>Copyright and license:</strong> The Erythroneura dataset attached here is © 2003-2006 D. Dmitriev & C. Dietrich. The SDD version is released here under the Creative Commons non-commercial, by attribution, share-alike license in version 2.5. </p>
 
-<p><strong>SDD document:</strong> <a href="examples/Erythroneura.sdd11.zip">Erythroneura.sdd11.zip</a>: D.Dmitriev's Erythroneura key in SDD 1.1 format</p>
+<p><strong>SDD document:</strong> <a href="Erythroneura.sdd11.zip">Erythroneura.sdd11.zip</a>: D.Dmitriev's Erythroneura key in SDD 1.1 format</p>
 
 <hr>
 
-<h3>An Interactive Key to Tribes of Leafhoppers / &#1048;&#1085;&#1090;&#1077;&#1088;&#1072;&#1082;&#1090;&#1080;&#1074;&#1085;&#1072;&#1103; &#1054;&#1087;&#1088;&#1077;&#1076;&#1077;&#1083;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1072;&#1103; &#1058;&#1072;&#1073;&#1083;&#1080;&#1094;&#1072; &#1062;&#1080;&#1082;&#1072;&#1076;&#1086;&#1082; (Cicadellidae, in English and Russian)</h3>
+<h3 id="an-interactive-key-to-tribe-of-leafhoppers-cicadellidae-in-english-and-russian">An Interactive Key to Tribes of Leafhoppers / &#1048;&#1085;&#1090;&#1077;&#1088;&#1072;&#1082;&#1090;&#1080;&#1074;&#1085;&#1072;&#1103; &#1054;&#1087;&#1088;&#1077;&#1076;&#1077;&#1083;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1072;&#1103; &#1058;&#1072;&#1073;&#1083;&#1080;&#1094;&#1072; &#1062;&#1080;&#1082;&#1072;&#1076;&#1086;&#1082; (Cicadellidae, in English and Russian)</h3>
 
 <p><strong>Introduction:</strong> This key by D. Dmitriev & C. Dietrich is used to demonstrate the multilingual properties of the <a href="http://ctap.inhs.uiuc.edu/dmitriev/">3I software</a> and is available in <a href="http://ctap.inhs.uiuc.edu/dmitriev/key.asp?key=Cicnymph&i=1&lng=En">English</a> and <a href="http://ctap.inhs.uiuc.edu/dmitriev/key.asp?key=Cicnymph&i=1&lng=Ru">Russian</a>. See the "Interactive Key to Species of Erythroneura" above for further information on 3I.</p>
 
@@ -90,19 +90,19 @@ GregorHagedorn - Mon Jan 18 2010 - Version 1.17
 
 <p><strong>Copyright and license:</strong> The "Key to Tribes of Leafhoppers" dataset attached here is © 2003-2006 D. Dmitriev & C. Dietrich. The SDD version is released here under the Creative Commons non-commercial, by attribution, share-alike license in version 2.5. </p>
 
-<p><strong>SDD document:</strong> <a href="examples/Cicad.sdd11.zip">Cicad.sdd11.zip</a>: D.Dmitriev's English/Russian multilingual example data set.</p>
+<p><strong>SDD document:</strong> <a href="Cicad.sdd11.zip">Cicad.sdd11.zip</a>: D.Dmitriev's English/Russian multilingual example data set.</p>
 
 <hr>
 
-<h2>2. Data sets for natural language descriptions including markup</h2>
+<h2 id="2-data-sets-for-natural-language-descriptions-including-markup">2. Data sets for natural language descriptions including markup</h2>
 
 <p>(None at the moment, please help us providing such a data set!)</p>
 
 <hr>
 
-<h2>3. Data sets for branching (static dichotomous or polytomous) keys</h2>
+<h2 id="3-data-sets-for-branching-static-dichotomous-or-polytomous-keys">3. Data sets for branching (static dichotomous or polytomous) keys</h2>
 
-<h3>Dichotomous key to higher plants from Val Rosandra (Italy)</h3>
+<h3 id="dichotomous-key-to-higher-plants-from-val-rosandra-italy">Dichotomous key to higher plants from Val Rosandra (Italy)</h3>
 
 <p>This SDD dataset is an export of the <a href="http://www.dryades.eu">FRIDA</a> key to the higher plants of the <a href="http://www.comune.san-dorligo-della-valle.ts.it/">Val Rosandra nature reserve</a> in Italy. The original FRIDA key is available <a href="http://dbiodbs.units.it/carso/chiavi_pub21?sc=67">online</a>. The dataset has been created as a prototype for more widespread adoption of SDD in the context of the <a href="http://www.keytonature.eu/">Key to Nature</a> EU project.</p>
 
@@ -112,11 +112,11 @@ GregorHagedorn - Mon Jan 18 2010 - Version 1.17
 
 <p><strong>Copyright and license:</strong> The "Val Rosandra" dataset attached here is © 2008 P.L. Nimis & S. Martellos. The SDD version is released here under the Creative Commons non-commercial, by attribution, share-alike license (Creative Commons 3.0 NC-BY-SA unported).</p>
 
-<p><strong>SDD document:</strong> <a href="examples/Val-Rosandra-FRIDA-Key.sdd11.zip">Val-Rosandra-FRIDA-Key.sdd11.zip</a>: Dichotomous key to higher plants from Val Rosandra (Italy).</p>
+<p><strong>SDD document:</strong> <a href="Val-Rosandra-FRIDA-Key.sdd11.zip">Val-Rosandra-FRIDA-Key.sdd11.zip</a>: Dichotomous key to higher plants from Val Rosandra (Italy).</p>
 
-<h3>Key to Dutch reptiles and amphibians (by ETI)</h3>
+<h3 id="key-to-dutch-reptiles-and-amphibians-by-eti">Key to Dutch reptiles and amphibians (by ETI)</h3>
 
-<p><a target="_blank" href="http://www.eti.uva.nl/" title="ETI ~BioInformatics home page"><img src="examples/Logo-Eti.png" alt="ETI ~BioInformatics home page" align="right" style="float:right;margin-left:20px;margin-bottom:10px"/></a>  The dataset has been created as a prototype while implementing SDD in the <a target="_blank" href="http://www.eti.uva.nl/">ETI BioInformatics</a> mobile key created in the context of the <a href="http://www.keytonature.eu/">Key to Nature</a> EU project. Its goal is to create a small, but realistic identification dataset for testing purposes, combining several features of SDD. </p>
+<p><a target="_blank" href="http://www.eti.uva.nl/" title="ETI ~BioInformatics home page"><img src="Logo-Eti.png" alt="ETI ~BioInformatics home page" align="right" style="float:right;margin-left:20px;margin-bottom:10px"/></a>  The dataset has been created as a prototype while implementing SDD in the <a target="_blank" href="http://www.eti.uva.nl/">ETI BioInformatics</a> mobile key created in the context of the <a href="http://www.keytonature.eu/">Key to Nature</a> EU project. Its goal is to create a small, but realistic identification dataset for testing purposes, combining several features of SDD. </p>
 
 <p><strong>Description of data set:</strong> The taxon names here contain atomized data (<nop>CanonicalName; this is the only dataset that features this), the key is dual language in Dutch and English. The key contains only categorical characters (no quantitative or text). The characters are labeled in question style, with the states giving the answers. Each taxon has a short Natural Language description (plain text without semantic markup; note that the English text is not a fully reflection of the Dutch). The key contains both coded descriptions to use with a multi-access key, and a manually created, fixed single-access key (polytomous). The latter in part uses question/answer style ("Does it have legs? yes/no"), in part couplet style with leads ("Warty skin, pupil horizontal/Warty skin, pupil vertical/Smooth skin, pupil vertical"). The size of the data set is small, with 24 taxa and 20 characters.</p>
 
@@ -124,7 +124,7 @@ GregorHagedorn - Mon Jan 18 2010 - Version 1.17
 
 <p><strong>Copyright and license:</strong> The dataset attached here is © 2008 ETI. The SDD version is released here under the Creative Commons non-commercial, by attribution, share-alike license (Creative Commons 3.0 NC-BY-SA unported).</p>
 
-<p><strong>SDD document:</strong> <a href="examples/ETI_rept_amph_key.sdd11.xml.zip">ETI_rept_amph_key.sdd11.xml.zip</a>: Key to Dutch reptiles and amphibians (by ETI)</p>
+<p><strong>SDD document:</strong> <a href="ETI_rept_amph_key.sdd11.xml.zip">ETI_rept_amph_key.sdd11.xml.zip</a>: Key to Dutch reptiles and amphibians (by ETI)</p>
 
 <hr>
 

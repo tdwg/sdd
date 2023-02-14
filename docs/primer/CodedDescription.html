@@ -5,9 +5,9 @@ author: "Donovan Sharp"
 
 <p>DonovanSharp - Tue Jul 18 2006 - Version 1.10<br> <a href="index.html">Parent topic: SddContents</a><br></p>
 
-<h2>SDD Part 0: Introduction and Primer to the SDD Standard </h2>
+<h2 id="sdd-part-0-introduction-and-primer-to-the-sdd-standard">SDD Part 0: Introduction and Primer to the SDD Standard </h2>
 
-<h3>4.1 Coded Descriptions</h3>
+<h3 id="4-1-coded-descriptions">4.1 Coded Descriptions</h3>
 
 <p>The &lt;<a href="CodedDescription.html">CodedDescription</a>&gt; element contains the actual data associated with each dataset.</p>
 
@@ -17,13 +17,13 @@ author: "Donovan Sharp"
 
 <p><a href="CodedDescription/codeddescription.gif"><img src="CodedDescription/codeddescription.gif"/></a></p>
 
-<h4>4.1.1 SDD for summary data</h4>
+<h4 id="4-1-1-sdd-for-summary-data">4.1.1 SDD for summary data</h4>
 
 <p>Summary data records occurence for a related group of individuals (i.e. species, genus). Data may be aggregated from sample data using statistical measures, state distributions, etc. The element is optional to support descriptions containing only sample data or media objects. Characters are NOT required to have unique ref attributes! Data for one character may be recorded with different modifications (in spring/autumn, at tip/base).</p>
 
 <p><a href="CodedDescription/summarydata.gif"><img src="CodedDescription/summarydata.gif"/></a></p>
 
-<h5>Example 4.1.1.1 - A simple summary data description</h5>
+<h5 id="example-4-1-1-1-a-simple-summary-data-description">Example 4.1.1.1 - A simple summary data description</h5>
 
 <table bgcolor="#ddddff" border="0" width="100%" cellpadding="5" cellspacing="5" style="border-collapse: collapse" bordercolor="#111111">
 
@@ -63,13 +63,13 @@ author: "Donovan Sharp"
 
 <p>In this example the taxon Korthalsella (taxon t2) is scored present for character c3 state s7, present for character c1 state s2 and (5-)10-20(-25) for the quantitative character c4. The names assigned to these character and state names can be found within the <a href="SddCharacters.html">&lt;Characters&gt;</a> element.</p>
 
-<h4>4.1.2 SDD for <a href="SampleData.html">&lt;SampleData&gt;</a></h4>
+<h4 id="4-1-2-sdd-for-a-href-sampledata-html-lt-sampledata-gt-a">4.1.2 SDD for <a href="SampleData.html">&lt;SampleData&gt;</a></h4>
 
 <p>Raw sample data are recorded here. The analysed and generalized (e. g. using statistical measures) results are normally also reflected under <a href="SummaryData.html">&lt;SummaryData&gt;</a> (with origin = 'calculated' and &lt;BasedOnSample&gt; referring to a sample ID.</p>
 
 <p><a href="CodedDescription/sampledata.gif"><img src="CodedDescription/sampledata.gif"/></a></p>
 
-<h4>Example 4.1.2.1 - A simple raw data description</h4>
+<h4 id="example-4-1-2-1-a-simple-raw-data-description">Example 4.1.2.1 - A simple raw data description</h4>
 
 <table bgcolor="#ddddff" border="0" width="100%" cellpadding="5" cellspacing="5" style="border-collapse: collapse" bordercolor="#111111">
 

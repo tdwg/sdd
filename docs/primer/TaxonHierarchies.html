@@ -5,13 +5,13 @@ author: "Donovan Sharp"
 
 <p>DonovanSharp - Wed Aug 30 2006 - Version 1.14<br> <a href="index.html">Parent topic: SddContents</a><br></p>
 
-<h2>SDD Part 0: Introduction and Primer to the SDD Standard </h2>
+<h2 id="sdd-part-0-introduction-and-primer-to-the-sdd-standard">SDD Part 0: Introduction and Primer to the SDD Standard </h2>
 
-<h3>3.7 Taxon heirarchies</h3>
+<h3 id="3-7-taxon-heirarchies">3.7 Taxon heirarchies</h3>
 
 <p>Taxon hierarchies allow one or more hierarchical structures to be set for the coded entities. Hierarchies may tbe taxonomic (order/family/genus etc.) or non-taxonomic (weed/species/diseases, herb/shrub/tree).</p>
 
-<h4>Example 3.7.1 - A simple taxon hierarchy</h4>
+<h4 id="example-3-7-1-a-simple-taxon-hierarchy">Example 3.7.1 - A simple taxon hierarchy</h4>
 
 <p><a href="TaxonHierarchies/taxon_hierarchy_example.gif"><img src="TaxonHierarchies/taxon_hierarchy_example.gif"/></a></p>
 
@@ -21,7 +21,7 @@ author: "Donovan Sharp"
 
 <p><a href="TaxonHierarchies/taxonhierarchy.gif"><img src="TaxonHierarchies/taxonhierarchy.gif"/></a></p>
 
-<h4>Example 3.7.2 - A simple taxon hierarchy, SDD representation</h4>
+<h4 id="example-3-7-2-a-simple-taxon-hierarchy-sdd-representation">Example 3.7.2 - A simple taxon hierarchy, SDD representation</h4>
 
 <table bgcolor="#ddddff" border="0" width="100%" cellpadding="5" cellspacing="5" style="border-collapse: collapse" bordercolor="#111111">
 
@@ -78,7 +78,7 @@ author: "Donovan Sharp"
 
 <p>The taxon hierarchy supports taxonomic (order/family/genus etc.) and non-taxonomic (weed species, diseases, herb/shrub/tree) hierarchies. For many analytical purposes it is relevant whether a hierarchy is based on phylogenetic (= evolutionary) relatedness or whether it is an operational categorization. This is defined in the &lt;TaxonHierarchyType&gt; element. Currently content is restricted to "NonphylogeneticTaxonomy", "PhylogeneticTaxonomy", "SubsetFilter" or "UnspecifiedTaxonomy".</p>
 
-<h4>3.7.2 The structure of &lt;Nodes&gt; in &lt;TaxonHierarchy&gt;</h4>
+<h4 id="3-7-2-the-structure-of-lt-nodes-gt-in-lt-taxonhierarchy-gt">3.7.2 The structure of &lt;Nodes&gt; in &lt;TaxonHierarchy&gt;</h4>
 
 <p>The tree structure of the taxon hierarchy is presented as an ordered list of nodes together with edges pointing to parent nodes. Inner nodes may have taxon name references or may be anonymous (esp. for phylogenetic analyses). The &lt;Node&gt; element has the basic structure shown below.</p>
 

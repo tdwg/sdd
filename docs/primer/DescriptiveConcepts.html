@@ -5,9 +5,9 @@ author: "Gregor Hagedorn"
 
 <p>GregorHagedorn - Tue Aug 28 2007 - Version 1.16<br> <a href="index.html">Parent topic: SddContents</a><br></p>
 
-<h2>SDD Part 0: Introduction and Primer to the SDD Standard </h2>
+<h2 id="sdd-part-0-introduction-and-primer-to-the-sdd-standard">SDD Part 0: Introduction and Primer to the SDD Standard </h2>
 
-<h3>3.17 Descriptive concepts.</h3>
+<h3 id="3-17-descriptive-concepts">3.17 Descriptive concepts.</h3>
 
 <p>Descriptive Concepts in SDD comprise terminological and ontological elements used in descriptions that extend the simple characters and states defined in the &lt;Characters&gt; element. Core descriptive concepts include score modifiers, grouping concepts used in character trees, and "global" (re-useable) states.</p>
 
@@ -17,7 +17,7 @@ author: "Gregor Hagedorn"
 
 <p>Global states are states used in multiple places in a character list. For example, the states "blue" and "white" may be used to describe both scales and fins in descriptions of fish. The states may be defined in &lt;<a href="DescriptiveConcepts.html">DescriptiveConcepts</a>&gt; then referenced for several characters in &lt;Characters&gt;. </p>
 
-<h4>3.17.1 Data modifier definitions.</h4>
+<h4 id="3-17-1-data-modifier-definitions">3.17.1 Data modifier definitions.</h4>
 
 <p>In SDD all modifiers for probability (e.g. "possibly"), frequency (e.g. "rarely"), degree (e.g. "strongly"), timing (e.g. "when mature"), location (e.g. "at the base"), etc. are centrally managed using the &lt;Modifers&gt; element.</p>
 
@@ -25,7 +25,7 @@ author: "Gregor Hagedorn"
 
 <p><a href="DescriptiveConcepts/modifier.gif"><img src="DescriptiveConcepts/modifier.gif"/></a></p>
 
-<h5>Example 3.17.1.1 - Describing the Lucid scoring model using the &lt;modifiers&gt; element.</h5>
+<h5 id="example-3-17-1-1-describing-the-lucid-scoring-model-using-the-lt-modifiers-gt-element">Example 3.17.1.1 - Describing the Lucid scoring model using the &lt;modifiers&gt; element.</h5>
 
 <table bgcolor="#ddddff" border="0" width="100%" cellpadding="5" cellspacing="5" style="border-collapse: collapse" bordercolor="#111111">
 <tr><td>
@@ -82,7 +82,7 @@ author: "Gregor Hagedorn"
 
 <p>Modifiers may be assigned language specific labels and assigned usage for generation of natural language descriptions. Using a very simple grammar, the concatenation of these phrases yields a simple natural language description. See the example below.</p>
 
-<h5>Example 3.17.1.2 - Language specific labels and modifiers.</h5>
+<h5 id="example-3-17-1-2-language-specific-labels-and-modifiers">Example 3.17.1.2 - Language specific labels and modifiers.</h5>
 
 <table bgcolor="#ddddff" border="0" width="100%" cellpadding="5" cellspacing="5" style="border-collapse: collapse" bordercolor="#111111">
 <tr><td>
@@ -134,7 +134,7 @@ author: "Gregor Hagedorn"
 
 </td></tr></table>
 
-<h4>3.17.2 Grouping concepts</h4>
+<h4 id="3-17-2-grouping-concepts">3.17.2 Grouping concepts</h4>
 
 <p>Character hierarchies comprise a tree of nodes with characters at the end of each branch, as demonstrated in the example below.</p>
 
@@ -165,7 +165,7 @@ author: "Gregor Hagedorn"
 
 <p>For more information on using groupinf concepts to build a character tree, see the topic <a href="CharacterHierarchies.html">Character Hierarchies</a></p>
 
-<h4>3.17.3 Sharing states across characters (Concept States)</h4>
+<h4 id="3-17-3-sharing-states-across-characters-concept-states">3.17.3 Sharing states across characters (Concept States)</h4>
 
 <p>SDD provides a mechanism for defining state values that are reusable in multiple characters. For example the concept state 'blue' may be applied to many different colour descriptors such as "Eye colour', 'Fin colour' and 'Tail colour'. Similarly, the state "ovate" may be used for "Leaf shape", "Petal shape", "Seed shape" etc.  Using concept states simplifies the management of terminology and improves data analysis, as states from different characters can be compared if they refer to identical concept states.</p>
 
@@ -173,7 +173,7 @@ author: "Gregor Hagedorn"
 
 <p><a href="DescriptiveConcepts/conceptstates.gif"><img src="DescriptiveConcepts/conceptstates.gif"/></a></p>
 
-<h5>Example 3.17.3.1 - SDD representation of the categorical characters in 3.5.1.1.</h5>
+<h5 id="example-3-17-3-1-sdd-representation-of-the-categorical-characters-in-3-5-1-1">Example 3.17.3.1 - SDD representation of the categorical characters in 3.5.1.1.</h5>
 
 <table bgcolor="#ddddff" border="0" width="100%" cellpadding="5" cellspacing="5" style="border-collapse: collapse" bordercolor="#111111">
 <tr>

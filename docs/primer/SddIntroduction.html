@@ -5,19 +5,19 @@ author: "Kevin Thiele"
 
 <p>KevinThiele - Fri Sep 15 2006 - Version 1.19<br> <a href="index.html">Parent topic: SddContents</a><br></p>
 
-<h2>SDD Part 0: Introduction and Primer to the SDD Standard</h2>
+<h2 id="sdd-part-0-introduction-and-primer-to-the-sdd-standard">SDD Part 0: Introduction and Primer to the SDD Standard</h2>
 
-<h3>Abstract</h3>
+<h3 id="abstract">Abstract</h3>
 
 <p>SDD Part 0 is a non-normative introduction to the <a href="http://www.tdwg.org">Taxonomic Databases Working Group</a> SDD (Structure of Descriptive Data) Standard. Its intention is to provide a background, introduction and primer to the SDD Standard, with examples. Since the SDD Standard is a work-in-progress, this document will be updated from time to time.</p>
 
-<h3>Status of this document and version history</h3>
+<h3 id="status-of-this-document-and-version-history">Status of this document and version history</h3>
 
 <p>See <a href="DocumentStatus.html">DocumentStatus</a></p>
 
-<h2>1.0 Introduction</h2>
+<h2 id="1-0-introduction">1.0 Introduction</h2>
 
-<h3>1.1 Background to the TDWG-SDD Subgroup</h3>
+<h3 id="1-1-background-to-the-tdwg-sdd-subgroup">1.1 Background to the TDWG-SDD Subgroup</h3>
 
 <p>In September 1998 the <a href="http://www.tdwg.org">Taxonomic Databases Working Group </a> (TDWG) of the <a href="http://www.iubs.org">International Union of Biological Sciences</a> (IUBS) established the Structure of Descriptive Data (SDD) subgroup. TDWG&#8217;s role is to facilitate and manage the development of international standards in the taxonomic domain. The SDD subgroup was established to develop an international XML-based standard for capturing and managing descriptive data for organisms.</p>
 
@@ -25,13 +25,13 @@ author: "Kevin Thiele"
 
 <p>The SDD subgroup began discussing and scoping a standard through an email discussion group in November 1999 (see the <a href="http://listserv.nhm.ku.edu/archives/tdwg-sdd.html">SDD email list archives</a>). Considerable progress has been made at face-to-face meetings amongst a small group of core contributors, in Nov. 2001 (Canberra), Oct. 2002 (Sao Paulo), Feb. 2003 (Paris), October 2003 (Lisbon), May 2004 (Berlin) and Oct. 2004 (Christchurch).</p>
 
-<h3>1.2 The nature of descriptive data in taxonomy</h3>
+<h3 id="1-2-the-nature-of-descriptive-data-in-taxonomy">1.2 The nature of descriptive data in taxonomy</h3>
 
 <p>In taxonomy, descriptive data takes a number of very different forms.</p>
 
 <p>Natural-language descriptions (Box 1.2.1) are semi-structured, semi-formalised descriptions of a taxon (or occasionally of an individual specimen). They may be simple, short and written in plain language (if used for a popular field guide), or long, highly formal and using specialised terminology when used in a taxonomic monograph or other treatment.</p>
 
-<h4>Box 1.2.1 -  A typical natural language description</h4>
+<h4 id="box-1-2-1-a-typical-natural-language-description">Box 1.2.1 -  A typical natural language description</h4>
 
 <table bgcolor="#ddddff" cellspacing="2" cellpadding="2" border="1" width="80%">
 <tr>
@@ -54,7 +54,7 @@ Australian Birds&nbsp; (Reed New Holland: Sydney)</p>
 
 <p>  Dichotomous keys (Box 1.2.2) are specialised identification tools comprising fragments of descriptive data arranged in couplets forming a branching tree. Each fragment (lead) comprises a small (occasionally verbose) natural-language description.</p>
 
-<h4>Box 1.2.2 -  A simple dichotomous key</h4>
+<h4 id="box-1-2-2-a-simple-dichotomous-key">Box 1.2.2 -  A simple dichotomous key</h4>
 
 <p>	<div>
 		<table bgcolor="#ddddff" border="1" cellpadding="5" style="border-collapse: collapse" bordercolor="#111111" width="80%" id="table8">
@@ -104,7 +104,7 @@ Australian Birds&nbsp; (Reed New Holland: Sydney)</p>
 		</table>
 </div>   Coded descriptions (Box 1.2.3) comprise highly structured data used in computer identification and analysis programs such as Lucid (<a href="http://www.lucidcentral.org">www.lucidcentral.org</a>) , DELTA (<a href="http://www.delta-intkey.com">www.delta-intkey.com</a>) and phylogenetic analysis programs such as PAUP (<a href="http://www.paup.csit.fsu.edu">www.paup.csit.fsu.edu</a>).</p>
 
-<h4>Box 1.2.3 -  Simple examples of coded descriptions</h4>
+<h4 id="box-1-2-3-simple-examples-of-coded-descriptions">Box 1.2.3 -  Simple examples of coded descriptions</h4>
 
 <div>
 
@@ -219,7 +219,7 @@ DELTA file</div>
 
 <p>  Raw data descriptions (Box 1.2.4) usually comprise repeated measurements of parts of individual specimens, and are the basis from which the more abstracted descriptions in natural language and coded descriptions are derived. Few taxonomists consistently record and archive their raw data in a standardised format. </p>
 
-<h4>Box 1.2.4 - Example of raw (specimen) descriptive data</h4>
+<h4 id="box-1-2-4-example-of-raw-specimen-descriptive-data">Box 1.2.4 - Example of raw (specimen) descriptive data</h4>
 
 <p>  <div>
 	<table bgcolor="#ddddff" border="1" width="80%" cellspacing="0" id="table10" cellpadding="0">
@@ -272,11 +272,11 @@ DELTA file</div>
 	</table>
 	</div>  </p>
 
-<h3>1.3 Goals of SDD</h3>
+<h3 id="1-3-goals-of-sdd">1.3 Goals of SDD</h3>
 
 <p>The goal of the SDD standard is to allow capture, transport, caching and archiving of descriptive data in all the forms shown above, using a platform- and application-independent, international standard. Such a standard is crucial to enabling lossless porting of data between existing and future software platforms including identification, data-mining and analysis tools, and federated databases.</p>
 
-<h4>The SDD Standard:</h4>
+<h4 id="the-sdd-standard">The SDD Standard:</h4>
 
 <ul>
   <li>provides a flexible, platform-independent data structure for the capture and storage of taxonomic descriptions </li>
@@ -287,7 +287,7 @@ DELTA file</div>
   <li>is XML-based, and provides a schema for validation of documents. </li>
 </ul>
 
-<h4>It facilitates:</h4>
+<h4 id="it-facilitates">It facilitates:</h4>
 
 <ul>
   <li>lossless porting of data between standard-aware applications </li>
@@ -297,7 +297,7 @@ DELTA file</div>
   <li>archiving and sharing of raw and processed data</li>
 </ul>
 
-<h4>SDD documents may include all or some of the following:</h4>
+<h4 id="sdd-documents-may-include-all-or-some-of-the-following">SDD documents may include all or some of the following:</h4>
 
 <ul>
   <li>Terminologies (characters, states, modifiers, char. trees, higher concepts) </li>
@@ -309,7 +309,7 @@ DELTA file</div>
   <li>Resources associated with descriptions (e. g., images, references, links) </li>
 </ul>
 
-<h3>SDD is currently not designed to accommodate:</h3>
+<h3 id="sdd-is-currently-not-designed-to-accommodate">SDD is currently not designed to accommodate:</h3>
 
 <ul>
   <li>Molecular sequence and other genetic data (future plans exist)</li>
@@ -319,7 +319,7 @@ DELTA file</div>
   <li>Nomenclatural and formal systematic (rank) information</li>
 </ul>
 
-<h3>1.4 SDD Streams</h3>
+<h3 id="1-4-sdd-streams">1.4 SDD Streams</h3>
 
 <p>This Primer is structured into several streams, each describing how SDD can help you with a specific task. For each stream, the Primer describes the core elements of SDD used to capture information related to the task, and provides examples extending from simple to complex. </p>
 
